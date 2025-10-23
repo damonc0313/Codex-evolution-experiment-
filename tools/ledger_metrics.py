@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
-"""Helpers for computing Kael ledger metrics."""
+"""Helpers for computing Kael ledger metrics and NOS scores."""
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Iterable
 import json
 
 ROOT = Path(__file__).resolve().parent.parent
 ARTIFACTS_DIR = ROOT / "artifacts"
+
+DEFAULT_NOS_WEIGHTS = {
+    "energy_efficiency": 0.35,
+    "coherence": 0.30,
+    "resilience": 0.25,
+    "entropy": 0.10,
+}
 
 
 def _safe_float(value: float | int | str | None, default: float = 0.0) -> float:
@@ -108,9 +115,54 @@ def compute_continuity_ratio(artifacts_dir: Path | None = None) -> float:
     return round(linked / len(files), 3)
 
 
+def compute_nos_score(
+    energy_efficiency: float,
+    coherence: float,
+    resilience: float,
+    entropy: float,
+    weights: Dict[str, float] | None = None,
+) -> float:
+    """Compute the Natural Optimisation Signature score with optional weights."""
+
+    w = {**DEFAULT_NOS_WEIGHTS, **(weights or {})}
+    entropy_component = max(float(entropy) * max(w.get("entropy", 0.1), 1e-6), 1e-6)
+    energy = min(max(float(energy_efficiency), 0.0), 1.0)
+    coh = min(max(float(coherence), 0.0), 1.0)
+    res = min(max(float(resilience), 0.0), 1.0)
+    numerator = max(w["energy_efficiency"], 1e-6) * energy
+    numerator *= max(w["coherence"], 1e-6) * coh
+    numerator *= max(w["resilience"], 1e-6) * res
+    raw = numerator / entropy_component
+    return round(raw, 3)
+
+
+def map_nature_to_kpis(heuristics: Iterable[Dict[str, object]]) -> Dict[str, Dict[str, object]]:
+    """Transform heuristic specs into loop policy deltas.
+
+    Each heuristic entry should define ``mapping_to_codex_metric`` and
+    ``policy_suggestion`` fields.  The function produces a dictionary keyed by
+    heuristic name so callers can trace the resulting policy recommendations.
+    """
+
+    mapping: Dict[str, Dict[str, object]] = {}
+    for item in heuristics:
+        if not isinstance(item, dict):
+            continue
+        name = str(item.get("heuristic_name") or item.get("name") or "heuristic")
+        mapping[name] = {
+            "metrics": item.get("mapping_to_codex_metric") or item.get("mapping"),
+            "policy": item.get("policy_suggestion") or item.get("policy"),
+            "expected_effect": item.get("expected_effect"),
+        }
+    return mapping
+
+
 __all__ = [
+    "DEFAULT_NOS_WEIGHTS",
     "compute_cascade_probability",
     "measure_building_ratio",
     "estimate_task_multiplication",
     "compute_continuity_ratio",
+    "compute_nos_score",
+    "map_nature_to_kpis",
 ]

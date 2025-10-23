@@ -1,0 +1,53 @@
+{
+  "artifact_type": "nos_sources_index",
+  "sources": [
+    {
+      "kind": "evolution_rates",
+      "id": "evo_rates_01",
+      "path": "/workspace/Codex-evolution-experiment-/data/evo/evo_rates.csv",
+      "fields": {
+        "mutation_rate": "float",
+        "selection_gradient": "float",
+        "generation_time": "float"
+      },
+      "exists": false,
+      "row_count": 0,
+      "digest": null,
+      "warnings": [
+        "Source file not found; using defaults"
+      ]
+    },
+    {
+      "kind": "population_dynamics",
+      "id": "pop_dyn_01",
+      "path": "/workspace/Codex-evolution-experiment-/data/evo/pop_dyn.json",
+      "fields": {
+        "birth_rate": "float",
+        "death_rate": "float",
+        "carrying_capacity": "float"
+      },
+      "exists": false,
+      "row_count": 0,
+      "digest": null,
+      "warnings": [
+        "Source file not found; using defaults"
+      ]
+    },
+    {
+      "kind": "fitness_landscapes",
+      "id": "fit_land_01",
+      "path": "/workspace/Codex-evolution-experiment-/data/evo/fitness_land.parquet",
+      "fields": {
+        "ruggedness": "float",
+        "peaks": "int",
+        "neutrality": "float"
+      },
+      "exists": false,
+      "row_count": 0,
+      "digest": null,
+      "warnings": [
+        "Source file not found; using defaults"
+      ]
+    }
+  ]
+}

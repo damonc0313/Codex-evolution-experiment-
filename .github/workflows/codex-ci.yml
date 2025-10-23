@@ -14,6 +14,12 @@ on:
       - "tests/kael_hypotheses.json"
       - ".github/workflows/codex-ci.yml"
       - "requirements.txt"
+      - "docs/NATURAL_OPTIMISATION_SIGNATURE.md"
+      - "docs/REFLECTION_swarm_nature_synthesis.md"
+      - "runtime/nos_sources.yaml"
+      - "tools/natural_reflection.py"
+      - "tools/nos_data_sources.py"
+      - "tools/nos_calibration.py"
   pull_request:
 
 jobs:

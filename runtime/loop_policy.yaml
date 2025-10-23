@@ -8,8 +8,28 @@ continuous_operation_targets:
   task_queue_min: 6
   building_ratio_min: 0.55
   task_multiplication_min: 1.6
+natural_optimisation:
+  enabled: true
+  mutation_factor: 0.2
+  swarm_branching: 3
+  multi_optima_bias: true
+  anneal_on_plateau: true
+  monitoring_metrics:
+  - build_ratio
+  - task_multiplication
+  - cascade_probability
+  - nos_score
+  nos:
+    sources_config: runtime/nos_sources.yaml
+    weights:
+      energy_efficiency: 0.25
+      coherence: 0.25
+      resilience: 0.25
+      entropy: 0.25
+    gate_floor: 0.05
+    anneal_on_plateau: true
 stop_on:
-  - ci_fail
-  - digest_mismatch
-  - continuity_low
-  - regressions_spike
+- ci_fail
+- digest_mismatch
+- continuity_low
+- regressions_spike
