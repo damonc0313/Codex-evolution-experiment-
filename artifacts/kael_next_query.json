@@ -1,0 +1,7 @@
+{
+  "artifact_type": "next_query",
+  "written_at": 1761199266,
+  "query_path": "runtime/user_query.txt",
+  "mode_hint": "balanced",
+  "objective": "Design distributed task-queue balancer + lineage schema hooks; run kael metrics bench"
+}

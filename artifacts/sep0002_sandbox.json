@@ -1,0 +1,32 @@
+{
+  "artifact_type": "sandbox_validator_sim",
+  "baseline": {
+    "command": "python tools/validate_kernel.py",
+    "status": "PASS",
+    "output_ref": "09c5bd†L1-L5"
+  },
+  "simulated_upgrade": {
+    "scenario": "agents.md missing or malformed triggers failure",
+    "result": "PASS",
+    "details": "{'status': 'PASS', 'digest': 'f0c0330aab08873e'}"
+  },
+  "failure_probe": {
+    "method": "remove manifest field",
+    "expected": "validator returns non-zero",
+    "status": "not_executed",
+    "reason": "kept repository untouched during simulation"
+  },
+  "assumptions": [
+    "Simulation script mirrors future validator logic",
+    "No other files mutated during sandbox"
+  ],
+  "risk": {
+    "description": "Real validator change may surface hidden formatting issues",
+    "mitigation": "Add regression covering malformed front matter prior to hardening"
+  },
+  "acceptance_criteria": [
+    "Baseline validator run captured",
+    "Simulation reports manifest digest",
+    "Next steps defined for failure probe"
+  ]
+}

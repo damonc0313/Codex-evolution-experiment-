@@ -1,0 +1,20 @@
+{
+  "artifact_type": "sandbox_counterfactual",
+  "label": "COUNTERFACTUAL",
+  "scenario": "Assume kernel.digest is incorrect",
+  "falsification_test": [
+    "Recompute sha256[:16] of sanitized kernel text",
+    "Compare against identity.digest and DIGEST footer",
+    "If mismatch, mark ledger entry and halt CI"
+  ],
+  "recovery_steps": [
+    "Freeze new changes via sandbox pivot",
+    "Regenerate canonical digest and update identity + tail",
+    "Re-run validator and continuity self-check before resuming"
+  ],
+  "expected_data": [
+    "Canonical digest value from validator",
+    "CI job outcome (pass/fail)",
+    "Continuity ledger delta referencing remediation artifact"
+  ]
+}

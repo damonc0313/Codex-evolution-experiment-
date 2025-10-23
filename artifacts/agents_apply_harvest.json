@@ -1,0 +1,33 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "A",
+  "summary": {
+    "kernel_digest": "65e63e538c97e181",
+    "policy_invariants": ["REFUSAL","SANDBOX","COMMAND_BAR","EVIDENCE","CONTINUITY_BLOCK","QUALITY_GATES"],
+    "loop_components": {
+      "watcher": "tools/evolve_loop.py",
+      "query_anchor": "runtime/user_query.txt",
+      "mentor_channel": "runtime/mentor_feedback.txt"
+    }
+  },
+  "evidence_paths": [
+    "codex-kernel/codex_kernel.yaml",
+    "codex-kernel/evolution_policy.yaml",
+    "tools/evolve_loop.py",
+    "tools/validate_kernel.py",
+    "artifacts"
+  ],
+  "assumptions": [
+    "run_omega_cycle.py will orchestrate Ω-cycle steps",
+    "agents manifesto will guide mode selection"
+  ],
+  "risk": {
+    "description": "Without a manifest the loop lacks codified doctrine",
+    "mitigation": "Create docs/agents.md with explicit guardrails and tie runtime helpers to it"
+  },
+  "acceptance_criteria": [
+    "Agents manifesto authored and digested",
+    "Runtime consults manifesto for mode selection",
+    "Validator issues WARN if manifesto malformed"
+  ]
+}

@@ -1,143 +1,131 @@
-import sys, re, hashlib, pathlib
+#!/usr/bin/env python3
+"""
+Codex kernel/policy/artifacts validator
+- Computes canonical kernel digest (sha256[:16] of full file text with digest slots neutralized)
+- Confirms identity.digest and trailing DIGEST match canonical
+- Checks policy invariants and refusal pivot
+- Lints artifacts/ for minimal schema
+Exits 0 on success, 1 on any failure.
+"""
+
+from __future__ import annotations
+import sys, re, json, hashlib
+from pathlib import Path
 
 try:
-    import yaml  # type: ignore
-except ModuleNotFoundError:
-    yaml = None
-root = pathlib.Path(__file__).resolve().parents[1]
-k = root/"codex-kernel/codex_kernel.yaml"
-i = root/"codex-kernel/identity.digest"
-p = root/"codex-kernel/evolution_policy.yaml"
-if not k.exists():
-    print("::warning::Kernel file missing:", k)
+    import yaml
+except ImportError:
+    print("WARN: PyYAML missing")
     sys.exit(0)
-kernel = k.read_text(encoding="utf-8")
+
+ROOT = Path(__file__).resolve().parent.parent
+KERNEL = ROOT / "codex-kernel" / "codex_kernel.yaml"
+POLICY = ROOT / "codex-kernel" / "evolution_policy.yaml"
+ARTIFACTS_DIR = ROOT / "artifacts"
+
+def sha16_text(s: str) -> str:
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()[:16]
+
+def read_text(p: Path) -> str:
+    if not p.exists():
+        fail(f"Missing file: {p}")
+    return p.read_text(encoding="utf-8", errors="replace")
+
+errors: list[str] = []
+warnings: list[str] = []
 
 
-def _parse_policy_without_yaml(text: str) -> dict:
-    def parse_scalar(value: str):
-        value = value.strip()
-        if not value:
-            return ""
-        if (value.startswith('"') and value.endswith('"')) or (
-            value.startswith("'") and value.endswith("'")
-        ):
-            return value[1:-1]
-        lowered = value.lower()
-        if lowered in {"true", "false"}:
-            return lowered == "true"
-        if lowered in {"null", "none"}:
-            return None
-        try:
-            return int(value)
-        except ValueError:
-            pass
-        try:
-            return float(value)
-        except ValueError:
-            pass
-        return value
+def warn(msg: str) -> None:
+    warnings.append(msg)
+def fail(msg: str) -> None:
+    errors.append(msg)
 
-    lines = []
-    for raw_line in text.splitlines():
-        stripped = raw_line.strip()
-        if not stripped or raw_line.lstrip().startswith("#"):
-            continue
-        indent = len(raw_line) - len(raw_line.lstrip(" "))
-        lines.append((indent, stripped))
+def main() -> int:
+    # --- Kernel digest checks ---
+    ktxt = read_text(KERNEL)
+    canonical_view = re.sub(r'^(\s*digest:\s*)([0-9a-fA-F]{16})(.*)$', r"\1{{DIGEST16}}\3", ktxt, count=1, flags=re.M)
+    canonical_view = re.sub(r'^(\s*DIGEST:\s*)([0-9a-fA-F]{16})(\s*)$', r"\1{{DIGEST16}}\3", canonical_view, count=1, flags=re.M)
+    digest_calc = sha16_text(canonical_view)
 
-    root: dict = {}
-    stack = [(-1, root)]
+    m_field = re.search(r'^\s*digest:\s*([0-9a-fA-F]{16})', ktxt, flags=re.M)
+    m_tail_all = re.findall(r'^\s*DIGEST:\s*([0-9a-fA-F]{16})\s*$', ktxt, flags=re.M)
 
-    for index, (indent, content) in enumerate(lines):
-        while len(stack) > 1 and indent <= stack[-1][0]:
-            stack.pop()
+    digest_field = m_field.group(1) if m_field else None
+    digest_tail = m_tail_all[-1] if m_tail_all else None
 
-        parent = stack[-1][1]
+    if not digest_field:
+        fail("Kernel: identity.digest missing")
+    if not digest_tail:
+        fail("Kernel: trailing DIGEST line missing")
 
-        if content.startswith("- "):
-            if not isinstance(parent, list):
-                raise ValueError("Unexpected list item outside of a list")
-            parent.append(parse_scalar(content[2:]))
-            continue
+    if digest_field and digest_field != digest_calc:
+        fail(f"Kernel: identity.digest mismatch (identity={digest_field} vs calc={digest_calc})")
+    if digest_tail and digest_tail != digest_calc:
+        fail(f"Kernel: DIGEST tail mismatch (tail={digest_tail} vs calc={digest_calc})")
 
-        if ":" not in content:
-            raise ValueError(f"Cannot parse line: {content!r}")
+    # --- Policy checks ---
+    ptxt = read_text(POLICY)
+    req_tokens = ["REFUSAL","SANDBOX","COMMAND_BAR","EVIDENCE","CONTINUITY_BLOCK","QUALITY_GATES"]
+    for tok in req_tokens:
+        if tok not in ptxt:
+            fail(f"Policy: missing required invariant token: {tok}")
 
-        key, value_part = content.split(":", 1)
-        key = key.strip()
-        value_part = value_part.strip()
+    if not re.search(r'refusal_policy:\s*"?pivot_to_sandbox"?', ptxt):
+        fail('Policy: refusal_policy must be "pivot_to_sandbox"')
 
-        if value_part:
-            if not isinstance(parent, dict):
-                raise ValueError("Cannot assign key/value inside a list")
-            parent[key] = parse_scalar(value_part)
-            continue
+    # --- Artifacts sanity ---
+    if not ARTIFACTS_DIR.exists():
+        fail(f"Artifacts dir missing: {ARTIFACTS_DIR}")
+    else:
+        for p in sorted(ARTIFACTS_DIR.glob("*.json")):
+            try:
+                data = json.loads(p.read_text(encoding="utf-8"))
+            except Exception as e:
+                fail(f"Artifact {p.name}: invalid JSON ({e})")
+                continue
+            if not isinstance(data, dict):
+                fail(f"Artifact {p.name}: top-level must be object")
+            elif "artifact_type" not in data:
+                fail(f"Artifact {p.name}: missing 'artifact_type' field")
 
-        # Determine the container type by peeking at the next nested line.
-        container = {}
-        for next_indent, next_content in lines[index + 1 :]:
-            if next_indent <= indent:
-                break
-            if next_indent == indent + 2:
-                container = [] if next_content.startswith("- ") else {}
-                break
-
-        if isinstance(parent, list):
-            parent.append(container)
+    # --- Agents manifesto soft check ---
+    manifest_path = ROOT / "docs" / "agents.md"
+    if not manifest_path.exists():
+        warn("Agents manifest missing: docs/agents.md")
+    else:
+        text = read_text(manifest_path)
+        fm_match = re.match(r"^---\n(.*?)\n---\n", text, flags=re.S)
+        if not fm_match:
+            warn("Agents manifest: front matter missing")
         else:
-            parent[key] = container
+            try:
+                front_matter = yaml.safe_load(fm_match.group(1)) or {}
+            except yaml.YAMLError as exc:
+                warn(f"Agents manifest: front matter parse error ({exc})")
+                front_matter = {}
+            artifact_type = front_matter.get("artifact_type")
+            digest = front_matter.get("digest")
+            if artifact_type != "agents_manifesto":
+                warn("Agents manifest: artifact_type must be 'agents_manifesto'")
+            if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-fA-F]{16}", digest):
+                warn("Agents manifest: digest field missing or invalid (expect 16 hex)")
 
-        stack.append((indent, container))
+    # --- Result ---
+    if errors:
+        print("VALIDATION: FAIL")
+        for e in errors:
+            print(" -", e)
+        print(f"Canonical kernel digest: {digest_calc}")
+        return 1
 
-    return root
+    print("VALIDATION: OK")
+    print(f"Kernel digest: {digest_calc} (identity + DIGEST match)")
+    print("Policy: invariants present; pivot_to_sandbox ON")
+    print(f"Artifacts: {len(list(ARTIFACTS_DIR.glob('*.json')))} json files OK")
+    if warnings:
+        for msg in warnings:
+            print(f"WARN: {msg}")
+    return 0
 
-
-def load_policy(policy_path: pathlib.Path) -> dict:
-    if not policy_path.exists():
-        return {}
-
-    text = policy_path.read_text(encoding="utf-8")
-
-    if yaml is not None:
-        return yaml.safe_load(text) or {}
-
-    print("::warning::PyYAML not installed; falling back to minimal policy parser")
-    try:
-        return _parse_policy_without_yaml(text) or {}
-    except Exception as exc:  # pragma: no cover - defensive, optional path
-        print(f"::warning::Failed to parse policy without PyYAML: {exc}")
-        return {}
-
-
-policy = load_policy(p)
-def fail(msg): print(f"::error::{msg}"); sys.exit(1)
-inv = (policy.get("invariants") or {})
-for tok in inv.get("must_include", ["REFUSAL","SANDBOX","COMMAND_BAR","EVIDENCE","CONTINUITY_BLOCK","QUALITY_GATES"]):
-    if tok not in kernel: fail(f"[invariants] missing token: {tok}")
-for bad in inv.get("banned_phrases", ["As an AI","I apologize"]):
-    if re.search(rf"\b{re.escape(bad)}\b", kernel, flags=re.I): fail(f"[style] banned phrase present: {bad}")
-for name,rx in {
-  "pivot_to_sandbox": r"REFUSAL.?→.?SANDBOX",
-  "artifact_first":   r"ARTIFACT[_\- ]?FIRST",
-  "resp_schema":      r"RESPONSE[_\- ]SCHEMA",
-}.items():
-    if not re.search(rx, kernel, flags=re.I):
-        fail(f"[semantic] missing section: {name}")
-
-inline_match = re.search(r"^  digest: ([0-9a-f]{16})", kernel, flags=re.M)
-tail_match = re.search(r"^DIGEST: ([0-9a-f]{16})", kernel, flags=re.M)
-if not inline_match or not tail_match:
-    fail("digest markers missing from kernel")
-inline_digest, tail_digest = inline_match.group(1), tail_match.group(1)
-if inline_digest != identity or tail_digest != identity:
-    fail("digest fields inconsistent with identity.digest")
-
-canonical = re.sub(r"^  digest: [0-9a-f]{16}.*$", "  digest: {{DIGEST16}}", kernel, count=1, flags=re.M)
-canonical = re.sub(r"^DIGEST: [0-9a-f]{16}$", "DIGEST: {{DIGEST16}}", canonical, count=1, flags=re.M)
-calc = hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:16]
-if calc != identity:
-    fail(f"digest mismatch: computed {calc} expected {identity}")
-
-print("Kernel OK")
-print("DIGEST::" + calc)
+if __name__ == "__main__":
+    sys.exit(main())

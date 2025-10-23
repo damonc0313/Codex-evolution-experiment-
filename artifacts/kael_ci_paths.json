@@ -1,0 +1,11 @@
+{
+  "artifact_type": "ci_update",
+  "workflow": ".github/workflows/codex-ci.yml",
+  "paths": [
+    "docs/LEDGER_KAEL_2025-10-23.md",
+    "tools/ledger_metrics.py",
+    "tools/self_query.py",
+    "tests/kael_hypotheses.json"
+  ],
+  "notes": "CI now watches Kael ledger, metrics, and self-query upgrades."
+}

@@ -1,0 +1,7 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "C",
+  "action": "created",
+  "target": "docs/agents.md",
+  "notes": "Initial manifesto authored from scratch; no prior file existed"
+}

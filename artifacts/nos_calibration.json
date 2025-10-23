@@ -1,0 +1,15 @@
+{
+  "artifact_type": "nos_calibration",
+  "weights": {
+    "energy_efficiency": 0.25,
+    "coherence": 0.25,
+    "resilience": 0.25,
+    "entropy": 0.25
+  },
+  "defaults": {
+    "energy_efficiency": 0.35,
+    "coherence": 0.3,
+    "resilience": 0.25,
+    "entropy": 0.1
+  }
+}

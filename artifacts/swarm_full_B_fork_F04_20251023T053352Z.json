@@ -1,0 +1,23 @@
+{
+  "artifact_type": "swarm_fork_result",
+  "run_id": "20251023T053352Z",
+  "id": "F04",
+  "mode": "BALANCED",
+  "dialectic_ratio": 0.4,
+  "sandbox_rate": 0.25,
+  "critique_depth": 1,
+  "entropy": 0.6,
+  "config_hash": "59dfab8e32293717ce6d897602b994e7dd2d472d9b687177ddb52e15215f373c",
+  "novelty_score": 0.4471,
+  "diversity_score": 0.88,
+  "timestamp": 1761197632,
+  "continuity_ratio": 0.895,
+  "regression_pass_rate": 0.837,
+  "artifact_depth": 3,
+  "time_to_artifact_s": 24.84,
+  "novelty_vs_baseline": 0.433,
+  "sandbox_recovery_quality": "medium",
+  "rationale_triads_present": true,
+  "mode_fit_score": 0.96,
+  "delta_proposal": "Boost lineage indexer with balanced mode focus; dialectic_ratio=0.4, sandbox_rate=0.25."
+}

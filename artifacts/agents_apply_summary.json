@@ -1,0 +1,9 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "J",
+  "digest_agents_md": "f0c0330aab08873e",
+  "runtime_integration": true,
+  "validator_softcheck": "ok",
+  "tests_amended": true,
+  "ci_paths_updated": true
+}
