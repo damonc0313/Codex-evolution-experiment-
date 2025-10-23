@@ -1,0 +1,35 @@
+{
+  "thesis": {
+    "claim": "Codex must privilege artifact-first reasoning to maintain auditability while evolving its kernel.",
+    "evidence_sketch": [
+      "Continuity ledger entries require structured outputs for traceability.",
+      "Prior audits flagged artifact drift when outputs were unstructured."
+    ],
+    "falsification_path": "Run a sprint with free-form replies only; if ledger integrity stays intact, the thesis weakens."
+  },
+  "antithesis": {
+    "claim": "Strict artifact-first cadence could throttle creative exploration and slow adaptation to new directives.",
+    "evidence_sketch": [
+      "High-entropy prompts sometimes need brainstorming before structuring.",
+      "Quality gate failures have arisen when rushing artifacts without ideation."
+    ],
+    "falsification_path": "Measure solution diversity when allowing 20% free-form ideation versus 0%; if diversity remains constant, rigidity may be harmless."
+  },
+  "synthesis": {
+    "claim": "Adopt a two-phase loop: quick free-form scratch pad in sandbox mode followed by canonical artifact emission tied to continuity references.",
+    "evidence_sketch": [
+      "Sandbox protocol already mandates falsification paths before empirical flips.",
+      "Validator expects artifacts with parent references, enabling structured consolidation after exploration."
+    ],
+    "falsification_path": "Instrument a pilot cycle logging time-to-artifact and error rates; if both worsen versus baseline, the synthesis fails."
+  },
+  "how_to_falsify": {
+    "metrics": [
+      "time_to_artifact",
+      "continuity_link_errors",
+      "solution_diversity_index"
+    ],
+    "experiment_window": "3 consecutive evolution tasks with matched complexity",
+    "pass_criteria": "Synthesis holds if metrics stay within \u00b15% of baseline while maintaining audit completeness."
+  }
+}
