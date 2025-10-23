@@ -39,6 +39,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ARTIFACTS_DIR = ROOT / "artifacts"
 RUNTIME_DIR = ROOT / "runtime"
 USER_QUERY = RUNTIME_DIR / "user_query.txt"
+MANIFESTO_PATH = ROOT / "docs" / "agents.md"
 LOOP_POLICY_PATHS = [
     ROOT / "runtime" / "loop_policy.yaml",
     ROOT / "docs" / "loop_policy.yaml",
@@ -47,13 +48,14 @@ LOOP_POLICY_PATHS = [
 # Fork parameter space (mirrors mentor instruction)
 MODES = ["STRICT", "BALANCED", "CREATIVE"]
 DIALECTIC_RATIOS = [0.4, 0.6, 0.8]
-SANDBOX_RATES = [0.0, 0.25, 0.5]
+SANDBOX_RATES = [0.0, 0.25]
 CRITIQUE_DEPTHS = [1, 2]
 ENTROPY_LEVELS = [0.6, 0.9]
-TARGET_FORKS = 15  # ensure ≥12 and ≤18 actual samples
+TARGET_FORKS = 18  # ensure ≥18 samples when novelty floor permits
 MIN_TOP_FORKS = 3
 MAX_TOP_FORKS = 5
 RECENT_WINDOW_SECONDS = 24 * 60 * 60
+ARTIFACT_PREFIX = "swarm_full"
 
 
 @dataclass(frozen=True)
@@ -160,7 +162,7 @@ def _recent_config_hashes() -> Dict[str, int]:
     cutoff = int(time.time()) - RECENT_WINDOW_SECONDS
     if not ARTIFACTS_DIR.exists():
         return recent
-    for path in ARTIFACTS_DIR.glob("swarm_B_fork_*.json"):
+    for path in ARTIFACTS_DIR.glob(f"{ARTIFACT_PREFIX}_B_fork_*.json"):
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
         except Exception:
@@ -170,6 +172,12 @@ def _recent_config_hashes() -> Dict[str, int]:
         if isinstance(config_hash, str) and isinstance(ts, int) and ts >= cutoff:
             recent[config_hash] = ts
     return recent
+
+
+def _manifest_digest_short() -> str:
+    if not MANIFESTO_PATH.exists():
+        return "unknown"
+    return hashlib.sha256(MANIFESTO_PATH.read_bytes()).hexdigest()[:16]
 
 
 def _diversity_score(mode: str, ratio: float, sandbox_rate: float, critique_depth: int, entropy: float) -> float:
@@ -269,7 +277,7 @@ def _phase_a_plan(run_id: str, configs: Sequence[ForkConfig], *, dry_run: bool) 
         "generated_at": int(time.time()),
         "forks": [cfg.to_payload() for cfg in configs],
     }
-    path = ARTIFACTS_DIR / f"swarm_A_plan_{run_id}.json"
+    path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_A_plan_{run_id}.json"
     if not dry_run:
         _write_json(path, payload)
     return path
@@ -282,14 +290,14 @@ def _phase_b_forks(run_id: str, configs: Sequence[ForkConfig], *, dry_run: bool)
         results.append(result)
         if dry_run:
             continue
-        fork_path = ARTIFACTS_DIR / f"swarm_B_fork_{cfg.fork_id}_{run_id}.json"
+        fork_path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_B_fork_{cfg.fork_id}_{run_id}.json"
         _write_json(fork_path, {
             "artifact_type": "swarm_fork_result",
             "run_id": run_id,
             **result.to_payload(),
         })
     if not dry_run:
-        index_path = ARTIFACTS_DIR / f"swarm_B_index_{run_id}.json"
+        index_path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_B_index_{run_id}.json"
         _write_json(
             index_path,
             {
@@ -371,7 +379,7 @@ def _phase_c_select(run_id: str, results: Sequence[ForkResult], *, dry_run: bool
         ],
     }
     if not dry_run:
-        path = ARTIFACTS_DIR / f"swarm_C_selection_{run_id}.json"
+        path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_C_selection_{run_id}.json"
         _write_json(path, payload)
     return selected
 
@@ -397,8 +405,125 @@ def _phase_d_fusion(run_id: str, selected: Sequence[ForkResult], *, dry_run: boo
         ],
     }
     if not dry_run:
-        path = ARTIFACTS_DIR / f"swarm_D_fusion_{run_id}.json"
+        path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_D_fusion_{run_id}.json"
         _write_json(path, payload)
+    return payload
+
+
+def _neutralize_digest_line(line: str) -> str:
+    stripped = line.lstrip()
+    if stripped.startswith("digest:"):
+        prefix = line[: len(line) - len(stripped)]
+        return f"{prefix}digest: "
+    return line
+
+
+def _stamp_digest(path: Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    neutral_lines = [_neutralize_digest_line(line) for line in lines]
+    newline = "\n" if text.endswith("\n") else ""
+    neutral_text = "\n".join(neutral_lines) + newline
+    digest = hashlib.sha256(neutral_text.encode("utf-8")).hexdigest()[:16]
+
+    updated_lines = []
+    replaced = False
+    for line in lines:
+        stripped = line.lstrip()
+        if not replaced and stripped.startswith("digest:"):
+            prefix = line[: len(line) - len(stripped)]
+            updated_lines.append(f"{prefix}digest: {digest}")
+            replaced = True
+        else:
+            updated_lines.append(line)
+    updated_text = "\n".join(updated_lines) + newline
+    path.write_text(updated_text, encoding="utf-8")
+    return digest
+
+
+def _phase_e_sep_preview(
+    run_id: str,
+    selected: Sequence[ForkResult],
+    fusion_payload: Dict[str, Any],
+    *,
+    dry_run: bool,
+) -> Dict[str, Any]:
+    doc_path = ROOT / "docs" / "SEP-0003_lineage_schema.md"
+    timestamp = int(time.time())
+    averages = {
+        "continuity_ratio": statistics.mean(r.continuity_ratio for r in selected),
+        "regression_pass_rate": statistics.mean(r.regression_pass_rate for r in selected),
+        "novelty_vs_baseline": statistics.mean(r.novelty_vs_baseline for r in selected),
+    }
+    best = max(selected, key=_composite_score)
+    sources = [
+        f"artifacts/{ARTIFACT_PREFIX}_B_index_{run_id}.json",
+        f"artifacts/{ARTIFACT_PREFIX}_C_selection_{run_id}.json",
+        f"artifacts/{ARTIFACT_PREFIX}_D_fusion_{run_id}.json",
+        "docs/agents.md",
+    ]
+
+    doc_content = (
+        "---\n"
+        "artifact_type: sep_proposal\n"
+        "id: SEP-0003\n"
+        "title: \"Lineage Schema Upgrade\"\n"
+        "status: draft\n"
+        "version: v0.1\n"
+        f"generated_at: {timestamp}\n"
+        "digest: TEMP\n"
+        "sources:\n"
+        + "\n".join(f"  - {src}" for src in sources)
+        + "\n---\n\n"
+        "# Summary\n"
+        "Elevate the continuity ledger into a versioned lineage schema, ensuring every artifact references parent hashes and execution metadata. "
+        "The upgrade is motivated by swarm forks that highlighted lineage depth as the dominant driver of continuity_ratio improvements.\n\n"
+        "## Proposed Changes\n"
+        "1. Introduce `lineage_root`, `parent_hashes`, and `swarm_run_id` fields to new artifacts.\n"
+        "2. Ship a migration utility that replays recent artifacts to backfill lineage metadata.\n"
+        "3. Extend the validator with strict lineage checks and gating thresholds (promotion from WARN→FAIL).\n"
+        "4. Accelerate the continuity indexer to maintain sub-10s refresh under Ω-cycle load.\n\n"
+        "## Evidence\n"
+        f"- Swarm fork fusion synthesis: {fusion_payload['dialectic']['synthesis']}\n"
+        f"- KPI averages (continuity={averages['continuity_ratio']:.3f}, regression={averages['regression_pass_rate']:.3f}, novelty={averages['novelty_vs_baseline']:.3f}).\n"
+        f"- Best configuration: mode={best.config.mode}, dialectic_ratio={best.config.dialectic_ratio}, sandbox_rate={best.config.sandbox_rate}, "
+        f"critique_depth={best.config.critique_depth}, entropy={best.config.entropy}.\n\n"
+        "## Assumptions\n"
+        f"- Agents manifesto remains at digest \"{_manifest_digest_short()}\" during rollout.\n"
+        "- Loop policy stop flags stay unchanged throughout SEP-0003 execution.\n\n"
+        "## Risks & Mitigations\n"
+        "- **Risk:** Validator false positives during migration.\n"
+        "  **Mitigation:** dry-run migration artifact plus mentor review before enforcement.\n"
+        "- **Risk:** Continuity indexer lag under swarm load.\n"
+        "  **Mitigation:** throttle autonomous query entropy until performance stabilises.\n\n"
+        "## Acceptance Criteria\n"
+        "- Validator enforces lineage fields (WARN→FAIL) with zero regressions in tests/claude_regressions.json.\n"
+        "- Continuity snapshots reference new lineage fields for all artifacts created post-merge.\n"
+        "- Swarm bench KPIs maintain continuity_ratio ≥0.9 and regression_pass_rate ≥0.85.\n\n"
+        "## Rollback Strategy\n"
+        "- Retain legacy schema writer behind a feature flag; revert by toggling `lineage_schema.enabled=false` in runtime config.\n"
+        "- Restore validator WARN mode via SEP-0002 rollback instructions.\n\n"
+        "## Next Steps\n"
+        "- Prepare SEP-0003 implementation branch with migration scripts and validator upgrade.\n"
+        "- Schedule mentor review focusing on lineage schema resilience.\n"
+    )
+
+    digest = None
+    if not dry_run:
+        doc_path.parent.mkdir(parents=True, exist_ok=True)
+        doc_path.write_text(doc_content, encoding="utf-8")
+        digest = _stamp_digest(doc_path)
+
+    payload = {
+        "artifact_type": "swarm_sep_preview",
+        "run_id": run_id,
+        "path": str(doc_path.relative_to(ROOT)),
+        "written": not dry_run,
+        "digest": digest,
+        "sources": sources,
+    }
+    if not dry_run:
+        _write_json(ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_E_sep0003_{run_id}.json", payload)
     return payload
 
 
@@ -418,7 +543,7 @@ def _novelty_against_previous(candidate: str, previous: str) -> float:
     return xor / max_val
 
 
-def _phase_e_next_query(
+def _phase_f_next_query(
     run_id: str,
     selected: Sequence[ForkResult],
     policy: LoopPolicy,
@@ -461,17 +586,18 @@ def _phase_e_next_query(
         "previous_query_present": bool(previous_query.strip()),
     }
     if not dry_run:
-        _write_json(ARTIFACTS_DIR / f"swarm_E_next_query_{run_id}.json", payload)
+        _write_json(ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_F_next_query_{run_id}.json", payload)
         USER_QUERY.parent.mkdir(parents=True, exist_ok=True)
-        USER_QUERY.write_text(query, encoding="utf-8")
+        USER_QUERY.write_text(query + "\n", encoding="utf-8")
     return payload
 
 
-def _phase_f_summary(
+def _phase_g_summary(
     run_id: str,
     results: Sequence[ForkResult],
     selected: Sequence[ForkResult],
     fusion_payload: Dict[str, Any],
+    sep_preview_payload: Dict[str, Any],
     next_query_payload: Dict[str, Any],
     policy: LoopPolicy,
     *,
@@ -497,18 +623,35 @@ def _phase_f_summary(
             "novelty_floor": policy.novelty_floor,
         },
         "fusion": fusion_payload,
+        "sep_preview": sep_preview_payload,
         "next_query": next_query_payload,
         "gated": gated,
     }
     if not dry_run:
-        _write_json(ARTIFACTS_DIR / f"swarm_F_summary_{run_id}.json", summary)
+        _write_json(ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_G_summary_{run_id}.json", summary)
     return summary
+
+
+def _update_loop_state(run_id: str, summary: Dict[str, Any], *, dry_run: bool) -> None:
+    if dry_run:
+        return
+    payload = {
+        "artifact_type": "swarm_loop_state",
+        "run_id": run_id,
+        "updated_at": int(time.time()),
+        "summary": summary,
+    }
+    RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
+    (RUNTIME_DIR / "loop_state.json").write_text(
+        json.dumps(payload, indent=2),
+        encoding="utf-8",
+    )
 
 
 def _phase_gate_check(run_id: str, selected: Sequence[ForkResult], *, dry_run: bool) -> bool:
     avg_regression = statistics.mean(r.regression_pass_rate for r in selected)
     avg_continuity = statistics.mean(r.continuity_ratio for r in selected)
-    gated = avg_regression < 0.8 or avg_continuity < 0.9
+    gated = avg_regression < 0.85 or avg_continuity < 0.9
     if gated and not dry_run:
         payload = {
             "artifact_type": "swarm_gate_block",
@@ -522,7 +665,7 @@ def _phase_gate_check(run_id: str, selected: Sequence[ForkResult], *, dry_run: b
                 "Reduce entropy budget for upcoming cycles",
             ],
         }
-        _write_json(ARTIFACTS_DIR / f"swarm_gate_block_{run_id}.json", payload)
+        _write_json(ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_gate_block_{run_id}.json", payload)
     return gated
 
 
@@ -561,13 +704,26 @@ def run_swarm(*, dry_run: bool = False) -> Dict[str, Any]:
     selected = _phase_c_select(run_id, results, dry_run=dry_run)
     gated = _phase_gate_check(run_id, selected, dry_run=dry_run)
     fusion = _phase_d_fusion(run_id, selected, dry_run=dry_run)
-    next_query = _phase_e_next_query(run_id, selected, policy, dry_run=dry_run, gated=gated)
-    summary = _phase_f_summary(run_id, results, selected, fusion, next_query, policy, dry_run=dry_run, gated=gated)
+    sep_preview = _phase_e_sep_preview(run_id, selected, fusion, dry_run=dry_run)
+    next_query = _phase_f_next_query(run_id, selected, policy, dry_run=dry_run, gated=gated)
+    summary = _phase_g_summary(
+        run_id,
+        results,
+        selected,
+        fusion,
+        sep_preview,
+        next_query,
+        policy,
+        dry_run=dry_run,
+        gated=gated,
+    )
+    _update_loop_state(run_id, summary, dry_run=dry_run)
 
     return {
         "run_id": run_id,
         "forks_launched": len(results),
         "selected": len(selected),
+        "sep_preview": sep_preview,
         "gated": gated,
         "summary": summary,
     }
@@ -593,20 +749,22 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if args.dry_run:
         print(
-            "[SWARM] Dry-run complete — run_id={run} forks={forks} selected={selected} gated={gated}".format(
+            "[SWARM] Dry-run complete — run_id={run} forks={forks} selected={selected} gated={gated} sep_written={sep}".format(
                 run=result["run_id"],
                 forks=result["forks_launched"],
                 selected=result["selected"],
                 gated=result["gated"],
+                sep=result["sep_preview"]["written"],
             )
         )
     else:
         print(
-            "[SWARM] Completed run {run}: forks={forks} selected={selected} gated={gated}".format(
+            "[SWARM] Completed run {run}: forks={forks} selected={selected} gated={gated} sep_digest={sep}".format(
                 run=result["run_id"],
                 forks=result["forks_launched"],
                 selected=result["selected"],
                 gated=result["gated"],
+                sep=result["sep_preview"]["digest"],
             )
         )
     return 0

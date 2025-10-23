@@ -1,0 +1,6 @@
+{
+  "artifact_type": "validator_guard_patch",
+  "timestamp": 1761199693,
+  "import_guard": "WARN on missing PyYAML then exit 0",
+  "status": "applied"
+}

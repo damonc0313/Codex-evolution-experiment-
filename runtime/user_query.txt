@@ -1,1 +1,1 @@
-Enhance Codex's dialectic synthesis module
+/evolve 'Implement queue-balancer v1 PoC + lineage hooks; draft SEP-0005 multi-agent comparison; run 12-fork swarm with Kael metrics guard'

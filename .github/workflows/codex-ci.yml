@@ -4,11 +4,16 @@ on:
   push:
     paths:
       - "docs/agents.md"
+      - "docs/LEDGER_KAEL_2025-10-23.md"
       - "tools/agents_protocol.py"
+      - "tools/ledger_metrics.py"
       - "tools/run_omega_cycle.py"
+      - "tools/self_query.py"
       - "tools/validate_kernel.py"
       - "tests/claude_regressions.json"
+      - "tests/kael_hypotheses.json"
       - ".github/workflows/codex-ci.yml"
+      - "requirements.txt"
   pull_request:
 
 jobs:
@@ -21,6 +26,6 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install deps
-        run: pip install pyyaml
+        run: pip install -r requirements.txt
       - name: Validate kernel, policy, artifacts
         run: python tools/validate_kernel.py

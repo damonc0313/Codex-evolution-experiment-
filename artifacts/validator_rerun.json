@@ -1,0 +1,8 @@
+{
+  "artifact_type": "validator_rerun",
+  "timestamp": 1761199876,
+  "command": "python tools/validate_kernel.py",
+  "exit_code": 0,
+  "digest": "65e63e538c97e181",
+  "artifacts_checked": 72
+}
