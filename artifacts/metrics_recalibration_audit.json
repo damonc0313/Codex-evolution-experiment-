@@ -1,0 +1,274 @@
+{
+  "artifact_type": "metrics_recalibration_audit",
+  "timestamp": "2025-10-23T13:03:06.050274",
+  "total_artifacts": 32,
+  "classifications": {
+    "building": 13,
+    "analysis": 4,
+    "hybrid": 14,
+    "unknown": 1
+  },
+  "percentages": {
+    "building": 40.6,
+    "analysis": 12.5,
+    "hybrid": 43.8
+  },
+  "metrics": {
+    "corrected_building_ratio": 0.645,
+    "average_confidence": 0.834,
+    "kael_target_building_ratio": 0.55,
+    "kael_target_confidence": 0.85
+  },
+  "threshold_assessment": {
+    "building_ratio_status": "PASS",
+    "building_ratio_gap": 0.095,
+    "confidence_status": "FAIL",
+    "confidence_gap": -0.016
+  },
+  "artifact_details": [
+    {
+      "name": "agents_apply_ci.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (2 building, 1 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "agents_apply_cisim.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (2 building, 2 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "agents_apply_digest.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "UNKNOWN",
+      "rationale": "No classification keywords found",
+      "confidence": 0.5
+    },
+    {
+      "name": "agents_apply_draft.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (6 vs 0)",
+      "confidence": 0.9
+    },
+    {
+      "name": "agents_apply_harvest.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (5 building, 3 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "agents_apply_patch.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (2 vs 0)",
+      "confidence": 0.9
+    },
+    {
+      "name": "agents_apply_runtime.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (3 building, 2 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "agents_apply_summary.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "ANALYSIS",
+      "rationale": "Strong analysis indicators (2 vs 0)",
+      "confidence": 0.75
+    },
+    {
+      "name": "agents_apply_tests.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (1 vs 0)",
+      "confidence": 0.9
+    },
+    {
+      "name": "agents_apply_validator.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (2 building, 2 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "agents_decision_summary.json",
+      "artifact_type": "reflection_decision",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (5 building, 10 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "agents_digest_lineage.json",
+      "artifact_type": "digest_lineage",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (7 vs 0)",
+      "confidence": 0.9
+    },
+    {
+      "name": "agents_feedback_trace.json",
+      "artifact_type": "agents_feedback_trace",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (5 building, 11 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "agents_reflect_report.json",
+      "artifact_type": "agents_reflection",
+      "classification": "ANALYSIS",
+      "rationale": "Strong analysis indicators (12 vs 5)",
+      "confidence": 0.75
+    },
+    {
+      "name": "artifact_0000_init.json",
+      "artifact_type": "genesis_snapshot",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (5 vs 2)",
+      "confidence": 0.9
+    },
+    {
+      "name": "artifact_0002_handshake.json",
+      "artifact_type": "integrity_handshake",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (5 vs 0)",
+      "confidence": 0.9
+    },
+    {
+      "name": "artifact_0002_meta.json",
+      "artifact_type": "self_reflection",
+      "classification": "ANALYSIS",
+      "rationale": "Strong analysis indicators (11 vs 3)",
+      "confidence": 0.75
+    },
+    {
+      "name": "artifact_0003_triad.json",
+      "artifact_type": "dialectic_triad",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (6 building, 3 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "artifact_0004_sandbox.json",
+      "artifact_type": "sandbox_probe",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (3 vs 1)",
+      "confidence": 0.9
+    },
+    {
+      "name": "artifact_0005_continuity.json",
+      "artifact_type": "continuity_index",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (5 building, 3 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "artifact_0006_modes.json",
+      "artifact_type": "mode_benchmark",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (5 vs 2)",
+      "confidence": 0.9
+    },
+    {
+      "name": "artifact_0007_SEP0001_preview.json",
+      "artifact_type": "sep_preview",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (10 building, 7 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "artifact_0008_meta_audit.json",
+      "artifact_type": "meta_audit",
+      "classification": "ANALYSIS",
+      "rationale": "Strong analysis indicators (11 vs 2)",
+      "confidence": 0.75
+    },
+    {
+      "name": "artifact_0009_SEP0001_plan.json",
+      "artifact_type": "sep_plan",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (12 vs 2)",
+      "confidence": 0.9
+    },
+    {
+      "name": "artifact_0010_fractal.json",
+      "artifact_type": "self_analysis_fractal",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (5 vs 2)",
+      "confidence": 0.9
+    },
+    {
+      "name": "artifact_0011_continuity.json",
+      "artifact_type": "continuity_snapshot",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (10 building, 5 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "artifact_0012_falsify.json",
+      "artifact_type": "sandbox_counterfactual",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (3 vs 1)",
+      "confidence": 0.9
+    },
+    {
+      "name": "artifact_0013_SEP0001_dryrun.json",
+      "artifact_type": "sep_dryrun",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (8 vs 0)",
+      "confidence": 0.9
+    },
+    {
+      "name": "continuous_operation_metrics.json",
+      "artifact_type": "unknown",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (2 building, 1 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "kael_index.json",
+      "artifact_type": "cross_architecture_synthesis_index",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (5 building, 4 analysis)",
+      "confidence": 0.82
+    },
+    {
+      "name": "sep0002_digest.json",
+      "artifact_type": "sep_digest",
+      "classification": "BUILDING",
+      "rationale": "Strong building indicators (8 vs 1)",
+      "confidence": 0.9
+    },
+    {
+      "name": "sep0002_sandbox.json",
+      "artifact_type": "sandbox_validator_sim",
+      "classification": "HYBRID",
+      "rationale": "Mixed indicators (4 building, 2 analysis)",
+      "confidence": 0.82
+    }
+  ],
+  "analysis": {
+    "divergence_from_kael": {
+      "original_building_ratio": 0.16,
+      "corrected_building_ratio": 0.645,
+      "improvement": 0.485,
+      "still_below_target": false
+    },
+    "possible_causes": [
+      "Codex artifact-first protocol creates more meta-artifacts (reflections, reports)",
+      "Agents manifesto emphasis on validation/auditing increases analysis artifacts",
+      "Swarm fusion synthesis generates analytical artifacts as intermediate steps",
+      "Classification heuristics may need environment-specific calibration"
+    ],
+    "recommendations": [
+      "Audit ledger entries (not just artifacts) for building vs analysis balance",
+      "Weight artifact classifications by downstream impact (building artifacts spawn more work)",
+      "Consider artifact-first protocol as baseline shift (all outputs are 'building')",
+      "Recalibrate thresholds based on Codex-specific operational regime"
+    ]
+  }
+}
