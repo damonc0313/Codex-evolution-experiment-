@@ -1,0 +1,7 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "F",
+  "file": "tools/validate_kernel.py",
+  "check": "agents_manifesto_soft_warn",
+  "behavior": "Emits WARN lines when docs/agents.md missing or malformed"
+}

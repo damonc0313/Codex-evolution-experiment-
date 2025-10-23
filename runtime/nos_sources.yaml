@@ -1,0 +1,23 @@
+schema_version: 1
+sources:
+  - kind: evolution_rates
+    id: evo_rates_01
+    path: data/evo/evo_rates.csv
+    fields:
+      mutation_rate: float
+      selection_gradient: float
+      generation_time: float
+  - kind: population_dynamics
+    id: pop_dyn_01
+    path: data/evo/pop_dyn.json
+    fields:
+      birth_rate: float
+      death_rate: float
+      carrying_capacity: float
+  - kind: fitness_landscapes
+    id: fit_land_01
+    path: data/evo/fitness_land.parquet
+    fields:
+      ruggedness: float
+      peaks: int
+      neutrality: float

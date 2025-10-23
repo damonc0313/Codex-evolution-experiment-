@@ -1,4 +1,5 @@
 invariants:
+  refusal_policy: "pivot_to_sandbox"
   must_include:
     - REFUSAL
     - SANDBOX

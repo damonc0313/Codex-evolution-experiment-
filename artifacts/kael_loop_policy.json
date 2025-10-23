@@ -1,0 +1,23 @@
+{
+  "artifact_type": "loop_policy_update",
+  "policy_path": "runtime/loop_policy.yaml",
+  "changes": {
+    "enabled": true,
+    "self_write": true,
+    "max_iterations": 50,
+    "cooldown_seconds": 8,
+    "novelty_floor": 0.35,
+    "autonomous_permission": true
+  },
+  "continuous_operation_targets": {
+    "task_queue_min": 6,
+    "building_ratio_min": 0.55,
+    "task_multiplication_min": 1.6
+  },
+  "stop_on": [
+    "ci_fail",
+    "digest_mismatch",
+    "continuity_low",
+    "regressions_spike"
+  ]
+}

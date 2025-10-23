@@ -1,0 +1,65 @@
+{
+  "artifact_type": "agents_reflection",
+  "manifest_digest": "f0c0330aab08873e",
+  "sections": [
+    "Purpose and Scope",
+    "Core Doctrine",
+    "Agent Taxonomy",
+    "Autonomy Ladder",
+    "Decision Framework",
+    "Creative Protocols",
+    "Persistence and Ledger Discipline",
+    "Self-Improvement Loop",
+    "Mentor Bridge",
+    "Safety and Sandboxes",
+    "KPIs and Telemetry",
+    "Appendix"
+  ],
+  "decision_ladder": [
+    "Harvest findings",
+    "Measure KPIs",
+    "Propose reversible delta",
+    "Validate regressions",
+    "Commit after approval"
+  ],
+  "role_alignment": {
+    "Codex": {
+      "declared": "Executes Ω-cycle, generates artifacts, runs validations",
+      "observed_functions": [
+        "tools/run_omega_cycle.py main()",
+        "tools/agents_protocol.py.kpis",
+        "tools/evolve_loop.py run_cycle()"
+      ],
+      "alignment": "consistent"
+    },
+    "Mentor": {
+      "declared": "Critiques Codex outputs, updates objectives",
+      "observed_functions": [
+        "tools/evolve_loop.py run_cycle() --mentor invocation",
+        "runtime/mentor_feedback.txt consumer"
+      ],
+      "alignment": "partial" ,
+      "notes": "Feedback ingestion exists but no automatic summary writer yet"
+    },
+    "Validator": {
+      "declared": "Ensures kernel/policy/artifact integrity",
+      "observed_functions": [
+        "tools/validate_kernel.py main()"
+      ],
+      "alignment": "consistent"
+    }
+  },
+  "assumptions": [
+    "Mentor feedback loop will be extended to auto-summarize post-cycle results",
+    "Manifest sections remain stable for KPI extraction"
+  ],
+  "risk": {
+    "description": "Mentor alignment is only partial; missing automatic artifact summary injection could desync feedback cadence",
+    "mitigation": "Add Ω-cycle summary writer in SEP-0002 to append mentor feedback automatically"
+  },
+  "acceptance_criteria": [
+    "Manifest digest matches documented front matter",
+    "Sections enumerated align with manifesto body",
+    "Each agent role maps to at least one runtime function"
+  ]
+}

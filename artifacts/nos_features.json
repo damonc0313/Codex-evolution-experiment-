@@ -1,0 +1,9 @@
+{
+  "artifact_type": "nos_features",
+  "primitives": {
+    "energy_efficiency": 0.0,
+    "coherence": 0.0,
+    "resilience": 0.0,
+    "entropy": 0.0
+  }
+}
