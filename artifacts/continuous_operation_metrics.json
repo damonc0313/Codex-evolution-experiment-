@@ -1,11 +1,11 @@
 {
   "metrics": {
     "cascade_probability": 0.25,
-    "building_ratio": 0.0,
+    "building_ratio": 0.5,
     "task_multiplication": 1.0,
     "continuity_ratio": 1.0,
     "queue_depth": 0,
-    "continuous_operation_score": 0.0
+    "continuous_operation_score": 0.114
   },
   "thresholds": {
     "cascade_probability": {
@@ -14,7 +14,7 @@
       "status": "FAIL"
     },
     "building_ratio": {
-      "value": 0.0,
+      "value": 0.5,
       "threshold": 0.55,
       "status": "FAIL"
     },
@@ -36,6 +36,6 @@
   },
   "assessment": {
     "continuous_operation": "INACTIVE",
-    "score": 0.0
+    "score": 0.114
   }
 }
