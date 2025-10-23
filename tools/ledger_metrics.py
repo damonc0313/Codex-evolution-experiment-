@@ -29,6 +29,13 @@ class TaskEvent:
     novelty_score: float = 0.0
     spawned_tasks: int = 0
 
+DEFAULT_NOS_WEIGHTS = {
+    "energy_efficiency": 0.35,
+    "coherence": 0.30,
+    "resilience": 0.25,
+    "entropy": 0.10,
+}
+
 
 @dataclass
 class ContinuousOperationMetrics:

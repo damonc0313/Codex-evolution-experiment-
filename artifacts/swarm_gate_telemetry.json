@@ -1,0 +1,10 @@
+{
+  "artifact_type": "swarm_gate_telemetry",
+  "metrics": {
+    "continuity_ratio": 0.9222777777777778,
+    "regression_pass_rate": 0.8504444444444444,
+    "novelty_vs_baseline": 0.5786111111111111,
+    "time_to_artifact_s": 32.25111111111111
+  },
+  "nos_score": 0.0
+}

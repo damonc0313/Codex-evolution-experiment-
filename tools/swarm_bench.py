@@ -30,6 +30,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Sequence
 
+from ledger_metrics import DEFAULT_NOS_WEIGHTS, compute_nos_score
+
 try:
     import yaml  # type: ignore
 except Exception:  # pragma: no cover - optional dependency
@@ -97,10 +99,15 @@ class ForkResult:
     artifact_depth: int
     time_to_artifact_s: float
     novelty_vs_baseline: float
+    building_ratio: float
+    task_multiplication: float
+    cascade_probability: float
+    queue_depth: float
     sandbox_recovery_quality: str
     rationale_triads_present: bool
     mode_fit_score: float
     delta_proposal: str
+    nos_score: float
 
     def to_payload(self) -> Dict[str, Any]:
         payload = self.config.to_payload()
@@ -112,10 +119,15 @@ class ForkResult:
                 "artifact_depth": self.artifact_depth,
                 "time_to_artifact_s": round(self.time_to_artifact_s, 2),
                 "novelty_vs_baseline": round(self.novelty_vs_baseline, 3),
+                "building_ratio": round(self.building_ratio, 3),
+                "task_multiplication": round(self.task_multiplication, 3),
+                "cascade_probability": round(self.cascade_probability, 3),
+                "queue_depth": round(self.queue_depth, 2),
                 "sandbox_recovery_quality": self.sandbox_recovery_quality,
                 "rationale_triads_present": self.rationale_triads_present,
                 "mode_fit_score": round(self.mode_fit_score, 3),
                 "delta_proposal": self.delta_proposal,
+                "nos_score": round(self.nos_score, 3),
             }
         )
         return payload
@@ -126,6 +138,8 @@ class LoopPolicy:
     stop_on: Sequence[str]
     cooldown_seconds: int
     novelty_floor: float
+    nos_weights: Dict[str, float]
+    nos_gate_floor: float
 
 
 def _timestamp_id() -> str:
@@ -153,7 +167,27 @@ def _load_loop_policy() -> LoopPolicy:
     stop_on = tuple(data.get("stop_on", []) if isinstance(data.get("stop_on"), list) else [])
     cooldown = data.get("cooldown", 0)
     novelty_floor = data.get("novelty_floor", 0.2)
-    return LoopPolicy(stop_on=stop_on, cooldown_seconds=int(cooldown or 0), novelty_floor=float(novelty_floor or 0.2))
+    nat_opt = data.get("natural_optimisation", {}) if isinstance(data, dict) else {}
+    nos_cfg = nat_opt.get("nos", {}) if isinstance(nat_opt, dict) else {}
+    weights = dict(DEFAULT_NOS_WEIGHTS)
+    if isinstance(nos_cfg, dict):
+        raw_weights = nos_cfg.get("weights", {})
+        if isinstance(raw_weights, dict):
+            for key, value in raw_weights.items():
+                try:
+                    weights[key] = float(value)
+                except (TypeError, ValueError):
+                    continue
+        gate_floor = float(nos_cfg.get("gate_floor", 0.05))
+    else:
+        gate_floor = 0.05
+    return LoopPolicy(
+        stop_on=stop_on,
+        cooldown_seconds=int(cooldown or 0),
+        novelty_floor=float(novelty_floor or 0.2),
+        nos_weights=weights,
+        nos_gate_floor=gate_floor,
+    )
 
 
 def _recent_config_hashes() -> Dict[str, int]:
@@ -235,7 +269,7 @@ def _quality_label(config_hash: str) -> str:
     return labels[min(idx, len(labels) - 1)]
 
 
-def _simulate_fork(config: ForkConfig, seed_offset: str = "") -> ForkResult:
+def _simulate_fork(config: ForkConfig, nos_weights: Dict[str, float], seed_offset: str = "") -> ForkResult:
     base = config.config_hash + seed_offset
     ts = int(time.time())
     continuity = _hash_float(base + "continuity", 0.88, 0.99)
@@ -243,11 +277,27 @@ def _simulate_fork(config: ForkConfig, seed_offset: str = "") -> ForkResult:
     artifact_depth = int(_hash_float(base + "depth", 1, 5) + 0.5)
     time_to_artifact = _hash_float(base + "speed", 12.0, 55.0)
     novelty = _hash_float(base + "novelty", 0.35, 0.95)
+    building_ratio = _hash_float(base + "build", 0.5, 0.95)
+    task_multiplication = _hash_float(base + "taskmult", 1.1, 2.4)
+    cascade_probability = _hash_float(base + "cascade", 0.55, 1.45)
+    queue_depth = _hash_float(base + "queue", 5.0, 9.0)
     rationale = _hash_float(base + "triad", 0.0, 1.0) > 0.25
     mode_fit = _hash_float(base + "modefit", 0.55, 0.98)
     delta_proposal = (
         f"Boost lineage indexer with {config.mode.lower()} mode focus; "
         f"dialectic_ratio={config.dialectic_ratio}, sandbox_rate={config.sandbox_rate:.2f}."
+    )
+
+    energy_efficiency = max(0.0, min(1.0, 1.0 - min(time_to_artifact / 90.0, 1.0)))
+    coherence = max(0.0, min(1.0, continuity * min(artifact_depth / 5.0, 1.0)))
+    resilience = max(0.0, min(1.0, regression))
+    entropy = max(0.2, min(1.0, novelty))
+    nos_score = compute_nos_score(
+        energy_efficiency=energy_efficiency,
+        coherence=coherence,
+        resilience=resilience,
+        entropy=entropy,
+        weights=nos_weights,
     )
 
     return ForkResult(
@@ -258,10 +308,15 @@ def _simulate_fork(config: ForkConfig, seed_offset: str = "") -> ForkResult:
         artifact_depth=artifact_depth,
         time_to_artifact_s=time_to_artifact,
         novelty_vs_baseline=novelty,
+        building_ratio=building_ratio,
+        task_multiplication=task_multiplication,
+        cascade_probability=cascade_probability,
+        queue_depth=queue_depth,
         sandbox_recovery_quality=_quality_label(base),
         rationale_triads_present=rationale,
         mode_fit_score=mode_fit,
         delta_proposal=delta_proposal,
+        nos_score=nos_score,
     )
 
 
@@ -283,10 +338,10 @@ def _phase_a_plan(run_id: str, configs: Sequence[ForkConfig], *, dry_run: bool) 
     return path
 
 
-def _phase_b_forks(run_id: str, configs: Sequence[ForkConfig], *, dry_run: bool) -> List[ForkResult]:
+def _phase_b_forks(run_id: str, configs: Sequence[ForkConfig], policy: LoopPolicy, *, dry_run: bool) -> List[ForkResult]:
     results: List[ForkResult] = []
     for cfg in configs:
-        result = _simulate_fork(cfg, seed_offset=run_id)
+        result = _simulate_fork(cfg, policy.nos_weights, seed_offset=run_id)
         results.append(result)
         if dry_run:
             continue
@@ -602,7 +657,7 @@ def _phase_g_summary(
     policy: LoopPolicy,
     *,
     dry_run: bool,
-    gated: bool,
+    gate_metrics: Dict[str, float],
 ) -> Dict[str, Any]:
     best = max(selected, key=_composite_score)
     summary = {
@@ -616,16 +671,23 @@ def _phase_g_summary(
             "regression_pass_rate": round(statistics.mean(r.regression_pass_rate for r in selected), 3),
             "novelty_vs_baseline": round(statistics.mean(r.novelty_vs_baseline for r in selected), 3),
             "time_to_artifact_s": round(statistics.mean(r.time_to_artifact_s for r in selected), 2),
+            "building_ratio": round(statistics.mean(r.building_ratio for r in selected), 3),
+            "task_multiplication": round(statistics.mean(r.task_multiplication for r in selected), 3),
+            "cascade_probability": round(statistics.mean(r.cascade_probability for r in selected), 3),
+            "queue_depth": round(statistics.mean(r.queue_depth for r in selected), 2),
+            "nos_score": round(statistics.mean(r.nos_score for r in selected), 3),
         },
         "policy": {
             "stop_on": list(policy.stop_on),
             "cooldown_seconds": policy.cooldown_seconds,
             "novelty_floor": policy.novelty_floor,
+            "nos_weights": {k: round(v, 3) for k, v in policy.nos_weights.items()},
+            "nos_gate_floor": policy.nos_gate_floor,
         },
         "fusion": fusion_payload,
         "sep_preview": sep_preview_payload,
         "next_query": next_query_payload,
-        "gated": gated,
+        "gate_metrics": {k: (round(v, 3) if isinstance(v, float) else v) for k, v in gate_metrics.items()},
     }
     if not dry_run:
         _write_json(ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_G_summary_{run_id}.json", summary)
@@ -648,17 +710,28 @@ def _update_loop_state(run_id: str, summary: Dict[str, Any], *, dry_run: bool) -
     )
 
 
-def _phase_gate_check(run_id: str, selected: Sequence[ForkResult], *, dry_run: bool) -> bool:
-    avg_regression = statistics.mean(r.regression_pass_rate for r in selected)
-    avg_continuity = statistics.mean(r.continuity_ratio for r in selected)
-    gated = avg_regression < 0.85 or avg_continuity < 0.9
+def _phase_gate_check(run_id: str, selected: Sequence[ForkResult], policy: LoopPolicy, *, dry_run: bool) -> Dict[str, float]:
+    averages = {
+        "regression_pass_rate": statistics.mean(r.regression_pass_rate for r in selected),
+        "continuity_ratio": statistics.mean(r.continuity_ratio for r in selected),
+        "building_ratio": statistics.mean(r.building_ratio for r in selected),
+        "queue_depth": statistics.mean(r.queue_depth for r in selected),
+        "nos_score": statistics.mean(r.nos_score for r in selected),
+    }
+    nos_floor = policy.nos_gate_floor
+    gated = (
+        averages["regression_pass_rate"] < 0.85
+        or averages["continuity_ratio"] < 0.9
+        or averages["building_ratio"] < 0.55
+        or averages["queue_depth"] < 6.0
+        or averages["nos_score"] < nos_floor
+    )
     if gated and not dry_run:
         payload = {
             "artifact_type": "swarm_gate_block",
             "run_id": run_id,
-            "avg_regression": round(avg_regression, 3),
-            "avg_continuity": round(avg_continuity, 3),
-            "message": "Gate triggered — regression or continuity below threshold.",
+            "averages": {k: round(v, 3) for k, v in averages.items()},
+            "message": "Gate triggered — KPI thresholds unmet.",
             "recovery_steps": [
                 "Replay top forks with stricter validator hooks",
                 "Inject mentor review before next autonomous query",
@@ -666,7 +739,7 @@ def _phase_gate_check(run_id: str, selected: Sequence[ForkResult], *, dry_run: b
             ],
         }
         _write_json(ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_gate_block_{run_id}.json", payload)
-    return gated
+    return {"gated": gated, **{f"avg_{k}": v for k, v in averages.items()}}
 
 
 def _respect_cooldown(policy: LoopPolicy, *, dry_run: bool) -> None:
@@ -700,9 +773,10 @@ def run_swarm(*, dry_run: bool = False) -> Dict[str, Any]:
         )
 
     _phase_a_plan(run_id, configs, dry_run=dry_run)
-    results = _phase_b_forks(run_id, configs, dry_run=dry_run)
+    results = _phase_b_forks(run_id, configs, policy, dry_run=dry_run)
     selected = _phase_c_select(run_id, results, dry_run=dry_run)
-    gated = _phase_gate_check(run_id, selected, dry_run=dry_run)
+    gate_metrics = _phase_gate_check(run_id, selected, policy, dry_run=dry_run)
+    gated = bool(gate_metrics.get("gated", False))
     fusion = _phase_d_fusion(run_id, selected, dry_run=dry_run)
     sep_preview = _phase_e_sep_preview(run_id, selected, fusion, dry_run=dry_run)
     next_query = _phase_f_next_query(run_id, selected, policy, dry_run=dry_run, gated=gated)
@@ -715,7 +789,7 @@ def run_swarm(*, dry_run: bool = False) -> Dict[str, Any]:
         next_query,
         policy,
         dry_run=dry_run,
-        gated=gated,
+        gate_metrics=gate_metrics,
     )
     _update_loop_state(run_id, summary, dry_run=dry_run)
 
@@ -725,6 +799,7 @@ def run_swarm(*, dry_run: bool = False) -> Dict[str, Any]:
         "selected": len(selected),
         "sep_preview": sep_preview,
         "gated": gated,
+        "gate_metrics": gate_metrics,
         "summary": summary,
     }
 
@@ -758,13 +833,20 @@ def main(argv: Sequence[str] | None = None) -> int:
             )
         )
     else:
+        gate_metrics = result.get("gate_metrics", {})
+        kpistr = ", ".join(
+            f"{key.split('_',1)[1]}={gate_metrics[key]:.3f}"
+            for key in ("avg_regression_pass_rate", "avg_continuity_ratio", "avg_building_ratio", "avg_queue_depth")
+            if key in gate_metrics
+        )
         print(
-            "[SWARM] Completed run {run}: forks={forks} selected={selected} gated={gated} sep_digest={sep}".format(
+            "[SWARM] Completed run {run}: forks={forks} selected={selected} gated={gated} sep_digest={sep}{kpi}".format(
                 run=result["run_id"],
                 forks=result["forks_launched"],
                 selected=result["selected"],
                 gated=result["gated"],
                 sep=result["sep_preview"]["digest"],
+                kpi=(f" | {kpistr}" if kpistr else ""),
             )
         )
     return 0
