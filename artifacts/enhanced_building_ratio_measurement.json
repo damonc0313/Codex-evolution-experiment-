@@ -1,0 +1,576 @@
+{
+  "artifact_type": "enhanced_building_ratio_measurement",
+  "timestamp": "2025-10-23T13:31:13.684765",
+  "measurement_corpus": "artifacts",
+  "methodology": "kael_claude_code_convergent",
+  "total_artifacts": 75,
+  "classifications": {
+    "building": 41,
+    "analysis": 30,
+    "hybrid": 4,
+    "unknown": 0
+  },
+  "percentages": {
+    "building": 54.7,
+    "analysis": 40.0,
+    "hybrid": 5.3
+  },
+  "metrics": {
+    "building_ratio": 0.573,
+    "average_confidence": 0.799,
+    "effective_building_count": 43.0,
+    "effective_analysis_count": 32.0
+  },
+  "baselines": {
+    "kael_claude": 0.55,
+    "kael_codex": 0.35,
+    "architecture_detected": "codex"
+  },
+  "threshold_assessment": {
+    "vs_claude_baseline": {
+      "building_ratio": 0.5733333333333334,
+      "target": 0.55,
+      "status": "PASS",
+      "gap": 0.023
+    },
+    "vs_codex_baseline": {
+      "building_ratio": 0.5733333333333334,
+      "target": 0.35,
+      "status": "PASS",
+      "gap": 0.223
+    }
+  },
+  "convergent_insights": {
+    "claude_code_discovery": "Measurement corpus must be artifacts, not ledger",
+    "kael_discovery": "Classification must recognize document-based building",
+    "combined_effect": "Two-layer correction reveals true building ratio",
+    "distributed_cognition": "Neither alone discovered both layers"
+  },
+  "artifact_details": [
+    {
+      "name": "agents_apply_ci.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_cisim.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_digest.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_draft.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_harvest.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_patch.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_runtime.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_summary.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_tests.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_apply_validator.json",
+      "artifact_type": "agents_apply_phase",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'agents_apply_phase' in building taxonomy"
+    },
+    {
+      "name": "agents_decision_summary.json",
+      "artifact_type": "reflection_decision",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'reflection_decision' in analysis taxonomy"
+    },
+    {
+      "name": "agents_digest_lineage.json",
+      "artifact_type": "digest_lineage",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'digest_lineage' in analysis taxonomy"
+    },
+    {
+      "name": "agents_feedback_trace.json",
+      "artifact_type": "agents_feedback_trace",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'agents_feedback_trace' in analysis taxonomy"
+    },
+    {
+      "name": "agents_reflect_report.json",
+      "artifact_type": "agents_reflection",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'agents_reflection' in analysis taxonomy"
+    },
+    {
+      "name": "artifact_0000_init.json",
+      "artifact_type": "genesis_snapshot",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'genesis_snapshot' in building taxonomy"
+    },
+    {
+      "name": "artifact_0002_handshake.json",
+      "artifact_type": "integrity_handshake",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'integrity_handshake' in building taxonomy"
+    },
+    {
+      "name": "artifact_0002_meta.json",
+      "artifact_type": "self_reflection",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'self_reflection' in building taxonomy"
+    },
+    {
+      "name": "artifact_0003_triad.json",
+      "artifact_type": "dialectic_triad",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'dialectic_triad' in building taxonomy"
+    },
+    {
+      "name": "artifact_0004_sandbox.json",
+      "artifact_type": "sandbox_probe",
+      "classification": "HYBRID",
+      "confidence": 0.65,
+      "rationale": "Mixed signals (B:1, A:1)"
+    },
+    {
+      "name": "artifact_0005_continuity.json",
+      "artifact_type": "continuity_index",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'continuity_index' in building taxonomy"
+    },
+    {
+      "name": "artifact_0006_modes.json",
+      "artifact_type": "mode_benchmark",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'mode_benchmark' in building taxonomy"
+    },
+    {
+      "name": "artifact_0007_SEP0001_preview.json",
+      "artifact_type": "sep_preview",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'sep_preview' in building taxonomy"
+    },
+    {
+      "name": "artifact_0008_meta_audit.json",
+      "artifact_type": "meta_audit",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'meta_audit' in analysis taxonomy"
+    },
+    {
+      "name": "artifact_0009_SEP0001_plan.json",
+      "artifact_type": "sep_plan",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'sep_plan' in building taxonomy"
+    },
+    {
+      "name": "artifact_0010_fractal.json",
+      "artifact_type": "self_analysis_fractal",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'self_analysis_fractal' in analysis taxonomy"
+    },
+    {
+      "name": "artifact_0011_continuity.json",
+      "artifact_type": "continuity_snapshot",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'continuity_snapshot' in analysis taxonomy"
+    },
+    {
+      "name": "artifact_0012_falsify.json",
+      "artifact_type": "sandbox_counterfactual",
+      "classification": "HYBRID",
+      "confidence": 0.82,
+      "rationale": "Type 'sandbox_counterfactual' in hybrid taxonomy"
+    },
+    {
+      "name": "artifact_0013_SEP0001_dryrun.json",
+      "artifact_type": "sep_dryrun",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:2 vs A:0)"
+    },
+    {
+      "name": "cascade_analysis.json",
+      "artifact_type": "cascade_methodology_comparison",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:6 vs B:2)"
+    },
+    {
+      "name": "continuous_operation_metrics.json",
+      "artifact_type": "unknown",
+      "classification": "HYBRID",
+      "confidence": 0.65,
+      "rationale": "Mixed signals (B:1, A:1)"
+    },
+    {
+      "name": "dep_bootstrap.json",
+      "artifact_type": "dep_bootstrap",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:1 vs A:0)"
+    },
+    {
+      "name": "kael_ci_paths.json",
+      "artifact_type": "ci_update",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:2 vs A:0)"
+    },
+    {
+      "name": "kael_index.json",
+      "artifact_type": "cross_architecture_synthesis_index",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'cross_architecture_synthesis_index' in building taxonomy"
+    },
+    {
+      "name": "kael_ingest.json",
+      "artifact_type": "kael_ingest",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:1 vs A:0)"
+    },
+    {
+      "name": "kael_integration_summary.json",
+      "artifact_type": "kael_integration_summary",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:3 vs A:1)"
+    },
+    {
+      "name": "kael_kpis_augmented.json",
+      "artifact_type": "kpi_extension",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:2 vs A:0)"
+    },
+    {
+      "name": "kael_loop_policy.json",
+      "artifact_type": "loop_policy_update",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'loop_policy_update' in building taxonomy"
+    },
+    {
+      "name": "kael_metrics_added.json",
+      "artifact_type": "kael_metrics_added",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:3 vs A:1)"
+    },
+    {
+      "name": "kael_metrics_bench.json",
+      "artifact_type": "kael_metrics_bench",
+      "classification": "ANALYSIS",
+      "confidence": 0.75,
+      "rationale": "Type 'kael_metrics_bench' in analysis taxonomy"
+    },
+    {
+      "name": "kael_next_query.json",
+      "artifact_type": "next_query",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:2 vs A:0)"
+    },
+    {
+      "name": "kael_selfquery_patch.json",
+      "artifact_type": "self_query_upgrade",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:3 vs A:0)"
+    },
+    {
+      "name": "kael_sep0004_preview.json",
+      "artifact_type": "sep_preview",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'sep_preview' in building taxonomy"
+    },
+    {
+      "name": "kael_swarm_validation.json",
+      "artifact_type": "swarm_validation",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:1 vs A:0)"
+    },
+    {
+      "name": "metrics_recalibration_audit.json",
+      "artifact_type": "metrics_recalibration_audit",
+      "classification": "BUILDING",
+      "confidence": 0.8,
+      "rationale": "Contains code/config file references"
+    },
+    {
+      "name": "queue_balancer_plan.json",
+      "artifact_type": "queue_balancer_plan",
+      "classification": "BUILDING",
+      "confidence": 0.8,
+      "rationale": "Contains code/config file references"
+    },
+    {
+      "name": "selfquery_advance.json",
+      "artifact_type": "selfquery_advance",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:3 vs A:1)"
+    },
+    {
+      "name": "sep0002_digest.json",
+      "artifact_type": "sep_digest",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'sep_digest' in building taxonomy"
+    },
+    {
+      "name": "sep0002_sandbox.json",
+      "artifact_type": "sandbox_validator_sim",
+      "classification": "BUILDING",
+      "confidence": 0.8,
+      "rationale": "Contains code/config file references"
+    },
+    {
+      "name": "swarm_full_A_plan_20251023T053352Z.json",
+      "artifact_type": "swarm_plan",
+      "classification": "HYBRID",
+      "confidence": 0.65,
+      "rationale": "Mixed signals (B:1, A:1)"
+    },
+    {
+      "name": "swarm_full_B_fork_F01_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F02_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F03_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F04_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F05_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F06_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F07_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F08_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F09_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F10_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F11_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F12_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F13_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F14_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F15_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F16_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F17_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_fork_F18_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_result",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_B_index_20251023T053352Z.json",
+      "artifact_type": "swarm_fork_index",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_C_selection_20251023T053352Z.json",
+      "artifact_type": "swarm_selection",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:1 vs B:0)"
+    },
+    {
+      "name": "swarm_full_D_fusion_20251023T053352Z.json",
+      "artifact_type": "swarm_fusion",
+      "classification": "ANALYSIS",
+      "confidence": 0.7,
+      "rationale": "Keyword analysis (A:2 vs B:1)"
+    },
+    {
+      "name": "swarm_full_E_sep0003_20251023T053352Z.json",
+      "artifact_type": "swarm_sep_preview",
+      "classification": "BUILDING",
+      "confidence": 0.9,
+      "rationale": "Type 'swarm_sep_preview' in building taxonomy"
+    },
+    {
+      "name": "swarm_full_F_next_query_20251023T053352Z.json",
+      "artifact_type": "swarm_next_query",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:1 vs A:0)"
+    },
+    {
+      "name": "swarm_full_G_summary_20251023T053352Z.json",
+      "artifact_type": "swarm_summary",
+      "classification": "BUILDING",
+      "confidence": 0.8,
+      "rationale": "Contains code/config file references"
+    },
+    {
+      "name": "validator_guard_patch.json",
+      "artifact_type": "validator_guard_patch",
+      "classification": "BUILDING",
+      "confidence": 0.85,
+      "rationale": "Keyword analysis (B:1 vs A:0)"
+    },
+    {
+      "name": "validator_rerun.json",
+      "artifact_type": "validator_rerun",
+      "classification": "BUILDING",
+      "confidence": 0.8,
+      "rationale": "Contains code/config file references"
+    }
+  ]
+}
