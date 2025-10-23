@@ -1,0 +1,74 @@
+{
+  "artifact_type": "cascade_methodology_comparison",
+  "timestamp": "2025-10-23T13:04:46.947139",
+  "artifact_cascade": 0.0,
+  "ledger_cascade": 0.169,
+  "divergence": -0.169,
+  "divergence_ratio": 0.0,
+  "recommended_corpus": "ledger",
+  "rationale": {
+    "artifacts": "33 data points, rich metadata, parent tracking",
+    "ledger": "3 data points, simpler structure"
+  },
+  "full_artifact_analysis": {
+    "artifact_type": "cascade_analysis",
+    "timestamp": "2025-10-23T13:04:46.946996",
+    "measurement_corpus": "artifacts",
+    "total_artifacts": 33,
+    "timestamps_parsed": 2,
+    "components": {
+      "task_multiplication": 0.0,
+      "novelty_rate": 0.727,
+      "completion_latency_hours": 0.385,
+      "entries_per_hour": 2.599
+    },
+    "computed_cascade_probability": 0.0,
+    "kael_target": 2.0,
+    "status": "FAIL",
+    "gap": -2.0,
+    "artifact_types_discovered": [
+      "agents_apply_phase",
+      "agents_feedback_trace",
+      "agents_reflection",
+      "continuity_index",
+      "continuity_snapshot",
+      "cross_architecture_synthesis_index",
+      "dialectic_triad",
+      "digest_lineage",
+      "genesis_snapshot",
+      "integrity_handshake",
+      "meta_audit",
+      "metrics_recalibration_audit",
+      "mode_benchmark",
+      "reflection_decision",
+      "sandbox_counterfactual",
+      "sandbox_probe",
+      "sandbox_validator_sim",
+      "self_analysis_fractal",
+      "self_reflection",
+      "sep_digest",
+      "sep_dryrun",
+      "sep_plan",
+      "sep_preview",
+      "unknown"
+    ],
+    "novelty_diversity": "24/33 unique types"
+  },
+  "full_ledger_analysis": {
+    "artifact_type": "cascade_analysis",
+    "timestamp": "2025-10-23T13:04:46.947131",
+    "measurement_corpus": "ledger",
+    "total_entries": 3,
+    "timestamps_parsed": 3,
+    "components": {
+      "task_multiplication": 1.0,
+      "novelty_rate": 0.5,
+      "completion_latency_hours": 1.964,
+      "entries_per_hour": 0.509
+    },
+    "computed_cascade_probability": 0.169,
+    "kael_target": 2.0,
+    "status": "FAIL",
+    "gap": -1.831
+  }
+}
