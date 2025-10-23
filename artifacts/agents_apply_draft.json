@@ -1,0 +1,31 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "B",
+  "document": "docs/agents.md",
+  "sections": [
+    "Purpose and Scope",
+    "Core Doctrine",
+    "Agent Taxonomy",
+    "Autonomy Ladder",
+    "Decision Framework",
+    "Creative Protocols",
+    "Persistence and Ledger Discipline",
+    "Self-Improvement Loop",
+    "Mentor Bridge",
+    "Safety and Sandboxes",
+    "KPIs and Telemetry",
+    "Appendix"
+  ],
+  "assumptions": [
+    "Sections will guide functions in tools/agents_protocol.py"
+  ],
+  "risk": {
+    "description": "Manifest digest must be stamped post-write",
+    "mitigation": "Recalculate sha256[:16] after final edits"
+  },
+  "acceptance_criteria": [
+    "Manifest contains YAML front matter with TEMP digest",
+    "All mandated sections present",
+    "Ready for digest stamping"
+  ]
+}

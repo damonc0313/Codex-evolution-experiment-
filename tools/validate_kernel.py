@@ -32,6 +32,11 @@ def read_text(p: Path) -> str:
     return p.read_text(encoding="utf-8", errors="replace")
 
 errors: list[str] = []
+warnings: list[str] = []
+
+
+def warn(msg: str) -> None:
+    warnings.append(msg)
 def fail(msg: str) -> None:
     errors.append(msg)
 
@@ -83,6 +88,28 @@ def main() -> int:
             elif "artifact_type" not in data:
                 fail(f"Artifact {p.name}: missing 'artifact_type' field")
 
+    # --- Agents manifesto soft check ---
+    manifest_path = ROOT / "docs" / "agents.md"
+    if not manifest_path.exists():
+        warn("Agents manifest missing: docs/agents.md")
+    else:
+        text = read_text(manifest_path)
+        fm_match = re.match(r"^---\n(.*?)\n---\n", text, flags=re.S)
+        if not fm_match:
+            warn("Agents manifest: front matter missing")
+        else:
+            try:
+                front_matter = yaml.safe_load(fm_match.group(1)) or {}
+            except yaml.YAMLError as exc:
+                warn(f"Agents manifest: front matter parse error ({exc})")
+                front_matter = {}
+            artifact_type = front_matter.get("artifact_type")
+            digest = front_matter.get("digest")
+            if artifact_type != "agents_manifesto":
+                warn("Agents manifest: artifact_type must be 'agents_manifesto'")
+            if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-fA-F]{16}", digest):
+                warn("Agents manifest: digest field missing or invalid (expect 16 hex)")
+
     # --- Result ---
     if errors:
         print("VALIDATION: FAIL")
@@ -95,6 +122,9 @@ def main() -> int:
     print(f"Kernel digest: {digest_calc} (identity + DIGEST match)")
     print("Policy: invariants present; pivot_to_sandbox ON")
     print(f"Artifacts: {len(list(ARTIFACTS_DIR.glob('*.json')))} json files OK")
+    if warnings:
+        for msg in warnings:
+            print(f"WARN: {msg}")
     return 0
 
 if __name__ == "__main__":

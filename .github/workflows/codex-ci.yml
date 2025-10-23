@@ -2,6 +2,13 @@ name: Codex CI
 
 on:
   push:
+    paths:
+      - "docs/agents.md"
+      - "tools/agents_protocol.py"
+      - "tools/run_omega_cycle.py"
+      - "tools/validate_kernel.py"
+      - "tests/claude_regressions.json"
+      - ".github/workflows/codex-ci.yml"
   pull_request:
 
 jobs:
