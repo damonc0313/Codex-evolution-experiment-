@@ -1,0 +1,23 @@
+{
+  "artifact_type": "kael_loop_state",
+  "updated_at": 1761199841,
+  "policy": "runtime/loop_policy.yaml",
+  "targets": {
+    "task_queue_min": 6,
+    "building_ratio_min": 0.55,
+    "task_multiplication_min": 1.6
+  },
+  "latest_kpis": {
+    "artifact_type": "kael_metrics_bench",
+    "timestamp": 1761199788,
+    "sample_size": 50,
+    "entries_per_hour": 2328.599,
+    "novelty_rate": 0.64,
+    "avg_confidence": 0.8,
+    "cascade_probability": 745.152,
+    "building_ratio": 0.16,
+    "task_multiplication": 0.0,
+    "continuity_ratio": 0.0
+  },
+  "next_query": "/evolve 'Implement queue-balancer v1 PoC + lineage hooks; draft SEP-0005 multi-agent comparison; run 12-fork swarm with Kael metrics guard'"
+}

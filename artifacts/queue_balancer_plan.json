@@ -1,0 +1,11 @@
+{
+  "artifact_type": "queue_balancer_plan",
+  "timestamp": 1761199827,
+  "spec_path": "docs/queue_balancer_spec.md",
+  "digest": "4873b8bf1090b0ad",
+  "objectives": [
+    "Distribute tasks across \u03a9-cycle workers",
+    "Attach lineage metadata to every dispatch",
+    "Benchmark Kael KPIs post-dispatch"
+  ]
+}

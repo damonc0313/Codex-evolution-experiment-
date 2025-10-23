@@ -1,0 +1,12 @@
+{
+  "artifact_type": "kael_metrics_bench",
+  "timestamp": 1761199788,
+  "sample_size": 50,
+  "entries_per_hour": 2328.599,
+  "novelty_rate": 0.64,
+  "avg_confidence": 0.8,
+  "cascade_probability": 745.152,
+  "building_ratio": 0.16,
+  "task_multiplication": 0.0,
+  "continuity_ratio": 0.0
+}

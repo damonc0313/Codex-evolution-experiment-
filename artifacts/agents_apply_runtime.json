@@ -1,0 +1,19 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "E",
+  "runtime_links": [
+    "tools/agents_protocol.py",
+    "tools/run_omega_cycle.py"
+  ],
+  "assumptions": [
+    "Manifest remains accessible at docs/agents.md"
+  ],
+  "risk": {
+    "description": "Mode selection heuristics may misclassify novel tasks",
+    "mitigation": "Mentor feedback loop can override via updated user_query hints"
+  },
+  "acceptance_criteria": [
+    "agents_protocol functions load manifest without crashing",
+    "run_omega_cycle reports selected mode and KPI snapshot"
+  ]
+}

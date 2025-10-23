@@ -1,0 +1,19 @@
+{
+  "artifact_type": "sep_digest",
+  "document": "SEP-0002",
+  "path": "docs/SEP-0002_agents_refine.md",
+  "digest": "1ecb7609fde70b59",
+  "assumptions": [
+    "Digest computed with front-matter digest field neutralized",
+    "No other files altered during calculation"
+  ],
+  "risk": {
+    "description": "If manifesto evolves before SEP adoption, digest must be recomputed",
+    "mitigation": "Re-run digest script after final edits"
+  },
+  "acceptance_criteria": [
+    "Digest string recorded",
+    "Document path traceable",
+    "Computation method reproducible"
+  ]
+}
