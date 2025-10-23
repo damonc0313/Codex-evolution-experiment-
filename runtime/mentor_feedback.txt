@@ -1,0 +1,3 @@
+# Mentor feedback anchor for Codex Ω-cycle dialogue.
+# Update this file with critiques or next hypotheses; the watcher will feed it
+# into tools/run_omega_cycle.py via the --mentor flag after each cycle.

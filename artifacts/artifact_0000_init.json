@@ -1,4 +1,5 @@
 {
+  "artifact_type": "genesis_snapshot",
   "epoch": "0000_init",
   "timestamp": "2025-10-23T00:21:09.337479Z",
   "commands": {

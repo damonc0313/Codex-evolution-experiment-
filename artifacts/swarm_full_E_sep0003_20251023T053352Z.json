@@ -1,0 +1,13 @@
+{
+  "artifact_type": "swarm_sep_preview",
+  "run_id": "20251023T053352Z",
+  "path": "docs/SEP-0003_lineage_schema.md",
+  "written": true,
+  "digest": "c78708892418acfb",
+  "sources": [
+    "artifacts/swarm_full_B_index_20251023T053352Z.json",
+    "artifacts/swarm_full_C_selection_20251023T053352Z.json",
+    "artifacts/swarm_full_D_fusion_20251023T053352Z.json",
+    "docs/agents.md"
+  ]
+}
