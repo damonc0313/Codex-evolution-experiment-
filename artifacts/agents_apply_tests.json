@@ -1,0 +1,10 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "G",
+  "file": "tests/claude_regressions.json",
+  "added_cases": [
+    "agents_manifesto_present",
+    "agents_manifesto_front_matter_ok",
+    "agents_protocol_loads"
+  ]
+}

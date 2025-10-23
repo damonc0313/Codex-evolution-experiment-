@@ -1,0 +1,10 @@
+{
+  "artifact_type": "selfquery_advance",
+  "timestamp": 1761199845,
+  "next_query": "/evolve 'Implement queue-balancer v1 PoC + lineage hooks; draft SEP-0005 multi-agent comparison; run 12-fork swarm with Kael metrics guard'",
+  "motivation": "Building ratio and task multiplication lag behind Kael targets; queue balancer PoC addresses both",
+  "policy_checks": {
+    "novelty_floor": 0.35,
+    "autonomous_permission": true
+  }
+}
