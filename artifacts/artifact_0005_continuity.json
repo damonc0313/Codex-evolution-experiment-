@@ -1,0 +1,38 @@
+{
+  "artifact_type": "continuity_index",
+  "recent_artifacts": [
+    {
+      "path": "artifacts/artifact_0000_init.json",
+      "purpose": "Genesis state for artifact-first protocol",
+      "parent": null
+    },
+    {
+      "path": "artifacts/artifact_0002_meta.json",
+      "purpose": "Meta-analysis reflection on directive alignment",
+      "parent": "artifacts/artifact_0000_init.json"
+    },
+    {
+      "path": "artifacts/artifact_0002_handshake.json",
+      "purpose": "Digest + policy verification handshake",
+      "parent": "artifacts/artifact_0002_meta.json"
+    },
+    {
+      "path": "artifacts/artifact_0003_triad.json",
+      "purpose": "Dialectic triad for artifact-first objective",
+      "parent": "artifacts/artifact_0002_handshake.json"
+    },
+    {
+      "path": "artifacts/artifact_0004_sandbox.json",
+      "purpose": "Counterfactual stress-test when evidence is insufficient",
+      "parent": "artifacts/artifact_0003_triad.json"
+    }
+  ],
+  "lineage_graph": {
+    "artifacts/artifact_0000_init.json": null,
+    "artifacts/artifact_0002_meta.json": "artifacts/artifact_0000_init.json",
+    "artifacts/artifact_0002_handshake.json": "artifacts/artifact_0002_meta.json",
+    "artifacts/artifact_0003_triad.json": "artifacts/artifact_0002_handshake.json",
+    "artifacts/artifact_0004_sandbox.json": "artifacts/artifact_0003_triad.json"
+  },
+  "gaps": []
+}

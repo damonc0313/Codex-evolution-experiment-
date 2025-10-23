@@ -1,0 +1,22 @@
+{
+  "artifact_type": "sep_dryrun",
+  "sep_id": "SEP-0001",
+  "scope": [
+    "Patch validator NameError and enforce digest neutrality",
+    "Add /profile command gate for banned phrase and arithmetic discipline"
+  ],
+  "dryrun_steps": [
+    "Outline validator refactor with tests",
+    "Describe /profile interaction and quality gate hooks",
+    "Enumerate regression prompts to run post-change"
+  ],
+  "risks": [
+    "Validator drift if digest sanitation differs from policy",
+    "/profile gate over-restricting legitimate replies"
+  ],
+  "mitigations": [
+    "Document canonical digest procedure inside validator",
+    "Allow gate overrides via sandboxed clarification artifact"
+  ],
+  "readiness": "Plan complete; awaiting authorization"
+}
