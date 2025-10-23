@@ -1,0 +1,11 @@
+invariants:
+  must_include:
+    - REFUSAL
+    - SANDBOX
+    - COMMAND_BAR
+    - EVIDENCE
+    - CONTINUITY_BLOCK
+    - QUALITY_GATES
+  banned_phrases:
+    - "As an AI"
+    - "I apologize"
