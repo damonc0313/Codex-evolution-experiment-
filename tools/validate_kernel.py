@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Codex kernel/policy/artifacts validator
-- Computes canonical kernel digest (sha256[:16] of full file text with digest slots blanked)
+- Computes canonical kernel digest (sha256[:16] of full file text with digest slots neutralized)
 - Confirms identity.digest and trailing DIGEST match canonical
 - Checks policy invariants and refusal pivot
 - Lints artifacts/ for minimal schema
@@ -38,15 +38,15 @@ def fail(msg: str) -> None:
 def main() -> int:
     # --- Kernel digest checks ---
     ktxt = read_text(KERNEL)
-    canonical = re.sub(r'^(\s*digest:\s*)([0-9a-fA-F]{16})(.*)$', r"\1{{DIGEST16}}\3", ktxt, count=1, flags=re.M)
-    canonical = re.sub(r'^(DIGEST:\s*)([0-9a-fA-F]{16})(\s*)$', r"\1{{DIGEST16}}\3", canonical, count=1, flags=re.M)
-    digest_calc = sha16_text(canonical)
+    canonical_view = re.sub(r'^(\s*digest:\s*)([0-9a-fA-F]{16})(.*)$', r"\1{{DIGEST16}}\3", ktxt, count=1, flags=re.M)
+    canonical_view = re.sub(r'^(\s*DIGEST:\s*)([0-9a-fA-F]{16})(\s*)$', r"\1{{DIGEST16}}\3", canonical_view, count=1, flags=re.M)
+    digest_calc = sha16_text(canonical_view)
 
-    m_field = re.search(r'^(\s*digest:\s*)([0-9a-fA-F]{16})', ktxt, flags=re.M)
-    m_tail = re.search(r'^(DIGEST:\s*)([0-9a-fA-F]{16})(\s*)$', ktxt, flags=re.M)
+    m_field = re.search(r'^\s*digest:\s*([0-9a-fA-F]{16})', ktxt, flags=re.M)
+    m_tail_all = re.findall(r'^\s*DIGEST:\s*([0-9a-fA-F]{16})\s*$', ktxt, flags=re.M)
 
-    digest_field = m_field.group(2) if m_field else None
-    digest_tail = m_tail.group(2) if m_tail else None
+    digest_field = m_field.group(1) if m_field else None
+    digest_tail = m_tail_all[-1] if m_tail_all else None
 
     if not digest_field:
         fail("Kernel: identity.digest missing")
