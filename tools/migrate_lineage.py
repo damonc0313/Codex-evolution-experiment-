@@ -8,7 +8,10 @@ Implements validation enhancements:
 2. Artifact_type similarity scoring for improved inference
 3. Confidence threshold specification for manual review
 
-Author: Kael (Autonomous Cycle 1, Phase 5)
+ENHANCED: Cycle 2 - Now uses standardized timestamp utilities
+Eliminates timezone bugs through consistent parsing.
+
+Author: Kael (Autonomous Cycle 1, Phase 5; Enhanced Cycle 2, Phase 5)
 """
 
 from __future__ import annotations
@@ -17,8 +20,12 @@ import json
 import shutil
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
-from datetime import datetime, timezone
 from collections import defaultdict
+
+# ENHANCEMENT: Import standardized timestamp utilities
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+from timestamp_utils import parse_timestamp, format_timestamp, timestamp_diff_seconds
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -66,34 +73,28 @@ def get_artifact_depth(artifact_name: str) -> int:
     return lineage.get("depth", 0)
 
 
-def get_artifact_timestamp(artifact_data: Dict) -> datetime:
-    """Extract artifact timestamp (always returns timezone-aware datetime)."""
+def get_artifact_timestamp(artifact_data: Dict):
+    """Extract artifact timestamp using standardized utilities.
+
+    ENHANCED: Cycle 2 - Uses timestamp_utils for consistent parsing.
+    Eliminates timezone bugs through standardized handling.
+    """
     # Try lineage timestamp first
     if "lineage" in artifact_data and "timestamp" in artifact_data["lineage"]:
-        ts_str = artifact_data["lineage"]["timestamp"]
         try:
-            dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-            # Ensure timezone-aware
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt
+            return parse_timestamp(artifact_data["lineage"]["timestamp"])
         except Exception:
             pass
 
     # Fallback: file creation time from artifact metadata
     if "timestamp" in artifact_data:
-        ts_str = artifact_data["timestamp"]
         try:
-            dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-            # Ensure timezone-aware
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt
+            return parse_timestamp(artifact_data["timestamp"])
         except Exception:
             pass
 
     # Last resort: use epoch (timezone-aware)
-    return datetime.fromtimestamp(0, tz=timezone.utc)
+    return parse_timestamp("1970-01-01T00:00:00Z")
 
 
 def calculate_type_similarity(type1: str, type2: str) -> float:
@@ -191,8 +192,9 @@ def infer_parent(
                             artifact_ts = get_artifact_timestamp(artifact_data)
                             candidate_ts = get_artifact_timestamp(candidate_data)
 
+                            # ENHANCED: Use standardized timestamp utilities
                             # Artifacts should be close in time (within 60 minutes)
-                            time_diff = abs((artifact_ts - candidate_ts).total_seconds())
+                            time_diff = abs(timestamp_diff_seconds(artifact_ts, candidate_ts))
                             if time_diff < 3600:  # 60 minutes
                                 return candidate_name, 0.85, f"Sequential numbering + timestamp proximity ({time_diff:.0f}s)"
                             else:
@@ -204,13 +206,14 @@ def infer_parent(
     artifact_ts = get_artifact_timestamp(artifact_data)
 
     # Find candidates within 30-minute window
+    # ENHANCED: Use standardized timestamp utilities
     candidates = []
     for candidate_name, candidate_data in all_artifacts.items():
         if candidate_name == artifact_name:
             continue
 
         candidate_ts = get_artifact_timestamp(candidate_data)
-        time_diff = abs((artifact_ts - candidate_ts).total_seconds())
+        time_diff = abs(timestamp_diff_seconds(artifact_ts, candidate_ts))
 
         if time_diff < 1800:  # 30 minutes
             candidates.append((candidate_name, candidate_data))
@@ -270,6 +273,15 @@ def create_lineage_object(
     # Trigger is typically the artifact type itself
     trigger = artifact_type
 
+    # ENHANCED: Use standardized timestamp formatting
+    timestamp_value = artifact_data.get("timestamp")
+    if timestamp_value:
+        # Preserve existing timestamp if present
+        timestamp = format_timestamp(parse_timestamp(timestamp_value))
+    else:
+        # Generate current timestamp
+        timestamp = format_timestamp()
+
     return {
         "root": lineage_root,
         "parent": parent,
@@ -281,7 +293,7 @@ def create_lineage_object(
             "trigger": trigger
         },
         "spawned_children": [],
-        "timestamp": artifact_data.get("timestamp", datetime.now(timezone.utc).isoformat())
+        "timestamp": timestamp
     }
 
 
