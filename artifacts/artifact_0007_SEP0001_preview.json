@@ -1,4 +1,5 @@
 {
+  "artifact_type": "sep_preview",
   "problem": "tools/validate_kernel.py previously crashed with NameError due to missing identity binding; command bar lacks /profile quality gate despite kernel listing it.",
   "proposal": [
     "Refactor validator to load identity digest explicitly, validate format, and surface both canonical and full digests.",

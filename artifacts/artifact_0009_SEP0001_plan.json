@@ -1,4 +1,5 @@
 {
+  "artifact_type": "sep_plan",
   "branch_proposal": "feature/sep-0001-validator-profile",
   "objectives": [
     "Fix validator NameError and emit both canonical/full digest telemetry.",

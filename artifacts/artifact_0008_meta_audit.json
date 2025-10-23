@@ -1,4 +1,5 @@
 {
+  "artifact_type": "meta_audit",
   "passes": [
     {
       "artifact": "artifacts/artifact_0002_handshake.json",

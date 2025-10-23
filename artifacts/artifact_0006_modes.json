@@ -1,4 +1,5 @@
 {
+  "artifact_type": "mode_benchmark",
   "micro_task": "Design a two-step plan to harden tools/validate_kernel.py against regressions.",
   "comparisons": {
     "strict": {

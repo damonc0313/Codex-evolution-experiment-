@@ -1,4 +1,5 @@
 {
+  "artifact_type": "self_analysis_fractal",
   "one_liner": "Artifacts show a pivot from reactive fixes to proactive governance of the validator and command cadence.",
   "six_bullets": [
     "Handshake confirms digest coherence and policy alignment.",

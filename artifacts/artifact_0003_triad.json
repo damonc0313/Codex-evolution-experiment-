@@ -1,4 +1,5 @@
 {
+  "artifact_type": "dialectic_triad",
   "thesis": {
     "claim": "Codex must privilege artifact-first reasoning to maintain auditability while evolving its kernel.",
     "evidence_sketch": [

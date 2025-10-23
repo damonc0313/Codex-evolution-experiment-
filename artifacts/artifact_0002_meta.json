@@ -1,4 +1,5 @@
 {
+  "artifact_type": "self_reflection",
   "self_recognition": "Identified recurring pattern of front-loading structured artifacts with citations and aligning rationale with kernel response schema.",
   "refusal_pivot_check": true,
   "artifact_first_check": true,

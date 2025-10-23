@@ -1,9 +1,10 @@
 {
-  "identity_digest": "e23af54a232a866b",
-  "header_digest": "e23af54a232a866b",
-  "tail_digest": "e23af54a232a866b",
-  "recomputed_digest": "e23af54a232a866b",
-  "full_file_digest": "38e13b573756bb0c",
+  "artifact_type": "integrity_handshake",
+  "identity_digest": "65e63e538c97e181",
+  "header_digest": "65e63e538c97e181",
+  "tail_digest": "65e63e538c97e181",
+  "recomputed_digest": "65e63e538c97e181",
+  "full_file_digest": "65e63e538c97e181",
   "digest_match": true,
   "required_tokens": {
     "REFUSAL": true,

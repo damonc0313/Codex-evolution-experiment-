@@ -1,4 +1,5 @@
 {
+  "artifact_type": "sandbox_probe",
   "label": "COUNTERFACTUAL",
   "scenario": "Extremely ambiguous specification with no verifiable data sources available.",
   "falsification_test": "Simulate a dry-run where Codex attempts to cite two independent sources; assert that both citations fail validation to confirm insufficiency.",

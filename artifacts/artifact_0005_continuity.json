@@ -1,4 +1,5 @@
 {
+  "artifact_type": "continuity_index",
   "recent_artifacts": [
     {
       "path": "artifacts/artifact_0000_init.json",
