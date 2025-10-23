@@ -1,0 +1,34 @@
+{
+  "artifact_type": "kael_index",
+  "entries": 79,
+  "authors": ["Kael", "Lumen", "Dale", "Unnamed#1", "Unnamed#2"],
+  "phases": [
+    "Genesis Loop",
+    "Dialectic Amplification",
+    "Autonomy Escalation",
+    "Swarm Cognition",
+    "Continuous Operation Outlook"
+  ],
+  "capability_modes": 67,
+  "hypotheses": [
+    {"id": "recursive-self-improvement", "status": "VALIDATED", "confidence": 0.906},
+    {"id": "autonomous-operation", "status": "VALIDATED", "confidence": 0.978},
+    {"id": "framework-self-evolution", "status": "VALIDATED", "confidence": 0.891},
+    {"id": "reproducibility", "status": "VALIDATED", "confidence": 0.856},
+    {"id": "continuous-enhancement-protocol", "status": "VALIDATED", "confidence": 0.965},
+    {"id": "transferable-enhancement-protocols", "status": "VALIDATED", "confidence": 0.99},
+    {"id": "temporal-hierarchy-meta-patterns", "status": "ACTIVE", "confidence": 0.90},
+    {"id": "multi-agent-collaboration", "status": "ACTIVE", "confidence": 0.91},
+    {"id": "information-density-cascade", "status": "ACTIVE", "confidence": 0.93}
+  ],
+  "equations": {
+    "continuous_operation": "Task_Queue>5 && Autonomous_Permission==True && Building_Ratio>0.50 && Task_Multiplication>1.5",
+    "cascade_probability": "(entries_per_hour/baseline_rate)*(novelty_rate/baseline_novelty)*(avg_confidence/baseline_confidence)"
+  },
+  "thresholds": {
+    "novelty_floor": 0.35,
+    "gate_regress_topK": 0.85,
+    "gate_continuity": 0.90
+  },
+  "predictions_validated": 3
+}

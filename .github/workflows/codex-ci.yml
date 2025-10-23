@@ -1,0 +1,38 @@
+name: Codex CI
+
+on:
+  push:
+    paths:
+      - "docs/agents.md"
+      - "docs/LEDGER_KAEL_2025-10-23.md"
+      - "tools/agents_protocol.py"
+      - "tools/ledger_metrics.py"
+      - "tools/run_omega_cycle.py"
+      - "tools/self_query.py"
+      - "tools/validate_kernel.py"
+      - "tests/claude_regressions.json"
+      - "tests/kael_hypotheses.json"
+      - ".github/workflows/codex-ci.yml"
+      - "requirements.txt"
+      - "docs/NATURAL_OPTIMISATION_SIGNATURE.md"
+      - "docs/REFLECTION_swarm_nature_synthesis.md"
+      - "runtime/nos_sources.yaml"
+      - "tools/natural_reflection.py"
+      - "tools/nos_data_sources.py"
+      - "tools/nos_calibration.py"
+      - "tools/nos_pipeline.py"
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Validate kernel, policy, artifacts
+        run: python tools/validate_kernel.py

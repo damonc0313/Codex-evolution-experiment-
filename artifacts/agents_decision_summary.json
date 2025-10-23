@@ -1,0 +1,26 @@
+{
+  "artifact_type": "reflection_decision",
+  "baseline_validator": "PASS",
+  "simulated_hardened_validator": "PASS",
+  "recommended_action": "/apply \"SEP-0002\"",
+  "prerequisites": [
+    "Implement validator FAIL path for manifesto checks",
+    "Add regression covering malformed manifesto"
+  ],
+  "deviations": [
+    "Continuity ratio still 0.0 because artifacts lack lineage metadata"
+  ],
+  "assumptions": [
+    "SEP-0002 will include digest recomputation automation",
+    "CI pipeline handles additional failure mode gracefully"
+  ],
+  "risk": {
+    "description": "Hard failure may block urgent work if manifesto update overlooked",
+    "mitigation": "Document emergency override procedure in SEP-0002 rollout"
+  },
+  "acceptance_criteria": [
+    "Decision recorded with actionable next step",
+    "Risks enumerated",
+    "Prerequisites aligned with SEP draft"
+  ]
+}
