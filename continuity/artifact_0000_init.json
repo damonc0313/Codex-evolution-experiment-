@@ -1,0 +1,22 @@
+{
+  "artifact_id": "artifact_0000_init",
+  "timestamp": "2025-10-23T00:21:43Z",
+  "validator": {
+    "status": "Kernel OK",
+    "stdout": [
+      "Kernel OK",
+      "DIGEST::0b57b8820084e874"
+    ],
+    "stderr": "",
+    "returncode": 0
+  },
+  "digests": {
+    "kernel_file_digest_field": "d52375ce838ff62e",
+    "computed_sha256_prefix": "0b57b8820084e874"
+  },
+  "entropy": {
+    "before": 256,
+    "after": 256,
+    "drift": 0
+  }
+}
