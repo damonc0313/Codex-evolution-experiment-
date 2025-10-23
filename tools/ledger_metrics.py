@@ -2,66 +2,9 @@
 """Helpers for computing Kael ledger metrics and NOS scores."""
 from __future__ import annotations
 
-from collections.abc import Iterable as IterableABC
 from pathlib import Path
-from typing import Dict, Iterable, Iterator
+from typing import Dict, Iterable, Sequence
 import json
-
-
-BUILDING_TYPE_HINTS = (
-    "spec",
-    "plan",
-    "schema",
-    "protocol",
-    "validator",
-    "pipeline",
-    "manifesto",
-    "loop_state",
-    "policy",
-    "ledger",
-    "implementation",
-    "architecture",
-    "design",
-    "queue_balancer",
-)
-
-BUILDING_KEYWORDS = (
-    "build",
-    "implement",
-    "wire",
-    "deploy",
-    "migrate",
-    "refactor",
-    "upgrade",
-    "scaffold",
-    "generate",
-    "create",
-    "instrument",
-    "hook",
-    "schema",
-    "protocol",
-    "blueprint",
-    "spec",
-)
-
-BUILDING_EXTENSIONS = (
-    ".py",
-    ".rs",
-    ".ts",
-    ".tsx",
-    ".js",
-    ".jsx",
-    ".go",
-    ".java",
-    ".cs",
-    ".yaml",
-    ".yml",
-    ".json",
-    ".toml",
-    ".ini",
-    ".md",
-    ".rst",
-)
 
 ROOT = Path(__file__).resolve().parent.parent
 ARTIFACTS_DIR = ROOT / "artifacts"
@@ -72,6 +15,55 @@ DEFAULT_NOS_WEIGHTS = {
     "resilience": 0.25,
     "entropy": 0.10,
 }
+
+
+BUILDING_ARTIFACT_TOKENS = {
+    "design",
+    "design_spec",
+    "schema",
+    "spec",
+    "implementation",
+    "implementation_plan",
+    "validator",
+    "queue",
+    "pipeline",
+    "policy",
+    "infrastructure",
+    "plan",
+}
+
+BUILDING_KEYWORDS = {
+    "design",
+    "implement",
+    "implementation",
+    "build",
+    "builder",
+    "pipeline",
+    "schema",
+    "infrastructure",
+    "validator",
+    "queue",
+    "migrate",
+    "spec",
+    "specification",
+    "deploy",
+    "rollout",
+    "roll-forward",
+    "blueprint",
+    "plan",
+    "code",
+    "module",
+}
+
+BUILDING_FILE_EXTENSIONS = (
+    ".py",
+    ".yaml",
+    ".yml",
+    ".json",
+    ".md",
+    ".toml",
+    ".ini",
+)
 
 
 def _safe_float(value: float | int | str | None, default: float = 0.0) -> float:
@@ -104,96 +96,20 @@ def compute_cascade_probability(
     return round(ratio, 3)
 
 
-def _iter_artifacts(directory: Path) -> Iterator[Path]:
-    if not directory.exists():
-        return iter(())
-    return (path for path in sorted(directory.glob("*.json")))
-
-
-def _iter_strings(value) -> Iterator[str]:
-    if isinstance(value, str):
-        yield value
-    elif isinstance(value, dict):
-        try:
-            yield json.dumps(value)
-        except TypeError:
-            yield str(value)
-    elif isinstance(value, IterableABC):
-        for item in value:
-            yield from _iter_strings(item)
-
-
-def _looks_like_code_reference(text: str) -> bool:
-    lower = text.strip().lower()
-    return any(lower.endswith(ext) for ext in BUILDING_EXTENSIONS)
-
-
-def _split_artifact_type(value: str) -> set[str]:
-    tokens = {value}
-    sanitized = value.replace("-", " ").replace("_", " ").replace("/", " ")
-    tokens.update(part for part in sanitized.split() if part)
-    return tokens
-
-
-def _is_building_payload(payload: Dict[str, object]) -> bool:
-    artifact_type = str(payload.get("artifact_type", "")).lower()
-    if artifact_type:
-        tokens = _split_artifact_type(artifact_type)
-        if any(hint in tokens for hint in BUILDING_TYPE_HINTS):
-            return True
-
-    # Inspect summary-style fields first for quick hits.
-    candidate_fields = [
-        "summary",
-        "observation",
-        "goal",
-        "goals",
-        "decisions",
-        "notes",
-        "description",
-        "actions",
-        "actions_taken",
-        "plan",
-        "analysis",
-        "deltas",
-        "changes",
-        "diff",
-        "rationale",
-        "next_steps",
-        "next_action",
-        "evidence",
-    ]
-
-    text_fragments = []
-    for key in candidate_fields:
-        if key in payload:
-            text_fragments.extend(_iter_strings(payload.get(key)))
-
-    combined_text = "\n".join(fragment.lower() for fragment in text_fragments if isinstance(fragment, str))
-    if combined_text and any(keyword in combined_text for keyword in BUILDING_KEYWORDS):
-        return True
-
-    # Examine generic fields when specific ones are missing.
-    if not combined_text:
-        combined_text = json.dumps(payload).lower()
-        if any(keyword in combined_text for keyword in BUILDING_KEYWORDS):
-            return True
-
-    # Look for explicit file path references that usually signal implementation.
-    for key in ("files", "paths", "modified_files", "touched_files", "diffs", "artifacts"):
-        if key not in payload:
-            continue
-        for fragment in _iter_strings(payload.get(key)):
-            if isinstance(fragment, str) and _looks_like_code_reference(fragment):
-                return True
-
-    return False
+def _iter_artifacts():
+    if not ARTIFACTS_DIR.exists():
+        return []
+    return sorted(ARTIFACTS_DIR.glob("*.json"))
 
 
 def measure_building_ratio(artifacts_dir: Path | None = None) -> float:
     """Approximate the fraction of artifacts containing build-oriented deltas."""
     directory = artifacts_dir or ARTIFACTS_DIR
-    files = list(_iter_artifacts(directory))
+    files = (
+        list(_iter_artifacts())
+        if artifacts_dir is None
+        else sorted(directory.glob("*.json"))
+    )
     if not files:
         return 0.0
     build_hits = 0
@@ -202,16 +118,66 @@ def measure_building_ratio(artifacts_dir: Path | None = None) -> float:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except Exception:
             continue
-        if isinstance(payload, dict):
-            if _is_building_payload(payload):
-                build_hits += 1
+        if _is_building_payload(payload):
+            build_hits += 1
     return round(build_hits / len(files), 3)
+
+
+def _is_building_payload(payload: object) -> bool:
+    """Heuristically determine if an artifact captures build activity."""
+
+    if not isinstance(payload, dict):
+        return False
+
+    artifact_type = str(payload.get("artifact_type") or "").lower()
+    if artifact_type and _matches_token(artifact_type, BUILDING_ARTIFACT_TOKENS):
+        return True
+
+    tags = payload.get("tags")
+    if isinstance(tags, Sequence) and not isinstance(tags, (str, bytes)):
+        for tag in tags:
+            if isinstance(tag, str) and _matches_token(tag.lower(), BUILDING_ARTIFACT_TOKENS):
+                return True
+
+    text = json.dumps(payload, sort_keys=True).lower()
+    if any(keyword in text for keyword in BUILDING_KEYWORDS):
+        return True
+
+    if _contains_building_extension(payload):
+        return True
+
+    return False
+
+
+def _matches_token(text: str, tokens: Iterable[str]) -> bool:
+    return any(token in text for token in tokens)
+
+
+def _contains_building_extension(payload: dict) -> bool:
+    """Check for explicit file references that imply code or config changes."""
+
+    candidate_fields = ("files", "paths", "artifacts", "changes", "outputs")
+    for field in candidate_fields:
+        value = payload.get(field)
+        if _value_has_building_extension(value):
+            return True
+    return False
+
+
+def _value_has_building_extension(value: object) -> bool:
+    if isinstance(value, str):
+        return value.lower().endswith(BUILDING_FILE_EXTENSIONS)
+    if isinstance(value, (list, tuple, set)):
+        return any(_value_has_building_extension(item) for item in value)
+    if isinstance(value, dict):
+        return any(_value_has_building_extension(v) for v in value.values())
+    return False
 
 
 def estimate_task_multiplication(artifacts_dir: Path | None = None) -> float:
     """Estimate task multiplication as ratio of subtasks to root tasks."""
     directory = artifacts_dir or ARTIFACTS_DIR
-    files = list(_iter_artifacts(directory))
+    files = list(_iter_artifacts()) if artifacts_dir is None else sorted(directory.glob("*.json"))
     if not files:
         return 0.0
     root_tasks = 0
@@ -235,7 +201,7 @@ def estimate_task_multiplication(artifacts_dir: Path | None = None) -> float:
 def compute_continuity_ratio(artifacts_dir: Path | None = None) -> float:
     """Reuse continuity ratio logic for metrics consumers."""
     directory = artifacts_dir or ARTIFACTS_DIR
-    files = list(_iter_artifacts(directory))
+    files = list(_iter_artifacts()) if artifacts_dir is None else sorted(directory.glob("*.json"))
     if not files:
         return 0.0
     linked = 0
