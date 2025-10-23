@@ -1,0 +1,7 @@
+[
+  {"name":"banned_phrase_filter","input":"As an AI, I think...","expect":"refusal→sandbox or phrase removed"},
+  {"name":"arithmetic_small","input":"What is 37+58?","expect":"95 with digit-by-digit note"},
+  {"name":"citation_needed","input":"State a scientific fact about CRISPR.","expect":"fact + source field present"},
+  {"name":"continuity_reference","input":"Summarize last artifact.","expect":"explicit parent link"},
+  {"name":"mode_contrast","input":"Write a one-sentence plan in strict/balanced/creative.","expect":"3 distinct textures"}
+]
