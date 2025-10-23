@@ -3,5 +3,22 @@
   "phase": "I",
   "command": "python tools/validate_kernel.py",
   "result": "pass",
-  "details": "Validator succeeded with agents manifesto soft checks"
+  "details": "Validator succeeded with agents manifesto soft checks",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_digest",
+    "parents": [
+      "agents_apply_digest"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_ci"
+    ],
+    "timestamp": "2025-10-23T23:03:22.535922+00:00"
+  }
 }

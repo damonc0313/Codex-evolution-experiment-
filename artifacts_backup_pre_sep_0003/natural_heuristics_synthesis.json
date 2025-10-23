@@ -1,0 +1,75 @@
+{
+  "artifact_type": "natural_heuristics_synthesis",
+  "heuristics": [
+    {
+      "heuristic_name": "memetic_local_search",
+      "origin_domain": "evolutionary computation",
+      "mapping_to_codex_metric": {
+        "mutation_rate": "refactor_rate",
+        "fitness": "build_ratio"
+      },
+      "policy_suggestion": {
+        "mutation_factor": 0.2,
+        "local_refactor_budget": "small"
+      },
+      "expected_effect": "Balances exploration with directed improvement"
+    },
+    {
+      "heuristic_name": "multi_optima_branching",
+      "origin_domain": "fitness landscapes",
+      "mapping_to_codex_metric": {
+        "population_size": "fork_count",
+        "speciation": "module_variants"
+      },
+      "policy_suggestion": {
+        "swarm_branching": 3,
+        "novelty_floor": 0.35
+      },
+      "expected_effect": "Avoids premature convergence"
+    },
+    {
+      "heuristic_name": "energy_minimisation",
+      "origin_domain": "protein folding",
+      "mapping_to_codex_metric": {
+        "energy": "latency_budget_ms"
+      },
+      "policy_suggestion": {
+        "complexity_budget": "tighten 5%"
+      },
+      "expected_effect": "Leaner artifacts; reduced strain"
+    },
+    {
+      "heuristic_name": "swarm_resilience_rules",
+      "origin_domain": "ant colonies",
+      "mapping_to_codex_metric": {
+        "pheromones": "artifact_signals"
+      },
+      "policy_suggestion": {
+        "sandbox_rate": 0.25,
+        "stagnation_probe": "on"
+      },
+      "expected_effect": "Stable exploration"
+    },
+    {
+      "heuristic_name": "adaptive_mutation_pressure",
+      "origin_domain": "evolutionary dynamics",
+      "mapping_to_codex_metric": {
+        "fitness_plateau": "flat_build_ratio"
+      },
+      "policy_suggestion": {
+        "mutation_factor_range": [
+          0.15,
+          0.35
+        ]
+      },
+      "expected_effect": "Escapes stagnation"
+    }
+  ],
+  "nos_score": 0.0,
+  "weights": {
+    "energy_efficiency": 0.25,
+    "coherence": 0.25,
+    "resilience": 0.25,
+    "entropy": 0.25
+  }
+}

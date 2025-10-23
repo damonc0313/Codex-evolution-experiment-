@@ -19,5 +19,20 @@
     "digest_mismatch",
     "continuity_low",
     "regressions_spike"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "kael_sep0004_preview",
+    "parents": [
+      "kael_sep0004_preview"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "loop_policy_update"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.598046+00:00"
+  }
 }

@@ -4,5 +4,22 @@
   "refusal_pivot_check": true,
   "artifact_first_check": true,
   "continuity_trace_ok": true,
-  "summary": "Dialogue cadence matches kernel directives: sandbox pivot for refusals, artifact-first delivery, and continuity ledger updates remained intact."
+  "summary": "Dialogue cadence matches kernel directives: sandbox pivot for refusals, artifact-first delivery, and continuity ledger updates remained intact.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0010_fractal",
+    "parents": [
+      "artifact_0010_fractal"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "reflection",
+      "trigger": "self_reflection"
+    },
+    "spawned_children": [
+      "agents_reflect_report"
+    ],
+    "timestamp": "2025-10-23T23:03:22.564804+00:00"
+  }
 }

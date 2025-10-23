@@ -7,5 +7,22 @@
     "estimate_task_multiplication",
     "compute_continuity_ratio"
   ],
-  "notes": "Metrics helpers installed for Kael continuous operation KPIs."
+  "notes": "Metrics helpers installed for Kael continuous operation KPIs.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "kael_metrics_bench",
+    "parents": [
+      "kael_metrics_bench"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "kael_metrics_added"
+    },
+    "spawned_children": [
+      "kael_integration_summary"
+    ],
+    "timestamp": "2025-10-23T23:03:22.599543+00:00"
+  }
 }

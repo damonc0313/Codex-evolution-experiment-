@@ -3,7 +3,7 @@
   "baseline": {
     "command": "python tools/validate_kernel.py",
     "status": "PASS",
-    "output_ref": "09c5bd†L1-L5"
+    "output_ref": "09c5bd\u2020L1-L5"
   },
   "simulated_upgrade": {
     "scenario": "agents.md missing or malformed triggers failure",
@@ -28,5 +28,22 @@
     "Baseline validator run captured",
     "Simulation reports manifest digest",
     "Next steps defined for failure probe"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_E_sep0003_20251023T053352Z",
+    "parents": [
+      "swarm_full_E_sep0003_20251023T053352Z"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sandbox_validator_sim"
+    },
+    "spawned_children": [
+      "sep0002_digest"
+    ],
+    "timestamp": "2025-10-23T23:03:22.627644+00:00"
+  }
 }

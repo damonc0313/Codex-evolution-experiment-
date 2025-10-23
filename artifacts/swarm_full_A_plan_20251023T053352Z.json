@@ -201,5 +201,22 @@
       "novelty_score": 0.9121,
       "diversity_score": 0.86
     }
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_B_fork_F01_20251023T053352Z",
+    "parents": [
+      "swarm_full_B_fork_F01_20251023T053352Z"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "swarm_plan"
+    },
+    "spawned_children": [
+      "kael_swarm_validation"
+    ],
+    "timestamp": "2025-10-23T23:03:22.628846+00:00"
+  }
 }

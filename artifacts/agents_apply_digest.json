@@ -2,5 +2,22 @@
   "artifact_type": "agents_apply_phase",
   "phase": "D",
   "document": "docs/agents.md",
-  "digest": "f0c0330aab08873e"
+  "digest": "f0c0330aab08873e",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_draft",
+    "parents": [
+      "agents_apply_draft"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_cisim"
+    ],
+    "timestamp": "2025-10-23T23:03:22.537400+00:00"
+  }
 }

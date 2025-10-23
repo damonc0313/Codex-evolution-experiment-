@@ -1,0 +1,11 @@
+{
+  "artifact_type": "kael_metrics_added",
+  "module": "tools/ledger_metrics.py",
+  "exports": [
+    "compute_cascade_probability",
+    "measure_building_ratio",
+    "estimate_task_multiplication",
+    "compute_continuity_ratio"
+  ],
+  "notes": "Metrics helpers installed for Kael continuous operation KPIs."
+}

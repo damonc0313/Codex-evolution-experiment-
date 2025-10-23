@@ -1,0 +1,40 @@
+{
+  "artifact_type": "genesis_snapshot",
+  "epoch": "0000_init",
+  "timestamp": "2025-10-23T00:21:09.337479Z",
+  "commands": {
+    "validator": {
+      "command": "python tools/validate_kernel.py",
+      "stdout": [
+        "Kernel OK",
+        "DIGEST::8707458727c2729e"
+      ],
+      "status": "Kernel OK",
+      "digest": "8707458727c2729e"
+    }
+  },
+  "entropy_budget": {
+    "requested": "high",
+    "remaining": "high"
+  },
+  "environment": {
+    "python_version": "3.12.10",
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "cwd": "/workspace/Codex-evolution-experiment-",
+    "env_fingerprint": {
+      "shell": null,
+      "user": null,
+      "path_hash": "c0c2e1f7c9716817"
+    }
+  },
+  "integrity": {
+    "sandbox_trigger": "none",
+    "drift": 0.0,
+    "self_check": "operational",
+    "notes": [
+      "Kernel OK",
+      "DIGEST::8707458727c2729e"
+    ]
+  }
+}

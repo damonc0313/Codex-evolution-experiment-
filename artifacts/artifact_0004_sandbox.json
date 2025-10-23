@@ -8,5 +8,22 @@
     "List of candidate sources with metadata (title, date, provenance)",
     "Validation logs from citation_gate showing failure reasons",
     "User-supplied acceptance criteria clarifying evidence thresholds"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0003_triad",
+    "parents": [
+      "artifact_0003_triad"
+    ],
+    "depth": 3,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sandbox_probe"
+    },
+    "spawned_children": [
+      "artifact_0005_continuity"
+    ],
+    "timestamp": "2025-10-23T23:03:22.567374+00:00"
+  }
 }

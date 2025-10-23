@@ -11,5 +11,20 @@
     "coherence": 0.3,
     "resilience": 0.25,
     "entropy": 0.1
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "nos_features",
+    "parents": [
+      "nos_features"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "nos_calibration"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.615664+00:00"
   }
 }

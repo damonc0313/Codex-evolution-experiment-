@@ -1,0 +1,205 @@
+{
+  "artifact_type": "swarm_plan",
+  "run_id": "20251023T053352Z",
+  "generated_at": 1761197632,
+  "forks": [
+    {
+      "id": "F01",
+      "mode": "STRICT",
+      "dialectic_ratio": 0.6,
+      "sandbox_rate": 0.25,
+      "critique_depth": 1,
+      "entropy": 0.9,
+      "config_hash": "733b622d24a5d0307da1563935a675ef0b22c61ab65e7e46a2fde2ac3e80398e",
+      "novelty_score": 0.3055,
+      "diversity_score": 0.88
+    },
+    {
+      "id": "F02",
+      "mode": "BALANCED",
+      "dialectic_ratio": 0.6,
+      "sandbox_rate": 0.25,
+      "critique_depth": 1,
+      "entropy": 0.9,
+      "config_hash": "d105a4fe0d436b046d1b112f77430d13bb9e4054fdc487db3a9f911b75ca3c4e",
+      "novelty_score": 0.274,
+      "diversity_score": 0.94
+    },
+    {
+      "id": "F03",
+      "mode": "CREATIVE",
+      "dialectic_ratio": 0.4,
+      "sandbox_rate": 0.0,
+      "critique_depth": 2,
+      "entropy": 0.9,
+      "config_hash": "ae86d0eccb0dbb4ce3b11ca59ead37b5d7c2d70b05bc6512516a34f57f873b10",
+      "novelty_score": 0.8931,
+      "diversity_score": 0.85
+    },
+    {
+      "id": "F04",
+      "mode": "BALANCED",
+      "dialectic_ratio": 0.4,
+      "sandbox_rate": 0.25,
+      "critique_depth": 1,
+      "entropy": 0.6,
+      "config_hash": "59dfab8e32293717ce6d897602b994e7dd2d472d9b687177ddb52e15215f373c",
+      "novelty_score": 0.4471,
+      "diversity_score": 0.88
+    },
+    {
+      "id": "F05",
+      "mode": "BALANCED",
+      "dialectic_ratio": 0.4,
+      "sandbox_rate": 0.0,
+      "critique_depth": 2,
+      "entropy": 0.9,
+      "config_hash": "93e71f8a0a6c334b75116d066325236004c291289f721b29e6982ad969d89f53",
+      "novelty_score": 0.9373,
+      "diversity_score": 0.88
+    },
+    {
+      "id": "F06",
+      "mode": "STRICT",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.0,
+      "critique_depth": 2,
+      "entropy": 0.6,
+      "config_hash": "3ab50640d036e3635d68c644699faf01a2b4f5837f135a67b5f7978fe1513738",
+      "novelty_score": 0.5895,
+      "diversity_score": 0.8
+    },
+    {
+      "id": "F07",
+      "mode": "BALANCED",
+      "dialectic_ratio": 0.4,
+      "sandbox_rate": 0.0,
+      "critique_depth": 1,
+      "entropy": 0.9,
+      "config_hash": "feb70a21d0b35fd910f227e3c4124de656fb5cece03fc5b35c3ae8c63b98e386",
+      "novelty_score": 0.9796,
+      "diversity_score": 0.84
+    },
+    {
+      "id": "F08",
+      "mode": "BALANCED",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.0,
+      "critique_depth": 2,
+      "entropy": 0.9,
+      "config_hash": "6689bd17cd188b72a7cf254a374356ee295d9e60ef13b44eeb521e6c5fbf6dda",
+      "novelty_score": 0.7729,
+      "diversity_score": 0.88
+    },
+    {
+      "id": "F09",
+      "mode": "CREATIVE",
+      "dialectic_ratio": 0.4,
+      "sandbox_rate": 0.0,
+      "critique_depth": 1,
+      "entropy": 0.6,
+      "config_hash": "ef240a59fb809a38f7834cc2f0166112768ec73ba2436ab3f8a173255358f503",
+      "novelty_score": 0.8407,
+      "diversity_score": 0.79
+    },
+    {
+      "id": "F10",
+      "mode": "CREATIVE",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.0,
+      "critique_depth": 2,
+      "entropy": 0.6,
+      "config_hash": "74c8d2d6a22039a69ff745c512cd6626d7704a915b44b90d47705f96bba01406",
+      "novelty_score": 0.8544,
+      "diversity_score": 0.83
+    },
+    {
+      "id": "F11",
+      "mode": "STRICT",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.0,
+      "critique_depth": 1,
+      "entropy": 0.9,
+      "config_hash": "c7e39ec05045e893cd1981f4c53d371229010f82f38dbfb24329d687bf0159ec",
+      "novelty_score": 0.5023,
+      "diversity_score": 0.78
+    },
+    {
+      "id": "F12",
+      "mode": "STRICT",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.25,
+      "critique_depth": 1,
+      "entropy": 0.6,
+      "config_hash": "fb578b5e7ab9ee7a5c5a5437a295523f37bcb1941d1d0e42176cd53324bf9b9f",
+      "novelty_score": 0.6736,
+      "diversity_score": 0.82
+    },
+    {
+      "id": "F13",
+      "mode": "STRICT",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.25,
+      "critique_depth": 2,
+      "entropy": 0.6,
+      "config_hash": "d05288c0f724a8567c552f311f932ef62917c2a512f44f179c0c6dd55b0c4e12",
+      "novelty_score": 0.4102,
+      "diversity_score": 0.86
+    },
+    {
+      "id": "F14",
+      "mode": "BALANCED",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.25,
+      "critique_depth": 2,
+      "entropy": 0.6,
+      "config_hash": "6949501bd384606db16a448803b1c69153096dd59a9a721c449b62fa4f437451",
+      "novelty_score": 0.7421,
+      "diversity_score": 0.92
+    },
+    {
+      "id": "F15",
+      "mode": "CREATIVE",
+      "dialectic_ratio": 0.4,
+      "sandbox_rate": 0.25,
+      "critique_depth": 2,
+      "entropy": 0.6,
+      "config_hash": "b1fd19dedbf9ed63e7e8fae9869566a0abddfde3aea309129e3d4b657c55bd70",
+      "novelty_score": 0.4575,
+      "diversity_score": 0.89
+    },
+    {
+      "id": "F16",
+      "mode": "CREATIVE",
+      "dialectic_ratio": 0.8,
+      "sandbox_rate": 0.25,
+      "critique_depth": 1,
+      "entropy": 0.6,
+      "config_hash": "255620ee5308b068ac8242c08b9b50e391397d3c3f954dc835dc3805a3709a38",
+      "novelty_score": 0.2716,
+      "diversity_score": 0.85
+    },
+    {
+      "id": "F17",
+      "mode": "CREATIVE",
+      "dialectic_ratio": 0.6,
+      "sandbox_rate": 0.25,
+      "critique_depth": 1,
+      "entropy": 0.6,
+      "config_hash": "f10d28392573d9cb5138ed05175702ae9d3265b31c4d741a64772f18eec211d2",
+      "novelty_score": 0.8368,
+      "diversity_score": 0.89
+    },
+    {
+      "id": "F18",
+      "mode": "STRICT",
+      "dialectic_ratio": 0.6,
+      "sandbox_rate": 0.25,
+      "critique_depth": 1,
+      "entropy": 0.6,
+      "config_hash": "abe89062c5568cbf59bea962aa3fbff6a45dd5ecef7a02bd935caf8453f9f3c6",
+      "novelty_score": 0.9121,
+      "diversity_score": 0.86
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "artifact_type": "self_query_upgrade",
+  "module": "tools/self_query.py",
+  "policy_bias": {
+    "novelty_floor": 0.35,
+    "targets": {
+      "building_ratio_min": 0.55,
+      "task_queue_min": 6,
+      "task_multiplication_min": 1.6
+    }
+  },
+  "metrics_used": [
+    "cascade_probability",
+    "building_ratio",
+    "task_multiplication",
+    "continuity_ratio"
+  ]
+}

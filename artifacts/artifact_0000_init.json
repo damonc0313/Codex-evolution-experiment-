@@ -36,5 +36,36 @@
       "Kernel OK",
       "DIGEST::8707458727c2729e"
     ]
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": null,
+    "parents": [],
+    "depth": 0,
+    "spawned_by": {
+      "cycle": "initialization",
+      "phase": "genesis",
+      "trigger": "system_initialization"
+    },
+    "spawned_children": [
+      "agents_digest_lineage",
+      "artifact_0002_handshake",
+      "cascade_analysis",
+      "continuous_operation_metrics",
+      "dep_bootstrap",
+      "enhanced_building_ratio_measurement",
+      "kael_ci_paths",
+      "kael_index",
+      "kael_kpis_augmented",
+      "kael_next_query",
+      "kael_selfquery_patch",
+      "lineage_migration_report",
+      "metrics_recalibration_audit",
+      "natural_heuristics_synthesis",
+      "nos_sources_index",
+      "queue_balancer_plan",
+      "selfquery_advance"
+    ],
+    "timestamp": "2025-10-23T00:21:09.337479Z"
   }
 }

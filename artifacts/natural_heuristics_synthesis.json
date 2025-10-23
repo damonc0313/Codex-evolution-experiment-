@@ -71,5 +71,20 @@
     "coherence": 0.25,
     "resilience": 0.25,
     "entropy": 0.25
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "synthesis",
+      "trigger": "natural_heuristics_synthesis"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.612642+00:00"
   }
 }

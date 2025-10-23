@@ -34,5 +34,22 @@
     "artifacts/artifact_0003_triad.json": "artifacts/artifact_0002_handshake.json",
     "artifacts/artifact_0004_sandbox.json": "artifacts/artifact_0003_triad.json"
   },
-  "gaps": []
+  "gaps": [],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0004_sandbox",
+    "parents": [
+      "artifact_0004_sandbox"
+    ],
+    "depth": 4,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "continuity_index"
+    },
+    "spawned_children": [
+      "artifact_0006_modes"
+    ],
+    "timestamp": "2025-10-23T23:03:22.568623+00:00"
+  }
 }

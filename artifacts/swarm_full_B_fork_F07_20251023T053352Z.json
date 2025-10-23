@@ -19,5 +19,20 @@
   "sandbox_recovery_quality": "low",
   "rationale_triads_present": true,
   "mode_fit_score": 0.649,
-  "delta_proposal": "Boost lineage indexer with balanced mode focus; dialectic_ratio=0.4, sandbox_rate=0.00."
+  "delta_proposal": "Boost lineage indexer with balanced mode focus; dialectic_ratio=0.4, sandbox_rate=0.00.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_B_fork_F01_20251023T053352Z",
+    "parents": [
+      "swarm_full_B_fork_F01_20251023T053352Z"
+    ],
+    "depth": 2,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "swarm_fork_result"
+    },
+    "spawned_children": [],
+    "timestamp": 1761197632
+  }
 }

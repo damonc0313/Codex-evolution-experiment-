@@ -37,5 +37,20 @@
   "assessment": {
     "continuous_operation": "INACTIVE",
     "score": 0.114
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "unknown"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.583649+00:00"
   }
 }

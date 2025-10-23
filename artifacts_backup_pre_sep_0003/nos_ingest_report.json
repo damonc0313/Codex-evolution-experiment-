@@ -1,0 +1,8 @@
+{
+  "artifact_type": "nos_ingest_report",
+  "counts": {
+    "evo_rates_01": 0,
+    "pop_dyn_01": 0,
+    "fit_land_01": 0
+  }
+}

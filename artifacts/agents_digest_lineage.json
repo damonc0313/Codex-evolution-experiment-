@@ -16,5 +16,20 @@
     "Previous digest recorded",
     "Current digest recorded",
     "Hashing method documented"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "digest_lineage"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.553846+00:00"
+  }
 }

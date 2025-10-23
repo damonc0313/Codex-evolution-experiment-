@@ -8,5 +8,22 @@
   "cascade_probability": 745.152,
   "building_ratio": 0.16,
   "task_multiplication": 0.0,
-  "continuity_ratio": 0.0
+  "continuity_ratio": 0.0,
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "kael_sep0004_preview",
+    "parents": [
+      "kael_sep0004_preview"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "kael_metrics_bench"
+    },
+    "spawned_children": [
+      "kael_metrics_added"
+    ],
+    "timestamp": 1761199788
+  }
 }

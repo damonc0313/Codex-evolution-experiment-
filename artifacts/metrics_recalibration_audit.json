@@ -270,5 +270,20 @@
       "Consider artifact-first protocol as baseline shift (all outputs are 'building')",
       "Recalibrate thresholds based on Codex-specific operational regime"
     ]
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "metrics_recalibration_audit"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T13:03:06.050274"
   }
 }

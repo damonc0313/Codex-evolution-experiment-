@@ -1,0 +1,12 @@
+{
+  "artifact_type": "kpi_extension",
+  "module": "tools/agents_protocol.py",
+  "metrics": [
+    "cascade_probability",
+    "building_ratio",
+    "task_multiplication",
+    "novelty_rate",
+    "continuity_ratio_exact"
+  ],
+  "notes": "Manifesto KPIs now surface Kael continuous-operation signals."
+}

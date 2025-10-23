@@ -8,5 +8,20 @@
     "novelty_rate",
     "continuity_ratio_exact"
   ],
-  "notes": "Manifesto KPIs now surface Kael continuous-operation signals."
+  "notes": "Manifesto KPIs now surface Kael continuous-operation signals.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "kpi_extension"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.596668+00:00"
+  }
 }

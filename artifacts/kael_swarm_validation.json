@@ -9,5 +9,20 @@
     "building_ratio": 0.58
   },
   "status": "pass",
-  "notes": "Focused swarm dry-run satisfied Kael continuous-operation gates."
+  "notes": "Focused swarm dry-run satisfied Kael continuous-operation gates.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_A_plan_20251023T053352Z",
+    "parents": [
+      "swarm_full_A_plan_20251023T053352Z"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "swarm_validation"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.608131+00:00"
+  }
 }

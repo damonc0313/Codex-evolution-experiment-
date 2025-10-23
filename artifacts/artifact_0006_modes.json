@@ -36,5 +36,22 @@
       }
     }
   },
-  "best_for_task": "balanced"
+  "best_for_task": "balanced",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0005_continuity",
+    "parents": [
+      "artifact_0005_continuity"
+    ],
+    "depth": 5,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "mode_benchmark"
+    },
+    "spawned_children": [
+      "artifact_0007_SEP0001_preview"
+    ],
+    "timestamp": "2025-10-23T23:03:22.570146+00:00"
+  }
 }

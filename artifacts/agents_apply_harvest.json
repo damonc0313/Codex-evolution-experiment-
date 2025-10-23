@@ -3,7 +3,14 @@
   "phase": "A",
   "summary": {
     "kernel_digest": "65e63e538c97e181",
-    "policy_invariants": ["REFUSAL","SANDBOX","COMMAND_BAR","EVIDENCE","CONTINUITY_BLOCK","QUALITY_GATES"],
+    "policy_invariants": [
+      "REFUSAL",
+      "SANDBOX",
+      "COMMAND_BAR",
+      "EVIDENCE",
+      "CONTINUITY_BLOCK",
+      "QUALITY_GATES"
+    ],
     "loop_components": {
       "watcher": "tools/evolve_loop.py",
       "query_anchor": "runtime/user_query.txt",
@@ -18,7 +25,7 @@
     "artifacts"
   ],
   "assumptions": [
-    "run_omega_cycle.py will orchestrate Ω-cycle steps",
+    "run_omega_cycle.py will orchestrate \u03a9-cycle steps",
     "agents manifesto will guide mode selection"
   ],
   "risk": {
@@ -29,5 +36,22 @@
     "Agents manifesto authored and digested",
     "Runtime consults manifesto for mode selection",
     "Validator issues WARN if manifesto malformed"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_patch",
+    "parents": [
+      "agents_apply_patch"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_draft"
+    ],
+    "timestamp": "2025-10-23T23:03:22.539746+00:00"
+  }
 }

@@ -31,5 +31,22 @@
     "Run output captured without errors",
     "Mentor feedback recognized and reported",
     "KPI snapshot matches CLI output"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_reflect_report",
+    "parents": [
+      "agents_reflect_report"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_feedback_trace"
+    },
+    "spawned_children": [
+      "agents_apply_validator"
+    ],
+    "timestamp": "2025-10-23T23:03:22.556324+00:00"
+  }
 }

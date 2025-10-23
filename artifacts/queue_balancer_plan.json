@@ -7,5 +7,20 @@
     "Distribute tasks across \u03a9-cycle workers",
     "Attach lineage metadata to every dispatch",
     "Benchmark Kael KPIs post-dispatch"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "queue_balancer_plan"
+    },
+    "spawned_children": [],
+    "timestamp": 1761199827
+  }
 }

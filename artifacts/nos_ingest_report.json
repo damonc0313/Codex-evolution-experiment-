@@ -4,5 +4,22 @@
     "evo_rates_01": 0,
     "pop_dyn_01": 0,
     "fit_land_01": 0
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "nos_sources_index",
+    "parents": [
+      "nos_sources_index"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "nos_ingest_report"
+    },
+    "spawned_children": [
+      "nos_features"
+    ],
+    "timestamp": "2025-10-23T23:03:22.618494+00:00"
   }
 }

@@ -8,5 +8,20 @@
     "tools/run_omega_cycle.py",
     "tools/validate_kernel.py",
     "tests/claude_regressions.json"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_cisim",
+    "parents": [
+      "agents_apply_cisim"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.532753+00:00"
+  }
 }

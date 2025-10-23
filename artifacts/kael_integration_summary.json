@@ -11,5 +11,22 @@
   "self_query_upgraded": true,
   "sep0004_preview": "docs/SEP-0004_continuous_operation.md",
   "swarm_gate": "pass",
-  "next_query_written": true
+  "next_query_written": true,
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "kael_metrics_added",
+    "parents": [
+      "kael_metrics_added"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "kael_integration_summary"
+    },
+    "spawned_children": [
+      "kael_ingest"
+    ],
+    "timestamp": "2025-10-23T23:03:22.595160+00:00"
+  }
 }

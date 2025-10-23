@@ -380,5 +380,20 @@
       "mode_fit_score": 0.584,
       "delta_proposal": "Boost lineage indexer with strict mode focus; dialectic_ratio=0.6, sandbox_rate=0.25."
     }
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_B_fork_F01_20251023T053352Z",
+    "parents": [
+      "swarm_full_B_fork_F01_20251023T053352Z"
+    ],
+    "depth": 2,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "swarm_fork_index"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.658079+00:00"
+  }
 }

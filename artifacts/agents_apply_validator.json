@@ -3,5 +3,22 @@
   "phase": "F",
   "file": "tools/validate_kernel.py",
   "check": "agents_manifesto_soft_warn",
-  "behavior": "Emits WARN lines when docs/agents.md missing or malformed"
+  "behavior": "Emits WARN lines when docs/agents.md missing or malformed",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_feedback_trace",
+    "parents": [
+      "agents_feedback_trace"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_tests"
+    ],
+    "timestamp": "2025-10-23T23:03:22.548725+00:00"
+  }
 }

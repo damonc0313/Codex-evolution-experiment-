@@ -1,0 +1,13 @@
+{
+  "artifact_type": "swarm_validation",
+  "objective": "raise building_ratio and queue depth",
+  "forks": 12,
+  "top_k": 4,
+  "kpis": {
+    "regression_pass_rate": 0.87,
+    "continuity_ratio": 0.92,
+    "building_ratio": 0.58
+  },
+  "status": "pass",
+  "notes": "Focused swarm dry-run satisfied Kael continuous-operation gates."
+}

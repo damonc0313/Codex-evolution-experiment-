@@ -7,5 +7,20 @@
     "Continuity ledger entries",
     "Swarm fusion telemetry"
   ],
-  "notes": "Synthesis ingested and indexed for doctrine + KPI activation."
+  "notes": "Synthesis ingested and indexed for doctrine + KPI activation.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "kael_integration_summary",
+    "parents": [
+      "kael_integration_summary"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "kael_ingest"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.593772+00:00"
+  }
 }

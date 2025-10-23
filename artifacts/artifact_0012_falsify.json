@@ -16,5 +16,22 @@
     "Canonical digest value from validator",
     "CI job outcome (pass/fail)",
     "Continuity ledger delta referencing remediation artifact"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0011_continuity",
+    "parents": [
+      "artifact_0011_continuity"
+    ],
+    "depth": 11,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sandbox_counterfactual"
+    },
+    "spawned_children": [
+      "artifact_0013_SEP0001_dryrun"
+    ],
+    "timestamp": "2025-10-23T23:03:22.578429+00:00"
+  }
 }

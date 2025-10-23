@@ -15,5 +15,22 @@
   "acceptance_criteria": [
     "agents_protocol functions load manifest without crashing",
     "run_omega_cycle reports selected mode and KPI snapshot"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_summary",
+    "parents": [
+      "agents_apply_summary"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_patch"
+    ],
+    "timestamp": "2025-10-23T23:03:22.542035+00:00"
+  }
 }

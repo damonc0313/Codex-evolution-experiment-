@@ -5,5 +5,22 @@
   "runtime_integration": true,
   "validator_softcheck": "ok",
   "tests_amended": true,
-  "ci_paths_updated": true
+  "ci_paths_updated": true,
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_tests",
+    "parents": [
+      "agents_apply_tests"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_runtime"
+    ],
+    "timestamp": "2025-10-23T23:03:22.543143+00:00"
+  }
 }

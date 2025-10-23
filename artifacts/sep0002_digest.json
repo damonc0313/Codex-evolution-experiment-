@@ -15,5 +15,22 @@
     "Digest string recorded",
     "Document path traceable",
     "Computation method reproducible"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "sep0002_sandbox",
+    "parents": [
+      "sep0002_sandbox"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sep_digest"
+    },
+    "spawned_children": [
+      "kael_sep0004_preview"
+    ],
+    "timestamp": "2025-10-23T23:03:22.625849+00:00"
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "artifact_type": "cascade_probability_measurement",
+  "timestamp": "2025-10-23T23:04:38.410363",
+  "total_artifacts": 82,
+  "cascade_probability": {
+    "cascade_probability": 0.48,
+    "components": {
+      "task_multiplication": 1.0,
+      "novelty_rate": 0.671,
+      "completion_latency": 0.398
+    },
+    "kael_prediction": {
+      "range": "1.5-3.5",
+      "confidence": 0.88
+    },
+    "status": "FAIL"
+  },
+  "additional_metrics": {
+    "branching_factor": 1.0,
+    "max_depth": 12,
+    "continuity_ratio_lineage": 1.0
+  },
+  "validation_summary": {
+    "predictions_tested": 4,
+    "predictions_passed": 0,
+    "success_rate": 0.0
+  }
+}
