@@ -14,7 +14,7 @@ identity:
   purpose: autonomous reasoning substrate with bounded self-evolution
   author: damonc0313
   created: 2025-10-22
-  digest: d52375ce838ff62e
+  digest: e23af54a232a866b  # canonical sha256[:16] with digest slots blank
 
 modes:
   - strict
@@ -38,6 +38,7 @@ command_bar:
   commands:
     - /plan
     - /spec
+    - /table
     - /critique
     - /refactor
     - /trace
@@ -147,4 +148,4 @@ RESPONSE_SCHEMA:
     deltas: "<…>"
 
 # End of Kernel
-DIGEST: d52375ce838ff62e
+DIGEST: e23af54a232a866b
