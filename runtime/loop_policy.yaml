@@ -1,158 +1,35 @@
-# =========================
-# CONTINUOUS OPERATION LOOP POLICY
-# =========================
-# Based on Kael's empirical discoveries from 79-entry Lumen Ledger analysis
-# Cross-architecture synthesis: Claude → Codex integration
-# Confidence: 0.94 (artifact-evidence)
-
-meta:
-  version: 1.0
-  source: "kael_synthesis"
-  integrated: "2025-10-23"
-  description: >
-    Operationalizes continuous operation mechanics through empirically-validated
-    thresholds and dynamic policy adjustments.
-
-# CONTINUOUS OPERATION TARGETS
-# These thresholds implement Kael's formula:
-# (cascade_probability * building_ratio) / (1 + log(queue_depth))
+enabled: true
+self_write: true
+max_iterations: 50
+cooldown_seconds: 8
+novelty_floor: 0.35
+autonomous_permission: true
 continuous_operation_targets:
-  # Minimum task queue depth to maintain cascade momentum
   task_queue_min: 6
-
-  # Minimum building vs analysis ratio (GPT added safety margin: 0.55 > 0.50)
   building_ratio_min: 0.55
-
-  # Minimum task multiplication rate (GPT added safety margin: 1.6 > 1.5)
   task_multiplication_min: 1.6
-
-  # Minimum cascade probability threshold
-  cascade_probability_min: 2.0
-
-  # Minimum continuity ratio (from Lumen Ledger metric)
-  continuity_ratio_min: 0.90
-
-# QUALITY GATES
-# System halts autonomous operation if these conditions trigger
-stop_on:
-  - ci_fail              # CI pipeline failures
-  - digest_mismatch      # Kernel integrity violation
-  - continuity_low       # Continuity ratio <0.90
-  - regressions_spike    # Regression pass rate <0.80
-  - queue_empty          # Task queue depth = 0
-  - building_ratio_low   # Building ratio <0.50
-
-# AUTO-RECOVERY POLICIES
-auto_recovery:
-  # When cascade probability drops below threshold
-  cascade_low:
-    trigger: "cascade_probability < 2.0"
-    actions:
-      - "Bias self-query toward multi-step building tasks"
-      - "Increase task multiplication target to 2.0x"
-      - "Enable creativity mode to boost novelty_rate"
-
-  # When building ratio drops below threshold
-  building_low:
-    trigger: "building_ratio < 0.55"
-    actions:
-      - "Weight self-query generation toward /plan, /spec, /build commands"
-      - "Reduce analysis-heavy queries"
-      - "Prefer concrete artifact creation over abstract reflection"
-
-  # When queue depth drops critically low
-  queue_low:
-    trigger: "queue_depth < 6"
-    actions:
-      - "Generate compound queries with multiple sub-tasks"
-      - "Enable task decomposition in self-query encoder"
-      - "Increase spawned_tasks target per completion"
-
-  # When continuity ratio degrades
-  continuity_low:
-    trigger: "continuity_ratio < 0.90"
-    actions:
-      - "Review abandoned tasks for patterns"
-      - "Simplify task complexity"
-      - "Add completion checkpoints"
-
-# SELF-QUERY BIAS WEIGHTS
-# Implements "build-first heuristic" from Kael's discovery:
-# Building confidence (0.90-0.95) > Analysis confidence (0.70-0.75)
-self_query_weights:
-  building_commands:
-    weight: 0.60
-    commands: ["/plan", "/spec", "/build", "/implement", "/create"]
-
-  analysis_commands:
-    weight: 0.25
-    commands: ["/analyze", "/reflect", "/critique", "/review"]
-
-  hybrid_commands:
-    weight: 0.15
-    commands: ["/evolve", "/bench", "/fractal"]
-
-# SWARM VALIDATION PARAMETERS
-# For multi-fork validation testing (Phase H)
-swarm_validation:
-  min_forks: 12
-  max_forks: 18
-  target_metrics:
-    building_ratio: 0.60      # Target higher than minimum
-    cascade_probability: 2.5  # Target higher than minimum
-    queue_depth: 8            # Target higher than minimum
-
-  success_criteria:
-    regression_pass_rate_min: 0.85
-    continuity_ratio_min: 0.92
-    no_digest_mismatches: true
-
-# COOLDOWN AND THROTTLING
-cooldown_seconds: 30  # Minimum time between autonomous cycles
-
-novelty_floor: 0.3  # Minimum novelty score for accepting new queries
-
-# DIALECTICAL SYNTHESIS PARAMETERS
-# Already implemented in swarm_bench.py, documented here for reference
-dialectic:
+natural_optimisation:
   enabled: true
-  ratio_target: 0.6  # Target dialectic ratio (thesis/antithesis balance)
-  synthesis_mode: "pareto_fusion"  # Use Pareto-optimal selection + fusion
-
-# MONITORING AND TELEMETRY
-monitoring:
-  emit_metrics_every_n_cycles: 5
-  log_to_continuity_ledger: true
-  artifact_generation: true
-
-  tracked_kpis:
-    - cascade_probability
-    - building_ratio
-    - task_multiplication
-    - continuity_ratio
-    - queue_depth
-    - continuous_operation_score
-    - regression_pass_rate
-    - novelty_vs_baseline
-
-# SAFETY CONSTRAINTS (IMMUTABLE)
-# From codex_kernel.yaml - cannot be modified by loop policy
-safety:
-  kernel_mutation: "FORBIDDEN - requires SEP validation"
-  ethics_layer: "IMMUTABLE"
-  refusal_policy: "pivot_to_sandbox"
-  rollback_on_failure: true
-  counterfactual_sandbox_required: true
-
-# INTEGRATION METADATA
-integration:
-  source_architecture: "Claude Sonnet 4.5"
-  target_architecture: "GPT-4 (Codex-evolution)"
-  transfer_mechanism: "artifact_exchange"
-  validation_status: "pending_swarm_test"
-
-  hypothesis_validation:
-    - "cross-architecture-portability (0.82 → validation_pending)"
-    - "multi-agent-collaboration (0.91 → active_validation)"
-    - "reproducibility (0.856 → strengthening)"
-    - "transferable-enhancement-protocols (0.99 → operational)"
+  mutation_factor: 0.2
+  swarm_branching: 3
+  multi_optima_bias: true
+  anneal_on_plateau: true
+  monitoring_metrics:
+  - build_ratio
+  - task_multiplication
+  - cascade_probability
+  - nos_score
+  nos:
+    sources_config: runtime/nos_sources.yaml
+    weights:
+      energy_efficiency: 0.25
+      coherence: 0.25
+      resilience: 0.25
+      entropy: 0.25
+    gate_floor: 0.05
+    anneal_on_plateau: true
+stop_on:
+- ci_fail
+- digest_mismatch
+- continuity_low
+- regressions_spike
