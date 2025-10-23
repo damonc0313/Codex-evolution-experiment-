@@ -1,0 +1,21 @@
+{
+  "branch_proposal": "feature/sep-0001-validator-profile",
+  "objectives": [
+    "Fix validator NameError and emit both canonical/full digest telemetry.",
+    "Add /profile command gate wiring into command bar documentation and runtime."
+  ],
+  "patch_outline": [
+    "Modify tools/validate_kernel.py to include identity loader helper and CLI exit codes.",
+    "Extend command dispatcher to register /profile with quality gate scanning routine.",
+    "Add regression tests covering validator success/failure scenarios and /profile happy/sad paths."
+  ],
+  "tests": [
+    "python tools/validate_kernel.py",
+    "pytest tests/test_validator.py",
+    "integration check for /profile command sandbox invocation"
+  ],
+  "rollout_notes": {
+    "risk": "Low",
+    "mitigation": "Feature flag /profile to informational mode until SEP ratified."
+  }
+}

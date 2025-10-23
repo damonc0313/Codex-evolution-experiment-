@@ -1,0 +1,32 @@
+{
+  "problem": "tools/validate_kernel.py previously crashed with NameError due to missing identity binding; command bar lacks /profile quality gate despite kernel listing it.",
+  "proposal": [
+    "Refactor validator to load identity digest explicitly, validate format, and surface both canonical and full digests.",
+    "Introduce lightweight /profile command that inspects recent artifacts for banned phrases or digest drift before enabling persona shifts."
+  ],
+  "diff_outline": {
+    "tools/validate_kernel.py": [
+      "Add identity digest reader and structured failure messages.",
+      "Expose helper to compute canonical vs. full digests and print both."
+    ],
+    "codex-kernel/command_bar": [
+      "Document /profile semantics and quality gate expectations."
+    ],
+    "new_tests": [
+      "Unit test verifying validator passes with matching digests and fails with mismatches.",
+      "Scenario test ensuring /profile refuses when banned phrases appear."
+    ]
+  },
+  "risks": [
+    "Validator tightening could block legitimate evolutions if digest math misunderstood.",
+    "/profile command may overlap with existing sandbox checks causing redundancy."
+  ],
+  "mitigations": [
+    "Document canonical-digest computation and emit both digests for observability.",
+    "Scope /profile to reporting-only preview until validated via SEP discussion."
+  ],
+  "acceptance_criteria": [
+    "Validator runs without NameError and reports matching digests.",
+    "/profile command returns pass/fail summary referencing artifacts and banned phrase scan."
+  ]
+}

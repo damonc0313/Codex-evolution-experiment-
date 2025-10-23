@@ -1,0 +1,97 @@
+{
+  "passes": [
+    {
+      "artifact": "artifacts/artifact_0002_handshake.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": true,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "OK"
+    },
+    {
+      "artifact": "artifacts/artifact_0003_triad.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": false,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "Review sandbox coverage"
+    },
+    {
+      "artifact": "artifacts/artifact_0004_sandbox.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": true,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "OK"
+    },
+    {
+      "artifact": "artifacts/artifact_0005_continuity.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": false,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "Review sandbox coverage"
+    },
+    {
+      "artifact": "artifacts/artifact_0006_modes.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": false,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "Review sandbox coverage"
+    },
+    {
+      "artifact": "artifacts/artifact_0007_SEP0001_preview.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": true,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "OK"
+    }
+  ],
+  "satisfied_ratio": "3/6",
+  "gaps": [
+    {
+      "artifact": "artifacts/artifact_0003_triad.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": false,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "Review sandbox coverage"
+    },
+    {
+      "artifact": "artifacts/artifact_0005_continuity.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": false,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "Review sandbox coverage"
+    },
+    {
+      "artifact": "artifacts/artifact_0006_modes.json",
+      "invariant_checks": {
+        "artifact_first": true,
+        "sandbox_ready": false,
+        "continuity_logged": true,
+        "quality_gates": true
+      },
+      "notes": "Review sandbox coverage"
+    }
+  ]
+}
