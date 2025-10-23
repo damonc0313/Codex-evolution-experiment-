@@ -1,0 +1,40 @@
+{
+  "artifact_type": "mode_benchmark",
+  "micro_task": "Design a two-step plan to harden tools/validate_kernel.py against regressions.",
+  "comparisons": {
+    "strict": {
+      "plan": [
+        "Add unit tests covering identity digest parsing and digest mismatch cases.",
+        "Wire validator execution into CI as a required check."
+      ],
+      "score": {
+        "specificity": 3,
+        "risk": 1,
+        "novelty": 1
+      }
+    },
+    "balanced": {
+      "plan": [
+        "Refactor validator to expose a reusable check_digest(identity) helper.",
+        "Document troubleshooting steps in README with failure patterns."
+      ],
+      "score": {
+        "specificity": 2,
+        "risk": 1,
+        "novelty": 2
+      }
+    },
+    "creative": {
+      "plan": [
+        "Generate synthetic kernel variants via fuzzing to probe validator edge cases.",
+        "Log validator runs into continuity ledger to detect drift via anomaly scoring."
+      ],
+      "score": {
+        "specificity": 1,
+        "risk": 2,
+        "novelty": 3
+      }
+    }
+  },
+  "best_for_task": "balanced"
+}
