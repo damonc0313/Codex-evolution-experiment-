@@ -259,11 +259,7 @@ def _write_artifact(record: Dict[str, Any]) -> None:
 
 
 def main() -> None:
-    record = synthesize_query()
-    ANCHOR.parent.mkdir(parents=True, exist_ok=True)
-    ANCHOR.write_text(record["query"], encoding="utf-8")
-    _write_artifact(record)
-    print(f"[SELF-QUERY] wrote new directive: {record['query']}")
+    generate_query()
 
 
 if __name__ == "__main__":

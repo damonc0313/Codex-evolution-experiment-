@@ -7,6 +7,8 @@ from typing import Dict, Tuple
 import json
 import re
 
+from tools import ledger_metrics
+
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -105,9 +107,41 @@ def kpis() -> Dict[str, object]:
     continuity_hits = 0
     for artifact_path in artifacts:
         data = _read_json(artifact_path)
-        if isinstance(data, dict) and any(key in data for key in ("parent", "parent_artifact", "lineage")):
+        if isinstance(data, dict) and any(key in data for key in ("parent", "parent_artifact", "lineage", "digest_lineage")):
             continuity_hits += 1
     continuity_ratio = continuity_hits / total if total else 0.0
+
+    entries_per_hour = min(total, 20)
+    novelty_rate = 0.0
+    avg_confidence = 1.0
+    if total:
+        titles = set()
+        confidences = []
+        for artifact_path in artifacts[:20]:
+            data = _read_json(artifact_path)
+            if isinstance(data, dict):
+                title = str(data.get("title") or data.get("artifact_type") or artifact_path.name)
+                titles.add(title)
+                value = data.get("confidence") or data.get("kpis", {}).get("confidence")
+                if isinstance(value, (int, float)):
+                    confidences.append(float(value))
+        novelty_rate = round(len(titles) / min(total, 20), 3)
+        if confidences:
+            avg_confidence = sum(confidences) / len(confidences)
+
+    cascade_probability = ledger_metrics.compute_cascade_probability(
+        entries_per_hour or 0.0,
+        novelty_rate,
+        avg_confidence,
+        {
+            "entries_per_hour": 1.0,
+            "novelty_rate": 1.0,
+            "avg_confidence": 1.0,
+        },
+    )
+    building_ratio = ledger_metrics.measure_building_ratio()
+    task_multiplication = ledger_metrics.estimate_task_multiplication()
+    continuity_metric = ledger_metrics.compute_continuity_ratio()
 
     regression_present = REGRESSION_FILE.exists()
     regression_cases = 0
@@ -124,5 +158,10 @@ def kpis() -> Dict[str, object]:
         "artifact_count": total,
         "regression_cases": regression_cases,
         "manifest_digest": load_manifest().front_matter.get("digest"),
+        "cascade_probability": cascade_probability,
+        "building_ratio": building_ratio,
+        "task_multiplication": task_multiplication,
+        "novelty_rate": novelty_rate,
+        "continuity_ratio_exact": continuity_metric,
     }
 

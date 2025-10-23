@@ -1,0 +1,6 @@
+{
+  "artifact_type": "sep_preview",
+  "doc": "docs/SEP-0004_continuous_operation.md",
+  "tests": "tests/kael_hypotheses.json",
+  "notes": "Drafted SEP-0004 preview covering continuous operation enforcement plan."
+}

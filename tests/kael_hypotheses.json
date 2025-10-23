@@ -1,0 +1,26 @@
+[
+  {
+    "name": "continuous_operation_formula_holds",
+    "description": "Validate continuous operation thresholds match loop_policy targets",
+    "expect": {
+      "task_queue_min": 6,
+      "building_ratio_min": 0.55,
+      "task_multiplication_min": 1.6
+    }
+  },
+  {
+    "name": "cascade_prob_computable",
+    "description": "Ensure ledger_metrics.compute_cascade_probability returns a float",
+    "expect": "float"
+  },
+  {
+    "name": "novelty_floor_enforced",
+    "description": "Self-query should enforce novelty floor from policy",
+    "expect": ">=0.35"
+  },
+  {
+    "name": "self_query_biases_building",
+    "description": "Autonomous queries should bias toward improving building ratio when below target",
+    "expect": "query contains building-focused directive"
+  }
+]
