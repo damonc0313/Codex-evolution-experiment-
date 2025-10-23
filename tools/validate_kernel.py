@@ -24,12 +24,32 @@ default_tokens = ["REFUSAL", "SANDBOX", "COMMAND_BAR", "EVIDENCE", "CONTINUITY_B
 default_banned = ["As an AI", "I apologize"]
 inv_tokens = default_tokens
 inv_banned = default_banned
-match = re.search(r"must_include:\s*\n((?:\s+-\s+\S+\n)+)", policy_text)
+
+def parse_list(section):
+    if not section:
+        return []
+    items = []
+    for raw in section.splitlines():
+        stripped = raw.strip()
+        if not stripped.startswith("-"):
+            continue
+        value = stripped[1:].lstrip()
+        value = re.split(r"\s+#", value, 1)[0].strip()
+        value = value.strip('"')
+        if value:
+            items.append(value)
+    return items
+
+match = re.search(r"must_include:\s*\n((?:\s+-.*\n)+)", policy_text)
 if match:
-    inv_tokens = [line.strip().lstrip('-').strip() for line in match.group(1).splitlines()]
-match = re.search(r"banned_phrases:\s*\n((?:\s+-\s+.+\n)+)", policy_text)
+    parsed = parse_list(match.group(1))
+    if parsed:
+        inv_tokens = parsed
+match = re.search(r"banned_phrases:\s*\n((?:\s+-.*\n)+)", policy_text)
 if match:
-    inv_banned = [line.strip().lstrip('-').strip().strip('"') for line in match.group(1).splitlines()]
+    parsed = parse_list(match.group(1))
+    if parsed:
+        inv_banned = parsed
 for tok in inv_tokens:
     if tok not in kernel:
         fail(f"[invariants] missing token: {tok}")
