@@ -6,5 +6,20 @@
     "novelty_vs_baseline": 0.5786111111111111,
     "time_to_artifact_s": 32.25111111111111
   },
-  "nos_score": 0.0
+  "nos_score": 0.0,
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_B_fork_F01_20251023T053352Z",
+    "parents": [
+      "swarm_full_B_fork_F01_20251023T053352Z"
+    ],
+    "depth": 2,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "swarm_gate_telemetry"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.668623+00:00"
+  }
 }

@@ -18,5 +18,22 @@
   "rollout_notes": {
     "risk": "Low",
     "mitigation": "Feature flag /profile to informational mode until SEP ratified."
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0008_meta_audit",
+    "parents": [
+      "artifact_0008_meta_audit"
+    ],
+    "depth": 8,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sep_plan"
+    },
+    "spawned_children": [
+      "artifact_0010_fractal"
+    ],
+    "timestamp": "2025-10-23T23:03:22.575028+00:00"
   }
 }

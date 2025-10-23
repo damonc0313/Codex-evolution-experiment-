@@ -1,0 +1,7 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "I",
+  "command": "python tools/validate_kernel.py",
+  "result": "pass",
+  "details": "Validator succeeded with agents manifesto soft checks"
+}

@@ -26,5 +26,23 @@
     "Standardize artifact parent references (documented in continuity snapshot).",
     "Define /profile gating scope before enabling evolution (captured in SEP preview)."
   ],
-  "sep_idea": "SEP-0001 formalizes validator hardening and introduces /profile quality gate under guarded rollout."
+  "sep_idea": "SEP-0001 formalizes validator hardening and introduces /profile quality gate under guarded rollout.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0009_SEP0001_plan",
+    "parents": [
+      "artifact_0009_SEP0001_plan"
+    ],
+    "depth": 9,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "self_analysis_fractal"
+    },
+    "spawned_children": [
+      "artifact_0002_meta",
+      "artifact_0011_continuity"
+    ],
+    "timestamp": "2025-10-23T23:03:22.576222+00:00"
+  }
 }

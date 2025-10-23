@@ -1,0 +1,11 @@
+{
+  "artifact_type": "kael_ingest",
+  "source": "docs/LEDGER_KAEL_2025-10-23.md",
+  "index_artifact": "artifacts/kael_index.json",
+  "evidence": [
+    "Kael synthesis conversation block",
+    "Continuity ledger entries",
+    "Swarm fusion telemetry"
+  ],
+  "notes": "Synthesis ingested and indexed for doctrine + KPI activation."
+}

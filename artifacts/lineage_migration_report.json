@@ -1,0 +1,540 @@
+{
+  "migration_type": "lineage_backfill",
+  "dry_run": false,
+  "timestamp": "2025-10-23T23:03:22.781055+00:00",
+  "artifacts_processed": 83,
+  "artifacts_already_migrated": 0,
+  "lineage_added": 83,
+  "confidence_distribution": {
+    "0.70-0.79": 59,
+    "0.60-0.69": 6,
+    "0.50-0.59": 17,
+    "0.90-1.00": 1
+  },
+  "manual_review_required": [
+    "agents_decision_summary",
+    "agents_digest_lineage",
+    "agents_reflect_report",
+    "artifact_0002_handshake",
+    "cascade_analysis",
+    "continuous_operation_metrics",
+    "dep_bootstrap",
+    "enhanced_building_ratio_measurement",
+    "kael_ci_paths",
+    "kael_index",
+    "kael_kpis_augmented",
+    "kael_loop_policy",
+    "kael_metrics_bench",
+    "kael_next_query",
+    "kael_selfquery_patch",
+    "lineage_migration_report",
+    "metrics_recalibration_audit",
+    "natural_heuristics_synthesis",
+    "nos_sources_index",
+    "queue_balancer_plan",
+    "selfquery_advance",
+    "sep0002_digest",
+    "sep0002_sandbox"
+  ],
+  "manual_review_count": 23,
+  "migration_results": [
+    {
+      "artifact": "agents_apply_ci",
+      "parent_inferred": "agents_apply_cisim",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_cisim",
+      "parent_inferred": "agents_apply_digest",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_digest",
+      "parent_inferred": "agents_apply_draft",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_draft",
+      "parent_inferred": "agents_apply_harvest",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_harvest",
+      "parent_inferred": "agents_apply_patch",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_patch",
+      "parent_inferred": "agents_apply_runtime",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_runtime",
+      "parent_inferred": "agents_apply_summary",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_summary",
+      "parent_inferred": "agents_apply_tests",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_tests",
+      "parent_inferred": "agents_apply_validator",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "agents_apply_validator",
+      "parent_inferred": "agents_feedback_trace",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "agents_decision_summary",
+      "parent_inferred": "agents_reflect_report",
+      "confidence": 0.7,
+      "rationale": "Timestamp proximity + type similarity (0.65)"
+    },
+    {
+      "artifact": "agents_digest_lineage",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "agents_feedback_trace",
+      "parent_inferred": "agents_reflect_report",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "agents_reflect_report",
+      "parent_inferred": "artifact_0002_meta",
+      "confidence": 0.7,
+      "rationale": "Timestamp proximity + type similarity (0.65)"
+    },
+    {
+      "artifact": "artifact_0000_init",
+      "parent_inferred": null,
+      "confidence": 1.0,
+      "rationale": "Root artifact"
+    },
+    {
+      "artifact": "artifact_0002_handshake",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "artifact_0002_meta",
+      "parent_inferred": "artifact_0010_fractal",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "artifact_0003_triad",
+      "parent_inferred": "artifact_0002_handshake",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0004_sandbox",
+      "parent_inferred": "artifact_0003_triad",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0005_continuity",
+      "parent_inferred": "artifact_0004_sandbox",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0006_modes",
+      "parent_inferred": "artifact_0005_continuity",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0007_SEP0001_preview",
+      "parent_inferred": "artifact_0006_modes",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0008_meta_audit",
+      "parent_inferred": "artifact_0007_SEP0001_preview",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0009_SEP0001_plan",
+      "parent_inferred": "artifact_0008_meta_audit",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0010_fractal",
+      "parent_inferred": "artifact_0009_SEP0001_plan",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0011_continuity",
+      "parent_inferred": "artifact_0010_fractal",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0012_falsify",
+      "parent_inferred": "artifact_0011_continuity",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "artifact_0013_SEP0001_dryrun",
+      "parent_inferred": "artifact_0012_falsify",
+      "confidence": 0.7,
+      "rationale": "Sequential numbering (timestamps distant: 1761260603s)"
+    },
+    {
+      "artifact": "cascade_analysis",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "continuous_operation_metrics",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "dep_bootstrap",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "enhanced_building_ratio_measurement",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "kael_ci_paths",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "kael_index",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "kael_ingest",
+      "parent_inferred": "kael_integration_summary",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "kael_integration_summary",
+      "parent_inferred": "kael_metrics_added",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "kael_kpis_augmented",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "kael_loop_policy",
+      "parent_inferred": "kael_sep0004_preview",
+      "confidence": 0.7,
+      "rationale": "Timestamp proximity + type similarity (0.65)"
+    },
+    {
+      "artifact": "kael_metrics_added",
+      "parent_inferred": "kael_metrics_bench",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "kael_metrics_bench",
+      "parent_inferred": "kael_sep0004_preview",
+      "confidence": 0.7,
+      "rationale": "Timestamp proximity + type similarity (0.65)"
+    },
+    {
+      "artifact": "kael_next_query",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "kael_selfquery_patch",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "kael_sep0004_preview",
+      "parent_inferred": "sep0002_digest",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "kael_swarm_validation",
+      "parent_inferred": "swarm_full_A_plan_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "lineage_migration_report",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "metrics_recalibration_audit",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "natural_heuristics_synthesis",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "nos_calibration",
+      "parent_inferred": "nos_features",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "nos_features",
+      "parent_inferred": "nos_ingest_report",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "nos_ingest_report",
+      "parent_inferred": "nos_sources_index",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "nos_sources_index",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "queue_balancer_plan",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "selfquery_advance",
+      "parent_inferred": "artifact_0000_init",
+      "confidence": 0.5,
+      "rationale": "Default root link (no better parent found)"
+    },
+    {
+      "artifact": "sep0002_digest",
+      "parent_inferred": "sep0002_sandbox",
+      "confidence": 0.7,
+      "rationale": "Timestamp proximity + type similarity (0.65)"
+    },
+    {
+      "artifact": "sep0002_sandbox",
+      "parent_inferred": "swarm_full_E_sep0003_20251023T053352Z",
+      "confidence": 0.7,
+      "rationale": "Timestamp proximity + type similarity (0.65)"
+    },
+    {
+      "artifact": "swarm_full_A_plan_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F01_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F02_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F02_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F03_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F04_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F05_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F06_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F07_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F08_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F09_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F10_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F11_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F12_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F13_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F14_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F15_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F16_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F17_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_fork_F18_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.74,
+      "rationale": "Timestamp proximity + type similarity (0.95)"
+    },
+    {
+      "artifact": "swarm_full_B_index_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "swarm_full_C_selection_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "swarm_full_D_fusion_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "swarm_full_E_sep0003_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "swarm_full_F_next_query_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "swarm_full_G_summary_20251023T053352Z",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "swarm_gate_telemetry",
+      "parent_inferred": "swarm_full_B_fork_F01_20251023T053352Z",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "validator_guard_patch",
+      "parent_inferred": "validator_rerun",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    },
+    {
+      "artifact": "validator_rerun",
+      "parent_inferred": "validator_guard_patch",
+      "confidence": 0.72,
+      "rationale": "Timestamp proximity + type similarity (0.80)"
+    }
+  ]
+}

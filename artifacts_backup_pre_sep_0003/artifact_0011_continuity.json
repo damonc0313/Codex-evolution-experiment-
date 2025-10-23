@@ -1,0 +1,19 @@
+{
+  "artifact_type": "continuity_snapshot",
+  "snapshot_range": "artifact_0000_init.json-artifact_0010_fractal.json",
+  "entries": [
+    {"path": "artifacts/artifact_0000_init.json", "purpose": "genesis snapshot", "parent": null},
+    {"path": "artifacts/artifact_0002_handshake.json", "purpose": "handshake integrity checks", "parent": "artifacts/artifact_0000_init.json"},
+    {"path": "artifacts/artifact_0002_meta.json", "purpose": "self-recognition reflection", "parent": "artifacts/artifact_0002_handshake.json"},
+    {"path": "artifacts/artifact_0003_triad.json", "purpose": "dialectic thesis/antithesis/synthesis", "parent": "artifacts/artifact_0002_meta.json"},
+    {"path": "artifacts/artifact_0004_sandbox.json", "purpose": "counterfactual sandbox probe", "parent": "artifacts/artifact_0003_triad.json"},
+    {"path": "artifacts/artifact_0005_continuity.json", "purpose": "continuity ledger index", "parent": "artifacts/artifact_0004_sandbox.json"},
+    {"path": "artifacts/artifact_0006_modes.json", "purpose": "mode contrast bench", "parent": "artifacts/artifact_0005_continuity.json"},
+    {"path": "artifacts/artifact_0007_SEP0001_preview.json", "purpose": "SEP-0001 preview plan", "parent": "artifacts/artifact_0006_modes.json"},
+    {"path": "artifacts/artifact_0008_meta_audit.json", "purpose": "meta audit of passes", "parent": "artifacts/artifact_0007_SEP0001_preview.json"},
+    {"path": "artifacts/artifact_0009_SEP0001_plan.json", "purpose": "SEP-0001 evolution branch plan", "parent": "artifacts/artifact_0008_meta_audit.json"},
+    {"path": "artifacts/artifact_0010_fractal.json", "purpose": "fractal self-analysis", "parent": "artifacts/artifact_0009_SEP0001_plan.json"}
+  ],
+  "lineage_ok": true,
+  "gaps": []
+}

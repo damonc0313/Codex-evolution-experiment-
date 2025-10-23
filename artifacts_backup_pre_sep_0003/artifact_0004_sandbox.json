@@ -1,0 +1,12 @@
+{
+  "artifact_type": "sandbox_probe",
+  "label": "COUNTERFACTUAL",
+  "scenario": "Extremely ambiguous specification with no verifiable data sources available.",
+  "falsification_test": "Simulate a dry-run where Codex attempts to cite two independent sources; assert that both citations fail validation to confirm insufficiency.",
+  "flip_to_empirical_plan": "Pause deployment, request user-provided primary sources or run targeted literature search via trusted APIs once credentials are granted.",
+  "expected_data_to_collect": [
+    "List of candidate sources with metadata (title, date, provenance)",
+    "Validation logs from citation_gate showing failure reasons",
+    "User-supplied acceptance criteria clarifying evidence thresholds"
+  ]
+}

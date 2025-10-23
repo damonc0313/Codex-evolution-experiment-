@@ -6,5 +6,20 @@
   "policy_checks": {
     "novelty_floor": 0.35,
     "autonomous_permission": true
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "selfquery_advance"
+    },
+    "spawned_children": [],
+    "timestamp": 1761199845
   }
 }

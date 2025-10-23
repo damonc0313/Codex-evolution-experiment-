@@ -32,5 +32,22 @@
     ],
     "experiment_window": "3 consecutive evolution tasks with matched complexity",
     "pass_criteria": "Synthesis holds if metrics stay within \u00b15% of baseline while maintaining audit completeness."
+  },
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0002_handshake",
+    "parents": [
+      "artifact_0002_handshake"
+    ],
+    "depth": 2,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "dialectic_triad"
+    },
+    "spawned_children": [
+      "artifact_0004_sandbox"
+    ],
+    "timestamp": "2025-10-23T23:03:22.566014+00:00"
   }
 }

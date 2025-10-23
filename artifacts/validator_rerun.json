@@ -4,5 +4,22 @@
   "command": "python tools/validate_kernel.py",
   "exit_code": 0,
   "digest": "65e63e538c97e181",
-  "artifacts_checked": 72
+  "artifacts_checked": 72,
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "validator_guard_patch",
+    "parents": [
+      "validator_guard_patch"
+    ],
+    "depth": 2,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "validator_rerun"
+    },
+    "spawned_children": [
+      "validator_guard_patch"
+    ],
+    "timestamp": 1761199876
+  }
 }

@@ -24,7 +24,7 @@
   ],
   "role_alignment": {
     "Codex": {
-      "declared": "Executes Ω-cycle, generates artifacts, runs validations",
+      "declared": "Executes \u03a9-cycle, generates artifacts, runs validations",
       "observed_functions": [
         "tools/run_omega_cycle.py main()",
         "tools/agents_protocol.py.kpis",
@@ -38,7 +38,7 @@
         "tools/evolve_loop.py run_cycle() --mentor invocation",
         "runtime/mentor_feedback.txt consumer"
       ],
-      "alignment": "partial" ,
+      "alignment": "partial",
       "notes": "Feedback ingestion exists but no automatic summary writer yet"
     },
     "Validator": {
@@ -55,11 +55,29 @@
   ],
   "risk": {
     "description": "Mentor alignment is only partial; missing automatic artifact summary injection could desync feedback cadence",
-    "mitigation": "Add Ω-cycle summary writer in SEP-0002 to append mentor feedback automatically"
+    "mitigation": "Add \u03a9-cycle summary writer in SEP-0002 to append mentor feedback automatically"
   },
   "acceptance_criteria": [
     "Manifest digest matches documented front matter",
     "Sections enumerated align with manifesto body",
     "Each agent role maps to at least one runtime function"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0002_meta",
+    "parents": [
+      "artifact_0002_meta"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "reflection",
+      "trigger": "agents_reflection"
+    },
+    "spawned_children": [
+      "agents_decision_summary",
+      "agents_feedback_trace"
+    ],
+    "timestamp": "2025-10-23T23:03:22.558553+00:00"
+  }
 }

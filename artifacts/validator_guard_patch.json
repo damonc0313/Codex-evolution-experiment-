@@ -2,5 +2,22 @@
   "artifact_type": "validator_guard_patch",
   "timestamp": 1761199693,
   "import_guard": "WARN on missing PyYAML then exit 0",
-  "status": "applied"
+  "status": "applied",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "validator_rerun",
+    "parents": [
+      "validator_rerun"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "validator_guard_patch"
+    },
+    "spawned_children": [
+      "validator_rerun"
+    ],
+    "timestamp": 1761199693
+  }
 }

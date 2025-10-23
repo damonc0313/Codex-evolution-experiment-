@@ -121,5 +121,20 @@
     "novelty": 0.9927,
     "previous_query_present": true
   },
-  "gated": false
+  "gated": false,
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_B_fork_F01_20251023T053352Z",
+    "parents": [
+      "swarm_full_B_fork_F01_20251023T053352Z"
+    ],
+    "depth": 2,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "swarm_summary"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.667224+00:00"
+  }
 }

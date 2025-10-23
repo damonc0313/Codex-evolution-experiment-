@@ -29,5 +29,22 @@
   "acceptance_criteria": [
     "Validator runs without NameError and reports matching digests.",
     "/profile command returns pass/fail summary referencing artifacts and banned phrase scan."
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0006_modes",
+    "parents": [
+      "artifact_0006_modes"
+    ],
+    "depth": 6,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sep_preview"
+    },
+    "spawned_children": [
+      "artifact_0008_meta_audit"
+    ],
+    "timestamp": "2025-10-23T23:03:22.572749+00:00"
+  }
 }

@@ -3,5 +3,22 @@
   "phase": "C",
   "action": "created",
   "target": "docs/agents.md",
-  "notes": "Initial manifesto authored from scratch; no prior file existed"
+  "notes": "Initial manifesto authored from scratch; no prior file existed",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_runtime",
+    "parents": [
+      "agents_apply_runtime"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_harvest"
+    ],
+    "timestamp": "2025-10-23T23:03:22.540894+00:00"
+  }
 }

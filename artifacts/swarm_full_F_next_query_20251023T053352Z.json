@@ -5,5 +5,20 @@
   "mode_hint": "BALANCED",
   "reason": "fused_delta",
   "novelty": 0.9927,
-  "previous_query_present": true
+  "previous_query_present": true,
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "swarm_full_B_fork_F01_20251023T053352Z",
+    "parents": [
+      "swarm_full_B_fork_F01_20251023T053352Z"
+    ],
+    "depth": 2,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "swarm_next_query"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.664636+00:00"
+  }
 }

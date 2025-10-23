@@ -6,5 +6,22 @@
     "agents_manifesto_present",
     "agents_manifesto_front_matter_ok",
     "agents_protocol_loads"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_apply_validator",
+    "parents": [
+      "agents_apply_validator"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "agents_apply_phase"
+    },
+    "spawned_children": [
+      "agents_apply_summary"
+    ],
+    "timestamp": "2025-10-23T23:03:22.546705+00:00"
+  }
 }

@@ -572,5 +572,20 @@
       "confidence": 0.8,
       "rationale": "Contains code/config file references"
     }
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "enhanced_building_ratio_measurement"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T13:31:13.684765"
+  }
 }

@@ -7,5 +7,20 @@
     "tools/self_query.py",
     "tests/kael_hypotheses.json"
   ],
-  "notes": "CI now watches Kael ledger, metrics, and self-query upgrades."
+  "notes": "CI now watches Kael ledger, metrics, and self-query upgrades.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0000_init",
+    "parents": [
+      "artifact_0000_init"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "ci_update"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.589218+00:00"
+  }
 }

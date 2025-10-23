@@ -2,5 +2,23 @@
   "artifact_type": "sep_preview",
   "doc": "docs/SEP-0004_continuous_operation.md",
   "tests": "tests/kael_hypotheses.json",
-  "notes": "Drafted SEP-0004 preview covering continuous operation enforcement plan."
+  "notes": "Drafted SEP-0004 preview covering continuous operation enforcement plan.",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "sep0002_digest",
+    "parents": [
+      "sep0002_digest"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sep_preview"
+    },
+    "spawned_children": [
+      "kael_loop_policy",
+      "kael_metrics_bench"
+    ],
+    "timestamp": "2025-10-23T23:03:22.606718+00:00"
+  }
 }

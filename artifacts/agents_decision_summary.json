@@ -22,5 +22,20 @@
     "Decision recorded with actionable next step",
     "Risks enumerated",
     "Prerequisites aligned with SEP draft"
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "agents_reflect_report",
+    "parents": [
+      "agents_reflect_report"
+    ],
+    "depth": 1,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "reflection",
+      "trigger": "reflection_decision"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.551252+00:00"
+  }
 }

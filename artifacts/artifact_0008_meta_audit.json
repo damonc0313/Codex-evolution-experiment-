@@ -94,5 +94,22 @@
       },
       "notes": "Review sandbox coverage"
     }
-  ]
+  ],
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0007_SEP0001_preview",
+    "parents": [
+      "artifact_0007_SEP0001_preview"
+    ],
+    "depth": 7,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "meta_audit"
+    },
+    "spawned_children": [
+      "artifact_0009_SEP0001_plan"
+    ],
+    "timestamp": "2025-10-23T23:03:22.573775+00:00"
+  }
 }

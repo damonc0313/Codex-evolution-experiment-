@@ -18,5 +18,20 @@
     "Document canonical digest procedure inside validator",
     "Allow gate overrides via sandboxed clarification artifact"
   ],
-  "readiness": "Plan complete; awaiting authorization"
+  "readiness": "Plan complete; awaiting authorization",
+  "lineage": {
+    "root": "artifact_0000_init",
+    "parent": "artifact_0012_falsify",
+    "parents": [
+      "artifact_0012_falsify"
+    ],
+    "depth": 12,
+    "spawned_by": {
+      "cycle": "unknown_cycle",
+      "phase": "unknown",
+      "trigger": "sep_dryrun"
+    },
+    "spawned_children": [],
+    "timestamp": "2025-10-23T23:03:22.580724+00:00"
+  }
 }

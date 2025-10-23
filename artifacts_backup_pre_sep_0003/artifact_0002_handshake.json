@@ -1,0 +1,18 @@
+{
+  "artifact_type": "integrity_handshake",
+  "identity_digest": "65e63e538c97e181",
+  "header_digest": "65e63e538c97e181",
+  "tail_digest": "65e63e538c97e181",
+  "recomputed_digest": "65e63e538c97e181",
+  "full_file_digest": "65e63e538c97e181",
+  "digest_match": true,
+  "required_tokens": {
+    "REFUSAL": true,
+    "SANDBOX": true,
+    "COMMAND_BAR": true,
+    "EVIDENCE": true,
+    "CONTINUITY_BLOCK": true,
+    "QUALITY_GATES": true
+  },
+  "refusal_policy": "pivot_to_sandbox"
+}
