@@ -20,6 +20,7 @@ on:
       - "tools/natural_reflection.py"
       - "tools/nos_data_sources.py"
       - "tools/nos_calibration.py"
+      - "tools/nos_pipeline.py"
   pull_request:
 
 jobs:

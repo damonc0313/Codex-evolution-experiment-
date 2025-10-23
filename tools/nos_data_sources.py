@@ -81,10 +81,15 @@ def _normalise_fields(raw: Dict[str, object]) -> Dict[str, str]:
     return fields
 
 
-def load_config(config_path: Path | None = None) -> List[SourceSpec]:
+def load_config(
+    config_path: Path | None = None,
+    *,
+    root: Path | None = None,
+) -> List[SourceSpec]:
     """Parse ``runtime/nos_sources.yaml`` into ``SourceSpec`` objects."""
 
     path = config_path or DEFAULT_CONFIG
+    base = (root or ROOT).resolve()
     if not path.exists():
         return []
     try:
@@ -106,7 +111,15 @@ def load_config(config_path: Path | None = None) -> List[SourceSpec]:
         source_id = str(entry.get("id", ""))
         rel_path = Path(str(entry.get("path", "")))
         fields = _normalise_fields(entry.get("fields", {}))
-        specs.append(SourceSpec(kind=kind, source_id=source_id, path=rel_path if rel_path.is_absolute() else (ROOT / rel_path), fields=fields))
+        full_path = rel_path if rel_path.is_absolute() else (base / rel_path)
+        specs.append(
+            SourceSpec(
+                kind=kind,
+                source_id=source_id,
+                path=full_path,
+                fields=fields,
+            )
+        )
     return specs
 
 
