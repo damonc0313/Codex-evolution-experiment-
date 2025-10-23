@@ -1,0 +1,20 @@
+{
+  "artifact_type": "digest_lineage",
+  "previous_digest": "f0c0330aab08873e",
+  "current_digest": "cd7db1071d130396",
+  "method": "sha256[:16] after neutralizing manifest digest field",
+  "continuity_entry": "continuity_ledger.jsonl:last",
+  "assumptions": [
+    "Manifest content unchanged since activation",
+    "Neutralization approach matches validator canonical method"
+  ],
+  "risk": {
+    "description": "If canonical method differs, lineage record may diverge from validator reading",
+    "mitigation": "Align hashing logic with future validator upgrade in SEP-0002"
+  },
+  "acceptance_criteria": [
+    "Previous digest recorded",
+    "Current digest recorded",
+    "Hashing method documented"
+  ]
+}

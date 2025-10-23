@@ -1,0 +1,12 @@
+{
+  "artifact_type": "agents_apply_phase",
+  "phase": "H",
+  "workflow": ".github/workflows/codex-ci.yml",
+  "paths_monitored": [
+    "docs/agents.md",
+    "tools/agents_protocol.py",
+    "tools/run_omega_cycle.py",
+    "tools/validate_kernel.py",
+    "tests/claude_regressions.json"
+  ]
+}
