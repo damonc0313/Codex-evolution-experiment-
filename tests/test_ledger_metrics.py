@@ -4,6 +4,11 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 import pytest
 
@@ -82,12 +87,66 @@ def test_measure_building_ratio_handles_file_lists(tmp_path: Path) -> None:
     assert ratio == pytest.approx(1.0)
 
 
-def test_measure_building_ratio_handles_agents_apply_ci(tmp_path: Path) -> None:
-    """Regression: agents apply CI artifact should count as building."""
+def test_measure_building_ratio_counts_agents_apply_metadata(tmp_path: Path) -> None:
+    """Agents apply artifacts should count as building when they monitor code paths."""
 
-    fixture_path = Path(__file__).resolve().parent.parent / "artifacts" / "agents_apply_ci.json"
-    payload = json.loads(fixture_path.read_text(encoding="utf-8"))
-    _write_artifact(tmp_path, "agents_apply_ci.json", payload)
+    _write_artifact(
+        tmp_path,
+        "artifact_agents_apply.json",
+        {
+            "artifact_type": "agents_apply_phase",
+            "paths_monitored": ["runtime/loop_state.json"],
+            "workflow": {
+                "steps": [
+                    {
+                        "description": "Implementation guard",
+                        "implementation_targets": [
+                            "tools/ledger_metrics.py"
+                        ],
+                    }
+                ]
+            },
+        },
+    )
+
+    ratio = ledger_metrics.measure_building_ratio(tmp_path)
+    assert ratio == pytest.approx(1.0)
+
+
+def test_measure_building_ratio_counts_agents_apply_targets(tmp_path: Path) -> None:
+    """Targeted agents apply payloads referencing files should count as building."""
+
+    _write_artifact(
+        tmp_path,
+        "artifact_agents_apply_target.json",
+        {
+            "artifact_type": "agents_apply_phase",
+            "phase": "C",
+            "action": "created",
+            "target": "docs/agents.md",
+            "notes": "Created manifesto to codify implementation guardrails.",
+        },
+    )
+
+    ratio = ledger_metrics.measure_building_ratio(tmp_path)
+    assert ratio == pytest.approx(1.0)
+
+
+def test_measure_building_ratio_counts_agents_apply_evidence_paths(tmp_path: Path) -> None:
+    """Evidence paths with file references should register as building work."""
+
+    _write_artifact(
+        tmp_path,
+        "artifact_agents_apply_evidence.json",
+        {
+            "artifact_type": "agents_apply_phase",
+            "phase": "A",
+            "evidence_paths": [
+                "tools/evolve_loop.py",
+                "codex-kernel/evolution_policy.yaml",
+            ],
+        },
+    )
 
     ratio = ledger_metrics.measure_building_ratio(tmp_path)
     assert ratio == pytest.approx(1.0)

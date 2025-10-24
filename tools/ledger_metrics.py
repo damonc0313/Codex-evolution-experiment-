@@ -27,14 +27,17 @@ BUILDING_TYPE_HINTS = (
     "sep",
     "upgrade",
     "patch",
-    "agents",
     "apply",
+    "agents_apply",
+    "apply_phase",
+    "continuity",
 )
 
 BUILDING_KEYWORDS = (
     "build",
     "implement",
     "implementation",
+    "implementing",
     "wire",
     "deploy",
     "migrate",
@@ -50,6 +53,8 @@ BUILDING_KEYWORDS = (
     "blueprint",
     "spec",
     "manifest",
+    "document",
+    "manuscript",
 )
 
 BUILDING_EXTENSIONS = (
@@ -180,6 +185,14 @@ def _is_building_payload(payload: Dict[str, object]) -> bool:
         "acceptance_criteria",
         "assumptions",
         "risk",
+        "workflow",
+        "paths_monitored",
+        "monitors",
+        "implementation_targets",
+        "targets",
+        "target",
+        "evidence_paths",
+        "implementation_notes",
     ]
 
     text_fragments = []
@@ -206,8 +219,10 @@ def _is_building_payload(payload: Dict[str, object]) -> bool:
         "diffs",
         "artifacts",
         "paths_monitored",
-        "workflow",
-        "monitors",
+        "implementation_targets",
+        "targets",
+        "target",
+        "evidence_paths",
     ):
         if key not in payload:
             continue
