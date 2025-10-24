@@ -27,11 +27,17 @@ BUILDING_TYPE_HINTS = (
     "sep",
     "upgrade",
     "patch",
+    "apply",
+    "agents_apply",
+    "apply_phase",
+    "continuity",
 )
 
 BUILDING_KEYWORDS = (
     "build",
     "implement",
+    "implementation",
+    "implementing",
     "wire",
     "deploy",
     "migrate",
@@ -47,6 +53,8 @@ BUILDING_KEYWORDS = (
     "blueprint",
     "spec",
     "manifest",
+    "document",
+    "manuscript",
 )
 
 BUILDING_EXTENSIONS = (
@@ -172,6 +180,14 @@ def _is_building_payload(payload: Dict[str, object]) -> bool:
         "acceptance_criteria",
         "assumptions",
         "risk",
+        "workflow",
+        "paths_monitored",
+        "monitors",
+        "implementation_targets",
+        "targets",
+        "target",
+        "evidence_paths",
+        "implementation_notes",
     ]
 
     text_fragments = []
@@ -190,7 +206,19 @@ def _is_building_payload(payload: Dict[str, object]) -> bool:
             return True
 
     # Look for explicit file path references that usually signal implementation.
-    for key in ("files", "paths", "modified_files", "touched_files", "diffs", "artifacts"):
+    for key in (
+        "files",
+        "paths",
+        "modified_files",
+        "touched_files",
+        "diffs",
+        "artifacts",
+        "paths_monitored",
+        "implementation_targets",
+        "targets",
+        "target",
+        "evidence_paths",
+    ):
         if key not in payload:
             continue
         for fragment in _iter_strings(payload.get(key)):
