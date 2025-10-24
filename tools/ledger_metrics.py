@@ -27,11 +27,14 @@ BUILDING_TYPE_HINTS = (
     "sep",
     "upgrade",
     "patch",
+    "agents",
+    "apply",
 )
 
 BUILDING_KEYWORDS = (
     "build",
     "implement",
+    "implementation",
     "wire",
     "deploy",
     "migrate",
@@ -202,9 +205,9 @@ def _is_building_payload(payload: Dict[str, object]) -> bool:
         "touched_files",
         "diffs",
         "artifacts",
-        "implementation_targets",
-        "next_build_steps",
-        "patch_commands",
+        "paths_monitored",
+        "workflow",
+        "monitors",
     ):
         if key not in payload:
             continue
