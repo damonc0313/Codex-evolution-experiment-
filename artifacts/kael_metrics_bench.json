@@ -1,29 +1,12 @@
 {
   "artifact_type": "kael_metrics_bench",
-  "timestamp": 1761199788,
-  "sample_size": 50,
-  "entries_per_hour": 2328.599,
-  "novelty_rate": 0.64,
-  "avg_confidence": 0.8,
-  "cascade_probability": 745.152,
-  "building_ratio": 0.16,
+  "timestamp": 1761283470,
+  "sample_size": 84,
+  "entries_per_hour": 5040.0,
+  "novelty_rate": 0.679,
+  "avg_confidence": 0.94,
+  "cascade_probability": 2010.519,
+  "building_ratio": 0.345,
   "task_multiplication": 0.0,
-  "continuity_ratio": 0.0,
-  "lineage": {
-    "root": "artifact_0000_init",
-    "parent": "kael_sep0004_preview",
-    "parents": [
-      "kael_sep0004_preview"
-    ],
-    "depth": 1,
-    "spawned_by": {
-      "cycle": "unknown_cycle",
-      "phase": "unknown",
-      "trigger": "kael_metrics_bench"
-    },
-    "spawned_children": [
-      "kael_metrics_added"
-    ],
-    "timestamp": 1761199788
-  }
+  "continuity_ratio": 0.976
 }
