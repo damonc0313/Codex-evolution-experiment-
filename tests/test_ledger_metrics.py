@@ -80,3 +80,28 @@ def test_measure_building_ratio_handles_file_lists(tmp_path: Path) -> None:
 
     ratio = ledger_metrics.measure_building_ratio(tmp_path)
     assert ratio == pytest.approx(1.0)
+
+
+def test_is_building_payload_counts_swarm_metadata() -> None:
+    """Swarm fork metadata with repo paths should count as building."""
+
+    payload = {
+        "artifact_type": "swarm_fork_result",
+        "implementation_targets": [
+            {
+                "path": "tools/swarm_bench.py",
+                "description": "Emit implementation metadata for downstream agents.",
+            },
+            {
+                "path": "tests/test_ledger_metrics.py",
+                "description": "Ensure coverage for swarm metadata signals.",
+            },
+        ],
+        "modified_files": ["tools/ledger_metrics.py"],
+        "next_build_steps": [
+            "apply_patch <<'PATCH'\n*** Update File: tools/ledger_metrics.py\n# ... patch contents ...\nPATCH",
+            "pytest tests/test_ledger_metrics.py",
+        ],
+    }
+
+    assert ledger_metrics._is_building_payload(payload)
