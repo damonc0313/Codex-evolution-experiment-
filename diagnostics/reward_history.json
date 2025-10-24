@@ -1,0 +1,225 @@
+{
+  "rewards": [
+    {
+      "reward": 0.7582,
+      "baseline": 0.7,
+      "advantage": 0.0583,
+      "building_signal": 0.78,
+      "quality": 0.725,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.939414Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_ci"
+    },
+    {
+      "reward": 0.756,
+      "baseline": 0.7582,
+      "advantage": -0.0022,
+      "building_signal": 0.78,
+      "quality": 0.72,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.944341Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_cisim"
+    },
+    {
+      "reward": 0.7582,
+      "baseline": 0.7571,
+      "advantage": 0.0011,
+      "building_signal": 0.78,
+      "quality": 0.725,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.949248Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_digest"
+    },
+    {
+      "reward": 0.7515,
+      "baseline": 0.7575,
+      "advantage": -0.006,
+      "building_signal": 0.78,
+      "quality": 0.71,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.954506Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_draft"
+    },
+    {
+      "reward": 0.7515,
+      "baseline": 0.756,
+      "advantage": -0.0045,
+      "building_signal": 0.78,
+      "quality": 0.71,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.959366Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_harvest"
+    },
+    {
+      "reward": 0.756,
+      "baseline": 0.7551,
+      "advantage": 0.0009,
+      "building_signal": 0.78,
+      "quality": 0.72,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.964374Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_patch"
+    },
+    {
+      "reward": 0.7538,
+      "baseline": 0.7552,
+      "advantage": -0.0015,
+      "building_signal": 0.78,
+      "quality": 0.715,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.969527Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_runtime"
+    },
+    {
+      "reward": 0.7515,
+      "baseline": 0.755,
+      "advantage": -0.0035,
+      "building_signal": 0.78,
+      "quality": 0.71,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.974432Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_summary"
+    },
+    {
+      "reward": 0.7582,
+      "baseline": 0.7546,
+      "advantage": 0.0037,
+      "building_signal": 0.78,
+      "quality": 0.725,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.979200Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_tests"
+    },
+    {
+      "reward": 0.756,
+      "baseline": 0.755,
+      "advantage": 0.001,
+      "building_signal": 0.78,
+      "quality": 0.72,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.984356Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_validator"
+    },
+    {
+      "reward": 0.708,
+      "baseline": 0.7551,
+      "advantage": -0.0471,
+      "building_signal": 0.72,
+      "quality": 0.6667,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.989647Z",
+      "artifact_type": "reflection_decision",
+      "artifact_name": "agents_decision_summary"
+    },
+    {
+      "reward": 0.7493,
+      "baseline": 0.7508,
+      "advantage": -0.0016,
+      "building_signal": 0.78,
+      "quality": 0.705,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.994649Z",
+      "artifact_type": "digest_lineage",
+      "artifact_name": "agents_digest_lineage"
+    },
+    {
+      "reward": 0.7448,
+      "baseline": 0.7507,
+      "advantage": -0.0059,
+      "building_signal": 0.78,
+      "quality": 0.695,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:43.999816Z",
+      "artifact_type": "agents_feedback_trace",
+      "artifact_name": "agents_feedback_trace"
+    },
+    {
+      "reward": 0.7027,
+      "baseline": 0.7502,
+      "advantage": -0.0475,
+      "building_signal": 0.72,
+      "quality": 0.655,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:44.004743Z",
+      "artifact_type": "agents_reflection",
+      "artifact_name": "agents_reflect_report"
+    },
+    {
+      "reward": 0.7394,
+      "baseline": 0.7468,
+      "advantage": -0.0075,
+      "building_signal": 0.78,
+      "quality": 0.6933,
+      "novelty": 0.7692,
+      "timestamp": "2025-10-24T20:30:44.010066Z",
+      "artifact_type": "genesis_snapshot",
+      "artifact_name": "artifact_0000_init"
+    },
+    {
+      "reward": 0.747,
+      "baseline": 0.7463,
+      "advantage": 0.0007,
+      "building_signal": 0.78,
+      "quality": 0.7,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:44.015624Z",
+      "artifact_type": "integrity_handshake",
+      "artifact_name": "artifact_0002_handshake"
+    },
+    {
+      "reward": 0.7147,
+      "baseline": 0.7464,
+      "advantage": -0.0316,
+      "building_signal": 0.72,
+      "quality": 0.6817,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:44.021363Z",
+      "artifact_type": "self_reflection",
+      "artifact_name": "artifact_0002_meta"
+    },
+    {
+      "reward": 0.756,
+      "baseline": 0.7445,
+      "advantage": 0.0115,
+      "building_signal": 0.78,
+      "quality": 0.72,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:44.026633Z",
+      "artifact_type": "dialectic_triad",
+      "artifact_name": "artifact_0003_triad"
+    },
+    {
+      "reward": 0.7538,
+      "baseline": 0.7452,
+      "advantage": 0.0086,
+      "building_signal": 0.78,
+      "quality": 0.715,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:44.032180Z",
+      "artifact_type": "sandbox_probe",
+      "artifact_name": "artifact_0004_sandbox"
+    },
+    {
+      "reward": 0.7903,
+      "baseline": 0.7456,
+      "advantage": 0.0446,
+      "building_signal": 0.86,
+      "quality": 0.725,
+      "novelty": 0.8,
+      "timestamp": "2025-10-24T20:30:44.037569Z",
+      "artifact_type": "continuity_index",
+      "artifact_name": "artifact_0005_continuity"
+    }
+  ],
+  "last_updated": "2025-10-24T20:30:44.037848Z"
+}

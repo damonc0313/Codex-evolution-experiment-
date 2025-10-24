@@ -33,3 +33,9 @@ stop_on:
 - digest_mismatch
 - continuity_low
 - regressions_spike
+artifact_generation_weights:
+  building: 0.5107
+  analysis: 0.29
+  hybrid: 0.1993
+validation:
+  min_confidence_threshold: 0.7
