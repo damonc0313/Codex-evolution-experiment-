@@ -80,3 +80,14 @@ def test_measure_building_ratio_handles_file_lists(tmp_path: Path) -> None:
 
     ratio = ledger_metrics.measure_building_ratio(tmp_path)
     assert ratio == pytest.approx(1.0)
+
+
+def test_measure_building_ratio_handles_agents_apply_ci(tmp_path: Path) -> None:
+    """Regression: agents apply CI artifact should count as building."""
+
+    fixture_path = Path(__file__).resolve().parent.parent / "artifacts" / "agents_apply_ci.json"
+    payload = json.loads(fixture_path.read_text(encoding="utf-8"))
+    _write_artifact(tmp_path, "agents_apply_ci.json", payload)
+
+    ratio = ledger_metrics.measure_building_ratio(tmp_path)
+    assert ratio == pytest.approx(1.0)
