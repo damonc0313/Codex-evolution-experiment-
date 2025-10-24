@@ -1,0 +1,46 @@
+{
+  "artifact_type": "self_query",
+  "query": "/trace 'Audit continuous operation KPIs and recommend gating adjustments'\n# lineage=|manifesto=46c9a5a6|cascade=0.0|ts=1761283501",
+  "timestamp": 1761283501,
+  "manifesto_digest": "46c9a5a6",
+  "metrics": {
+    "entries_per_hour": 101.174,
+    "novelty_rate": 1.0,
+    "avg_confidence": 0.0,
+    "cascade_probability": 0.0,
+    "building_ratio": 0.345,
+    "task_multiplication": 0.0,
+    "continuity_ratio": 0.964
+  },
+  "policy": {
+    "novelty_floor": 0.35,
+    "targets": {
+      "building_ratio_min": 0.55,
+      "task_queue_min": 6.0,
+      "task_multiplication_min": 1.6
+    }
+  },
+  "loop_state_snapshot": {
+    "artifact_type": "kael_loop_state",
+    "updated_at": 1761283470,
+    "policy": "runtime/loop_policy.yaml",
+    "targets": {
+      "task_queue_min": 6,
+      "building_ratio_min": 0.55,
+      "task_multiplication_min": 1.6
+    },
+    "latest_kpis": {
+      "artifact_type": "kael_metrics_bench",
+      "timestamp": 1761283470,
+      "sample_size": 84,
+      "entries_per_hour": 5040.0,
+      "novelty_rate": 0.679,
+      "avg_confidence": 0.94,
+      "cascade_probability": 2010.519,
+      "building_ratio": 0.55,
+      "task_multiplication": 0.0,
+      "continuity_ratio": 0.976
+    },
+    "next_query": "/evolve 'Implement queue-balancer v1 PoC + lineage hooks; draft SEP-0005 multi-agent comparison; run 12-fork swarm with Kael metrics guard'"
+  }
+}
