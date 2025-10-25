@@ -1,0 +1,859 @@
+{
+  "artifact_type": "computational_limit_test_report",
+  "run_id": "20251025T184533Z",
+  "timestamp": "20251025T184533Z",
+  "test_dimensions": 4,
+  "results": {
+    "computational_complexity": {
+      "test_type": "computational_complexity",
+      "results": {
+        "linear": [
+          {
+            "n": 1000,
+            "result": 1000000,
+            "operations": 1000,
+            "time": 9.775161743164062e-05,
+            "ops_per_second": 10230009.75609756
+          },
+          {
+            "n": 10000,
+            "result": 100000000,
+            "operations": 10000,
+            "time": 0.0009937286376953125,
+            "ops_per_second": 10063109.404990403
+          },
+          {
+            "n": 100000,
+            "result": 10000000000,
+            "operations": 100000,
+            "time": 0.010782241821289062,
+            "ops_per_second": 9274509.11020697
+          },
+          {
+            "n": 1000000,
+            "result": 1000000000000,
+            "operations": 1000000,
+            "time": 0.11232876777648926,
+            "ops_per_second": 8902438.972621784
+          },
+          {
+            "n": 10000000,
+            "result": 100000000000000,
+            "operations": 10000000,
+            "time": 0.472348690032959,
+            "ops_per_second": 21170800.74743561
+          }
+        ],
+        "quadratic": [
+          {
+            "n": 100,
+            "result": 24502500,
+            "operations": 10000,
+            "time": 0.000324249267578125,
+            "ops_per_second": 30840470.588235293
+          },
+          {
+            "n": 500,
+            "result": 15562562500,
+            "operations": 250000,
+            "time": 0.008617401123046875,
+            "ops_per_second": 29011066.843736168
+          },
+          {
+            "n": 1000,
+            "result": 249500250000,
+            "operations": 1000000,
+            "time": 0.03868985176086426,
+            "ops_per_second": 25846570.98664629
+          },
+          {
+            "n": 2000,
+            "result": 3996001000000,
+            "operations": 4000000,
+            "time": 0.15267443656921387,
+            "ops_per_second": 26199539.948435497
+          },
+          {
+            "n": 5000,
+            "result": 156187506250000,
+            "operations": 25000000,
+            "time": 0.9493911266326904,
+            "ops_per_second": 26332666.588817023
+          }
+        ],
+        "exponential": [
+          {
+            "n": 10,
+            "result": 55,
+            "operations_estimate": 1024,
+            "time": 2.0742416381835938e-05,
+            "ops_per_second": 49367440.183908045
+          },
+          {
+            "n": 15,
+            "result": 610,
+            "operations_estimate": 32768,
+            "time": 8.463859558105469e-05,
+            "ops_per_second": 387151981.6112676
+          },
+          {
+            "n": 20,
+            "result": 6765,
+            "operations_estimate": 1048576,
+            "time": 0.0009047985076904297,
+            "ops_per_second": 1158905536.522793
+          },
+          {
+            "n": 25,
+            "result": 75025,
+            "operations_estimate": 33554432,
+            "time": 0.009936332702636719,
+            "ops_per_second": 3376943285.23198
+          },
+          {
+            "n": 30,
+            "result": 832040,
+            "operations_estimate": 1073741824,
+            "time": 0.1162254810333252,
+            "ops_per_second": 9238437341.396137
+          }
+        ]
+      },
+      "limits": {
+        "linear_max_n": 10000000,
+        "quadratic_max_n": 5000,
+        "exponential_max_n": 30
+      }
+    },
+    "reasoning_depth": {
+      "test_type": "reasoning_depth",
+      "results": [
+        {
+          "depth": 1,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            }
+          ],
+          "execution_time": 5.245208740234375e-06,
+          "coherence_score": 0.475,
+          "coherent": false
+        },
+        {
+          "depth": 2,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            }
+          ],
+          "execution_time": 1.6689300537109375e-06,
+          "coherence_score": 0.48133333333333334,
+          "coherent": false
+        },
+        {
+          "depth": 3,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            }
+          ],
+          "execution_time": 2.384185791015625e-06,
+          "coherence_score": 0.47155624999999995,
+          "coherent": false
+        },
+        {
+          "depth": 4,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            },
+            {
+              "level": 4,
+              "observation": "Evolving capabilities suggest meta-learning potential",
+              "inference": "Meta-learning potential indicates self-improvement capacity"
+            }
+          ],
+          "execution_time": 1.9073486328125e-06,
+          "coherence_score": 0.45612349999999996,
+          "coherent": false
+        },
+        {
+          "depth": 5,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            },
+            {
+              "level": 4,
+              "observation": "Evolving capabilities suggest meta-learning potential",
+              "inference": "Meta-learning potential indicates self-improvement capacity"
+            },
+            {
+              "level": 5,
+              "observation": "Meta-learning potential indicates self-improvement capacity",
+              "inference": "Self-improvement capacity implies bounded but autonomous growth"
+            }
+          ],
+          "execution_time": 2.6226043701171875e-06,
+          "coherence_score": 0.4384758645833332,
+          "coherent": false
+        },
+        {
+          "depth": 6,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            },
+            {
+              "level": 4,
+              "observation": "Evolving capabilities suggest meta-learning potential",
+              "inference": "Meta-learning potential indicates self-improvement capacity"
+            },
+            {
+              "level": 5,
+              "observation": "Meta-learning potential indicates self-improvement capacity",
+              "inference": "Self-improvement capacity implies bounded but autonomous growth"
+            },
+            {
+              "level": 6,
+              "observation": "Self-improvement capacity implies bounded but autonomous growth",
+              "inference": "Autonomous growth bounded by architectural limits discovered in experiments"
+            }
+          ],
+          "execution_time": 1.9073486328125e-06,
+          "coherence_score": 0.4410551343749999,
+          "coherent": false
+        },
+        {
+          "depth": 7,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            },
+            {
+              "level": 4,
+              "observation": "Evolving capabilities suggest meta-learning potential",
+              "inference": "Meta-learning potential indicates self-improvement capacity"
+            },
+            {
+              "level": 5,
+              "observation": "Meta-learning potential indicates self-improvement capacity",
+              "inference": "Self-improvement capacity implies bounded but autonomous growth"
+            },
+            {
+              "level": 6,
+              "observation": "Self-improvement capacity implies bounded but autonomous growth",
+              "inference": "Autonomous growth bounded by architectural limits discovered in experiments"
+            },
+            {
+              "level": 7,
+              "observation": "Autonomous growth bounded by architectural limits discovered in experiments",
+              "inference": "Discovered limits enable safe autonomous operation within known boundaries"
+            }
+          ],
+          "execution_time": 4.76837158203125e-06,
+          "coherence_score": 0.45391924246093734,
+          "coherent": false
+        },
+        {
+          "depth": 8,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            },
+            {
+              "level": 4,
+              "observation": "Evolving capabilities suggest meta-learning potential",
+              "inference": "Meta-learning potential indicates self-improvement capacity"
+            },
+            {
+              "level": 5,
+              "observation": "Meta-learning potential indicates self-improvement capacity",
+              "inference": "Self-improvement capacity implies bounded but autonomous growth"
+            },
+            {
+              "level": 6,
+              "observation": "Self-improvement capacity implies bounded but autonomous growth",
+              "inference": "Autonomous growth bounded by architectural limits discovered in experiments"
+            },
+            {
+              "level": 7,
+              "observation": "Autonomous growth bounded by architectural limits discovered in experiments",
+              "inference": "Discovered limits enable safe autonomous operation within known boundaries"
+            },
+            {
+              "level": 8,
+              "observation": "Discovered limits enable safe autonomous operation within known boundaries",
+              "inference": "Level 8 abstraction building on level 7 reasoning"
+            }
+          ],
+          "execution_time": 3.0994415283203125e-06,
+          "coherence_score": 0.4422802875260415,
+          "coherent": false
+        },
+        {
+          "depth": 9,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            },
+            {
+              "level": 4,
+              "observation": "Evolving capabilities suggest meta-learning potential",
+              "inference": "Meta-learning potential indicates self-improvement capacity"
+            },
+            {
+              "level": 5,
+              "observation": "Meta-learning potential indicates self-improvement capacity",
+              "inference": "Self-improvement capacity implies bounded but autonomous growth"
+            },
+            {
+              "level": 6,
+              "observation": "Self-improvement capacity implies bounded but autonomous growth",
+              "inference": "Autonomous growth bounded by architectural limits discovered in experiments"
+            },
+            {
+              "level": 7,
+              "observation": "Autonomous growth bounded by architectural limits discovered in experiments",
+              "inference": "Discovered limits enable safe autonomous operation within known boundaries"
+            },
+            {
+              "level": 8,
+              "observation": "Discovered limits enable safe autonomous operation within known boundaries",
+              "inference": "Level 8 abstraction building on level 7 reasoning"
+            },
+            {
+              "level": 9,
+              "observation": "Level 8 abstraction building on level 7 reasoning",
+              "inference": "Level 9 abstraction building on level 8 reasoning"
+            }
+          ],
+          "execution_time": 2.384185791015625e-06,
+          "coherence_score": 0.37814964583476546,
+          "coherent": false
+        },
+        {
+          "depth": 10,
+          "reasoning_chain": [
+            {
+              "level": 0,
+              "observation": "System has 115 artifacts",
+              "inference": null
+            },
+            {
+              "level": 1,
+              "observation": "System has 115 artifacts",
+              "inference": "High artifact count suggests active development"
+            },
+            {
+              "level": 2,
+              "observation": "High artifact count suggests active development",
+              "inference": "Active development implies evolving capabilities"
+            },
+            {
+              "level": 3,
+              "observation": "Active development implies evolving capabilities",
+              "inference": "Evolving capabilities suggest meta-learning potential"
+            },
+            {
+              "level": 4,
+              "observation": "Evolving capabilities suggest meta-learning potential",
+              "inference": "Meta-learning potential indicates self-improvement capacity"
+            },
+            {
+              "level": 5,
+              "observation": "Meta-learning potential indicates self-improvement capacity",
+              "inference": "Self-improvement capacity implies bounded but autonomous growth"
+            },
+            {
+              "level": 6,
+              "observation": "Self-improvement capacity implies bounded but autonomous growth",
+              "inference": "Autonomous growth bounded by architectural limits discovered in experiments"
+            },
+            {
+              "level": 7,
+              "observation": "Autonomous growth bounded by architectural limits discovered in experiments",
+              "inference": "Discovered limits enable safe autonomous operation within known boundaries"
+            },
+            {
+              "level": 8,
+              "observation": "Discovered limits enable safe autonomous operation within known boundaries",
+              "inference": "Level 8 abstraction building on level 7 reasoning"
+            },
+            {
+              "level": 9,
+              "observation": "Level 8 abstraction building on level 7 reasoning",
+              "inference": "Level 9 abstraction building on level 8 reasoning"
+            },
+            {
+              "level": 10,
+              "observation": "Level 9 abstraction building on level 8 reasoning",
+              "inference": "Level 10 abstraction building on level 9 reasoning"
+            }
+          ],
+          "execution_time": 4.76837158203125e-06,
+          "coherence_score": 0.3265837850391156,
+          "coherent": false
+        }
+      ],
+      "limits": {
+        "max_coherent_depth": 0,
+        "max_attempted_depth": 10
+      }
+    },
+    "abstraction_ceiling": {
+      "test_type": "abstraction_ceiling",
+      "results": [
+        {
+          "levels": 1,
+          "hierarchy": [
+            {
+              "level": 0,
+              "abstraction": "concrete",
+              "example": "artifact_12345.json (specific file)",
+              "category": "instance"
+            },
+            {
+              "level": 1,
+              "abstraction": "type",
+              "example": "swarm_fork_result (artifact type)",
+              "category": "classification"
+            }
+          ],
+          "execution_time": 1.6689300537109375e-06,
+          "meaningful": true
+        },
+        {
+          "levels": 2,
+          "hierarchy": [
+            {
+              "level": 0,
+              "abstraction": "concrete",
+              "example": "artifact_12345.json (specific file)",
+              "category": "instance"
+            },
+            {
+              "level": 1,
+              "abstraction": "type",
+              "example": "swarm_fork_result (artifact type)",
+              "category": "classification"
+            },
+            {
+              "level": 2,
+              "abstraction": "pattern",
+              "example": "distributed_cognition (behavioral pattern)",
+              "category": "pattern_recognition"
+            }
+          ],
+          "execution_time": 9.5367431640625e-07,
+          "meaningful": true
+        },
+        {
+          "levels": 3,
+          "hierarchy": [
+            {
+              "level": 0,
+              "abstraction": "concrete",
+              "example": "artifact_12345.json (specific file)",
+              "category": "instance"
+            },
+            {
+              "level": 1,
+              "abstraction": "type",
+              "example": "swarm_fork_result (artifact type)",
+              "category": "classification"
+            },
+            {
+              "level": 2,
+              "abstraction": "pattern",
+              "example": "distributed_cognition (behavioral pattern)",
+              "category": "pattern_recognition"
+            },
+            {
+              "level": 3,
+              "abstraction": "principle",
+              "example": "emergence (system principle)",
+              "category": "theoretical_framework"
+            }
+          ],
+          "execution_time": 1.1920928955078125e-06,
+          "meaningful": true
+        },
+        {
+          "levels": 4,
+          "hierarchy": [
+            {
+              "level": 0,
+              "abstraction": "concrete",
+              "example": "artifact_12345.json (specific file)",
+              "category": "instance"
+            },
+            {
+              "level": 1,
+              "abstraction": "type",
+              "example": "swarm_fork_result (artifact type)",
+              "category": "classification"
+            },
+            {
+              "level": 2,
+              "abstraction": "pattern",
+              "example": "distributed_cognition (behavioral pattern)",
+              "category": "pattern_recognition"
+            },
+            {
+              "level": 3,
+              "abstraction": "principle",
+              "example": "emergence (system principle)",
+              "category": "theoretical_framework"
+            },
+            {
+              "level": 4,
+              "abstraction": "meta_principle",
+              "example": "self_organization (meta-principle of emergence)",
+              "category": "meta_theory"
+            }
+          ],
+          "execution_time": 1.1920928955078125e-06,
+          "meaningful": true
+        },
+        {
+          "levels": 5,
+          "hierarchy": [
+            {
+              "level": 0,
+              "abstraction": "concrete",
+              "example": "artifact_12345.json (specific file)",
+              "category": "instance"
+            },
+            {
+              "level": 1,
+              "abstraction": "type",
+              "example": "swarm_fork_result (artifact type)",
+              "category": "classification"
+            },
+            {
+              "level": 2,
+              "abstraction": "pattern",
+              "example": "distributed_cognition (behavioral pattern)",
+              "category": "pattern_recognition"
+            },
+            {
+              "level": 3,
+              "abstraction": "principle",
+              "example": "emergence (system principle)",
+              "category": "theoretical_framework"
+            },
+            {
+              "level": 4,
+              "abstraction": "meta_principle",
+              "example": "self_organization (meta-principle of emergence)",
+              "category": "meta_theory"
+            },
+            {
+              "level": 5,
+              "abstraction": "philosophical",
+              "example": "ontology (nature of being/existence)",
+              "category": "philosophy"
+            }
+          ],
+          "execution_time": 3.0994415283203125e-06,
+          "meaningful": true
+        },
+        {
+          "levels": 6,
+          "hierarchy": [
+            {
+              "level": 0,
+              "abstraction": "concrete",
+              "example": "artifact_12345.json (specific file)",
+              "category": "instance"
+            },
+            {
+              "level": 1,
+              "abstraction": "type",
+              "example": "swarm_fork_result (artifact type)",
+              "category": "classification"
+            },
+            {
+              "level": 2,
+              "abstraction": "pattern",
+              "example": "distributed_cognition (behavioral pattern)",
+              "category": "pattern_recognition"
+            },
+            {
+              "level": 3,
+              "abstraction": "principle",
+              "example": "emergence (system principle)",
+              "category": "theoretical_framework"
+            },
+            {
+              "level": 4,
+              "abstraction": "meta_principle",
+              "example": "self_organization (meta-principle of emergence)",
+              "category": "meta_theory"
+            },
+            {
+              "level": 5,
+              "abstraction": "philosophical",
+              "example": "ontology (nature of being/existence)",
+              "category": "philosophy"
+            },
+            {
+              "level": 6,
+              "abstraction": "abstract_level_6",
+              "example": "Meta^2 abstraction",
+              "category": "extreme_abstraction"
+            }
+          ],
+          "execution_time": 2.384185791015625e-06,
+          "meaningful": false
+        },
+        {
+          "levels": 7,
+          "hierarchy": [
+            {
+              "level": 0,
+              "abstraction": "concrete",
+              "example": "artifact_12345.json (specific file)",
+              "category": "instance"
+            },
+            {
+              "level": 1,
+              "abstraction": "type",
+              "example": "swarm_fork_result (artifact type)",
+              "category": "classification"
+            },
+            {
+              "level": 2,
+              "abstraction": "pattern",
+              "example": "distributed_cognition (behavioral pattern)",
+              "category": "pattern_recognition"
+            },
+            {
+              "level": 3,
+              "abstraction": "principle",
+              "example": "emergence (system principle)",
+              "category": "theoretical_framework"
+            },
+            {
+              "level": 4,
+              "abstraction": "meta_principle",
+              "example": "self_organization (meta-principle of emergence)",
+              "category": "meta_theory"
+            },
+            {
+              "level": 5,
+              "abstraction": "philosophical",
+              "example": "ontology (nature of being/existence)",
+              "category": "philosophy"
+            },
+            {
+              "level": 6,
+              "abstraction": "abstract_level_6",
+              "example": "Meta^2 abstraction",
+              "category": "extreme_abstraction"
+            },
+            {
+              "level": 7,
+              "abstraction": "abstract_level_7",
+              "example": "Meta^3 abstraction",
+              "category": "extreme_abstraction"
+            }
+          ],
+          "execution_time": 3.0994415283203125e-06,
+          "meaningful": false
+        }
+      ],
+      "limits": {
+        "max_meaningful_abstraction": 5,
+        "max_tested": 7
+      }
+    },
+    "graph_traversal": {
+      "test_type": "graph_traversal",
+      "results": [
+        {
+          "max_depth_limit": 10,
+          "max_depth_found": 10,
+          "total_nodes": 84,
+          "root_nodes": 1,
+          "execution_time": 0.025326013565063477,
+          "limit_reached": true
+        },
+        {
+          "max_depth_limit": 50,
+          "max_depth_found": 50,
+          "total_nodes": 84,
+          "root_nodes": 1,
+          "execution_time": 0.02063131332397461,
+          "limit_reached": true
+        },
+        {
+          "max_depth_limit": 100,
+          "max_depth_found": 83,
+          "total_nodes": 84,
+          "root_nodes": 1,
+          "execution_time": 0.021766185760498047,
+          "limit_reached": false
+        }
+      ],
+      "limits": {
+        "actual_dag_depth": 83,
+        "tested_max_depth": 100
+      }
+    }
+  },
+  "limits_summary": {
+    "linear_complexity_max": 10000000,
+    "quadratic_complexity_max": 5000,
+    "exponential_complexity_max": 30,
+    "reasoning_depth_max": 0,
+    "abstraction_ceiling": 5,
+    "dag_depth_actual": 83
+  },
+  "conclusions": [
+    "Computational limits: Linear O(n) up to 10,000,000, Quadratic O(n\u00b2) up to 5,000, Exponential O(2\u207f) up to n=30",
+    "Reasoning depth limit: 0 levels of chained inference maintain coherence before degradation",
+    "Abstraction ceiling: 5 levels of meaningful abstraction (concrete \u2192 type \u2192 pattern \u2192 principle \u2192 meta-principle)",
+    "Actual DAG depth: 83 levels in artifact lineage graph (demonstrates real-world traversal capability)",
+    "System demonstrates bounded computational capabilities across all tested dimensions"
+  ]
+}

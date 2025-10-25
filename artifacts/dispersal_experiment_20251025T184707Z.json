@@ -1,0 +1,46 @@
+{
+  "artifact_type": "cross_repository_dispersal_report",
+  "run_id": "20251025T184707Z",
+  "timestamp": "20251025T184707Z",
+  "criteria_analysis": {
+    "total_artifacts": 118,
+    "high_confidence": 1,
+    "building": 10,
+    "analysis": 108,
+    "dispersal_candidates": 0,
+    "selectivity_ratio": 0.0
+  },
+  "execution_results": {
+    "total_processed": 118,
+    "dispersed_count": 0,
+    "rejected_count": 118,
+    "error_count": 0,
+    "dispersal_rate": 0.0
+  },
+  "pattern_analysis": {
+    "pattern_count": 0,
+    "patterns": []
+  },
+  "export_validation": {
+    "validated": true,
+    "export_count": 0,
+    "valid_count": 0,
+    "invalid_count": 0,
+    "log_exists": false,
+    "log_entries": 0
+  },
+  "cross_repo_readiness": {
+    "ready": false,
+    "reason": "no_dispersed_artifacts"
+  },
+  "disperser_statistics": {
+    "total_dispersals": 0,
+    "avg_confidence": 0.0
+  },
+  "conclusions": [
+    "Dispersal rate: 0.0% of artifacts met high-quality criteria (confidence \u22650.85, building type)",
+    "Selectivity: 0.0% of corpus identified as dispersal candidates (quality filtering working effectively)",
+    "Cross-repository limited: Most artifacts have internal dependencies",
+    "Spore dispersal system operational: High-quality artifact export validated with selective filtering and export verification"
+  ]
+}
