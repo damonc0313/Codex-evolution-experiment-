@@ -67,5 +67,11 @@
       "selfquery_advance"
     ],
     "timestamp": "2025-10-23T00:21:09.337479Z"
-  }
+  },
+  "artifact_hash": "85c809e7e554c5a6",
+  "parent_hash": [
+    "388d9954e41e4f48"
+  ],
+  "depth": 78,
+  "spawn_count": 1
 }

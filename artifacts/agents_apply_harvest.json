@@ -53,5 +53,11 @@
       "agents_apply_draft"
     ],
     "timestamp": "2025-10-23T23:03:22.539746+00:00"
-  }
+  },
+  "artifact_hash": "b281639315f02bd9",
+  "parent_hash": [
+    "9bc7ba068651b260"
+  ],
+  "depth": 28,
+  "spawn_count": 1
 }

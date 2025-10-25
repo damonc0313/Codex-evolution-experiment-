@@ -1,0 +1,37 @@
+{
+  "connections": [
+    {
+      "source": "tool_0",
+      "target": "tool_1",
+      "bandwidth": 4.135475687721501,
+      "health_score": 0.9411735389272065,
+      "packets_sent": 17,
+      "packets_successful": 16,
+      "packets_failed": 1,
+      "created_at": 1761375271.6694298,
+      "last_used": 1761375298.0698714
+    },
+    {
+      "source": "tool_1",
+      "target": "tool_2",
+      "bandwidth": 4.1354756877215,
+      "health_score": 0.941176469293371,
+      "packets_sent": 17,
+      "packets_successful": 16,
+      "packets_failed": 1,
+      "created_at": 1761375272.6716251,
+      "last_used": 1761375298.2883925
+    },
+    {
+      "source": "tool_2",
+      "target": "tool_0",
+      "bandwidth": 4.594972986357222,
+      "health_score": 0.99999308255866,
+      "packets_sent": 16,
+      "packets_successful": 16,
+      "packets_failed": 0,
+      "created_at": 1761375273.6727927,
+      "last_used": 1761375297.8029895
+    }
+  ]
+}

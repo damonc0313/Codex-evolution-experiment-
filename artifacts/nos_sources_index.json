@@ -66,5 +66,11 @@
       "nos_ingest_report"
     ],
     "timestamp": "2025-10-23T23:03:22.619843+00:00"
-  }
+  },
+  "artifact_hash": "c8ce72c20ffdc376",
+  "parent_hash": [
+    "e1d311cc27fc9983"
+  ],
+  "depth": 67,
+  "spawn_count": 1
 }

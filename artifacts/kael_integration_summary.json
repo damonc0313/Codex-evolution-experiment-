@@ -28,5 +28,11 @@
       "kael_ingest"
     ],
     "timestamp": "2025-10-23T23:03:22.595160+00:00"
-  }
+  },
+  "artifact_hash": "36d2bc3fc1f08780",
+  "parent_hash": [
+    "8d3812da29b4a47e"
+  ],
+  "depth": 55,
+  "spawn_count": 1
 }

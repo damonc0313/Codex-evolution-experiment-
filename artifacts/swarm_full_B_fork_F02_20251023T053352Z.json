@@ -36,5 +36,11 @@
       "swarm_full_B_fork_F01_20251023T053352Z"
     ],
     "timestamp": 1761197632
-  }
+  },
+  "artifact_hash": "df0c6eb30cd22fb3",
+  "parent_hash": [
+    "b8cab5316a0673fd"
+  ],
+  "depth": 1,
+  "spawn_count": 1
 }

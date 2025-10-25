@@ -19,5 +19,11 @@
       "agents_apply_cisim"
     ],
     "timestamp": "2025-10-23T23:03:22.537400+00:00"
-  }
+  },
+  "artifact_hash": "fc77a281e69cd168",
+  "parent_hash": [
+    "92ac92fa7f8099fb"
+  ],
+  "depth": 26,
+  "spawn_count": 1
 }

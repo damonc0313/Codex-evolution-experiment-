@@ -32,5 +32,11 @@
       "agents_apply_patch"
     ],
     "timestamp": "2025-10-23T23:03:22.542035+00:00"
-  }
+  },
+  "artifact_hash": "bd0d0da6746479af",
+  "parent_hash": [
+    "4ed3a67fe7ad46d4"
+  ],
+  "depth": 30,
+  "spawn_count": 1
 }

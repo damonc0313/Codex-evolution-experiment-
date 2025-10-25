@@ -21,5 +21,11 @@
       "nos_features"
     ],
     "timestamp": "2025-10-23T23:03:22.618494+00:00"
-  }
+  },
+  "artifact_hash": "e1d311cc27fc9983",
+  "parent_hash": [
+    "4ac6a2e394f7111b"
+  ],
+  "depth": 66,
+  "spawn_count": 1
 }

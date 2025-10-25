@@ -44,5 +44,11 @@
       "agents_apply_digest"
     ],
     "timestamp": "2025-10-23T23:03:22.538572+00:00"
-  }
+  },
+  "artifact_hash": "9bc7ba068651b260",
+  "parent_hash": [
+    "fc77a281e69cd168"
+  ],
+  "depth": 27,
+  "spawn_count": 1
 }

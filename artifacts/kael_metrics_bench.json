@@ -25,5 +25,11 @@
       "kael_metrics_added"
     ],
     "timestamp": 1761199788
-  }
+  },
+  "artifact_hash": "a71bed1dae933b12",
+  "parent_hash": [
+    "634809eae171be72"
+  ],
+  "depth": 20,
+  "spawn_count": 1
 }

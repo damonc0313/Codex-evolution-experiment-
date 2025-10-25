@@ -22,5 +22,11 @@
     },
     "spawned_children": [],
     "timestamp": 1761199686
-  }
+  },
+  "artifact_hash": "0332a7d75cb905dc",
+  "parent_hash": [
+    "baf5669f3657bf6c"
+  ],
+  "depth": 18,
+  "spawn_count": 1
 }

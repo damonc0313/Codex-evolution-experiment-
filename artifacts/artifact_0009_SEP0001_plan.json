@@ -35,5 +35,11 @@
       "artifact_0010_fractal"
     ],
     "timestamp": "2025-10-23T23:03:22.575028+00:00"
-  }
+  },
+  "artifact_hash": "2e9d713da94ae843",
+  "parent_hash": [
+    "153a76c6a5b166ad"
+  ],
+  "depth": 46,
+  "spawn_count": 1
 }
