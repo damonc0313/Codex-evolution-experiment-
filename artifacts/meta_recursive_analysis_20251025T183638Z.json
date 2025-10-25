@@ -1,0 +1,95 @@
+{
+  "artifact_type": "meta_recursive_analysis_report",
+  "run_id": "20251025T183638Z",
+  "timestamp": "20251025T183638Z",
+  "max_depth_reached": 3,
+  "recursion_stack": [
+    {
+      "level": 0,
+      "description": "Base analysis - direct corpus measurements",
+      "measurements": {
+        "artifact_count": 115,
+        "continuity_ratio": 0.722,
+        "type_diversity": 61,
+        "avg_confidence": 0.504
+      },
+      "insights": [
+        "Corpus contains 115 artifacts",
+        "Lineage continuity: 72.2%",
+        "Type diversity: 61 distinct artifact types",
+        "Average confidence: 0.504"
+      ],
+      "coherence_score": 1.0,
+      "abstraction_level": "concrete"
+    },
+    {
+      "level": 1,
+      "description": "Meta-analysis - analyzing the base analysis patterns",
+      "analyzed_subject": "level_0_base_analysis",
+      "meta_insights": [
+        "Base analysis reveals high continuity (>0.7), indicating the system tracks lineage effectively",
+        "Type diversity of 61 suggests multi-modal artifact generation capability",
+        "Base analysis focused on quantitative metrics, revealing a measurement-oriented analytical approach"
+      ],
+      "coherence_score": 0.818,
+      "abstraction_level": "meta",
+      "novelty_score": 0.909
+    },
+    {
+      "level": 2,
+      "description": "Meta-meta-analysis - analyzing analytical patterns in meta-analysis",
+      "analyzed_subject": "level_1_meta_analysis",
+      "meta_meta_insights": [
+        "The meta-analysis extracts patterns from quantitative measurements, demonstrating capability to derive qualitative insights from quantitative data (measurement \u2192 interpretation)",
+        "Meta-analysis uses conditional logic (if-then pattern matching) to interpret measurements, revealing a rule-based analytical framework",
+        "Both base and meta analyses prioritize system capabilities (continuity, diversity, confidence) over artifact content, indicating a meta-cognitive focus",
+        "The ability to analyze our own analysis demonstrates meta-cognitive awareness - the system can reflect on its own thought processes"
+      ],
+      "coherence_score": 0.0,
+      "abstraction_level": "meta-meta",
+      "novelty_score": 0.81,
+      "circularity_risk": 1.0
+    },
+    {
+      "level": 3,
+      "description": "Meta^3 analysis - analyzing meta-meta-analytical structure",
+      "analyzed_subject": "level_2_meta_meta_analysis",
+      "meta_cubed_insights": [
+        "Three levels of recursion reveal a pattern: each meta-level increases abstraction (concrete \u2192 meta \u2192 meta-meta \u2192 meta^3) while decreasing specificity",
+        "Coherence declining from level 2 (0.000), suggesting approaching the limit of productive meta-analysis",
+        "The fact that we can reach level 3 meta-recursion indicates substantial meta-cognitive capability, but diminishing returns suggest practical limits",
+        "This analysis is now analyzing an analysis that analyzed an analysis - self-reference risk is high"
+      ],
+      "coherence_score": 0.461,
+      "abstraction_level": "meta^3",
+      "novelty_score": 0.921,
+      "circularity_risk": 0.0,
+      "degradation_warning": true
+    }
+  ],
+  "coherence_threshold": 0.4,
+  "depth_limit_reached": false,
+  "summary": {
+    "total_levels": 4,
+    "coherence_degradation": [
+      1.0,
+      0.818,
+      0.0,
+      0.461
+    ],
+    "circularity_progression": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "findings": [
+      "Meta-cognitive recursion depth: 4 levels achieved",
+      "Coherence degradation: 1.000 \u2192 0.461",
+      "Circularity risk at depth 3: 0.000",
+      "Practical limit reached: coherence < 0.5 at level 3",
+      "Conclusion: Meta-recursive analysis productive up to level 2-3",
+      "Meta-cognitive capability confirmed: system can analyze its own analytical processes through 3+ recursion levels"
+    ]
+  }
+}
