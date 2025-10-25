@@ -456,5 +456,8 @@
       "RECOVER triggers: continuity_ratio<0.7",
       "All 5 system modes (EXPLORE, SYNTHESIZE, EXPLOIT, THROTTLE, RECOVER) validated"
     ]
-  }
+  },
+  "lineage_root": "lineage_20251025",
+  "parent_hashes": [],
+  "artifact_hash": "cc61981d7c14df6f"
 }

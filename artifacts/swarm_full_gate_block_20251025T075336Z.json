@@ -13,5 +13,8 @@
     "Replay top forks with stricter validator hooks",
     "Inject mentor review before next autonomous query",
     "Reduce entropy budget for upcoming cycles"
-  ]
+  ],
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [],
+  "artifact_hash": "d6e8e2e69be6c995"
 }

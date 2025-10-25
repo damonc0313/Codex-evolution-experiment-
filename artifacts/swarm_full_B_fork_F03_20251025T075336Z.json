@@ -24,5 +24,8 @@
   "rationale_triads_present": false,
   "mode_fit_score": 0.774,
   "delta_proposal": "Boost lineage indexer with balanced mode focus; dialectic_ratio=0.6, sandbox_rate=0.25.",
-  "nos_score": 0.034
+  "nos_score": 0.034,
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [],
+  "artifact_hash": "6d4aca8ec2f5fc4e"
 }

@@ -470,5 +470,8 @@
       "delta_proposal": "Boost lineage indexer with creative mode focus; dialectic_ratio=0.4, sandbox_rate=0.25.",
       "nos_score": 0.035
     }
-  ]
+  ],
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [],
+  "artifact_hash": "02fe489122c2a897"
 }

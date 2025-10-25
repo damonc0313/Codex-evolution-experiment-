@@ -38,5 +38,11 @@
     "c8ce72c20ffdc376"
   ],
   "depth": 68,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_sep_digest",
+  "parent_hashes": [
+    [
+      "c8ce72c20ffdc376"
+    ]
+  ]
 }

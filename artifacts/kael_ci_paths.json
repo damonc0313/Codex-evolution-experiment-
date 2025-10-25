@@ -28,5 +28,11 @@
     "9d5af272d47ee513"
   ],
   "depth": 52,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_ci_update",
+  "parent_hashes": [
+    [
+      "9d5af272d47ee513"
+    ]
+  ]
 }

@@ -58,5 +58,11 @@
     "fb57fad4c5ba042a"
   ],
   "depth": 51,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_unknown",
+  "parent_hashes": [
+    [
+      "fb57fad4c5ba042a"
+    ]
+  ]
 }

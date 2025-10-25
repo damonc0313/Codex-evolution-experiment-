@@ -5,5 +5,8 @@
   "mode_hint": "STRICT",
   "reason": "gated",
   "novelty": 0.3168,
-  "previous_query_present": true
+  "previous_query_present": true,
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [],
+  "artifact_hash": "4648eb75e1e71d86"
 }

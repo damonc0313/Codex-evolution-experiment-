@@ -27,5 +27,11 @@
     "4ac6a2e394f7111b"
   ],
   "depth": 66,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "autonomous_report",
+  "parent_hashes": [
+    [
+      "4ac6a2e394f7111b"
+    ]
+  ]
 }

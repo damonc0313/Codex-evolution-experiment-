@@ -64,5 +64,7 @@
   "artifact_hash": "b8cab5316a0673fd",
   "parent_hash": [],
   "depth": 0,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": []
 }

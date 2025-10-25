@@ -51,5 +51,11 @@
     "09cbf4d7e18e0576"
   ],
   "depth": 69,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_sandbox_validator_sim",
+  "parent_hashes": [
+    [
+      "09cbf4d7e18e0576"
+    ]
+  ]
 }

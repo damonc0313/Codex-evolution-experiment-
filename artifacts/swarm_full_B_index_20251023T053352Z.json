@@ -401,5 +401,11 @@
     "8f4f2ef587921641"
   ],
   "depth": 71,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "8f4f2ef587921641"
+    ]
+  ]
 }

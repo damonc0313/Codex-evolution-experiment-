@@ -37,5 +37,11 @@
     "9ad8bceace19bcc4"
   ],
   "depth": 35,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_digest_lineage",
+  "parent_hashes": [
+    [
+      "9ad8bceace19bcc4"
+    ]
+  ]
 }

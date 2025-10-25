@@ -40,5 +40,11 @@
     "efe63b8db3ed7821"
   ],
   "depth": 4,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "efe63b8db3ed7821"
+    ]
+  ]
 }

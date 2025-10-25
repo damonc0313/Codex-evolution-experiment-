@@ -67,5 +67,10 @@
     "Replay top forks with extended continuity checks",
     "Run hardened validator dry-run",
     "Compare KPI deltas against baseline artifacts"
-  ]
+  ],
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [
+    "b716ea8bc8bc54d6"
+  ],
+  "artifact_hash": "9e78237fde586168"
 }

@@ -201,5 +201,8 @@
       "novelty_score": 0.4575,
       "diversity_score": 0.89
     }
-  ]
+  ],
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [],
+  "artifact_hash": "bd7be89a6ea05c1a"
 }

@@ -1,0 +1,20 @@
+{
+  "artifact_type": "lineage_migration_report",
+  "timestamp": "20251025T191049Z",
+  "dry_run": true,
+  "migration_version": "SEP-0003-v1.0",
+  "artifacts_processed": 124,
+  "artifacts_migrated": 124,
+  "errors": [],
+  "validation": {
+    "valid": true,
+    "total_artifacts": 124,
+    "root_artifacts": 37,
+    "lineage_groups": 45,
+    "invalid_references": 0,
+    "invalid_refs_sample": []
+  },
+  "lineage_root": "autonomous_report",
+  "parent_hashes": [],
+  "artifact_hash": "602903383f9dfaf2"
+}

@@ -40,5 +40,11 @@
     "664f61631c4687ba"
   ],
   "depth": 15,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "664f61631c4687ba"
+    ]
+  ]
 }

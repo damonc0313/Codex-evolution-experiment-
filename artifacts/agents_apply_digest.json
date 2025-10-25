@@ -25,5 +25,11 @@
     "92ac92fa7f8099fb"
   ],
   "depth": 26,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_apply_phase",
+  "parent_hashes": [
+    [
+      "92ac92fa7f8099fb"
+    ]
+  ]
 }

@@ -35,5 +35,11 @@
     "32dc03a5aed31f90"
   ],
   "depth": 60,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_self_query_upgrade",
+  "parent_hashes": [
+    [
+      "32dc03a5aed31f90"
+    ]
+  ]
 }

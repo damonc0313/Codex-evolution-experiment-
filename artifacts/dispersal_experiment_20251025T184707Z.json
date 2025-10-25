@@ -42,5 +42,8 @@
     "Selectivity: 0.0% of corpus identified as dispersal candidates (quality filtering working effectively)",
     "Cross-repository limited: Most artifacts have internal dependencies",
     "Spore dispersal system operational: High-quality artifact export validated with selective filtering and export verification"
-  ]
+  ],
+  "lineage_root": "autonomous_report",
+  "parent_hashes": [],
+  "artifact_hash": "049d6d8d108465a3"
 }

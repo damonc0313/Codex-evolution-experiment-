@@ -50,5 +50,11 @@
     "fc77a281e69cd168"
   ],
   "depth": 27,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_apply_phase",
+  "parent_hashes": [
+    [
+      "fc77a281e69cd168"
+    ]
+  ]
 }

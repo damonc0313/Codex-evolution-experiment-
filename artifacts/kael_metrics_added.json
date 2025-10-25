@@ -30,5 +30,11 @@
     "1bed1546b9cc7902"
   ],
   "depth": 58,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_kael_metrics_added",
+  "parent_hashes": [
+    [
+      "1bed1546b9cc7902"
+    ]
+  ]
 }

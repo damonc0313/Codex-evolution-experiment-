@@ -40,5 +40,11 @@
     "5dfe37c7592ab4dc"
   ],
   "depth": 57,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_loop_policy_update",
+  "parent_hashes": [
+    [
+      "5dfe37c7592ab4dc"
+    ]
+  ]
 }

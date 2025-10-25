@@ -29,5 +29,11 @@
     "36d2bc3fc1f08780"
   ],
   "depth": 56,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_kpi_extension",
+  "parent_hashes": [
+    [
+      "36d2bc3fc1f08780"
+    ]
+  ]
 }

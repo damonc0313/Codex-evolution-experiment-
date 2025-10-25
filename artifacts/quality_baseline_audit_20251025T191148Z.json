@@ -1,59 +1,39 @@
 {
   "artifact_type": "quality_baseline_audit",
-  "timestamp": "20251025T190756Z",
-  "total_artifacts": 123,
+  "timestamp": "20251025T191148Z",
+  "total_artifacts": 126,
   "lineage": {
-    "total_artifacts": 123,
-    "parent_hash_count": 84,
-    "parent_hash_ratio": 0.6829,
-    "lineage_root_count": 0,
-    "lineage_root_ratio": 0.0,
+    "total_artifacts": 126,
+    "parent_hash_count": 125,
+    "parent_hash_ratio": 0.9921,
+    "lineage_root_count": 125,
+    "lineage_root_ratio": 0.9921,
     "swarm_run_id_count": 51,
-    "complete_lineage_count": 0,
-    "complete_lineage_ratio": 0.0,
+    "complete_lineage_count": 125,
+    "complete_lineage_ratio": 0.9921,
     "lineage_gaps_by_type": {
-      "swarm_fork_result": 18,
-      "stabilization_plan": 1,
-      "swarm_fusion": 1,
-      "capability_discovery_report": 1,
-      "swarm_next_query": 1,
-      "swarm_selection": 1,
-      "self_query": 1,
-      "computational_limit_test_report": 1,
-      "swarm_sep_preview": 1,
-      "swarm_fork_index": 1,
-      "nos_analysis_report": 1,
-      "fork_comparison_analysis": 1,
-      "swarm_gate_block": 1,
-      "meta_recursive_analysis_report": 1,
-      "swarm_plan": 1,
-      "cascade_validation_report": 2,
-      "meta_synthesis_report": 1,
-      "swarm_summary": 1,
-      "cross_repository_dispersal_report": 1,
-      "autonomous_limit_discovery_report": 1,
-      "homeostatic_boundary_map": 1
+      "lineage_migration_report": 1
     },
-    "migration_required": 123
+    "migration_required": 1
   },
   "validator": {
     "validation_count": 4,
-    "validation_ratio": 0.0325,
+    "validation_ratio": 0.0317,
     "confidence_count": 3,
-    "confidence_ratio": 0.0244,
+    "confidence_ratio": 0.0238,
     "high_confidence_count": 3,
-    "high_confidence_ratio": 0.0244,
+    "high_confidence_ratio": 0.0238,
     "quality_metrics_count": 3,
-    "quality_metrics_ratio": 0.0244,
+    "quality_metrics_ratio": 0.0238,
     "regression_test_count": 51,
     "validator_mode": "WARN",
     "recommended_upgrade": "FAIL"
   },
   "redundancy": {
-    "unique_hashes": 79,
+    "unique_hashes": 82,
     "duplicate_groups": 4,
-    "dedup_ratio": 0.6423,
-    "redundancy": 0.3577,
+    "dedup_ratio": 0.6508,
+    "redundancy": 0.3492,
     "over_represented_types": {
       "swarm_fork_result": 36
     },
@@ -99,9 +79,11 @@
       "computational_limit_test_report": 1,
       "swarm_sep_preview": 2,
       "metrics_recalibration_audit": 1,
+      "lineage_migration_report": 2,
       "enhanced_building_ratio_measurement": 1,
       "loop_policy_update": 1,
       "nos_calibration": 1,
+      "quality_baseline_audit": 1,
       "validator_rerun": 1,
       "nos_analysis_report": 1,
       "nos_sources_index": 1,
@@ -130,21 +112,15 @@
     }
   },
   "metadata": {
-    "timestamp_coverage": 0.4959,
-    "artifact_type_coverage": 0.9837,
-    "run_id_coverage": 0.4878,
-    "confidence_coverage": 0.0244,
-    "rich_metadata_count": 104,
+    "timestamp_coverage": 0.5079,
+    "artifact_type_coverage": 0.9841,
+    "run_id_coverage": 0.4762,
+    "confidence_coverage": 0.0238,
+    "rich_metadata_count": 120,
     "sparse_metadata_count": 0,
-    "avg_fields": 16.86
+    "avg_fields": 19.01
   },
   "recommendations": [
-    {
-      "priority": "HIGH",
-      "area": "lineage",
-      "action": "Migrate 123 artifacts to complete lineage schema (SEP-0003)",
-      "impact": "Improve coherence from 0.000 to 1.0"
-    },
     {
       "priority": "CRITICAL",
       "area": "validation",
@@ -160,7 +136,7 @@
     {
       "priority": "MEDIUM",
       "area": "efficiency",
-      "action": "Implement deduplication (current redundancy: 35.8%)",
+      "action": "Implement deduplication (current redundancy: 34.9%)",
       "impact": "Improve energy efficiency component by 0.05-0.10"
     },
     {
@@ -169,8 +145,5 @@
       "action": "Add confidence scores to all artifacts (current: 2.4%)",
       "impact": "Enable quality-based filtering and validation"
     }
-  ],
-  "lineage_root": "lineage_20251025",
-  "parent_hashes": [],
-  "artifact_hash": "a2f371a8079201ca"
+  ]
 }

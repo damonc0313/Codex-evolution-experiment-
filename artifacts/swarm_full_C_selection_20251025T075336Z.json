@@ -486,5 +486,14 @@
       "nos_score": 0.035,
       "reason": "dominated"
     }
-  ]
+  ],
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [
+    "ebe5a1cb05b9459a",
+    "51742fd046d73afe",
+    "31ff1d97a46149cf",
+    "b205da873dc90389",
+    "6d4aca8ec2f5fc4e"
+  ],
+  "artifact_hash": "b716ea8bc8bc54d6"
 }

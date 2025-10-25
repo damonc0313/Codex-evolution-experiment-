@@ -142,5 +142,10 @@
     "avg_building_ratio": 0.676,
     "avg_queue_depth": 7.982,
     "avg_nos_score": 0.041
-  }
+  },
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [
+    "bd7be89a6ea05c1a"
+  ],
+  "artifact_hash": "7955c0e4144c559e"
 }

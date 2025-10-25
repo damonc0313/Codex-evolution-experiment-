@@ -40,5 +40,11 @@
     "19b618cf6d946d31"
   ],
   "depth": 17,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "19b618cf6d946d31"
+    ]
+  ]
 }

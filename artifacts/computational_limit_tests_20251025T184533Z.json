@@ -855,5 +855,8 @@
     "Abstraction ceiling: 5 levels of meaningful abstraction (concrete \u2192 type \u2192 pattern \u2192 principle \u2192 meta-principle)",
     "Actual DAG depth: 83 levels in artifact lineage graph (demonstrates real-world traversal capability)",
     "System demonstrates bounded computational capabilities across all tested dimensions"
-  ]
+  ],
+  "lineage_root": "autonomous_test",
+  "parent_hashes": [],
+  "artifact_hash": "5a436276909a72c3"
 }

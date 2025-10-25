@@ -28,5 +28,11 @@
     "baf5669f3657bf6c"
   ],
   "depth": 18,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_17611996",
+  "parent_hashes": [
+    [
+      "baf5669f3657bf6c"
+    ]
+  ]
 }

@@ -28,5 +28,11 @@
     "a71bed1dae933b12"
   ],
   "depth": 21,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_17611998",
+  "parent_hashes": [
+    [
+      "a71bed1dae933b12"
+    ]
+  ]
 }

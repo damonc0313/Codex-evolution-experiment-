@@ -82,5 +82,11 @@
     "eb7f4729addc2e8d"
   ],
   "depth": 48,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_continuity_snapshot",
+  "parent_hashes": [
+    [
+      "eb7f4729addc2e8d"
+    ]
+  ]
 }

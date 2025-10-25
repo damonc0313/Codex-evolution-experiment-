@@ -55,5 +55,11 @@
     "2302a8fb24ceb187"
   ],
   "depth": 40,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_dialectic_triad",
+  "parent_hashes": [
+    [
+      "2302a8fb24ceb187"
+    ]
+  ]
 }

@@ -92,5 +92,8 @@
     "Homeostatic THROTTLE activates at cascade_probability=4.144",
     "\u2713 Threshold close to prediction (4.0)",
     "Baseline cascade_probability=0.000 (stable, below predicted 2.0+)"
-  ]
+  ],
+  "lineage_root": "autonomous_validation",
+  "parent_hashes": [],
+  "artifact_hash": "2ac3163d0885204b"
 }

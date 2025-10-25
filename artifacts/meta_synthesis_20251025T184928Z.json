@@ -198,5 +198,8 @@
     "Homeostatic regulation working as designed: Predictions validated with >96% accuracy",
     "Meta-cognitive self-awareness confirmed through multiple independent evidence streams",
     "Quality-first architecture validated: System consistently prioritizes quality over quantity"
-  ]
+  ],
+  "lineage_root": "autonomous_report",
+  "parent_hashes": [],
+  "artifact_hash": "e2336b1d42cd890c"
 }

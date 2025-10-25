@@ -92,5 +92,11 @@
     "91a83525a8ed94ca"
   ],
   "depth": 63,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "autonomous_synthesis",
+  "parent_hashes": [
+    [
+      "91a83525a8ed94ca"
+    ]
+  ]
 }

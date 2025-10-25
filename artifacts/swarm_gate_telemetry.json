@@ -27,5 +27,11 @@
     "56933c9234e3c70e"
   ],
   "depth": 77,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_swarm_gate_telemetry",
+  "parent_hashes": [
+    [
+      "56933c9234e3c70e"
+    ]
+  ]
 }

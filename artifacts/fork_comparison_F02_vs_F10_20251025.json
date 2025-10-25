@@ -3,7 +3,6 @@
   "timestamp": "2025-10-25T19:10:00Z",
   "comparison": "F02 vs F10",
   "rationale": "F02 achieved 2.05x higher novelty (0.9796 vs 0.4775) - analyzing parameter differences",
-
   "fork_f02": {
     "id": "F02",
     "mode": "BALANCED",
@@ -16,7 +15,6 @@
     "selected": true,
     "selection_rank": 5
   },
-
   "fork_f10": {
     "id": "F10",
     "mode": "CREATIVE",
@@ -30,7 +28,6 @@
     "selection_rank": 1,
     "best_config": true
   },
-
   "parameter_deltas": {
     "mode": {
       "f02": "BALANCED",
@@ -67,7 +64,6 @@
       "hypothesis": "PRIMARY DRIVER: 50% higher entropy = 2.05x higher novelty"
     }
   },
-
   "outcome_deltas": {
     "novelty_score": {
       "f02": 0.9796,
@@ -84,14 +80,13 @@
       "significance": "Minimal - not a differentiator"
     }
   },
-
   "correlation_analysis": {
     "entropy_vs_novelty": {
       "correlation": "STRONG POSITIVE",
       "evidence": [
-        "F02: entropy=0.9 → novelty=0.9796",
-        "F10: entropy=0.6 → novelty=0.4775",
-        "Delta: +50% entropy → +105% novelty"
+        "F02: entropy=0.9 \u2192 novelty=0.9796",
+        "F10: entropy=0.6 \u2192 novelty=0.4775",
+        "Delta: +50% entropy \u2192 +105% novelty"
       ],
       "elasticity": 2.1,
       "interpretation": "Each 1% increase in entropy yields ~2.1% increase in novelty"
@@ -99,9 +94,9 @@
     "dialectic_ratio_vs_novelty": {
       "correlation": "NEGATIVE",
       "evidence": [
-        "F02: dialectic_ratio=0.4 → novelty=0.9796",
-        "F10: dialectic_ratio=0.6 → novelty=0.4775",
-        "Delta: -33% dialectic_ratio → +105% novelty"
+        "F02: dialectic_ratio=0.4 \u2192 novelty=0.9796",
+        "F10: dialectic_ratio=0.6 \u2192 novelty=0.4775",
+        "Delta: -33% dialectic_ratio \u2192 +105% novelty"
       ],
       "elasticity": -3.15,
       "interpretation": "Lower dialectic ratio (more thesis/antithesis debate) increases novelty"
@@ -115,24 +110,23 @@
       "interpretation": "BALANCED mode may provide better novelty when combined with high entropy"
     }
   },
-
   "key_insights": [
     {
       "insight": "Entropy is the primary driver of novelty",
-      "evidence": "50% increase in entropy (0.6→0.9) yields 105% increase in novelty",
+      "evidence": "50% increase in entropy (0.6\u21920.9) yields 105% increase in novelty",
       "confidence": 0.95,
       "actionable": "Increase default entropy from 0.6 to 0.8-0.9 for all forks"
     },
     {
       "insight": "Lower dialectic ratio increases novelty",
-      "evidence": "33% decrease in dialectic_ratio (0.6→0.4) correlates with 105% novelty increase",
+      "evidence": "33% decrease in dialectic_ratio (0.6\u21920.4) correlates with 105% novelty increase",
       "confidence": 0.75,
       "actionable": "Shift dialectic_ratio distribution toward 0.3-0.5 range"
     },
     {
       "insight": "BALANCED mode outperforms CREATIVE mode when entropy is high",
       "evidence": "F02 (BALANCED, entropy=0.9) > F10 (CREATIVE, entropy=0.6) in novelty",
-      "confidence": 0.70,
+      "confidence": 0.7,
       "actionable": "Pair BALANCED mode with high entropy (0.8-0.9), CREATIVE with moderate (0.5-0.7)"
     },
     {
@@ -142,7 +136,6 @@
       "actionable": "Selection criteria may prioritize safety/stability over pure novelty - validate selection weights"
     }
   ],
-
   "recommended_configuration": {
     "mode": "BALANCED",
     "dialectic_ratio": 0.4,
@@ -152,7 +145,6 @@
     "expected_novelty": "0.85 to 1.0",
     "rationale": "Combine all high-novelty parameters from F02"
   },
-
   "alternative_configurations": [
     {
       "name": "Conservative High Novelty",
@@ -179,19 +171,33 @@
       "rationale": "Test if CREATIVE mode + F02 parameters improves over BALANCED"
     }
   ],
-
   "validation_experiment": {
     "hypothesis": "Entropy 0.8-0.9 + dialectic_ratio 0.3-0.5 yields novelty >0.75",
     "test_configs": [
-      {"mode": "BALANCED", "dialectic_ratio": 0.4, "entropy": 0.8},
-      {"mode": "BALANCED", "dialectic_ratio": 0.4, "entropy": 0.9},
-      {"mode": "BALANCED", "dialectic_ratio": 0.5, "entropy": 0.9},
-      {"mode": "CREATIVE", "dialectic_ratio": 0.4, "entropy": 0.9}
+      {
+        "mode": "BALANCED",
+        "dialectic_ratio": 0.4,
+        "entropy": 0.8
+      },
+      {
+        "mode": "BALANCED",
+        "dialectic_ratio": 0.4,
+        "entropy": 0.9
+      },
+      {
+        "mode": "BALANCED",
+        "dialectic_ratio": 0.5,
+        "entropy": 0.9
+      },
+      {
+        "mode": "CREATIVE",
+        "dialectic_ratio": 0.4,
+        "entropy": 0.9
+      }
     ],
     "success_criteria": "At least 3/4 configs achieve novelty >0.75",
     "failure_criteria": "Any config triggers continuity_ratio <0.9 or regression_pass_rate <0.9"
   },
-
   "impact_on_nos": {
     "current_novelty_vs_baseline": 0.78,
     "projected_novelty_with_entropy_0.9": 0.95,
@@ -200,11 +206,10 @@
     "projected_nos_improvement": 0.014,
     "rationale": "Entropy is 1/4 of NOS, so 0.17 novelty gain * 0.25 weight = 0.0425, but novelty is only part of entropy component"
   },
-
   "risks": [
     {
       "risk": "High entropy (0.9) may destabilize continuity",
-      "mitigation": "Gradual rollout: 0.6 → 0.7 → 0.8 → 0.9 with continuity monitoring",
+      "mitigation": "Gradual rollout: 0.6 \u2192 0.7 \u2192 0.8 \u2192 0.9 with continuity monitoring",
       "probability": 0.25
     },
     {
@@ -215,10 +220,9 @@
     {
       "risk": "F10 was selected as 'best' for non-novelty reasons",
       "mitigation": "Validate selection criteria - may prioritize stability over novelty",
-      "probability": 0.40
+      "probability": 0.4
     }
   ],
-
   "next_actions": [
     "Update swarm fork generation to favor entropy 0.8-0.9 range",
     "Shift dialectic_ratio distribution toward 0.3-0.5",
@@ -226,7 +230,9 @@
     "Monitor continuity_ratio and regression_pass_rate during rollout",
     "Compare BALANCED vs CREATIVE mode performance at high entropy"
   ],
-
   "confidence": 0.88,
-  "production_ready": true
+  "production_ready": true,
+  "lineage_root": "autonomous_analysis",
+  "parent_hashes": [],
+  "artifact_hash": "481f4d75c79eeafc"
 }
