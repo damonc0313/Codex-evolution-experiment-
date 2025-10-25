@@ -27,11 +27,17 @@ BUILDING_TYPE_HINTS = (
     "sep",
     "upgrade",
     "patch",
+    "apply",
+    "agents_apply",
+    "apply_phase",
+    "continuity",
 )
 
 BUILDING_KEYWORDS = (
     "build",
     "implement",
+    "implementation",
+    "implementing",
     "wire",
     "deploy",
     "migrate",
@@ -47,6 +53,8 @@ BUILDING_KEYWORDS = (
     "blueprint",
     "spec",
     "manifest",
+    "document",
+    "manuscript",
 )
 
 BUILDING_EXTENSIONS = (
@@ -121,6 +129,8 @@ def _iter_strings(value) -> Iterator[str]:
     if isinstance(value, str):
         yield value
     elif isinstance(value, dict):
+        for item in value.values():
+            yield from _iter_strings(item)
         try:
             yield json.dumps(value)
         except TypeError:
@@ -132,7 +142,7 @@ def _iter_strings(value) -> Iterator[str]:
 
 def _looks_like_code_reference(text: str) -> bool:
     lower = text.strip().lower()
-    return any(lower.endswith(ext) for ext in BUILDING_EXTENSIONS)
+    return any(ext in lower for ext in BUILDING_EXTENSIONS)
 
 
 def _split_artifact_type(value: str) -> set[str]:
@@ -167,11 +177,22 @@ def _is_building_payload(payload: Dict[str, object]) -> bool:
         "diff",
         "rationale",
         "next_steps",
+        "next_build_steps",
+        "patch_commands",
+        "implementation_targets",
         "next_action",
         "evidence",
         "acceptance_criteria",
         "assumptions",
         "risk",
+        "workflow",
+        "paths_monitored",
+        "monitors",
+        "implementation_targets",
+        "targets",
+        "target",
+        "evidence_paths",
+        "implementation_notes",
     ]
 
     text_fragments = []
@@ -190,7 +211,19 @@ def _is_building_payload(payload: Dict[str, object]) -> bool:
             return True
 
     # Look for explicit file path references that usually signal implementation.
-    for key in ("files", "paths", "modified_files", "touched_files", "diffs", "artifacts"):
+    for key in (
+        "files",
+        "paths",
+        "modified_files",
+        "touched_files",
+        "diffs",
+        "artifacts",
+        "paths_monitored",
+        "implementation_targets",
+        "targets",
+        "target",
+        "evidence_paths",
+    ):
         if key not in payload:
             continue
         for fragment in _iter_strings(payload.get(key)):

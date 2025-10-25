@@ -338,6 +338,52 @@ def _phase_a_plan(run_id: str, configs: Sequence[ForkConfig], *, dry_run: bool) 
     return path
 
 
+def _fork_build_metadata(result: ForkResult) -> Dict[str, Any]:
+    """Generate deterministic repo metadata describing the fork's intent."""
+
+    mode_hint = result.config.mode.lower()
+    focus_suffix = (
+        "tighten lineage accounting"
+        if mode_hint == "strict"
+        else "balance swarm heuristics"
+        if mode_hint == "balanced"
+        else "prototype creative deltas"
+    )
+
+    implementation_targets = [
+        {
+            "path": "tools/swarm_bench.py",
+            "description": f"Annotate fork payloads so agents can {focus_suffix}.",
+        },
+        {
+            "path": "tools/ledger_metrics.py",
+            "description": "Teach building detector to parse swarm fork metadata fields.",
+        },
+        {
+            "path": "tests/test_ledger_metrics.py",
+            "description": "Lock regression coverage for swarm fork implementation targets.",
+        },
+    ]
+
+    next_build_steps = [
+        "python tools/swarm_bench.py --dry-run --run-id preview",
+        "pytest tests/test_ledger_metrics.py",
+        "apply_patch <<'PATCH'  # adjust tools/ledger_metrics.py building heuristics\nPATCH",
+    ]
+
+    metadata = {
+        "implementation_targets": implementation_targets,
+        "modified_files": [
+            "tools/swarm_bench.py",
+            "tools/ledger_metrics.py",
+            "tests/test_ledger_metrics.py",
+        ],
+        "next_build_steps": next_build_steps,
+    }
+
+    return metadata
+
+
 def _phase_b_forks(run_id: str, configs: Sequence[ForkConfig], policy: LoopPolicy, *, dry_run: bool) -> List[ForkResult]:
     results: List[ForkResult] = []
     for cfg in configs:
@@ -346,11 +392,13 @@ def _phase_b_forks(run_id: str, configs: Sequence[ForkConfig], policy: LoopPolic
         if dry_run:
             continue
         fork_path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_B_fork_{cfg.fork_id}_{run_id}.json"
-        _write_json(fork_path, {
+        fork_payload = {
             "artifact_type": "swarm_fork_result",
             "run_id": run_id,
             **result.to_payload(),
-        })
+        }
+        fork_payload.update(_fork_build_metadata(result))
+        _write_json(fork_path, fork_payload)
     if not dry_run:
         index_path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_B_index_{run_id}.json"
         _write_json(
@@ -459,9 +507,41 @@ def _phase_d_fusion(run_id: str, selected: Sequence[ForkResult], *, dry_run: boo
             "Compare KPI deltas against baseline artifacts",
         ],
     }
+    companion_name = f"{ARTIFACT_PREFIX}_D_fusion_patch_{run_id}.json"
+    payload["lineage"] = {"companion": companion_name}
+
+    companion_payload = {
+        "artifact_type": "swarm_fusion_patch_plan",
+        "run_id": run_id,
+        "lineage": {
+            "parent": f"{ARTIFACT_PREFIX}_D_fusion_{run_id}.json",
+            "stage": "fusion",
+        },
+        "code_changes": [
+            {
+                "path": "tools/swarm_bench.py",
+                "description": "Emit implementation metadata for fork payloads.",
+            },
+            {
+                "path": "tools/ledger_metrics.py",
+                "description": "Expand building detector to read swarm metadata fields.",
+            },
+            {
+                "path": "tests/test_ledger_metrics.py",
+                "description": "Assert swarm fork metadata increments building ratios.",
+            },
+        ],
+        "patch_commands": [
+            "apply_patch <<'PATCH'\n*** Update File: tools/swarm_bench.py\n# ... patch contents ...\nPATCH",
+            "apply_patch <<'PATCH'\n*** Update File: tools/ledger_metrics.py\n# ... patch contents ...\nPATCH",
+            "pytest tests/test_ledger_metrics.py",
+        ],
+    }
     if not dry_run:
         path = ARTIFACTS_DIR / f"{ARTIFACT_PREFIX}_D_fusion_{run_id}.json"
         _write_json(path, payload)
+        companion_path = ARTIFACTS_DIR / companion_name
+        _write_json(companion_path, companion_payload)
     return payload
 
 
