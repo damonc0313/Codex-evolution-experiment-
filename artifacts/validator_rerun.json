@@ -21,5 +21,11 @@
       "validator_guard_patch"
     ],
     "timestamp": 1761199876
-  }
+  },
+  "artifact_hash": "28b9fb272d52eb2a",
+  "parent_hash": [
+    "b1bfc95da7dcdc59"
+  ],
+  "depth": 23,
+  "spawn_count": 1
 }

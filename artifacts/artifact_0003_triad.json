@@ -49,5 +49,11 @@
       "artifact_0004_sandbox"
     ],
     "timestamp": "2025-10-23T23:03:22.566014+00:00"
-  }
+  },
+  "artifact_hash": "4220ba12f22f7134",
+  "parent_hash": [
+    "2302a8fb24ceb187"
+  ],
+  "depth": 40,
+  "spawn_count": 1
 }

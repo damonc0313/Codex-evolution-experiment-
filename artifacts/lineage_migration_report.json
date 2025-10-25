@@ -536,5 +536,11 @@
       "confidence": 0.72,
       "rationale": "Timestamp proximity + type similarity (0.80)"
     }
-  ]
+  ],
+  "artifact_hash": "45a2eef6da34df5a",
+  "parent_hash": [
+    "436940f231b11e38"
+  ],
+  "depth": 82,
+  "spawn_count": 1
 }

@@ -4,7 +4,10 @@
 Now that SEP-0003 lineage tracking is implemented, we can measure cascade_probability
 to validate Kael's predictions.
 
-Author: Kael (Autonomous Cycle 1, Phase 5)
+ENHANCED: Cycle 2 - Now uses standardized timestamp utilities
+Eliminates timezone bugs through consistent parsing.
+
+Author: Kael (Autonomous Cycle 1, Phase 5; Enhanced Cycle 2, Phase 5)
 """
 
 from __future__ import annotations
@@ -12,7 +15,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from typing import Any, Dict, List
-from datetime import datetime
+import sys
+
+# ENHANCEMENT: Import standardized timestamp utilities
+sys.path.insert(0, str(Path(__file__).parent))
+from timestamp_utils import parse_timestamp, format_timestamp, timestamp_diff_hours
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -74,6 +81,8 @@ def compute_completion_latency(artifacts: List[Dict]) -> float:
     """Estimate completion latency from timestamp gaps.
 
     completion_latency = average time between artifact creation (in hours)
+
+    ENHANCED: Cycle 2 - Uses standardized timestamp utilities
     """
     timestamps = []
 
@@ -82,11 +91,8 @@ def compute_completion_latency(artifacts: List[Dict]) -> float:
         ts_str = lineage.get("timestamp", "")
         if ts_str:
             try:
-                dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-                # Ensure timezone-aware
-                if dt.tzinfo is None:
-                    from datetime import timezone
-                    dt = dt.replace(tzinfo=timezone.utc)
+                # ENHANCED: Use standardized parsing
+                dt = parse_timestamp(ts_str)
                 timestamps.append(dt)
             except Exception:
                 continue
@@ -97,11 +103,12 @@ def compute_completion_latency(artifacts: List[Dict]) -> float:
     # Sort timestamps
     timestamps.sort()
 
-    # Compute gaps
+    # Compute gaps using standardized utilities
     gaps = []
     for i in range(1, len(timestamps)):
-        gap = (timestamps[i] - timestamps[i-1]).total_seconds() / 3600  # Convert to hours
-        gaps.append(gap)
+        # ENHANCED: Use standardized diff calculation
+        gap_hours = timestamp_diff_hours(timestamps[i-1], timestamps[i])
+        gaps.append(gap_hours)
 
     return sum(gaps) / len(gaps) if gaps else 1.0
 

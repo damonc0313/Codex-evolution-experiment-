@@ -60,5 +60,9 @@
       "swarm_gate_telemetry"
     ],
     "timestamp": 1761197632
-  }
+  },
+  "artifact_hash": "b8cab5316a0673fd",
+  "parent_hash": [],
+  "depth": 0,
+  "spawn_count": 1
 }

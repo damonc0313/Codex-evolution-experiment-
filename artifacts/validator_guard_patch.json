@@ -19,5 +19,11 @@
       "validator_rerun"
     ],
     "timestamp": 1761199693
-  }
+  },
+  "artifact_hash": "634809eae171be72",
+  "parent_hash": [
+    "0332a7d75cb905dc"
+  ],
+  "depth": 19,
+  "spawn_count": 1
 }

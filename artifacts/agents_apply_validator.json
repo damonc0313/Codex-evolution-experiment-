@@ -20,5 +20,11 @@
       "agents_apply_tests"
     ],
     "timestamp": "2025-10-23T23:03:22.548725+00:00"
-  }
+  },
+  "artifact_hash": "4423401ca19f0228",
+  "parent_hash": [
+    "fbea4516efa40204"
+  ],
+  "depth": 33,
+  "spawn_count": 1
 }

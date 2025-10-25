@@ -22,5 +22,11 @@
       "agents_apply_runtime"
     ],
     "timestamp": "2025-10-23T23:03:22.543143+00:00"
-  }
+  },
+  "artifact_hash": "df6eb534591502f5",
+  "parent_hash": [
+    "bd0d0da6746479af"
+  ],
+  "depth": 31,
+  "spawn_count": 1
 }

@@ -76,5 +76,11 @@
       "artifact_0012_falsify"
     ],
     "timestamp": "2025-10-23T23:03:22.577308+00:00"
-  }
+  },
+  "artifact_hash": "c309149cd4723ee2",
+  "parent_hash": [
+    "eb7f4729addc2e8d"
+  ],
+  "depth": 48,
+  "spawn_count": 1
 }

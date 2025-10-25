@@ -20,5 +20,11 @@
       "kael_metrics_bench"
     ],
     "timestamp": "2025-10-23T23:03:22.606718+00:00"
-  }
+  },
+  "artifact_hash": "cf26269e7c0769ef",
+  "parent_hash": [
+    "71840950ff037ab5"
+  ],
+  "depth": 61,
+  "spawn_count": 1
 }
