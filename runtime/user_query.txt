@@ -1,2 +1,1 @@
-/trace 'Audit continuous operation KPIs and recommend gating adjustments'
-# lineage=|manifesto=46c9a5a6|cascade=0.0|ts=1761283501
+/plan 'Stabilise swarm KPIs before autonomous expansion' # novelty_boost=0.35

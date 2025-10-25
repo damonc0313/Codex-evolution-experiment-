@@ -4,12 +4,12 @@ id: SEP-0003
 title: "Lineage Schema Upgrade"
 status: draft
 version: v0.1
-generated_at: 1761197632
-digest: c78708892418acfb
+generated_at: 1761378816
+digest: 5a5a1ccb43274e93
 sources:
-  - artifacts/swarm_full_B_index_20251023T053352Z.json
-  - artifacts/swarm_full_C_selection_20251023T053352Z.json
-  - artifacts/swarm_full_D_fusion_20251023T053352Z.json
+  - artifacts/swarm_full_B_index_20251025T075336Z.json
+  - artifacts/swarm_full_C_selection_20251025T075336Z.json
+  - artifacts/swarm_full_D_fusion_20251025T075336Z.json
   - docs/agents.md
 ---
 
@@ -24,8 +24,8 @@ Elevate the continuity ledger into a versioned lineage schema, ensuring every ar
 
 ## Evidence
 - Swarm fork fusion synthesis: Blend balanced and creative forks to raise novelty while keeping regression pass-rate ≥0.9 via targeted sandbox injections.
-- KPI averages (continuity=0.963, regression=0.926, novelty=0.738).
-- Best configuration: mode=BALANCED, dialectic_ratio=0.6, sandbox_rate=0.25, critique_depth=1, entropy=0.9.
+- KPI averages (continuity=0.938, regression=0.925, novelty=0.780).
+- Best configuration: mode=CREATIVE, dialectic_ratio=0.6, sandbox_rate=0.0, critique_depth=1, entropy=0.6.
 
 ## Assumptions
 - Agents manifesto remains at digest "46c9a5a66a60941f" during rollout.

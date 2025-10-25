@@ -1,0 +1,9 @@
+{
+  "artifact_type": "swarm_next_query",
+  "run_id": "20251025T075336Z",
+  "query": "/plan 'Stabilise swarm KPIs before autonomous expansion' # novelty_boost=0.35",
+  "mode_hint": "STRICT",
+  "reason": "gated",
+  "novelty": 0.3168,
+  "previous_query_present": true
+}
