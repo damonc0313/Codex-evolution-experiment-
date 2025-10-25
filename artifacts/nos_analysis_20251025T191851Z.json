@@ -1,66 +1,66 @@
 {
   "artifact_type": "nos_analysis_report",
-  "timestamp": "20251025T191201Z",
-  "nos_score": 0.6043,
+  "timestamp": "20251025T191851Z",
+  "nos_score": 0.6003,
   "nos_floor_threshold": 0.05,
   "gate_status": "UNBLOCKED",
   "components": {
     "energy_efficiency": {
-      "score": 0.6089,
-      "building_ratio": 0.1732,
-      "dedup_ratio": 0.6535,
+      "score": 0.6119,
+      "building_ratio": 0.1642,
+      "dedup_ratio": 0.6716,
       "rate_score": 1.0,
       "building_count": 22,
-      "total_count": 127,
-      "unique_count": 83
+      "total_count": 134,
+      "unique_count": 90
     },
     "coherence": {
-      "score": 0.8066,
-      "lineage_ratio": 0.9843,
+      "score": 0.7812,
+      "lineage_ratio": 0.9328,
       "continuity_ratio": 0.963,
-      "run_id_ratio": 0.4724,
+      "run_id_ratio": 0.4478,
       "lineage_count": 125,
       "run_id_count": 60
     },
     "resilience": {
-      "score": 0.327,
+      "score": 0.3311,
       "regression_pass_rate": 0.926,
-      "validation_ratio": 0.0315,
-      "confidence_ratio": 0.0236,
+      "validation_ratio": 0.0299,
+      "confidence_ratio": 0.0373,
       "validation_count": 4,
-      "high_confidence_count": 3
+      "high_confidence_count": 5
     },
     "entropy": {
-      "score": 0.6748,
-      "shannon_entropy": 0.8249,
+      "score": 0.6771,
+      "shannon_entropy": 0.8318,
       "novelty_score": 0.738,
       "config_diversity": 0.4615,
-      "unique_types": 71,
-      "total_types": 127
+      "unique_types": 73,
+      "total_types": 134
     }
   },
   "bottleneck": {
     "bottleneck": "resilience",
-    "bottleneck_score": 0.327,
+    "bottleneck_score": 0.3311,
     "ranking": [
       {
         "component": "resilience",
-        "score": 0.327,
+        "score": 0.3311,
         "rank": 1
       },
       {
         "component": "energy_efficiency",
-        "score": 0.6089,
+        "score": 0.6119,
         "rank": 2
       },
       {
         "component": "entropy",
-        "score": 0.6748,
+        "score": 0.6771,
         "rank": 3
       },
       {
         "component": "coherence",
-        "score": 0.8066,
+        "score": 0.7812,
         "rank": 4
       }
     ]
@@ -75,10 +75,9 @@
     {
       "component": "resilience",
       "action": "Increase validation coverage",
-      "rationale": "Validation ratio: 0.032",
+      "rationale": "Validation ratio: 0.030",
       "expected_impact": "+0.05 to +0.10"
     }
   ],
-  "artifact_count": 127,
-  "confidence": 0.5
+  "artifact_count": 134
 }

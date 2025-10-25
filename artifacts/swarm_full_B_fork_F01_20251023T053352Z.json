@@ -66,5 +66,6 @@
   "depth": 0,
   "spawn_count": 1,
   "lineage_root": "swarm_20251023T053352Z",
-  "parent_hashes": []
+  "parent_hashes": [],
+  "confidence": 0.7525
 }

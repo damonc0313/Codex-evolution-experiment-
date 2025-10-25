@@ -858,5 +858,6 @@
   ],
   "lineage_root": "autonomous_test",
   "parent_hashes": [],
-  "artifact_hash": "5a436276909a72c3"
+  "artifact_hash": "5a436276909a72c3",
+  "confidence": 0.855
 }

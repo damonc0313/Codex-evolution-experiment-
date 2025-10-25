@@ -145,5 +145,6 @@
       "action": "Add confidence scores to all artifacts (current: 2.4%)",
       "impact": "Enable quality-based filtering and validation"
     }
-  ]
+  ],
+  "confidence": 0.5525
 }

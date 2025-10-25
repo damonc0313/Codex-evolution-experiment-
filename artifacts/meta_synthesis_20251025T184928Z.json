@@ -201,5 +201,6 @@
   ],
   "lineage_root": "autonomous_report",
   "parent_hashes": [],
-  "artifact_hash": "e2336b1d42cd890c"
+  "artifact_hash": "e2336b1d42cd890c",
+  "confidence": 0.83
 }

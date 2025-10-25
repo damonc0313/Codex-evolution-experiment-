@@ -72,5 +72,6 @@
   "parent_hashes": [
     "b716ea8bc8bc54d6"
   ],
-  "artifact_hash": "9e78237fde586168"
+  "artifact_hash": "9e78237fde586168",
+  "confidence": 0.7025
 }

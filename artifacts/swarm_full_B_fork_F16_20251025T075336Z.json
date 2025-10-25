@@ -27,5 +27,6 @@
   "nos_score": 0.036,
   "lineage_root": "swarm_20251025T075336Z",
   "parent_hashes": [],
-  "artifact_hash": "d76b5d404b8df4cd"
+  "artifact_hash": "d76b5d404b8df4cd",
+  "confidence": 0.7075
 }

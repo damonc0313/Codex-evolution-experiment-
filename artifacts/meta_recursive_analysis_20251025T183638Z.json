@@ -94,5 +94,6 @@
   },
   "lineage_root": "autonomous_analysis",
   "parent_hashes": [],
-  "artifact_hash": "8e29169b0b101848"
+  "artifact_hash": "8e29169b0b101848",
+  "confidence": 0.8125
 }

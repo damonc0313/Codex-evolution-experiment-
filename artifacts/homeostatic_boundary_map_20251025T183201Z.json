@@ -459,5 +459,6 @@
   },
   "lineage_root": "lineage_20251025",
   "parent_hashes": [],
-  "artifact_hash": "cc61981d7c14df6f"
+  "artifact_hash": "cc61981d7c14df6f",
+  "confidence": 0.7375
 }

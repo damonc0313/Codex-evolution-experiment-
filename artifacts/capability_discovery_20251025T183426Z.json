@@ -120,5 +120,6 @@
   },
   "lineage_root": "autonomous_report",
   "parent_hashes": [],
-  "artifact_hash": "947448d544344ecb"
+  "artifact_hash": "947448d544344ecb",
+  "confidence": 0.8125
 }

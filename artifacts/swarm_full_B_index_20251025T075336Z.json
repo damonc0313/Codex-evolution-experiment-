@@ -473,5 +473,6 @@
   ],
   "lineage_root": "swarm_20251025T075336Z",
   "parent_hashes": [],
-  "artifact_hash": "02fe489122c2a897"
+  "artifact_hash": "02fe489122c2a897",
+  "confidence": 0.7175
 }

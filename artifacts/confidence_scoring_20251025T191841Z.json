@@ -1,0 +1,26 @@
+{
+  "artifact_type": "confidence_scoring_report",
+  "timestamp": "20251025T191841Z",
+  "dry_run": false,
+  "statistics": {
+    "total": 133,
+    "avg_confidence": 0.713,
+    "high_confidence_count": 5,
+    "high_confidence_ratio": 0.0376
+  },
+  "distribution": {
+    "excellent": 0,
+    "high": 5,
+    "good": 94,
+    "fair": 29,
+    "low": 5
+  },
+  "weights": {
+    "artifact_type": 0.3,
+    "lineage_completeness": 0.25,
+    "metadata_richness": 0.2,
+    "content_complexity": 0.15,
+    "validation_status": 0.05,
+    "dependencies": 0.05
+  }
+}

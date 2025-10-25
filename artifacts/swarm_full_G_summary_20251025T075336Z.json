@@ -147,5 +147,6 @@
   "parent_hashes": [
     "bd7be89a6ea05c1a"
   ],
-  "artifact_hash": "7955c0e4144c559e"
+  "artifact_hash": "7955c0e4144c559e",
+  "confidence": 0.7625
 }

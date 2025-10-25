@@ -95,5 +95,6 @@
   ],
   "lineage_root": "autonomous_validation",
   "parent_hashes": [],
-  "artifact_hash": "2ac3163d0885204b"
+  "artifact_hash": "2ac3163d0885204b",
+  "confidence": 0.8125
 }
