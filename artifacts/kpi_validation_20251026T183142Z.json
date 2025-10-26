@@ -1,0 +1,183 @@
+{
+  "artifact_type": "kpi_validation_report",
+  "timestamp": "20251026T183142Z",
+  "stabilization_status": "PARTIAL",
+  "criteria_met": false,
+  "current_kpis": {
+    "continuity_ratio": 0.963,
+    "regression_pass_rate": 0.926,
+    "cascade_probability": 0.0,
+    "task_multiplication": 0.0,
+    "nos_score": 0.6032,
+    "lineage_coverage": 0.9379,
+    "validation_pass_rate": 0.8993288590604027,
+    "coherence": 0.7747,
+    "resilience": 0.3411
+  },
+  "validation_results": {
+    "continuity_ratio": {
+      "value": 0.963,
+      "criteria": ">= 0.900",
+      "passed": true,
+      "status": "\u2713 PASS"
+    },
+    "regression_pass_rate": {
+      "value": 0.926,
+      "criteria": ">= 0.900",
+      "passed": true,
+      "status": "\u2713 PASS"
+    },
+    "cascade_probability": {
+      "value": 0.0,
+      "criteria": "<= 3.500",
+      "passed": true,
+      "status": "\u2713 PASS"
+    },
+    "task_multiplication": {
+      "value": 0.0,
+      "criteria": "<= 2.500",
+      "passed": true,
+      "status": "\u2713 PASS"
+    },
+    "nos_score": {
+      "value": 0.6032,
+      "criteria": ">= 0.055",
+      "passed": true,
+      "status": "\u2713 PASS"
+    },
+    "lineage_coverage": {
+      "value": 0.9379,
+      "criteria": ">= 0.950",
+      "passed": false,
+      "status": "\u2717 FAIL"
+    },
+    "validation_pass_rate": {
+      "value": 0.8993288590604027,
+      "criteria": ">= 0.950",
+      "passed": false,
+      "status": "\u2717 FAIL"
+    }
+  },
+  "delta_analysis": {
+    "validation_pass_rate": {
+      "baseline": 0.0,
+      "current": 0.8993288590604027,
+      "delta": 0.8993288590604027,
+      "delta_percent": 0.0,
+      "improved": true
+    },
+    "regression_pass_rate": {
+      "baseline": 0.926,
+      "current": 0.926,
+      "delta": 0.0,
+      "delta_percent": 0.0,
+      "improved": false
+    },
+    "cascade_probability": {
+      "baseline": 0.0,
+      "current": 0.0,
+      "delta": 0.0,
+      "delta_percent": 0.0,
+      "improved": false
+    },
+    "lineage_coverage": {
+      "baseline": 0.0,
+      "current": 0.9379,
+      "delta": 0.9379,
+      "delta_percent": 0.0,
+      "improved": true
+    },
+    "coherence": {
+      "baseline": 0.0,
+      "current": 0.7747,
+      "delta": 0.7747,
+      "delta_percent": 0.0,
+      "improved": true
+    },
+    "resilience": {
+      "baseline": 0.0,
+      "current": 0.3411,
+      "delta": 0.3411,
+      "delta_percent": 0.0,
+      "improved": true
+    },
+    "novelty_vs_baseline": {
+      "baseline": 0.738,
+      "current": 0.0,
+      "delta": -0.738,
+      "delta_percent": -100.0,
+      "improved": false
+    },
+    "continuity_ratio": {
+      "baseline": 0.963,
+      "current": 0.963,
+      "delta": 0.0,
+      "delta_percent": 0.0,
+      "improved": false
+    },
+    "task_multiplication": {
+      "baseline": 0.0,
+      "current": 0.0,
+      "delta": 0.0,
+      "delta_percent": 0.0,
+      "improved": false
+    },
+    "nos_score": {
+      "baseline": 0.0,
+      "current": 0.6032,
+      "delta": 0.6032,
+      "delta_percent": 0.0,
+      "improved": true
+    }
+  },
+  "summary": {
+    "major_improvements": [],
+    "minor_improvements": [
+      {
+        "kpi": "validation_pass_rate",
+        "delta": 0.8993288590604027,
+        "delta_percent": 0.0
+      },
+      {
+        "kpi": "lineage_coverage",
+        "delta": 0.9379,
+        "delta_percent": 0.0
+      },
+      {
+        "kpi": "coherence",
+        "delta": 0.7747,
+        "delta_percent": 0.0
+      },
+      {
+        "kpi": "resilience",
+        "delta": 0.3411,
+        "delta_percent": 0.0
+      },
+      {
+        "kpi": "nos_score",
+        "delta": 0.6032,
+        "delta_percent": 0.0
+      }
+    ],
+    "regressions": [
+      {
+        "kpi": "novelty_vs_baseline",
+        "delta": -0.738,
+        "delta_percent": -100.0
+      }
+    ],
+    "total_improvements": 5
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "area": "Lineage Coverage",
+      "recommendation": "Migrate remaining 6.2% artifacts to SEP-0003."
+    },
+    {
+      "priority": "INFO",
+      "area": "Lineage",
+      "recommendation": "Excellent lineage improvement: +93.8%. Maintain this coverage going forward."
+    }
+  ]
+}

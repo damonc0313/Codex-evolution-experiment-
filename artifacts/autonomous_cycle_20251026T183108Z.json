@@ -1,0 +1,55 @@
+{
+  "artifact_type": "autonomous_cycle_result",
+  "timestamp": "20251026T183108Z",
+  "cycle_number": 1,
+  "start_time": "2025-10-26T18:31:07.678326Z",
+  "phases": [
+    {
+      "cycle": 1,
+      "timestamp": "2025-10-26T18:31:07.678364Z",
+      "phase": "diagnostics",
+      "nos_analysis": {
+        "success": true
+      },
+      "quality_audit": {
+        "success": true
+      },
+      "kpi_validation": {
+        "success": false
+      },
+      "health_status": "healthy"
+    },
+    {
+      "cycle": 1,
+      "timestamp": "2025-10-26T18:31:07.992260Z",
+      "phase": "optimization",
+      "mode": "explore",
+      "entropy_optimization": {
+        "success": true
+      },
+      "validation": {
+        "success": false
+      }
+    }
+  ],
+  "system_mode": "explore",
+  "final_kpis": {
+    "continuity_ratio": 0.963,
+    "regression_pass_rate": 0.926,
+    "cascade_probability": 0.0,
+    "task_multiplication": 0.0,
+    "nos_score": 0.6032,
+    "lineage_coverage": 0.9379,
+    "validation_pass_rate": 0.9781021897810219,
+    "coherence": 0.7747,
+    "resilience": 0.3411,
+    "energy_efficiency_score": 0.6157,
+    "coherence_score": 0.7747,
+    "resilience_score": 0.3411,
+    "entropy_score": 0.6811,
+    "novelty_vs_baseline": 0.738,
+    "time_to_artifact_s": 24.5
+  },
+  "success": true,
+  "duration_seconds": 0.5250773429870605
+}
