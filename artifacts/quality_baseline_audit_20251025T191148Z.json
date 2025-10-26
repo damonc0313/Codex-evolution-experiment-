@@ -146,5 +146,8 @@
       "impact": "Enable quality-based filtering and validation"
     }
   ],
-  "confidence": 0.5525
+  "confidence": 0.5525,
+  "lineage_root": "lineage_20251025",
+  "parent_hashes": [],
+  "artifact_hash": "9ce3c1b653029687"
 }

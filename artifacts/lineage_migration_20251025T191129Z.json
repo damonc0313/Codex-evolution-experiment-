@@ -14,5 +14,8 @@
     "invalid_references": 0,
     "invalid_refs_sample": []
   },
-  "confidence": 0.445
+  "confidence": 0.445,
+  "lineage_root": "autonomous_report",
+  "parent_hashes": [],
+  "artifact_hash": "ffef7d401add36b2"
 }

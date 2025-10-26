@@ -1,0 +1,68 @@
+{
+  "artifact_type": "validation_report",
+  "timestamp": "20251026T181305Z",
+  "validator_version": "2.0.0",
+  "mode": "fail",
+  "statistics": {
+    "total": 137,
+    "valid": 134,
+    "invalid": 3,
+    "critical_issues": 5,
+    "error_issues": 62,
+    "warning_issues": 4
+  },
+  "compliance": {
+    "sep_0003_compliant": false,
+    "validation_pass_rate": 0.9781021897810219
+  },
+  "failed_artifacts": [
+    {
+      "filename": "continuous_operation_metrics.json",
+      "artifact_type": "unknown",
+      "issues": [
+        {
+          "rule": "metadata-artifact_type",
+          "severity": "critical",
+          "message": "Missing required field: artifact_type"
+        },
+        {
+          "rule": "metadata-timestamp",
+          "severity": "error",
+          "message": "Missing recommended field: timestamp"
+        }
+      ]
+    },
+    {
+      "filename": "lineage_migration_20251026T181253Z.json",
+      "artifact_type": "lineage_migration_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "lineage_migration_report.json",
+      "artifact_type": "unknown",
+      "issues": [
+        {
+          "rule": "metadata-artifact_type",
+          "severity": "critical",
+          "message": "Missing required field: artifact_type"
+        }
+      ]
+    }
+  ]
+}

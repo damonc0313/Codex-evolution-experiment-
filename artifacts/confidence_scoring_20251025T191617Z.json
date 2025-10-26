@@ -23,5 +23,8 @@
     "validation_status": 0.05,
     "dependencies": 0.05
   },
-  "confidence": 0.49
+  "confidence": 0.49,
+  "lineage_root": "autonomous_report",
+  "parent_hashes": [],
+  "artifact_hash": "e4d64a068c17bf75"
 }

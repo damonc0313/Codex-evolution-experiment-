@@ -79,5 +79,8 @@
       "expected_impact": "+0.05 to +0.10"
     }
   ],
-  "artifact_count": 134
+  "artifact_count": 134,
+  "lineage_root": "autonomous_analysis",
+  "parent_hashes": [],
+  "artifact_hash": "123e55b153390398"
 }
