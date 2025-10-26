@@ -1,0 +1,39 @@
+{
+  "artifact_type": "deduplication_analysis",
+  "timestamp": "20251026T181615Z",
+  "total_artifacts": 140,
+  "exact_duplicates": 0,
+  "structural_similarities": 4,
+  "temporal_redundancy_types": 1,
+  "deduplication_potential": {
+    "exact_duplicates": 0,
+    "structural_redundancy": 14,
+    "total_removable": 0,
+    "savings_ratio": 0.0,
+    "current_redundancy": 0.358,
+    "projected_redundancy": 0.358,
+    "energy_efficiency_improvement": 0.0,
+    "projected_energy_efficiency": 0.606,
+    "nos_improvement": 0.0
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "action": "Implement smart artifact generation caching",
+      "impact": "14 fewer redundant generations",
+      "implementation": "Add cache check before generating similar artifacts"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Add deduplication check to artifact pipeline",
+      "impact": "Prevent future redundancy",
+      "implementation": "Pre-generation hash check with skip logic"
+    },
+    {
+      "priority": "LOW",
+      "action": "Optimize artifact regeneration triggers",
+      "impact": "Further reduce redundancy to <25%",
+      "implementation": "Analyze and optimize artifact generation logic"
+    }
+  ]
+}
