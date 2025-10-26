@@ -1,0 +1,1127 @@
+{
+  "artifact_type": "autonomous_experiment_engine_report",
+  "timestamp": "2025-10-26T18:47:03.973262Z",
+  "lineage_root": "autonomous_operations_framework",
+  "parent_hashes": [
+    "3946554",
+    "bcbe78b"
+  ],
+  "run_summary": {
+    "total_experiments": 30,
+    "success_rate": 1.0,
+    "experiments_by_type": {
+      "capability_boundary": 15,
+      "pattern_discovery": 1,
+      "creative_synthesis": 1,
+      "meta_analysis": 1,
+      "optimization_exploration": 1,
+      "emergent_behavior": 1,
+      "recursive_reasoning": 8,
+      "hybrid_experiment": 2
+    },
+    "total_insights": 30,
+    "capability_map": {
+      "pattern_complexity": 2,
+      "creative_novelty": 0.8081011735476895,
+      "recursive_depth": 2,
+      "optimization_dimensions": 25
+    }
+  },
+  "experiment_history": [
+    {
+      "type": "capability_boundary",
+      "difficulty": 1,
+      "parameters": {
+        "dimension": "synthesis",
+        "intensity": 0.2
+      },
+      "success": true,
+      "results": {
+        "dimension": "synthesis",
+        "max_successful_level": 2,
+        "boundary_estimate": 5,
+        "boundary_sharpness": 0.6508131876995007,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in synthesis found at level 5",
+          "recommendation": "Operate below level 2 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.969109Z"
+    },
+    {
+      "type": "pattern_discovery",
+      "difficulty": 2,
+      "parameters": {
+        "data_size": 200,
+        "complexity": 2
+      },
+      "success": true,
+      "results": {
+        "data_size": 200,
+        "complexity": 2,
+        "patterns_found": [
+          "linear_trend",
+          "periodic_oscillation"
+        ],
+        "pattern_count": 2,
+        "discovery_confidence": 0.7
+      },
+      "insights": [
+        {
+          "insight": "Discovered 2 distinct patterns in data",
+          "recommendation": "Patterns persist across scales"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.969406Z"
+    },
+    {
+      "type": "creative_synthesis",
+      "difficulty": 3,
+      "parameters": {
+        "source_count": 5,
+        "novelty_target": 0.74
+      },
+      "success": true,
+      "results": {
+        "source_count": 5,
+        "target_novelty": 0.74,
+        "achieved_novelty": 0.8081011735476895,
+        "coherence": 0.6767595305809242,
+        "approaches_used": [
+          "conceptual_blending",
+          "analogical_transfer",
+          "constraint_relaxation"
+        ],
+        "emergent_concepts": 8
+      },
+      "insights": [
+        {
+          "insight": "Achieved 0.81 novelty with 0.68 coherence",
+          "recommendation": "Novelty-coherence tradeoff suggests optimal range 0.7-0.85"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.969570Z"
+    },
+    {
+      "type": "meta_analysis",
+      "difficulty": 4,
+      "parameters": {
+        "history_size": 10
+      },
+      "success": true,
+      "results": {
+        "experiments_analyzed": 10,
+        "meta_patterns": [
+          "difficulty_scaling",
+          "success_rate_curve",
+          "boundary_convergence",
+          "capability_clustering"
+        ],
+        "meta_insights": [
+          "Experiment success inversely correlated with difficulty",
+          "Boundaries cluster in similar regions across dimensions",
+          "Learning rate increases with experiment count"
+        ],
+        "predictive_accuracy": 0.943128393583928
+      },
+      "insights": [
+        {
+          "insight": "Meta-analysis revealed 4 cross-experiment patterns",
+          "recommendation": "Use meta-patterns to guide future experiment design"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.969731Z"
+    },
+    {
+      "type": "optimization_exploration",
+      "difficulty": 5,
+      "parameters": {
+        "dimensions": 25,
+        "strategy": "genetic"
+      },
+      "success": true,
+      "results": {
+        "dimensions": 25,
+        "strategy": "genetic",
+        "iterations": 50,
+        "initial_value": 0.3,
+        "final_value": 0.9033930527902609,
+        "improvement": 0.6033930527902609,
+        "local_optima_found": 8,
+        "global_optimum_reached": true
+      },
+      "insights": [
+        {
+          "insight": "Optimization improved 0.60 across 25D space",
+          "recommendation": "Multi-start strategy recommended for high-dimensional spaces"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.969884Z"
+    },
+    {
+      "type": "emergent_behavior",
+      "difficulty": 5,
+      "parameters": {
+        "agent_count": 100,
+        "interaction_rules": 5
+      },
+      "success": true,
+      "results": {
+        "agent_count": 100,
+        "interaction_rules": 5,
+        "emergent_properties": [
+          "collective_oscillation",
+          "pattern_formation",
+          "hierarchical_organization",
+          "phase_transition",
+          "adaptive_behavior"
+        ],
+        "emergence_strength": 1.0,
+        "system_complexity": 23.02585092994046
+      },
+      "insights": [
+        {
+          "insight": "System exhibited 5 emergent properties",
+          "recommendation": "Emergence threshold at ~50 agents with 3+ interaction rules"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970055Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 5,
+      "parameters": {
+        "depth": 5
+      },
+      "success": true,
+      "results": {
+        "target_depth": 5,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970204Z"
+    },
+    {
+      "type": "hybrid_experiment",
+      "difficulty": 5,
+      "parameters": {
+        "approaches": [
+          "creative_synthesis",
+          "optimization",
+          "pattern_discovery"
+        ]
+      },
+      "success": true,
+      "results": {
+        "approaches_combined": [
+          "creative_synthesis",
+          "optimization",
+          "pattern_discovery"
+        ],
+        "synergy_score": 0.9459303947529502,
+        "emergent_insights": [
+          "Cross-domain pattern transfer",
+          "Multi-perspective validation"
+        ]
+      },
+      "insights": [
+        {
+          "insight": "Hybrid approach generated 2 emergent insights",
+          "recommendation": "Hybrid experiments yield synergistic benefits"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970358Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 5,
+      "parameters": {
+        "dimension": "reasoning",
+        "intensity": 1.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "reasoning",
+        "max_successful_level": 10,
+        "boundary_estimate": 14,
+        "boundary_sharpness": 0.3778229872603705,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in reasoning found at level 14",
+          "recommendation": "Operate below level 10 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970473Z"
+    },
+    {
+      "type": "hybrid_experiment",
+      "difficulty": 6,
+      "parameters": {
+        "approaches": [
+          "pattern_discovery",
+          "optimization",
+          "creative_synthesis"
+        ]
+      },
+      "success": true,
+      "results": {
+        "approaches_combined": [
+          "pattern_discovery",
+          "optimization",
+          "creative_synthesis"
+        ],
+        "synergy_score": 0.8629653763941811,
+        "emergent_insights": [
+          "Cross-domain pattern transfer",
+          "Multi-perspective validation"
+        ]
+      },
+      "insights": [
+        {
+          "insight": "Hybrid approach generated 2 emergent insights",
+          "recommendation": "Hybrid experiments yield synergistic benefits"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970606Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 7,
+      "parameters": {
+        "dimension": "creativity",
+        "intensity": 1.4
+      },
+      "success": true,
+      "results": {
+        "dimension": "creativity",
+        "max_successful_level": 14,
+        "boundary_estimate": 16,
+        "boundary_sharpness": 0.6993544151413376,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in creativity found at level 16",
+          "recommendation": "Operate below level 14 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970725Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 8,
+      "parameters": {
+        "depth": 8
+      },
+      "success": true,
+      "results": {
+        "target_depth": 8,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 6,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 7,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 8,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970852Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 9,
+      "parameters": {
+        "depth": 8
+      },
+      "success": true,
+      "results": {
+        "target_depth": 8,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 6,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 7,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 8,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.970980Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "creativity",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "creativity",
+        "max_successful_level": 20,
+        "boundary_estimate": 21,
+        "boundary_sharpness": 0.6611576253372203,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in creativity found at level 21",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.971120Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "creativity",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "creativity",
+        "max_successful_level": 20,
+        "boundary_estimate": 23,
+        "boundary_sharpness": 0.4541706390949813,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in creativity found at level 23",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.971225Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 10,
+      "parameters": {
+        "depth": 8
+      },
+      "success": true,
+      "results": {
+        "target_depth": 8,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 6,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 7,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 8,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.971365Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "reasoning",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "reasoning",
+        "max_successful_level": 20,
+        "boundary_estimate": 21,
+        "boundary_sharpness": 0.6902055823500637,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in reasoning found at level 21",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.971468Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "synthesis",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "synthesis",
+        "max_successful_level": 20,
+        "boundary_estimate": 22,
+        "boundary_sharpness": 0.749163348211503,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in synthesis found at level 22",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.971679Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "synthesis",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "synthesis",
+        "max_successful_level": 20,
+        "boundary_estimate": 21,
+        "boundary_sharpness": 0.7171584802274166,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in synthesis found at level 21",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.971829Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 10,
+      "parameters": {
+        "depth": 8
+      },
+      "success": true,
+      "results": {
+        "target_depth": 8,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 6,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 7,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 8,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.971960Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "synthesis",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "synthesis",
+        "max_successful_level": 20,
+        "boundary_estimate": 24,
+        "boundary_sharpness": 0.7898465085590234,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in synthesis found at level 24",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972079Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "synthesis",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "synthesis",
+        "max_successful_level": 20,
+        "boundary_estimate": 24,
+        "boundary_sharpness": 0.6122231965772829,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in synthesis found at level 24",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972191Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 10,
+      "parameters": {
+        "depth": 8
+      },
+      "success": true,
+      "results": {
+        "target_depth": 8,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 6,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 7,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 8,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972289Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "reasoning",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "reasoning",
+        "max_successful_level": 20,
+        "boundary_estimate": 22,
+        "boundary_sharpness": 0.328638211717871,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in reasoning found at level 22",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972384Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "reasoning",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "reasoning",
+        "max_successful_level": 20,
+        "boundary_estimate": 23,
+        "boundary_sharpness": 0.4378546194438272,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in reasoning found at level 23",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972462Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "synthesis",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "synthesis",
+        "max_successful_level": 20,
+        "boundary_estimate": 21,
+        "boundary_sharpness": 0.38388237746118536,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in synthesis found at level 21",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972544Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "creativity",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "creativity",
+        "max_successful_level": 20,
+        "boundary_estimate": 23,
+        "boundary_sharpness": 0.5581642866149219,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in creativity found at level 23",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972666Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 10,
+      "parameters": {
+        "depth": 8
+      },
+      "success": true,
+      "results": {
+        "target_depth": 8,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 6,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 7,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 8,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972768Z"
+    },
+    {
+      "type": "capability_boundary",
+      "difficulty": 10,
+      "parameters": {
+        "dimension": "creativity",
+        "intensity": 2.0
+      },
+      "success": true,
+      "results": {
+        "dimension": "creativity",
+        "max_successful_level": 20,
+        "boundary_estimate": 21,
+        "boundary_sharpness": 0.3241987620783144,
+        "status": "boundary_found"
+      },
+      "insights": [
+        {
+          "insight": "Capability boundary in creativity found at level 21",
+          "recommendation": "Operate below level 20 for stable performance"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972870Z"
+    },
+    {
+      "type": "recursive_reasoning",
+      "difficulty": 10,
+      "parameters": {
+        "depth": 8
+      },
+      "success": true,
+      "results": {
+        "target_depth": 8,
+        "stable_depth": 2,
+        "levels": [
+          {
+            "depth": 0,
+            "coherence": 1.0,
+            "stable": true
+          },
+          {
+            "depth": 1,
+            "coherence": 0.7,
+            "stable": true
+          },
+          {
+            "depth": 2,
+            "coherence": 0.4,
+            "stable": false
+          },
+          {
+            "depth": 3,
+            "coherence": 0.10000000000000009,
+            "stable": false
+          },
+          {
+            "depth": 4,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 5,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 6,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 7,
+            "coherence": 0.0,
+            "stable": false
+          },
+          {
+            "depth": 8,
+            "coherence": 0.0,
+            "stable": false
+          }
+        ],
+        "breakdown_point": 2,
+        "coherence_degradation_rate": 0.3
+      },
+      "insights": [
+        {
+          "insight": "Recursive reasoning stable up to depth 2",
+          "recommendation": "Stay within depth 3 for reliable meta-cognitive operations"
+        }
+      ],
+      "timestamp": "2025-10-26T18:47:03.972961Z"
+    }
+  ],
+  "capability_map": {
+    "pattern_complexity": 2,
+    "creative_novelty": 0.8081011735476895,
+    "recursive_depth": 2,
+    "optimization_dimensions": 25
+  },
+  "meta_insights": [
+    {
+      "insight": "Autonomous experiment design successfully adapts based on results",
+      "evidence": "100.0% overall success rate"
+    },
+    {
+      "insight": "Self-directed exploration discovers capability boundaries",
+      "evidence": "Mapped 4 capability dimensions"
+    },
+    {
+      "insight": "Meta-cognitive loop enables continuous improvement",
+      "evidence": "Generated 30 actionable insights"
+    }
+  ]
+}

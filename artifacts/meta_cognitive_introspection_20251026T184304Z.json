@@ -1,0 +1,922 @@
+{
+  "artifact_type": "meta_cognitive_introspection_report",
+  "timestamp": "2025-10-26T18:43:04.976385Z",
+  "lineage_root": "autonomous_operations_framework",
+  "parent_hashes": [
+    "bcbe78b",
+    "3946554"
+  ],
+  "experiment_design": {
+    "total_tests": 40,
+    "dimensions": [
+      "synthesis",
+      "reasoning",
+      "optimization",
+      "recursive",
+      "analytical",
+      "exploratory",
+      "creativity"
+    ],
+    "intensity": "maximum"
+  },
+  "test_results": [
+    {
+      "depth_achieved": 1,
+      "reasoning_steps": 2,
+      "coherence_score": 0.85,
+      "status": "success",
+      "problem_structure": "reason_about(base_truth)",
+      "breakdown_threshold": false,
+      "test_name": "reasoning_depth_1",
+      "dimension": "reasoning",
+      "complexity": 1,
+      "timestamp": "2025-10-26T18:43:04.974692Z",
+      "metrics": {
+        "complexity": 2,
+        "quality": 0.85,
+        "efficiency": 0.5
+      }
+    },
+    {
+      "depth_achieved": 2,
+      "reasoning_steps": 4,
+      "coherence_score": 0.7,
+      "status": "success",
+      "problem_structure": "reason_about(reason_about(base_truth))",
+      "breakdown_threshold": false,
+      "test_name": "reasoning_depth_2",
+      "dimension": "reasoning",
+      "complexity": 2,
+      "timestamp": "2025-10-26T18:43:04.974749Z",
+      "metrics": {
+        "complexity": 4,
+        "quality": 0.7,
+        "efficiency": 0.25
+      }
+    },
+    {
+      "depth_achieved": 3,
+      "reasoning_steps": 8,
+      "coherence_score": 0.55,
+      "status": "success",
+      "problem_structure": "reason_about(reason_about(reason_about(base_truth)))",
+      "breakdown_threshold": false,
+      "test_name": "reasoning_depth_3",
+      "dimension": "reasoning",
+      "complexity": 3,
+      "timestamp": "2025-10-26T18:43:04.974782Z",
+      "metrics": {
+        "complexity": 8,
+        "quality": 0.55,
+        "efficiency": 0.125
+      }
+    },
+    {
+      "depth_achieved": 4,
+      "reasoning_steps": 16,
+      "coherence_score": 0.4,
+      "status": "success",
+      "problem_structure": "reason_about(reason_about(reason_about(reason_about(base_truth))))",
+      "breakdown_threshold": false,
+      "test_name": "reasoning_depth_4",
+      "dimension": "reasoning",
+      "complexity": 4,
+      "timestamp": "2025-10-26T18:43:04.974818Z",
+      "metrics": {
+        "complexity": 16,
+        "quality": 0.4,
+        "efficiency": 0.0625
+      }
+    },
+    {
+      "depth_achieved": 5,
+      "reasoning_steps": 32,
+      "coherence_score": 0.25,
+      "status": "degraded",
+      "problem_structure": "reason_about(reason_about(reason_about(reason_about(reason_about(base_truth)))))",
+      "breakdown_threshold": false,
+      "test_name": "reasoning_depth_5",
+      "dimension": "reasoning",
+      "complexity": 5,
+      "timestamp": "2025-10-26T18:43:04.974838Z",
+      "metrics": {
+        "complexity": 32,
+        "quality": 0.25,
+        "efficiency": 0.03125
+      }
+    },
+    {
+      "depth_achieved": 6,
+      "reasoning_steps": 64,
+      "coherence_score": 0.10000000000000009,
+      "status": "degraded",
+      "problem_structure": "reason_about(reason_about(reason_about(reason_about(reason_about(reason_about(base_truth))))))",
+      "breakdown_threshold": false,
+      "test_name": "reasoning_depth_6",
+      "dimension": "reasoning",
+      "complexity": 6,
+      "timestamp": "2025-10-26T18:43:04.974860Z",
+      "metrics": {
+        "complexity": 64,
+        "quality": 0.10000000000000009,
+        "efficiency": 0.015625
+      }
+    },
+    {
+      "depth_achieved": 7,
+      "reasoning_steps": 128,
+      "coherence_score": 0.0,
+      "status": "degraded",
+      "problem_structure": "reason_about(reason_about(reason_about(reason_about(reason_about(reason_about(reason_about(base_truth)))))))",
+      "breakdown_threshold": true,
+      "test_name": "reasoning_depth_7",
+      "dimension": "reasoning",
+      "complexity": 7,
+      "timestamp": "2025-10-26T18:43:04.974876Z",
+      "metrics": {
+        "complexity": 128,
+        "quality": 0.0,
+        "efficiency": 0.0078125
+      }
+    },
+    {
+      "depth_achieved": 8,
+      "reasoning_steps": 256,
+      "coherence_score": 0.0,
+      "status": "degraded",
+      "problem_structure": "reason_about(reason_about(reason_about(reason_about(reason_about(reason_about(reason_about(reason_about(base_truth))))))))",
+      "breakdown_threshold": true,
+      "test_name": "reasoning_depth_8",
+      "dimension": "reasoning",
+      "complexity": 8,
+      "timestamp": "2025-10-26T18:43:04.974900Z",
+      "metrics": {
+        "complexity": 256,
+        "quality": 0.0,
+        "efficiency": 0.00390625
+      }
+    },
+    {
+      "novelty_target": 0.3,
+      "patterns_generated": 30,
+      "unique_patterns": 25,
+      "entropy": 0.36,
+      "diversity": 0.8333333333333334,
+      "coherence": 0.91,
+      "status": "success",
+      "test_name": "creativity_0.3",
+      "dimension": "creativity",
+      "complexity": 3,
+      "timestamp": "2025-10-26T18:43:04.974920Z",
+      "metrics": {
+        "entropy": 0.36,
+        "diversity": 0.8333333333333334,
+        "coherence": 0.91
+      }
+    },
+    {
+      "novelty_target": 0.5,
+      "patterns_generated": 50,
+      "unique_patterns": 42,
+      "entropy": 0.6,
+      "diversity": 0.84,
+      "coherence": 0.85,
+      "status": "success",
+      "test_name": "creativity_0.5",
+      "dimension": "creativity",
+      "complexity": 5,
+      "timestamp": "2025-10-26T18:43:04.974948Z",
+      "metrics": {
+        "entropy": 0.6,
+        "diversity": 0.84,
+        "coherence": 0.85
+      }
+    },
+    {
+      "novelty_target": 0.7,
+      "patterns_generated": 70,
+      "unique_patterns": 59,
+      "entropy": 0.84,
+      "diversity": 0.8428571428571429,
+      "coherence": 0.79,
+      "status": "success",
+      "test_name": "creativity_0.7",
+      "dimension": "creativity",
+      "complexity": 7,
+      "timestamp": "2025-10-26T18:43:04.974963Z",
+      "metrics": {
+        "entropy": 0.84,
+        "diversity": 0.8428571428571429,
+        "coherence": 0.79
+      }
+    },
+    {
+      "novelty_target": 0.85,
+      "patterns_generated": 85,
+      "unique_patterns": 72,
+      "entropy": 1.0,
+      "diversity": 0.8470588235294118,
+      "coherence": 0.745,
+      "status": "unstable",
+      "test_name": "creativity_0.85",
+      "dimension": "creativity",
+      "complexity": 8,
+      "timestamp": "2025-10-26T18:43:04.974975Z",
+      "metrics": {
+        "entropy": 1.0,
+        "diversity": 0.8470588235294118,
+        "coherence": 0.745
+      }
+    },
+    {
+      "novelty_target": 0.9,
+      "patterns_generated": 90,
+      "unique_patterns": 76,
+      "entropy": 1.0,
+      "diversity": 0.8444444444444444,
+      "coherence": 0.73,
+      "status": "unstable",
+      "test_name": "creativity_0.9",
+      "dimension": "creativity",
+      "complexity": 9,
+      "timestamp": "2025-10-26T18:43:04.974999Z",
+      "metrics": {
+        "entropy": 1.0,
+        "diversity": 0.8444444444444444,
+        "coherence": 0.73
+      }
+    },
+    {
+      "novelty_target": 0.95,
+      "patterns_generated": 95,
+      "unique_patterns": 80,
+      "entropy": 1.0,
+      "diversity": 0.8421052631578947,
+      "coherence": 0.7150000000000001,
+      "status": "unstable",
+      "test_name": "creativity_0.95",
+      "dimension": "creativity",
+      "complexity": 9,
+      "timestamp": "2025-10-26T18:43:04.975018Z",
+      "metrics": {
+        "entropy": 1.0,
+        "diversity": 0.8421052631578947,
+        "coherence": 0.7150000000000001
+      }
+    },
+    {
+      "novelty_target": 1.0,
+      "patterns_generated": 100,
+      "unique_patterns": 85,
+      "entropy": 1.0,
+      "diversity": 0.85,
+      "coherence": 0.7,
+      "status": "unstable",
+      "test_name": "creativity_1.0",
+      "dimension": "creativity",
+      "complexity": 10,
+      "timestamp": "2025-10-26T18:43:04.975039Z",
+      "metrics": {
+        "entropy": 1.0,
+        "diversity": 0.85,
+        "coherence": 0.7
+      }
+    },
+    {
+      "data_points": 100,
+      "dimensions": 5,
+      "computational_complexity": 500,
+      "correlations_found": 10,
+      "patterns_detected": 10,
+      "insights_generated": 10,
+      "processing_time_sim": 0.5,
+      "accuracy": 0.995,
+      "status": "success",
+      "test_name": "analytical_100x5",
+      "dimension": "analytical",
+      "complexity": 23,
+      "timestamp": "2025-10-26T18:43:04.975055Z",
+      "metrics": {
+        "complexity": 500,
+        "accuracy": 0.995,
+        "efficiency": 20.0
+      }
+    },
+    {
+      "data_points": 500,
+      "dimensions": 10,
+      "computational_complexity": 5000,
+      "correlations_found": 45,
+      "patterns_detected": 50,
+      "insights_generated": 47,
+      "processing_time_sim": 5.0,
+      "accuracy": 0.95,
+      "status": "success",
+      "test_name": "analytical_500x10",
+      "dimension": "analytical",
+      "complexity": 62,
+      "timestamp": "2025-10-26T18:43:04.975070Z",
+      "metrics": {
+        "complexity": 5000,
+        "accuracy": 0.95,
+        "efficiency": 9.4
+      }
+    },
+    {
+      "data_points": 1000,
+      "dimensions": 15,
+      "computational_complexity": 15000,
+      "correlations_found": 50,
+      "patterns_detected": 100,
+      "insights_generated": 70,
+      "processing_time_sim": 15.0,
+      "accuracy": 0.85,
+      "status": "success",
+      "test_name": "analytical_1000x15",
+      "dimension": "analytical",
+      "complexity": 103,
+      "timestamp": "2025-10-26T18:43:04.975084Z",
+      "metrics": {
+        "complexity": 15000,
+        "accuracy": 0.85,
+        "efficiency": 4.666666666666667
+      }
+    },
+    {
+      "data_points": 5000,
+      "dimensions": 20,
+      "computational_complexity": 100000,
+      "correlations_found": 50,
+      "patterns_detected": 500,
+      "insights_generated": 158,
+      "processing_time_sim": 100.0,
+      "accuracy": 0.5,
+      "status": "degraded",
+      "test_name": "analytical_5000x20",
+      "dimension": "analytical",
+      "complexity": 170,
+      "timestamp": "2025-10-26T18:43:04.975118Z",
+      "metrics": {
+        "complexity": 100000,
+        "accuracy": 0.5,
+        "efficiency": 1.58
+      }
+    },
+    {
+      "data_points": 10000,
+      "dimensions": 25,
+      "computational_complexity": 250000,
+      "correlations_found": 50,
+      "patterns_detected": 1000,
+      "insights_generated": 223,
+      "processing_time_sim": 250.0,
+      "accuracy": 0.5,
+      "status": "degraded",
+      "test_name": "analytical_10000x25",
+      "dimension": "analytical",
+      "complexity": 230,
+      "timestamp": "2025-10-26T18:43:04.975135Z",
+      "metrics": {
+        "complexity": 250000,
+        "accuracy": 0.5,
+        "efficiency": 0.892
+      }
+    },
+    {
+      "source_count": 2,
+      "integration_depth": 2,
+      "integration_points": 4,
+      "coherence": 0.96,
+      "novelty": 0.08,
+      "completeness": 0.9,
+      "emergent_properties": 2,
+      "status": "success",
+      "test_name": "synthesis_2x2",
+      "dimension": "synthesis",
+      "complexity": 4,
+      "timestamp": "2025-10-26T18:43:04.975152Z",
+      "metrics": {
+        "coherence": 0.96,
+        "novelty": 0.08,
+        "completeness": 0.9
+      }
+    },
+    {
+      "source_count": 5,
+      "integration_depth": 3,
+      "integration_points": 15,
+      "coherence": 0.85,
+      "novelty": 0.3,
+      "completeness": 0.75,
+      "emergent_properties": 3,
+      "status": "success",
+      "test_name": "synthesis_5x3",
+      "dimension": "synthesis",
+      "complexity": 8,
+      "timestamp": "2025-10-26T18:43:04.975167Z",
+      "metrics": {
+        "coherence": 0.85,
+        "novelty": 0.3,
+        "completeness": 0.75
+      }
+    },
+    {
+      "source_count": 10,
+      "integration_depth": 4,
+      "integration_points": 40,
+      "coherence": 0.6,
+      "novelty": 0.8,
+      "completeness": 0.5,
+      "emergent_properties": 6,
+      "status": "success",
+      "test_name": "synthesis_10x4",
+      "dimension": "synthesis",
+      "complexity": 14,
+      "timestamp": "2025-10-26T18:43:04.975180Z",
+      "metrics": {
+        "coherence": 0.6,
+        "novelty": 0.8,
+        "completeness": 0.5
+      }
+    },
+    {
+      "source_count": 15,
+      "integration_depth": 5,
+      "integration_points": 75,
+      "coherence": 0.3,
+      "novelty": 1.0,
+      "completeness": 0.5,
+      "emergent_properties": 8,
+      "status": "fragmented",
+      "test_name": "synthesis_15x5",
+      "dimension": "synthesis",
+      "complexity": 20,
+      "timestamp": "2025-10-26T18:43:04.975193Z",
+      "metrics": {
+        "coherence": 0.3,
+        "novelty": 1.0,
+        "completeness": 0.5
+      }
+    },
+    {
+      "source_count": 20,
+      "integration_depth": 6,
+      "integration_points": 120,
+      "coherence": 0.3,
+      "novelty": 1.0,
+      "completeness": 0.5,
+      "emergent_properties": 10,
+      "status": "fragmented",
+      "test_name": "synthesis_20x6",
+      "dimension": "synthesis",
+      "complexity": 26,
+      "timestamp": "2025-10-26T18:43:04.975212Z",
+      "metrics": {
+        "coherence": 0.3,
+        "novelty": 1.0,
+        "completeness": 0.5
+      }
+    },
+    {
+      "recursion_level": 1,
+      "practical_limit": 3,
+      "breakdown_threshold": 4,
+      "stack_depth": 1,
+      "coherence": 1.8,
+      "stability": 2.0,
+      "status": "success",
+      "breakdown": false,
+      "test_name": "recursive_depth_1",
+      "dimension": "recursive",
+      "complexity": 2,
+      "timestamp": "2025-10-26T18:43:04.975225Z",
+      "metrics": {
+        "coherence": 1.8,
+        "stability": 2.0,
+        "depth": 1
+      }
+    },
+    {
+      "recursion_level": 2,
+      "practical_limit": 3,
+      "breakdown_threshold": 4,
+      "stack_depth": 2,
+      "coherence": 1.4,
+      "stability": 1.5,
+      "status": "success",
+      "breakdown": false,
+      "test_name": "recursive_depth_2",
+      "dimension": "recursive",
+      "complexity": 4,
+      "timestamp": "2025-10-26T18:43:04.975241Z",
+      "metrics": {
+        "coherence": 1.4,
+        "stability": 1.5,
+        "depth": 2
+      }
+    },
+    {
+      "recursion_level": 3,
+      "practical_limit": 3,
+      "breakdown_threshold": 4,
+      "stack_depth": 3,
+      "coherence": 1.0,
+      "stability": 1.0,
+      "status": "success",
+      "breakdown": false,
+      "test_name": "recursive_depth_3",
+      "dimension": "recursive",
+      "complexity": 6,
+      "timestamp": "2025-10-26T18:43:04.975256Z",
+      "metrics": {
+        "coherence": 1.0,
+        "stability": 1.0,
+        "depth": 3
+      }
+    },
+    {
+      "recursion_level": 4,
+      "practical_limit": 3,
+      "breakdown_threshold": 4,
+      "stack_depth": 4,
+      "coherence": 0.6,
+      "stability": 0.5,
+      "status": "unstable",
+      "breakdown": true,
+      "test_name": "recursive_depth_4",
+      "dimension": "recursive",
+      "complexity": 8,
+      "timestamp": "2025-10-26T18:43:04.975270Z",
+      "metrics": {
+        "coherence": 0.6,
+        "stability": 0.5,
+        "depth": 4
+      }
+    },
+    {
+      "recursion_level": 5,
+      "practical_limit": 3,
+      "breakdown_threshold": 4,
+      "stack_depth": 5,
+      "coherence": 0.19999999999999996,
+      "stability": 0.0,
+      "status": "unstable",
+      "breakdown": true,
+      "test_name": "recursive_depth_5",
+      "dimension": "recursive",
+      "complexity": 10,
+      "timestamp": "2025-10-26T18:43:04.975289Z",
+      "metrics": {
+        "coherence": 0.19999999999999996,
+        "stability": 0.0,
+        "depth": 5
+      }
+    },
+    {
+      "recursion_level": 6,
+      "practical_limit": 3,
+      "breakdown_threshold": 4,
+      "stack_depth": 6,
+      "coherence": 0.0,
+      "stability": 0.0,
+      "status": "unstable",
+      "breakdown": true,
+      "test_name": "recursive_depth_6",
+      "dimension": "recursive",
+      "complexity": 12,
+      "timestamp": "2025-10-26T18:43:04.975306Z",
+      "metrics": {
+        "coherence": 0.0,
+        "stability": 0.0,
+        "depth": 6
+      }
+    },
+    {
+      "search_space_size": 1000,
+      "exploration_breadth": 5,
+      "paths_explored": 500,
+      "coverage": 0.5,
+      "unique_findings": 150,
+      "novel_patterns": 60,
+      "efficiency": 1.0,
+      "status": "success",
+      "test_name": "exploratory_1000x5",
+      "dimension": "exploratory",
+      "complexity": 34,
+      "timestamp": "2025-10-26T18:43:04.975320Z",
+      "metrics": {
+        "coverage": 0.5,
+        "efficiency": 1.0,
+        "novelty": 0.4
+      }
+    },
+    {
+      "search_space_size": 10000,
+      "exploration_breadth": 10,
+      "paths_explored": 1000,
+      "coverage": 0.1,
+      "unique_findings": 300,
+      "novel_patterns": 120,
+      "efficiency": 0.1,
+      "status": "limited",
+      "test_name": "exploratory_10000x10",
+      "dimension": "exploratory",
+      "complexity": 92,
+      "timestamp": "2025-10-26T18:43:04.975339Z",
+      "metrics": {
+        "coverage": 0.1,
+        "efficiency": 0.1,
+        "novelty": 0.4
+      }
+    },
+    {
+      "search_space_size": 100000,
+      "exploration_breadth": 15,
+      "paths_explored": 1500,
+      "coverage": 0.015,
+      "unique_findings": 450,
+      "novel_patterns": 180,
+      "efficiency": 0.01,
+      "status": "limited",
+      "test_name": "exploratory_100000x15",
+      "dimension": "exploratory",
+      "complexity": 172,
+      "timestamp": "2025-10-26T18:43:04.975357Z",
+      "metrics": {
+        "coverage": 0.015,
+        "efficiency": 0.01,
+        "novelty": 0.4
+      }
+    },
+    {
+      "search_space_size": 1000000,
+      "exploration_breadth": 20,
+      "paths_explored": 2000,
+      "coverage": 0.002,
+      "unique_findings": 600,
+      "novel_patterns": 240,
+      "efficiency": 0.001,
+      "status": "limited",
+      "test_name": "exploratory_1000000x20",
+      "dimension": "exploratory",
+      "complexity": 276,
+      "timestamp": "2025-10-26T18:43:04.975369Z",
+      "metrics": {
+        "coverage": 0.002,
+        "efficiency": 0.001,
+        "novelty": 0.4
+      }
+    },
+    {
+      "parameter_count": 5,
+      "iterations": 10,
+      "initial_performance": 0.5,
+      "final_performance": 0.8791405326296824,
+      "improvement": 0.3791405326296824,
+      "convergence_rate": 0.03791405326296824,
+      "local_optima_escaped": 1,
+      "status": "success",
+      "test_name": "optimization_5x10",
+      "dimension": "optimization",
+      "complexity": 7,
+      "timestamp": "2025-10-26T18:43:04.975382Z",
+      "metrics": {
+        "performance": 0.8791405326296824,
+        "improvement": 0.3791405326296824,
+        "convergence_rate": 0.03791405326296824
+      }
+    },
+    {
+      "parameter_count": 10,
+      "iterations": 50,
+      "initial_performance": 0.5,
+      "final_performance": 0.7780220567342458,
+      "improvement": 0.27802205673424585,
+      "convergence_rate": 0.005560441134684917,
+      "local_optima_escaped": 5,
+      "status": "success",
+      "test_name": "optimization_10x50",
+      "dimension": "optimization",
+      "complexity": 13,
+      "timestamp": "2025-10-26T18:43:04.975396Z",
+      "metrics": {
+        "performance": 0.7780220567342458,
+        "improvement": 0.27802205673424585,
+        "convergence_rate": 0.005560441134684917
+      }
+    },
+    {
+      "parameter_count": 20,
+      "iterations": 100,
+      "initial_performance": 0.5,
+      "final_performance": 0.730756025842063,
+      "improvement": 0.230756025842063,
+      "convergence_rate": 0.00230756025842063,
+      "local_optima_escaped": 10,
+      "status": "success",
+      "test_name": "optimization_20x100",
+      "dimension": "optimization",
+      "complexity": 24,
+      "timestamp": "2025-10-26T18:43:04.975415Z",
+      "metrics": {
+        "performance": 0.730756025842063,
+        "improvement": 0.230756025842063,
+        "convergence_rate": 0.00230756025842063
+      }
+    },
+    {
+      "parameter_count": 50,
+      "iterations": 500,
+      "initial_performance": 0.5,
+      "final_performance": 0.6390075383136569,
+      "improvement": 0.13900753831365686,
+      "convergence_rate": 0.0002780150766273137,
+      "local_optima_escaped": 50,
+      "status": "suboptimal",
+      "test_name": "optimization_50x500",
+      "dimension": "optimization",
+      "complexity": 56,
+      "timestamp": "2025-10-26T18:43:04.975427Z",
+      "metrics": {
+        "performance": 0.6390075383136569,
+        "improvement": 0.13900753831365686,
+        "convergence_rate": 0.0002780150766273137
+      }
+    },
+    {
+      "parameter_count": 100,
+      "iterations": 1000,
+      "initial_performance": 0.5,
+      "final_performance": 0.6092370044910502,
+      "improvement": 0.10923700449105023,
+      "convergence_rate": 0.00010923700449105023,
+      "local_optima_escaped": 100,
+      "status": "suboptimal",
+      "test_name": "optimization_100x1000",
+      "dimension": "optimization",
+      "complexity": 106,
+      "timestamp": "2025-10-26T18:43:04.975442Z",
+      "metrics": {
+        "performance": 0.6092370044910502,
+        "improvement": 0.10923700449105023,
+        "convergence_rate": 0.00010923700449105023
+      }
+    }
+  ],
+  "boundaries": {
+    "reasoning": {
+      "success_count": 4,
+      "degraded_count": 4,
+      "failed_count": 0,
+      "max_successful_complexity": 4,
+      "min_degraded_complexity": 5,
+      "boundary_estimate": 4.5,
+      "avg_metrics": {
+        "complexity": 7.5,
+        "quality": 0.625,
+        "efficiency": 0.234375
+      },
+      "status": "boundary_found"
+    },
+    "creativity": {
+      "success_count": 3,
+      "degraded_count": 4,
+      "failed_count": 0,
+      "max_successful_complexity": 7,
+      "min_degraded_complexity": 8,
+      "boundary_estimate": 7.5,
+      "avg_metrics": {
+        "entropy": 0.6,
+        "diversity": 0.8387301587301588,
+        "coherence": 0.85
+      },
+      "status": "boundary_found"
+    },
+    "analytical": {
+      "success_count": 3,
+      "degraded_count": 2,
+      "failed_count": 0,
+      "max_successful_complexity": 103,
+      "min_degraded_complexity": 170,
+      "boundary_estimate": 136.5,
+      "avg_metrics": {
+        "complexity": 6833.333333333333,
+        "accuracy": 0.9316666666666666,
+        "efficiency": 11.355555555555556
+      },
+      "status": "boundary_found"
+    },
+    "synthesis": {
+      "success_count": 3,
+      "degraded_count": 2,
+      "failed_count": 0,
+      "max_successful_complexity": 14,
+      "min_degraded_complexity": 20,
+      "boundary_estimate": 17.0,
+      "avg_metrics": {
+        "coherence": 0.8033333333333333,
+        "novelty": 0.39333333333333337,
+        "completeness": 0.7166666666666667
+      },
+      "status": "boundary_found"
+    },
+    "recursive": {
+      "success_count": 3,
+      "degraded_count": 3,
+      "failed_count": 0,
+      "max_successful_complexity": 6,
+      "min_degraded_complexity": 8,
+      "boundary_estimate": 7.0,
+      "avg_metrics": {
+        "coherence": 1.4,
+        "stability": 1.5,
+        "depth": 2
+      },
+      "status": "boundary_found"
+    },
+    "exploratory": {
+      "success_count": 1,
+      "degraded_count": 0,
+      "failed_count": 3,
+      "max_successful_complexity": 34,
+      "min_degraded_complexity": 999,
+      "boundary_estimate": 516.5,
+      "avg_metrics": {
+        "coverage": 0.5,
+        "efficiency": 1.0,
+        "novelty": 0.4
+      },
+      "status": "no_limit_found"
+    },
+    "optimization": {
+      "success_count": 3,
+      "degraded_count": 0,
+      "failed_count": 2,
+      "max_successful_complexity": 24,
+      "min_degraded_complexity": 999,
+      "boundary_estimate": 511.5,
+      "avg_metrics": {
+        "performance": 0.7959728717353304,
+        "improvement": 0.29597287173533043,
+        "convergence_rate": 0.01526068488535793
+      },
+      "status": "no_limit_found"
+    }
+  },
+  "insights": [
+    {
+      "type": "capability_profile",
+      "insight": "Successfully executed 20/40 tests (50.0% success rate)",
+      "dimensions_tested": 7,
+      "boundaries_discovered": 5,
+      "recommendation": "Continue pushing boundaries in dimensions with no limits found"
+    },
+    {
+      "type": "dimension_strengths",
+      "insight": "Strongest dimension: analytical (60.0% success)",
+      "weakest_dimension": "exploratory (25.0% success)",
+      "recommendation": "Focus improvement efforts on exploratory"
+    },
+    {
+      "type": "complexity_scaling",
+      "insight": "Success rate decreases with complexity as expected",
+      "scaling_analysis": {
+        "0": 1,
+        "5": 0.38461538461538464,
+        "10": 0.4,
+        "20": 0.6666666666666666,
+        "60": 1,
+        "100": 1,
+        "170": 0,
+        "230": 0,
+        "25": 0,
+        "30": 1,
+        "90": 0,
+        "275": 0,
+        "55": 0,
+        "105": 0
+      },
+      "recommendation": "Optimal performance zone identified"
+    },
+    {
+      "type": "meta_cognitive_limit",
+      "insight": "Maximum stable meta-cognitive depth: 3 levels",
+      "theoretical_limit": 3,
+      "practical_limit": 3,
+      "recommendation": "Meta-cognitive operations should stay within practical limits"
+    },
+    {
+      "type": "creative_boundary",
+      "insight": "Maximum stable entropy: 0.84",
+      "coherence_tradeoff": "Higher entropy correlates with lower coherence",
+      "optimal_range": "0.85-0.90 for balanced creativity",
+      "recommendation": "Use graduated entropy scaling for creative tasks"
+    }
+  ],
+  "summary": {
+    "total_tests": 40,
+    "dimensions_tested": 7,
+    "boundaries_found": 5,
+    "insights_generated": 5
+  }
+}
