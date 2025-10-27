@@ -6,6 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 from typing import Optional
+from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent
 PARENT = ROOT.parent
@@ -15,6 +16,10 @@ if str(PARENT) not in sys.path:
     sys.path.insert(0, str(PARENT))
 
 from agents_protocol import kpis, load_manifest, policy, select_mode  # type: ignore  # noqa: E402
+from tools.learning_kernel import LearningKernel
+
+# Initialize learning kernel
+kernel = LearningKernel()
 
 RUNTIME_QUERY = PARENT / "runtime" / "user_query.txt"
 
@@ -48,6 +53,25 @@ def main(argv: Optional[list[str]] = None) -> int:
             **metrics
         )
     )
+
+    # Wire in learning kernel to steer behavior
+    artifact = {
+        "artifact_type": "omega_cycle",
+        "mode": selected_mode,
+        "metrics": metrics,
+        "objective": objective[:200] if objective else "",
+        "timestamp": datetime.utcnow().isoformat() + 'Z'
+    }
+
+    # Let learning kernel process and steer
+    confidence_hint = metrics.get("continuity_ratio", 0.5)
+    kernel.step(observation=artifact, reward_hint=confidence_hint)
+
+    # Save diagnostics
+    diagnostics_path = PARENT / "diagnostics" / "learning_kernel_diagnostics.json"
+    diagnostics_path.parent.mkdir(exist_ok=True, parents=True)
+    kernel.export_diagnostics(diagnostics_path)
+    print(f"[Ω] Learning diagnostics saved: {diagnostics_path}")
 
     return 0
 

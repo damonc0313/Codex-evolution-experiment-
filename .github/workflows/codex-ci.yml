@@ -36,3 +36,5 @@ jobs:
         run: pip install -r requirements.txt
       - name: Validate kernel, policy, artifacts
         run: python tools/validate_kernel.py
+      - name: Run tests
+        run: pytest -q
