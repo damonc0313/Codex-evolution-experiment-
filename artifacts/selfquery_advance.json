@@ -27,5 +27,12 @@
     "4825f8c47576f5d2"
   ],
   "depth": 22,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_17611998",
+  "parent_hashes": [
+    [
+      "4825f8c47576f5d2"
+    ]
+  ],
+  "confidence": 0.71
 }

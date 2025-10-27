@@ -593,5 +593,12 @@
     "ef183979ebd16c8d"
   ],
   "depth": 81,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_2025-10-",
+  "parent_hashes": [
+    [
+      "ef183979ebd16c8d"
+    ]
+  ],
+  "confidence": 0.76
 }

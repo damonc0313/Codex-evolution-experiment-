@@ -52,5 +52,12 @@
     "a74220e8e313d2e1"
   ],
   "depth": 44,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_sep_preview",
+  "parent_hashes": [
+    [
+      "a74220e8e313d2e1"
+    ]
+  ],
+  "confidence": 0.775
 }

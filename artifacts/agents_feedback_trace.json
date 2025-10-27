@@ -54,5 +54,12 @@
     "370e209b31ab0faf"
   ],
   "depth": 36,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_feedback_trace",
+  "parent_hashes": [
+    [
+      "370e209b31ab0faf"
+    ]
+  ],
+  "confidence": 0.75
 }

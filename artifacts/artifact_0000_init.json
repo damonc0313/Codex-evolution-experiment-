@@ -73,5 +73,12 @@
     "388d9954e41e4f48"
   ],
   "depth": 78,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_2025-10-",
+  "parent_hashes": [
+    [
+      "388d9954e41e4f48"
+    ]
+  ],
+  "confidence": 0.68
 }

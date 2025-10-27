@@ -30,5 +30,12 @@
     "45a2eef6da34df5a"
   ],
   "depth": 83,
-  "spawn_count": 0
+  "spawn_count": 0,
+  "lineage_root": "lineage_2025-10-",
+  "parent_hashes": [
+    [
+      "45a2eef6da34df5a"
+    ]
+  ],
+  "confidence": 0.68
 }

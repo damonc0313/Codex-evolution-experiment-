@@ -34,5 +34,12 @@
     "8d3812da29b4a47e"
   ],
   "depth": 55,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_kael_integration_summary",
+  "parent_hashes": [
+    [
+      "8d3812da29b4a47e"
+    ]
+  ],
+  "confidence": 0.72
 }

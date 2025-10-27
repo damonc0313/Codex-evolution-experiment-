@@ -291,5 +291,12 @@
     "85c809e7e554c5a6"
   ],
   "depth": 79,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_2025-10-",
+  "parent_hashes": [
+    [
+      "85c809e7e554c5a6"
+    ]
+  ],
+  "confidence": 0.835
 }

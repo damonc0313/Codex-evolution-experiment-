@@ -28,5 +28,12 @@
     "777095717dd65291"
   ],
   "depth": 54,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_kael_ingest",
+  "parent_hashes": [
+    [
+      "777095717dd65291"
+    ]
+  ],
+  "confidence": 0.64
 }

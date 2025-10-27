@@ -1,0 +1,83 @@
+{
+  "artifact_type": "nos_analysis_report",
+  "timestamp": "20251026T183107Z",
+  "nos_score": 0.6032,
+  "nos_floor_threshold": 0.05,
+  "gate_status": "UNBLOCKED",
+  "components": {
+    "energy_efficiency": {
+      "score": 0.6157,
+      "building_ratio": 0.1528,
+      "dedup_ratio": 0.6944,
+      "rate_score": 1.0,
+      "building_count": 22,
+      "total_count": 144,
+      "unique_count": 100
+    },
+    "coherence": {
+      "score": 0.7747,
+      "lineage_ratio": 0.9444,
+      "continuity_ratio": 0.963,
+      "run_id_ratio": 0.4167,
+      "lineage_count": 136,
+      "run_id_count": 60
+    },
+    "resilience": {
+      "score": 0.3411,
+      "regression_pass_rate": 0.926,
+      "validation_ratio": 0.0486,
+      "confidence_ratio": 0.0486,
+      "validation_count": 7,
+      "high_confidence_count": 7
+    },
+    "entropy": {
+      "score": 0.6811,
+      "shannon_entropy": 0.8436,
+      "novelty_score": 0.738,
+      "config_diversity": 0.4615,
+      "unique_types": 80,
+      "total_types": 144
+    }
+  },
+  "bottleneck": {
+    "bottleneck": "resilience",
+    "bottleneck_score": 0.3411,
+    "ranking": [
+      {
+        "component": "resilience",
+        "score": 0.3411,
+        "rank": 1
+      },
+      {
+        "component": "energy_efficiency",
+        "score": 0.6157,
+        "rank": 2
+      },
+      {
+        "component": "entropy",
+        "score": 0.6811,
+        "rank": 3
+      },
+      {
+        "component": "coherence",
+        "score": 0.7747,
+        "rank": 4
+      }
+    ]
+  },
+  "suggestions": [
+    {
+      "component": "resilience",
+      "action": "Upgrade validator to FAIL mode",
+      "rationale": "Regression rate: 0.926",
+      "expected_impact": "+0.03 to +0.07"
+    },
+    {
+      "component": "resilience",
+      "action": "Increase validation coverage",
+      "rationale": "Validation ratio: 0.049",
+      "expected_impact": "+0.05 to +0.10"
+    }
+  ],
+  "artifact_count": 144
+}

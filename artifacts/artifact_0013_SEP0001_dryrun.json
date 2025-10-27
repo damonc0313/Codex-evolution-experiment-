@@ -39,5 +39,12 @@
     "25b5a800527db4cf"
   ],
   "depth": 50,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_sep_dryrun",
+  "parent_hashes": [
+    [
+      "25b5a800527db4cf"
+    ]
+  ],
+  "confidence": 0.73
 }

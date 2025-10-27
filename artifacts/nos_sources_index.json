@@ -72,5 +72,12 @@
     "e1d311cc27fc9983"
   ],
   "depth": 67,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_nos_sources_index",
+  "parent_hashes": [
+    [
+      "e1d311cc27fc9983"
+    ]
+  ],
+  "confidence": 0.6875
 }

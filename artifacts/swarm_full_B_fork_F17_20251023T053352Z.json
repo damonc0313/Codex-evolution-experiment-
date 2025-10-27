@@ -40,5 +40,12 @@
     "193a1b8f34aae50e"
   ],
   "depth": 16,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "193a1b8f34aae50e"
+    ]
+  ],
+  "confidence": 0.7175
 }

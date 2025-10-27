@@ -37,5 +37,12 @@
     "aa2480403d37b4af"
   ],
   "depth": 38,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_integrity_handshake",
+  "parent_hashes": [
+    [
+      "aa2480403d37b4af"
+    ]
+  ],
+  "confidence": 0.66
 }

@@ -1,0 +1,327 @@
+{
+  "artifact_type": "stabilization_plan",
+  "timestamp": "2025-10-25T19:00:00Z",
+  "query": "Stabilise swarm KPIs before autonomous expansion",
+  "novelty_boost": 0.35,
+  "executive_summary": {
+    "status": "GATED - NOS score below floor threshold",
+    "primary_blocker": "NOS score 0.041 < nos_gate_floor 0.05 (18% deficit)",
+    "strengths": [
+      "Continuity ratio: 0.938 (excellent, 93.8%)",
+      "Regression pass rate: 0.925 (good, above 0.9 threshold)",
+      "Building ratio: 0.676 (healthy artifact production)",
+      "Cascade probability: 0.993 (safe, well below 4.0 threshold)"
+    ],
+    "weaknesses": [
+      "NOS score critically low (0.041 vs 0.05 floor)",
+      "Queue depth moderate (7.98) - potential throughput constraint",
+      "Task multiplication at 1.712 - room for controlled increase"
+    ]
+  },
+  "root_cause_analysis": {
+    "nos_breakdown": {
+      "formula": "NOS = 0.25*(energy_eff + coherence + resilience + entropy)",
+      "current_score": 0.041,
+      "required_score": 0.05,
+      "gap": 0.009,
+      "gap_percent": 0.18,
+      "hypothesis": [
+        "Energy efficiency: Possible redundant work or duplicate artifact generation",
+        "Coherence: Lineage tracking gaps reducing artifact interconnection quality",
+        "Resilience: Validator enforcement gaps (WARN vs FAIL mode)",
+        "Entropy: Insufficient exploration diversity (most forks have entropy=0.6)"
+      ]
+    },
+    "swarm_insights": {
+      "best_novelty_config": {
+        "fork": "F02",
+        "novelty_score": 0.9796,
+        "mode": "BALANCED",
+        "entropy": 0.9,
+        "dialectic_ratio": 0.4
+      },
+      "observation": "Highest novelty achieved with BALANCED mode + high entropy (0.9) + low dialectic ratio (0.4)",
+      "current_best": {
+        "fork": "F10",
+        "novelty_score": 0.4775,
+        "mode": "CREATIVE",
+        "entropy": 0.6,
+        "dialectic_ratio": 0.6
+      },
+      "gap": "F02 has 2.05x higher novelty than F10 - suggests entropy is key driver"
+    }
+  },
+  "stabilization_objectives": {
+    "primary": "Raise NOS score from 0.041 to \u22650.055 (10% margin)",
+    "secondary": [
+      "Maintain continuity_ratio \u22650.9",
+      "Maintain regression_pass_rate \u22650.9",
+      "Implement SEP-0003 lineage schema",
+      "Validate fusion synthesis blueprint",
+      "Prepare for autonomous expansion phase"
+    ],
+    "constraints": [
+      "No degradation of continuity or regression KPIs",
+      "Cascade probability must stay <4.0",
+      "Task multiplication should stay <3.0",
+      "Novelty floor remains at 0.35"
+    ]
+  },
+  "action_plan": {
+    "phase_1_diagnostic": {
+      "title": "Deep KPI Analysis & NOS Component Measurement",
+      "actions": [
+        {
+          "action": "Instrument NOS component calculation",
+          "description": "Add explicit tracking of energy_efficiency, coherence, resilience, entropy in artifacts",
+          "deliverable": "tools/nos_analyzer.py - measures and reports NOS components",
+          "success_criteria": "Identify which of 4 NOS components is bottleneck"
+        },
+        {
+          "action": "Analyze swarm fork distribution",
+          "description": "Compare F02 (novelty=0.98) vs F10 (novelty=0.48) parameter differences",
+          "deliverable": "artifacts/fork_comparison_analysis.json",
+          "success_criteria": "Confirm entropy 0.9 > 0.6 correlation with novelty"
+        },
+        {
+          "action": "Baseline artifact quality audit",
+          "description": "Measure current lineage completeness, validator coverage, redundancy",
+          "deliverable": "artifacts/quality_baseline_audit.json",
+          "success_criteria": "Quantify lineage gaps, validator WARN vs FAIL ratio"
+        }
+      ],
+      "duration_estimate": "30-45 minutes",
+      "risk": "low"
+    },
+    "phase_2_lineage_hardening": {
+      "title": "Implement SEP-0003 Lineage Schema Upgrade",
+      "rationale": "Address coherence component of NOS by ensuring all artifacts have complete lineage metadata",
+      "actions": [
+        {
+          "action": "Create lineage migration utility",
+          "description": "Backfill parent_hashes, lineage_root, swarm_run_id for existing artifacts",
+          "deliverable": "tools/lineage_migrator.py",
+          "success_criteria": "100% of artifacts have complete lineage fields"
+        },
+        {
+          "action": "Upgrade validator to enforce lineage",
+          "description": "Promote lineage checks from WARN to FAIL mode",
+          "deliverable": "Updated validator with strict lineage enforcement",
+          "success_criteria": "Zero regressions in tests/claude_regressions.json"
+        },
+        {
+          "action": "Accelerate continuity indexer",
+          "description": "Optimize indexer to maintain <10s refresh under swarm load",
+          "deliverable": "Optimized continuity indexer with performance benchmarks",
+          "success_criteria": "Index refresh time <10s for 200+ artifacts"
+        }
+      ],
+      "duration_estimate": "60-90 minutes",
+      "risk": "medium - validator changes require careful testing",
+      "expected_nos_impact": "+0.005 to +0.010 (coherence improvement)"
+    },
+    "phase_3_entropy_optimization": {
+      "title": "Boost Exploration Entropy Based on F02 Success",
+      "rationale": "F02 achieved 0.9796 novelty with entropy=0.9 vs F10's 0.4775 with entropy=0.6",
+      "actions": [
+        {
+          "action": "Increase default entropy from 0.6 to 0.8",
+          "description": "Shift entropy distribution toward higher exploration",
+          "deliverable": "Updated swarm configuration with entropy=0.8 default",
+          "success_criteria": "Next swarm run shows avg_novelty >0.6 (vs current 0.48)"
+        },
+        {
+          "action": "Implement adaptive entropy scheduling",
+          "description": "Start forks with entropy=0.9, gradually reduce based on convergence",
+          "deliverable": "tools/adaptive_entropy.py",
+          "success_criteria": "Entropy adapts based on novelty plateau detection"
+        },
+        {
+          "action": "Add entropy diversity constraints",
+          "description": "Ensure fork distribution spans entropy 0.3-0.9 range",
+          "deliverable": "Updated fork generation with entropy stratification",
+          "success_criteria": "At least 3 forks in each entropy tercile (0.3-0.5, 0.5-0.7, 0.7-0.9)"
+        }
+      ],
+      "duration_estimate": "45-60 minutes",
+      "risk": "low - entropy increase may reduce stability slightly",
+      "expected_nos_impact": "+0.008 to +0.012 (entropy + resilience improvement)"
+    },
+    "phase_4_energy_efficiency": {
+      "title": "Reduce Redundant Work & Optimize Artifact Pipeline",
+      "rationale": "Queue depth of 7.98 suggests potential redundancy or inefficient task scheduling",
+      "actions": [
+        {
+          "action": "Implement artifact deduplication",
+          "description": "Detect and skip generation of functionally equivalent artifacts",
+          "deliverable": "tools/artifact_deduplicator.py with content-based hashing",
+          "success_criteria": "Reduce artifact generation rate by 10-15% without losing novelty"
+        },
+        {
+          "action": "Optimize task scheduling",
+          "description": "Prioritize building tasks over analysis when building_ratio >0.6",
+          "deliverable": "Updated task scheduler with building prioritization",
+          "success_criteria": "Queue depth reduces to <6.0 while maintaining throughput"
+        },
+        {
+          "action": "Add energy efficiency metrics",
+          "description": "Track useful_work / total_work ratio",
+          "deliverable": "Energy efficiency instrumentation in production monitor",
+          "success_criteria": "Baseline energy_efficiency metric established"
+        }
+      ],
+      "duration_estimate": "45-60 minutes",
+      "risk": "low",
+      "expected_nos_impact": "+0.003 to +0.006 (energy efficiency improvement)"
+    },
+    "phase_5_validation": {
+      "title": "Execute Fusion Blueprint & Validate Improvements",
+      "rationale": "Follow validation blueprint from swarm fusion synthesis",
+      "actions": [
+        {
+          "action": "Replay top forks with extended continuity checks",
+          "description": "Re-run F10, F15, F12, F05, F02 with lineage-enhanced validation",
+          "deliverable": "artifacts/fork_replay_validation.json",
+          "success_criteria": "All 5 forks pass with continuity_ratio \u22650.9"
+        },
+        {
+          "action": "Run hardened validator dry-run",
+          "description": "Test FAIL-mode validator on all artifacts without enforcement",
+          "deliverable": "artifacts/validator_dry_run_report.json",
+          "success_criteria": "Identify any artifacts that would fail new validation"
+        },
+        {
+          "action": "Compare KPI deltas against baseline",
+          "description": "Measure before/after for all KPIs (continuity, regression, NOS, etc)",
+          "deliverable": "artifacts/kpi_delta_analysis.json",
+          "success_criteria": "NOS \u22650.055, continuity \u22650.9, regression \u22650.9"
+        }
+      ],
+      "duration_estimate": "30-45 minutes",
+      "risk": "low",
+      "expected_nos_impact": "Validation only - confirms cumulative improvement"
+    },
+    "phase_6_expansion_readiness": {
+      "title": "Prepare for Autonomous Expansion",
+      "rationale": "Once stabilized, enable autonomous expansion with safety guardrails",
+      "actions": [
+        {
+          "action": "Configure autonomous expansion parameters",
+          "description": "Set task_multiplication ceiling at 2.5, cascade_probability limit at 3.5",
+          "deliverable": "Updated autonomous expansion policy",
+          "success_criteria": "Parameters set with 15% safety margin below discovered limits"
+        },
+        {
+          "action": "Implement homeostatic monitoring",
+          "description": "Integrate production_monitor.py to track system mode transitions",
+          "deliverable": "Real-time homeostatic dashboard",
+          "success_criteria": "Auto-throttle if cascade_probability approaches 3.5"
+        },
+        {
+          "action": "Enable graduated autonomy rollout",
+          "description": "Start with task_mult=1.5 for 10 cycles, then 2.0, then 2.5",
+          "deliverable": "Graduated expansion schedule",
+          "success_criteria": "No THROTTLE mode triggers during rollout"
+        }
+      ],
+      "duration_estimate": "30-45 minutes",
+      "risk": "medium - autonomous expansion needs careful monitoring",
+      "expected_outcome": "Safe autonomous expansion enabled"
+    }
+  },
+  "success_criteria": {
+    "gate_unblocking": {
+      "metric": "NOS score",
+      "current": 0.041,
+      "target": 0.055,
+      "threshold": 0.05,
+      "margin": "10% safety margin above floor"
+    },
+    "stability_preservation": {
+      "continuity_ratio": {
+        "min": 0.9,
+        "current": 0.938
+      },
+      "regression_pass_rate": {
+        "min": 0.9,
+        "current": 0.925
+      },
+      "cascade_probability": {
+        "max": 3.5,
+        "current": 0.993
+      },
+      "task_multiplication": {
+        "max": 2.5,
+        "current": 1.712
+      }
+    },
+    "implementation_completeness": {
+      "sep_0003_implemented": true,
+      "validation_blueprint_executed": true,
+      "nos_instrumentation_added": true,
+      "energy_efficiency_tracked": true
+    }
+  },
+  "risk_assessment": {
+    "high_risk": [],
+    "medium_risk": [
+      {
+        "risk": "Validator upgrade breaks existing workflows",
+        "mitigation": "Dry-run validation before enforcement, feature flag for rollback",
+        "probability": 0.15
+      },
+      {
+        "risk": "Entropy increase destabilizes continuity",
+        "mitigation": "Gradual entropy ramp-up, real-time continuity monitoring",
+        "probability": 0.2
+      },
+      {
+        "risk": "Autonomous expansion triggers cascade",
+        "mitigation": "Graduated rollout with homeostatic monitoring and auto-throttle",
+        "probability": 0.1
+      }
+    ],
+    "low_risk": [
+      {
+        "risk": "Lineage migration has edge cases",
+        "mitigation": "Comprehensive testing on artifact corpus, manual review of migrations",
+        "probability": 0.3
+      },
+      {
+        "risk": "Energy efficiency gains don't materialize",
+        "mitigation": "Deduplication is optional optimization, doesn't block gate",
+        "probability": 0.4
+      }
+    ]
+  },
+  "implementation_sequence": [
+    "Phase 1: Diagnostic (30-45 min) - Understand NOS bottleneck",
+    "Phase 2: Lineage Hardening (60-90 min) - Implement SEP-0003",
+    "Phase 3: Entropy Optimization (45-60 min) - Boost exploration",
+    "Phase 4: Energy Efficiency (45-60 min) - Reduce redundancy",
+    "Phase 5: Validation (30-45 min) - Execute fusion blueprint",
+    "Phase 6: Expansion Readiness (30-45 min) - Enable autonomous mode"
+  ],
+  "estimated_total_duration": "4.5 to 6.5 hours",
+  "expected_outcomes": {
+    "nos_score": "0.055 to 0.065 (gate unblocked with margin)",
+    "continuity_ratio": "0.93 to 0.95 (maintained or improved)",
+    "regression_pass_rate": "0.92 to 0.95 (maintained or improved)",
+    "novelty_vs_baseline": "0.85 to 0.95 (significant improvement from entropy boost)",
+    "queue_depth": "5.0 to 6.5 (reduced through efficiency gains)",
+    "cascade_probability": "1.0 to 1.5 (controlled increase from task_mult growth)",
+    "autonomous_expansion_ready": true
+  },
+  "next_immediate_action": "Begin Phase 1 - Create tools/nos_analyzer.py to instrument NOS component tracking",
+  "confidence": 0.85,
+  "metadata": {
+    "based_on_swarm_run": "20251025T075336Z",
+    "swarm_fusion_synthesis": "Blend balanced and creative forks to raise novelty while keeping regression pass-rate \u22650.9 via targeted sandbox injections",
+    "discovered_limits_from": "AUTONOMOUS_EXPERIMENTATION_ARCHIVE.md",
+    "production_grade": true,
+    "experimental_depth": "comprehensive"
+  },
+  "lineage_root": "lineage_2025-10-",
+  "parent_hashes": [],
+  "artifact_hash": "935b51dde265843e"
+}

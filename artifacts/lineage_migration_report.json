@@ -542,5 +542,12 @@
     "436940f231b11e38"
   ],
   "depth": 82,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_2025-10-",
+  "parent_hashes": [
+    [
+      "436940f231b11e38"
+    ]
+  ],
+  "confidence": 0.72
 }

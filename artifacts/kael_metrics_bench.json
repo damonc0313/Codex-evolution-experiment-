@@ -31,5 +31,12 @@
     "634809eae171be72"
   ],
   "depth": 20,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_17612834",
+  "parent_hashes": [
+    [
+      "634809eae171be72"
+    ]
+  ],
+  "confidence": 0.7
 }

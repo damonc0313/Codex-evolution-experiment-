@@ -1,0 +1,21 @@
+{
+  "artifact_type": "swarm_gate_block",
+  "run_id": "20251025T075336Z",
+  "averages": {
+    "regression_pass_rate": 0.925,
+    "continuity_ratio": 0.938,
+    "building_ratio": 0.676,
+    "queue_depth": 7.982,
+    "nos_score": 0.041
+  },
+  "message": "Gate triggered \u2014 KPI thresholds unmet.",
+  "recovery_steps": [
+    "Replay top forks with stricter validator hooks",
+    "Inject mentor review before next autonomous query",
+    "Reduce entropy budget for upcoming cycles"
+  ],
+  "lineage_root": "swarm_20251025T075336Z",
+  "parent_hashes": [],
+  "artifact_hash": "d6e8e2e69be6c995",
+  "confidence": 0.6275
+}

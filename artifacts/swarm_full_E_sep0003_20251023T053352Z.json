@@ -32,5 +32,12 @@
     "312a7a9a91802248"
   ],
   "depth": 74,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "312a7a9a91802248"
+    ]
+  ],
+  "confidence": 0.775
 }

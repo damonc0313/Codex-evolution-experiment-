@@ -1,0 +1,119 @@
+{
+  "artifact_type": "expansion_configuration",
+  "timestamp": "2025-10-26T18:18:51.596809Z",
+  "strategy": "balanced",
+  "expansion_parameters": {
+    "task_multiplication_target": 2.0,
+    "cascade_probability_limit": 3.5,
+    "expansion_rate": "moderate",
+    "safety_margin": 0.15
+  },
+  "discovered_limits": {
+    "cascade_probability": {
+      "measured_threshold": 4.144,
+      "predicted_threshold": 4.0,
+      "safe_ceiling": 3.5,
+      "source": "cascade_validation_experiment"
+    },
+    "task_multiplication": {
+      "current": 1.712,
+      "safe_ceiling": 2.5,
+      "extreme_ceiling": 3.0,
+      "source": "swarm_kpi_averages"
+    },
+    "meta_recursive_depth": {
+      "practical_limit": 3,
+      "coherence_breakdown": 4,
+      "safe_ceiling": 2,
+      "source": "meta_recursive_analysis"
+    }
+  },
+  "rollout_schedule": [
+    {
+      "stage": 1,
+      "task_multiplication": 1.8832000000000002,
+      "duration_cycles": 10,
+      "description": "Initial expansion (10% increase)"
+    },
+    {
+      "stage": 2,
+      "task_multiplication": 2.2,
+      "duration_cycles": 10,
+      "description": "Moderate expansion (30% increase)"
+    },
+    {
+      "stage": 3,
+      "task_multiplication": 2.0,
+      "duration_cycles": 20,
+      "description": "Target expansion (sustained)"
+    }
+  ],
+  "homeostatic_monitoring": {
+    "mode_transitions": {
+      "EXPLORE": {
+        "conditions": [
+          "cascade_probability < 2.0",
+          "continuity_ratio \u2265 0.9",
+          "novelty_vs_baseline > 0.5"
+        ],
+        "action": "Maximize exploration and novelty"
+      },
+      "SYNTHESIZE": {
+        "conditions": [
+          "2.0 \u2264 cascade_probability < 3.0",
+          "building_ratio > 0.5"
+        ],
+        "action": "Balance exploration with consolidation"
+      },
+      "EXPLOIT": {
+        "conditions": [
+          "3.0 \u2264 cascade_probability < 3.5",
+          "building_ratio > 0.6"
+        ],
+        "action": "Focus on high-value artifact production"
+      },
+      "THROTTLE": {
+        "conditions": [
+          "cascade_probability \u2265 3.5"
+        ],
+        "action": "Reduce task multiplication, prevent cascade"
+      },
+      "RECOVER": {
+        "conditions": [
+          "continuity_ratio < 0.9",
+          "OR regression_pass_rate < 0.9"
+        ],
+        "action": "Emergency stabilization mode"
+      }
+    },
+    "auto_throttle_thresholds": {
+      "cascade_probability": 3.5,
+      "task_multiplication": 2.5,
+      "continuity_ratio_min": 0.9,
+      "regression_pass_rate_min": 0.9
+    },
+    "monitoring_frequency": "every_cycle",
+    "alert_channels": [
+      "production_monitor",
+      "kpi_validator"
+    ]
+  },
+  "safety_features": [
+    "Graduated rollout (3 stages)",
+    "Real-time KPI monitoring",
+    "Auto-throttle on threshold breach",
+    "Automatic rollback on failure",
+    "15% safety margin below discovered limits"
+  ],
+  "success_criteria": {
+    "sustained_task_multiplication": 2.0,
+    "stable_continuity": "\u22650.9 for 20 consecutive cycles",
+    "no_throttle_triggers": "No THROTTLE mode activations",
+    "maintained_quality": "regression_pass_rate \u22650.9"
+  },
+  "rollback_plan": {
+    "trigger": "Any KPI breach or THROTTLE mode activation",
+    "action": "Revert to previous stage task_multiplication",
+    "recovery": "Stabilize for 5 cycles before re-attempting expansion"
+  }
+}

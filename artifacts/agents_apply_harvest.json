@@ -59,5 +59,12 @@
     "9bc7ba068651b260"
   ],
   "depth": 28,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_apply_phase",
+  "parent_hashes": [
+    [
+      "9bc7ba068651b260"
+    ]
+  ],
+  "confidence": 0.73
 }

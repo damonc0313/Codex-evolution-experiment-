@@ -24,5 +24,12 @@
     "a5d39d3d8cb30f6e"
   ],
   "depth": 59,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_next_query",
+  "parent_hashes": [
+    [
+      "a5d39d3d8cb30f6e"
+    ]
+  ],
+  "confidence": 0.67
 }

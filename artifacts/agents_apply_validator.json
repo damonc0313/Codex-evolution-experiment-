@@ -26,5 +26,12 @@
     "fbea4516efa40204"
   ],
   "depth": 33,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_apply_phase",
+  "parent_hashes": [
+    [
+      "fbea4516efa40204"
+    ]
+  ],
+  "confidence": 0.73
 }

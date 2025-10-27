@@ -117,5 +117,12 @@
     "603c77fc056fc57e"
   ],
   "depth": 45,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_meta_audit",
+  "parent_hashes": [
+    [
+      "603c77fc056fc57e"
+    ]
+  ],
+  "confidence": 0.775
 }

@@ -224,5 +224,12 @@
     "0dadc659949e8d57"
   ],
   "depth": 70,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "0dadc659949e8d57"
+    ]
+  ],
+  "confidence": 0.7225
 }

@@ -1,0 +1,320 @@
+{
+  "artifact_type": "validation_report",
+  "timestamp": "20251026T183108Z",
+  "validator_version": "2.0.0",
+  "mode": "fail",
+  "statistics": {
+    "total": 149,
+    "valid": 134,
+    "invalid": 15,
+    "critical_issues": 41,
+    "error_issues": 62,
+    "warning_issues": 13
+  },
+  "compliance": {
+    "sep_0003_compliant": false,
+    "validation_pass_rate": 0.8993288590604027
+  },
+  "failed_artifacts": [
+    {
+      "filename": "continuous_operation_metrics.json",
+      "artifact_type": "unknown",
+      "issues": [
+        {
+          "rule": "metadata-artifact_type",
+          "severity": "critical",
+          "message": "Missing required field: artifact_type"
+        },
+        {
+          "rule": "metadata-timestamp",
+          "severity": "error",
+          "message": "Missing recommended field: timestamp"
+        }
+      ]
+    },
+    {
+      "filename": "deduplication_analysis_20251026T181615Z.json",
+      "artifact_type": "deduplication_analysis",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "entropy_optimization_plan_20251026T181504Z.json",
+      "artifact_type": "entropy_optimization_plan",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "entropy_optimization_plan_20251026T183108Z.json",
+      "artifact_type": "entropy_optimization_plan",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "entropy_optimization_report_20251026T181504Z.json",
+      "artifact_type": "entropy_optimization_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "entropy_optimization_report_20251026T183108Z.json",
+      "artifact_type": "entropy_optimization_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "expansion_configuration_20251026T181851Z.json",
+      "artifact_type": "expansion_configuration",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "expansion_readiness_20251026T181851Z.json",
+      "artifact_type": "expansion_readiness_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "kpi_validation_20251026T181749Z.json",
+      "artifact_type": "kpi_validation_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "kpi_validation_20251026T183107Z.json",
+      "artifact_type": "kpi_validation_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "lineage_migration_20251026T181253Z.json",
+      "artifact_type": "lineage_migration_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "lineage_migration_report.json",
+      "artifact_type": "unknown",
+      "issues": [
+        {
+          "rule": "metadata-artifact_type",
+          "severity": "critical",
+          "message": "Missing required field: artifact_type"
+        }
+      ]
+    },
+    {
+      "filename": "nos_analysis_20251026T183107Z.json",
+      "artifact_type": "nos_analysis_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "quality_baseline_audit_20251026T183107Z.json",
+      "artifact_type": "quality_baseline_audit",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    },
+    {
+      "filename": "validation_report_20251026T181305Z.json",
+      "artifact_type": "validation_report",
+      "issues": [
+        {
+          "rule": "SEP-0003-lineage_root",
+          "severity": "critical",
+          "message": "Missing required field: lineage_root"
+        },
+        {
+          "rule": "SEP-0003-parent_hashes",
+          "severity": "critical",
+          "message": "Missing required field: parent_hashes"
+        },
+        {
+          "rule": "SEP-0003-artifact_hash",
+          "severity": "critical",
+          "message": "Missing required field: artifact_hash"
+        }
+      ]
+    }
+  ]
+}

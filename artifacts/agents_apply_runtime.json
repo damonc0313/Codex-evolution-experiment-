@@ -38,5 +38,12 @@
     "4ed3a67fe7ad46d4"
   ],
   "depth": 30,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_apply_phase",
+  "parent_hashes": [
+    [
+      "4ed3a67fe7ad46d4"
+    ]
+  ],
+  "confidence": 0.73
 }

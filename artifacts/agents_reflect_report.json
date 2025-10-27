@@ -85,5 +85,12 @@
     "2c11da6ac4468b2e"
   ],
   "depth": 37,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_reflection",
+  "parent_hashes": [
+    [
+      "2c11da6ac4468b2e"
+    ]
+  ],
+  "confidence": 0.795
 }

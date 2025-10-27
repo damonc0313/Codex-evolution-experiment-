@@ -50,5 +50,12 @@
     "2e9d713da94ae843"
   ],
   "depth": 47,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "autonomous_analysis",
+  "parent_hashes": [
+    [
+      "2e9d713da94ae843"
+    ]
+  ],
+  "confidence": 0.775
 }

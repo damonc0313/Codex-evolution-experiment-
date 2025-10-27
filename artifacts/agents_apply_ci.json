@@ -29,5 +29,12 @@
     "28b9fb272d52eb2a"
   ],
   "depth": 24,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_agents_apply_phase",
+  "parent_hashes": [
+    [
+      "28b9fb272d52eb2a"
+    ]
+  ],
+  "confidence": 0.73
 }

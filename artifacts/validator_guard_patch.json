@@ -25,5 +25,12 @@
     "0332a7d75cb905dc"
   ],
   "depth": 19,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_17611996",
+  "parent_hashes": [
+    [
+      "0332a7d75cb905dc"
+    ]
+  ],
+  "confidence": 0.77
 }

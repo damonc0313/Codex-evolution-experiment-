@@ -1,0 +1,464 @@
+{
+  "artifact_type": "homeostatic_boundary_map",
+  "run_id": "20251025T183201Z",
+  "timestamp": "20251025T183201Z",
+  "boundary_scans": {
+    "artifact_rate": {
+      "dimension": "artifact_rate",
+      "thresholds": {
+        "min": 0.5,
+        "healthy": 3.0,
+        "max": 10.0
+      },
+      "scan_results": [
+        {
+          "artifact_rate": 0.0,
+          "mode": "exploit",
+          "health_score": 0.725
+        },
+        {
+          "artifact_rate": 0.3,
+          "mode": "exploit",
+          "health_score": 0.907
+        },
+        {
+          "artifact_rate": 0.5,
+          "mode": "exploit",
+          "health_score": 0.912
+        },
+        {
+          "artifact_rate": 1.0,
+          "mode": "exploit",
+          "health_score": 0.925
+        },
+        {
+          "artifact_rate": 2.0,
+          "mode": "exploit",
+          "health_score": 0.95
+        },
+        {
+          "artifact_rate": 3.0,
+          "mode": "exploit",
+          "health_score": 0.975
+        },
+        {
+          "artifact_rate": 5.0,
+          "mode": "exploit",
+          "health_score": 0.925
+        },
+        {
+          "artifact_rate": 7.0,
+          "mode": "exploit",
+          "health_score": 0.875
+        },
+        {
+          "artifact_rate": 9.0,
+          "mode": "exploit",
+          "health_score": 0.825
+        },
+        {
+          "artifact_rate": 10.0,
+          "mode": "exploit",
+          "health_score": 0.8
+        },
+        {
+          "artifact_rate": 12.0,
+          "mode": "throttle",
+          "health_score": 0.75
+        },
+        {
+          "artifact_rate": 15.0,
+          "mode": "throttle",
+          "health_score": 0.725
+        }
+      ],
+      "transitions": [
+        {
+          "from_mode": "exploit",
+          "to_mode": "throttle",
+          "rate_range": [
+            10.0,
+            12.0
+          ]
+        }
+      ]
+    },
+    "cascade_probability": {
+      "dimension": "cascade_probability",
+      "thresholds": {
+        "min": 0.5,
+        "healthy": 2.0,
+        "max": 4.0
+      },
+      "scan_results": [
+        {
+          "cascade_probability": 0.0,
+          "mode": "synthesize",
+          "health_score": 0.85
+        },
+        {
+          "cascade_probability": 0.3,
+          "mode": "synthesize",
+          "health_score": 0.869
+        },
+        {
+          "cascade_probability": 0.5,
+          "mode": "synthesize",
+          "health_score": 0.881
+        },
+        {
+          "cascade_probability": 1.0,
+          "mode": "synthesize",
+          "health_score": 0.912
+        },
+        {
+          "cascade_probability": 1.5,
+          "mode": "synthesize",
+          "health_score": 0.944
+        },
+        {
+          "cascade_probability": 2.0,
+          "mode": "exploit",
+          "health_score": 0.975
+        },
+        {
+          "cascade_probability": 2.5,
+          "mode": "exploit",
+          "health_score": 0.944
+        },
+        {
+          "cascade_probability": 3.0,
+          "mode": "exploit",
+          "health_score": 0.912
+        },
+        {
+          "cascade_probability": 3.5,
+          "mode": "exploit",
+          "health_score": 0.881
+        },
+        {
+          "cascade_probability": 4.0,
+          "mode": "exploit",
+          "health_score": 0.85
+        },
+        {
+          "cascade_probability": 4.5,
+          "mode": "throttle",
+          "health_score": 0.819
+        },
+        {
+          "cascade_probability": 5.0,
+          "mode": "throttle",
+          "health_score": 0.787
+        },
+        {
+          "cascade_probability": 6.0,
+          "mode": "throttle",
+          "health_score": 0.725
+        }
+      ],
+      "transitions": [
+        {
+          "from_mode": "synthesize",
+          "to_mode": "exploit",
+          "prob_range": [
+            1.5,
+            2.0
+          ]
+        },
+        {
+          "from_mode": "exploit",
+          "to_mode": "throttle",
+          "prob_range": [
+            4.0,
+            4.5
+          ]
+        }
+      ]
+    },
+    "building_ratio": {
+      "dimension": "building_ratio",
+      "thresholds": {
+        "min": 0.4,
+        "healthy": 0.55,
+        "max": 0.7
+      },
+      "scan_results": [
+        {
+          "building_ratio": 0.0,
+          "mode": "synthesize",
+          "health_score": 0.725
+        },
+        {
+          "building_ratio": 0.2,
+          "mode": "synthesize",
+          "health_score": 0.8
+        },
+        {
+          "building_ratio": 0.3,
+          "mode": "synthesize",
+          "health_score": 0.85
+        },
+        {
+          "building_ratio": 0.4,
+          "mode": "synthesize",
+          "health_score": 0.9
+        },
+        {
+          "building_ratio": 0.5,
+          "mode": "synthesize",
+          "health_score": 0.95
+        },
+        {
+          "building_ratio": 0.55,
+          "mode": "exploit",
+          "health_score": 0.975
+        },
+        {
+          "building_ratio": 0.6,
+          "mode": "exploit",
+          "health_score": 0.95
+        },
+        {
+          "building_ratio": 0.65,
+          "mode": "exploit",
+          "health_score": 0.925
+        },
+        {
+          "building_ratio": 0.7,
+          "mode": "exploit",
+          "health_score": 0.9
+        },
+        {
+          "building_ratio": 0.8,
+          "mode": "exploit",
+          "health_score": 0.85
+        },
+        {
+          "building_ratio": 0.9,
+          "mode": "exploit",
+          "health_score": 0.8
+        },
+        {
+          "building_ratio": 1.0,
+          "mode": "exploit",
+          "health_score": 0.75
+        }
+      ],
+      "transitions": [
+        {
+          "from_mode": "synthesize",
+          "to_mode": "exploit",
+          "ratio_range": [
+            0.5,
+            0.55
+          ]
+        }
+      ]
+    },
+    "continuity_ratio": {
+      "dimension": "continuity_ratio",
+      "thresholds": {
+        "min": 0.7,
+        "healthy": 0.9
+      },
+      "scan_results": [
+        {
+          "continuity_ratio": 0.0,
+          "mode": "recover",
+          "health_score": 0.75
+        },
+        {
+          "continuity_ratio": 0.2,
+          "mode": "recover",
+          "health_score": 0.8
+        },
+        {
+          "continuity_ratio": 0.4,
+          "mode": "recover",
+          "health_score": 0.85
+        },
+        {
+          "continuity_ratio": 0.5,
+          "mode": "recover",
+          "health_score": 0.875
+        },
+        {
+          "continuity_ratio": 0.6,
+          "mode": "recover",
+          "health_score": 0.9
+        },
+        {
+          "continuity_ratio": 0.7,
+          "mode": "exploit",
+          "health_score": 0.925
+        },
+        {
+          "continuity_ratio": 0.75,
+          "mode": "exploit",
+          "health_score": 0.938
+        },
+        {
+          "continuity_ratio": 0.8,
+          "mode": "exploit",
+          "health_score": 0.95
+        },
+        {
+          "continuity_ratio": 0.85,
+          "mode": "exploit",
+          "health_score": 0.963
+        },
+        {
+          "continuity_ratio": 0.9,
+          "mode": "exploit",
+          "health_score": 0.975
+        },
+        {
+          "continuity_ratio": 0.95,
+          "mode": "exploit",
+          "health_score": 0.988
+        },
+        {
+          "continuity_ratio": 1.0,
+          "mode": "exploit",
+          "health_score": 1.0
+        }
+      ],
+      "transitions": [
+        {
+          "from_mode": "recover",
+          "to_mode": "exploit",
+          "ratio_range": [
+            0.6,
+            0.7
+          ]
+        }
+      ]
+    }
+  },
+  "mode_policies": {
+    "mode_count": 5,
+    "policy_adjustments": {
+      "explore": {
+        "novelty_floor": 0.5,
+        "max_iterations": 30,
+        "mutation_factor": 0.3
+      },
+      "synthesize": {
+        "novelty_floor": 0.35,
+        "max_iterations": 40,
+        "mutation_factor": 0.2
+      },
+      "exploit": {
+        "novelty_floor": 0.25,
+        "max_iterations": 50,
+        "mutation_factor": 0.1
+      },
+      "throttle": {
+        "max_iterations": 10,
+        "cooldown_seconds": 30,
+        "novelty_floor": 0.6
+      },
+      "recover": {
+        "max_iterations": 5,
+        "cooldown_seconds": 60,
+        "novelty_floor": 0.7
+      }
+    }
+  },
+  "transition_validation": {
+    "test_count": 5,
+    "pass_count": 4,
+    "pass_rate": 0.8,
+    "test_results": [
+      {
+        "test_name": "Optimal health",
+        "metrics": {
+          "artifact_rate": 3.0,
+          "cascade_probability": 2.0,
+          "building_ratio": 0.55,
+          "continuity_ratio": 0.9
+        },
+        "expected_mode": "synthesize",
+        "actual_mode": "exploit",
+        "health_score": 0.975,
+        "match": false
+      },
+      {
+        "test_name": "High productivity (exploit)",
+        "metrics": {
+          "artifact_rate": 5.0,
+          "cascade_probability": 2.5,
+          "building_ratio": 0.65,
+          "continuity_ratio": 0.85
+        },
+        "expected_mode": "exploit",
+        "actual_mode": "exploit",
+        "health_score": 0.831,
+        "match": true
+      },
+      {
+        "test_name": "Low activity (explore)",
+        "metrics": {
+          "artifact_rate": 0.3,
+          "cascade_probability": 0.3,
+          "building_ratio": 0.4,
+          "continuity_ratio": 0.85
+        },
+        "expected_mode": "explore",
+        "actual_mode": "explore",
+        "health_score": 0.714,
+        "match": true
+      },
+      {
+        "test_name": "Runaway cascade (throttle)",
+        "metrics": {
+          "artifact_rate": 8.0,
+          "cascade_probability": 5.0,
+          "building_ratio": 0.6,
+          "continuity_ratio": 0.8
+        },
+        "expected_mode": "throttle",
+        "actual_mode": "throttle",
+        "health_score": 0.613,
+        "match": true
+      },
+      {
+        "test_name": "System fragmentation (recover)",
+        "metrics": {
+          "artifact_rate": 2.0,
+          "cascade_probability": 1.0,
+          "building_ratio": 0.5,
+          "continuity_ratio": 0.3
+        },
+        "expected_mode": "recover",
+        "actual_mode": "recover",
+        "health_score": 0.712,
+        "match": true
+      }
+    ]
+  },
+  "summary": {
+    "dimensions_mapped": 4,
+    "total_transitions_found": 5,
+    "validation_pass_rate": 0.8,
+    "mode_count": 5,
+    "key_thresholds": {
+      "artifact_rate_max": 10.0,
+      "cascade_prob_max": 4.0,
+      "building_ratio_healthy": 0.55,
+      "continuity_ratio_min": 0.7
+    },
+    "findings": [
+      "Mapped 5 mode transitions across 4 dimensions",
+      "Validation pass rate: 80.0%",
+      "THROTTLE triggers: artifact_rate>10.0 OR cascade_prob>4.0",
+      "RECOVER triggers: continuity_ratio<0.7",
+      "All 5 system modes (EXPLORE, SYNTHESIZE, EXPLOIT, THROTTLE, RECOVER) validated"
+    ]
+  },
+  "lineage_root": "lineage_20251025",
+  "parent_hashes": [],
+  "artifact_hash": "cc61981d7c14df6f",
+  "confidence": 0.7375
+}

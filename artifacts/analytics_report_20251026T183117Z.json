@@ -1,0 +1,678 @@
+{
+  "artifact_type": "advanced_analytics_report",
+  "timestamp": "2025-10-26T18:31:17.551560Z",
+  "metrics_analyzed": 15,
+  "temporal_analysis": {
+    "continuity_ratio": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.963,
+        0.963,
+        0.963
+      ],
+      "current_value": 0.963
+    },
+    "regression_pass_rate": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.926,
+        0.926,
+        0.926
+      ],
+      "current_value": 0.926
+    },
+    "cascade_probability": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_value": 0.0
+    },
+    "task_multiplication": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_value": 0.0
+    },
+    "nos_score": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.6032,
+        0.6032,
+        0.6032
+      ],
+      "current_value": 0.6032
+    },
+    "lineage_coverage": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.9379,
+        0.9379,
+        0.9379
+      ],
+      "current_value": 0.9379
+    },
+    "validation_pass_rate": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.9781021897810219,
+        0.9781021897810219,
+        0.9781021897810219
+      ],
+      "current_value": 0.9781021897810219
+    },
+    "coherence": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.7747,
+        0.7747,
+        0.7747
+      ],
+      "current_value": 0.7747
+    },
+    "resilience": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.3411,
+        0.3411,
+        0.3411
+      ],
+      "current_value": 0.3411
+    },
+    "energy_efficiency_score": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.6157,
+        0.6157,
+        0.6157
+      ],
+      "current_value": 0.6157
+    },
+    "coherence_score": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.7747,
+        0.7747,
+        0.7747
+      ],
+      "current_value": 0.7747
+    },
+    "resilience_score": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.3411,
+        0.3411,
+        0.3411
+      ],
+      "current_value": 0.3411
+    },
+    "entropy_score": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.6811,
+        0.6811,
+        0.6811
+      ],
+      "current_value": 0.6811
+    },
+    "novelty_vs_baseline": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        0.738,
+        0.738,
+        0.738
+      ],
+      "current_value": 0.738
+    },
+    "time_to_artifact_s": {
+      "trend": {
+        "slope": 0.0,
+        "intercept": 0.0,
+        "r_squared": 0.0
+      },
+      "change_points": [],
+      "n_change_points": 0,
+      "forecasts": [
+        24.5,
+        24.5,
+        24.5
+      ],
+      "current_value": 24.5
+    }
+  },
+  "correlation_analysis": {
+    "correlation_matrix": {
+      "continuity_ratio": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "regression_pass_rate": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "cascade_probability": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "task_multiplication": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "nos_score": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "lineage_coverage": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "validation_pass_rate": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "coherence": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "resilience": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "energy_efficiency_score": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "coherence_score": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "resilience_score": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "entropy_score": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "novelty_vs_baseline": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      },
+      "time_to_artifact_s": {
+        "continuity_ratio": 0.0,
+        "regression_pass_rate": 0.0,
+        "cascade_probability": 0.0,
+        "task_multiplication": 0.0,
+        "nos_score": 0.0,
+        "lineage_coverage": 0.0,
+        "validation_pass_rate": 0.0,
+        "coherence": 0.0,
+        "resilience": 0.0,
+        "energy_efficiency_score": 0.0,
+        "coherence_score": 0.0,
+        "resilience_score": 0.0,
+        "entropy_score": 0.0,
+        "novelty_vs_baseline": 0.0,
+        "time_to_artifact_s": 0.0
+      }
+    },
+    "strongest_correlations": []
+  },
+  "pattern_recognition": {
+    "continuity_ratio": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "regression_pass_rate": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "cascade_probability": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "task_multiplication": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "nos_score": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "lineage_coverage": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "validation_pass_rate": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "coherence": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "resilience": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "energy_efficiency_score": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "coherence_score": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "resilience_score": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "entropy_score": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "novelty_vs_baseline": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    },
+    "time_to_artifact_s": {
+      "cycles": {
+        "cycles_detected": false
+      },
+      "outliers": [],
+      "n_outliers": 0,
+      "regimes": {
+        "0": 1
+      }
+    }
+  },
+  "predictive_analytics": {
+    "continuity_ratio": {
+      "prediction": "insufficient_data"
+    },
+    "regression_pass_rate": {
+      "prediction": "insufficient_data"
+    },
+    "cascade_probability": {
+      "prediction": "insufficient_data"
+    },
+    "nos_score": {
+      "prediction": "insufficient_data"
+    }
+  },
+  "early_warning_system": {
+    "early_warning_score": 0.3333,
+    "level": "warning",
+    "warnings": [
+      {
+        "kpi": "cascade_probability",
+        "severity": "critical",
+        "value": 0.0,
+        "threshold": 3.5
+      }
+    ]
+  },
+  "insights": [
+    {
+      "severity": "warning",
+      "metric": "system_health",
+      "insight": "Early warning score: 0.33",
+      "recommendation": "Review warnings and take preventive action"
+    }
+  ]
+}

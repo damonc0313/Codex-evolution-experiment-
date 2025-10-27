@@ -40,5 +40,12 @@
     "c3f94b424aaef142"
   ],
   "depth": 10,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "c3f94b424aaef142"
+    ]
+  ],
+  "confidence": 0.7175
 }

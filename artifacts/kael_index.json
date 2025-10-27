@@ -154,5 +154,11 @@
     "c220e43f5ebd571f"
   ],
   "depth": 53,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "autonomous_synthesis",
+  "parent_hashes": [
+    [
+      "c220e43f5ebd571f"
+    ]
+  ]
 }

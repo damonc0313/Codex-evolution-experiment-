@@ -57,5 +57,12 @@
     "8219b0c623758e41"
   ],
   "depth": 42,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "lineage_continuity_index",
+  "parent_hashes": [
+    [
+      "8219b0c623758e41"
+    ]
+  ],
+  "confidence": 0.715
 }

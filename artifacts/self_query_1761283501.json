@@ -42,5 +42,9 @@
       "continuity_ratio": 0.976
     },
     "next_query": "/evolve 'Implement queue-balancer v1 PoC + lineage hooks; draft SEP-0005 multi-agent comparison; run 12-fork swarm with Kael metrics guard'"
-  }
+  },
+  "lineage_root": "lineage_17612835",
+  "parent_hashes": [],
+  "artifact_hash": "04e82ec8636f7838",
+  "confidence": 0.7
 }

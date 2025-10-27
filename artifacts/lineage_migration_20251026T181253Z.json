@@ -1,0 +1,17 @@
+{
+  "artifact_type": "lineage_migration_report",
+  "timestamp": "20251026T181253Z",
+  "dry_run": false,
+  "migration_version": "SEP-0003-v1.0",
+  "artifacts_processed": 136,
+  "artifacts_migrated": 136,
+  "errors": [],
+  "validation": {
+    "valid": true,
+    "total_artifacts": 136,
+    "root_artifacts": 49,
+    "lineage_groups": 45,
+    "invalid_references": 0,
+    "invalid_refs_sample": []
+  }
+}

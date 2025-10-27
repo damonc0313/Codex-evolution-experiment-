@@ -26,5 +26,12 @@
     "1139d7e329d6f245"
   ],
   "depth": 75,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "1139d7e329d6f245"
+    ]
+  ],
+  "confidence": 0.6775
 }

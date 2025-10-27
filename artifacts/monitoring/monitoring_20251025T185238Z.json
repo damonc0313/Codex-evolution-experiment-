@@ -1,0 +1,89 @@
+{
+  "artifact_type": "monitoring_report",
+  "timestamp": "20251025T185238Z",
+  "uptime_seconds": 0.2169959545135498,
+  "health": {
+    "healthy": true,
+    "total_checks": 3,
+    "passed": 3,
+    "failed": 0,
+    "checks": [
+      {
+        "healthy": true,
+        "component": "disk",
+        "check_name": "disk_space",
+        "message": "94.3% free",
+        "timestamp": 1761418358.2711174,
+        "metadata": {
+          "free_gb": 9.187938690185547
+        }
+      },
+      {
+        "healthy": true,
+        "component": "memory",
+        "check_name": "memory_usage",
+        "message": "operational",
+        "timestamp": 1761418358.271137,
+        "metadata": {}
+      },
+      {
+        "healthy": true,
+        "component": "filesystem",
+        "check_name": "artifacts_dir",
+        "message": "accessible",
+        "timestamp": 1761418358.2713091,
+        "metadata": {}
+      }
+    ]
+  },
+  "metrics": {
+    "test_operation.duration": {
+      "count": 20,
+      "latest": 0.3,
+      "mean": 0.2,
+      "min": 0.1,
+      "max": 0.3,
+      "sum": 4.0,
+      "stdev": 0.0725,
+      "p50": 0.2,
+      "p90": 0.3,
+      "p95": 0.3,
+      "p99": 0.3,
+      "rate": 97.5962
+    },
+    "test_operation.success": {
+      "count": 20,
+      "latest": 1.0,
+      "mean": 0.9,
+      "min": 0.0,
+      "max": 1.0,
+      "sum": 18.0,
+      "stdev": 0.3078,
+      "p50": 1.0,
+      "p90": 1.0,
+      "p95": 1.0,
+      "p99": 1.0,
+      "rate": 97.5996
+    },
+    "test_operation.iteration": {
+      "count": 20,
+      "latest": 19.0,
+      "mean": 9.5,
+      "min": 0.0,
+      "max": 19.0,
+      "sum": 190.0,
+      "stdev": 5.9161,
+      "p50": 10.0,
+      "p90": 18.0,
+      "p95": 19.0,
+      "p99": 19.0,
+      "rate": 97.6052
+    }
+  },
+  "system_resources": {
+    "disk_percent": 5.720061079746177,
+    "disk_free_gb": 9.187938690185547
+  },
+  "alerts": [],
+  "alert_count": 0
+}

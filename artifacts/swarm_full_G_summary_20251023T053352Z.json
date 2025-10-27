@@ -142,5 +142,12 @@
     "0447d44de2e7a935"
   ],
   "depth": 76,
-  "spawn_count": 1
+  "spawn_count": 1,
+  "lineage_root": "swarm_20251023T053352Z",
+  "parent_hashes": [
+    [
+      "0447d44de2e7a935"
+    ]
+  ],
+  "confidence": 0.7825
 }
