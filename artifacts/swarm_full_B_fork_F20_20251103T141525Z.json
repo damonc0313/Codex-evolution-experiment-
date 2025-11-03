@@ -1,0 +1,52 @@
+{
+  "artifact_type": "swarm_fork_result",
+  "run_id": "20251103T141525Z",
+  "id": "F20",
+  "mode": "STRICT",
+  "dialectic_ratio": 0.8,
+  "sandbox_rate": 0.0,
+  "critique_depth": 1,
+  "entropy": 0.9,
+  "config_hash": "c7e39ec05045e893cd1981f4c53d371229010f82f38dbfb24329d687bf0159ec",
+  "novelty_score": 0.5023,
+  "diversity_score": 0.78,
+  "timestamp": 1762179325,
+  "continuity_ratio": 0.98,
+  "regression_pass_rate": 0.837,
+  "artifact_depth": 3,
+  "time_to_artifact_s": 16.71,
+  "novelty_vs_baseline": 0.514,
+  "building_ratio": 0.578,
+  "task_multiplication": 1.507,
+  "cascade_probability": 0.741,
+  "queue_depth": 6.92,
+  "sandbox_recovery_quality": "low",
+  "rationale_triads_present": true,
+  "mode_fit_score": 0.917,
+  "delta_proposal": "Boost lineage indexer with strict mode focus; dialectic_ratio=0.8, sandbox_rate=0.00.",
+  "nos_score": 0.049,
+  "implementation_targets": [
+    {
+      "path": "tools/swarm_bench.py",
+      "description": "Annotate fork payloads so agents can tighten lineage accounting."
+    },
+    {
+      "path": "tools/ledger_metrics.py",
+      "description": "Teach building detector to parse swarm fork metadata fields."
+    },
+    {
+      "path": "tests/test_ledger_metrics.py",
+      "description": "Lock regression coverage for swarm fork implementation targets."
+    }
+  ],
+  "modified_files": [
+    "tools/swarm_bench.py",
+    "tools/ledger_metrics.py",
+    "tests/test_ledger_metrics.py"
+  ],
+  "next_build_steps": [
+    "python tools/swarm_bench.py --dry-run --run-id preview",
+    "pytest tests/test_ledger_metrics.py",
+    "apply_patch <<'PATCH'  # adjust tools/ledger_metrics.py building heuristics\nPATCH"
+  ]
+}

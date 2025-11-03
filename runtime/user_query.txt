@@ -1,2 +1,1 @@
-/bench 'Diagnose task multiplication bottlenecks and propose parallelization experiments'
-# lineage=|manifesto=46c9a5a6|cascade=75.698|ts=1762178954
+/plan 'Stabilise swarm KPIs before autonomous expansion'

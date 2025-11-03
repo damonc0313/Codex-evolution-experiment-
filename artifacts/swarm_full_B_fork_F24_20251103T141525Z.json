@@ -1,0 +1,52 @@
+{
+  "artifact_type": "swarm_fork_result",
+  "run_id": "20251103T141525Z",
+  "id": "F24",
+  "mode": "BALANCED",
+  "dialectic_ratio": 0.4,
+  "sandbox_rate": 0.0,
+  "critique_depth": 1,
+  "entropy": 0.9,
+  "config_hash": "feb70a21d0b35fd910f227e3c4124de656fb5cece03fc5b35c3ae8c63b98e386",
+  "novelty_score": 0.9796,
+  "diversity_score": 0.84,
+  "timestamp": 1762179325,
+  "continuity_ratio": 0.905,
+  "regression_pass_rate": 0.92,
+  "artifact_depth": 4,
+  "time_to_artifact_s": 46.63,
+  "novelty_vs_baseline": 0.753,
+  "building_ratio": 0.782,
+  "task_multiplication": 2.04,
+  "cascade_probability": 0.85,
+  "queue_depth": 6.42,
+  "sandbox_recovery_quality": "high",
+  "rationale_triads_present": true,
+  "mode_fit_score": 0.776,
+  "delta_proposal": "Boost lineage indexer with balanced mode focus; dialectic_ratio=0.4, sandbox_rate=0.00.",
+  "nos_score": 0.027,
+  "implementation_targets": [
+    {
+      "path": "tools/swarm_bench.py",
+      "description": "Annotate fork payloads so agents can balance swarm heuristics."
+    },
+    {
+      "path": "tools/ledger_metrics.py",
+      "description": "Teach building detector to parse swarm fork metadata fields."
+    },
+    {
+      "path": "tests/test_ledger_metrics.py",
+      "description": "Lock regression coverage for swarm fork implementation targets."
+    }
+  ],
+  "modified_files": [
+    "tools/swarm_bench.py",
+    "tools/ledger_metrics.py",
+    "tests/test_ledger_metrics.py"
+  ],
+  "next_build_steps": [
+    "python tools/swarm_bench.py --dry-run --run-id preview",
+    "pytest tests/test_ledger_metrics.py",
+    "apply_patch <<'PATCH'  # adjust tools/ledger_metrics.py building heuristics\nPATCH"
+  ]
+}

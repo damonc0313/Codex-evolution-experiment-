@@ -1,0 +1,17 @@
+{
+  "artifact_type": "swarm_gate_block",
+  "run_id": "20251103T141525Z",
+  "averages": {
+    "regression_pass_rate": 0.907,
+    "continuity_ratio": 0.938,
+    "building_ratio": 0.737,
+    "queue_depth": 6.263,
+    "nos_score": 0.035
+  },
+  "message": "Gate triggered \u2014 KPI thresholds unmet.",
+  "recovery_steps": [
+    "Replay top forks with stricter validator hooks",
+    "Inject mentor review before next autonomous query",
+    "Reduce entropy budget for upcoming cycles"
+  ]
+}
