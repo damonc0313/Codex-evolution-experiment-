@@ -1,8 +1,8 @@
 enabled: true
 self_write: true
-max_iterations: 50
-cooldown_seconds: 8
-novelty_floor: 0.35
+max_iterations: 75
+cooldown_seconds: 4
+novelty_floor: 0.25
 autonomous_permission: true
 continuous_operation_targets:
   task_queue_min: 6
@@ -34,8 +34,8 @@ stop_on:
 - continuity_low
 - regressions_spike
 artifact_generation_weights:
-  building: 0.5107
-  analysis: 0.29
-  hybrid: 0.1993
+  building: 0.5143
+  analysis: 0.2878
+  hybrid: 0.198
 validation:
   min_confidence_threshold: 0.7

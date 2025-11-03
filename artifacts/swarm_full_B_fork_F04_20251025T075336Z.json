@@ -28,5 +28,10 @@
   "lineage_root": "swarm_20251025T075336Z",
   "parent_hashes": [],
   "artifact_hash": "b205da873dc90389",
-  "confidence": 0.7075
+  "confidence": 0.7075,
+  "parent_hash": [
+    "6d4aca8ec2f5fc4e"
+  ],
+  "depth": 28,
+  "spawn_count": 2
 }

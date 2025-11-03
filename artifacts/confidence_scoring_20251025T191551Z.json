@@ -26,5 +26,10 @@
   "confidence": 0.49,
   "lineage_root": "autonomous_report",
   "parent_hashes": [],
-  "artifact_hash": "32f738c17253de40"
+  "artifact_hash": "32f738c17253de40",
+  "parent_hash": [
+    "75be0af70cff60d9"
+  ],
+  "depth": 151,
+  "spawn_count": 2
 }

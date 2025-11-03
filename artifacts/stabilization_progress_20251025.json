@@ -240,5 +240,10 @@
   "production_ready": true,
   "lineage_root": "autonomous_report",
   "parent_hashes": [],
-  "artifact_hash": "7f51aac1045ec7d6"
+  "artifact_hash": "7f51aac1045ec7d6",
+  "parent_hash": [
+    "481f4d75c79eeafc"
+  ],
+  "depth": 117,
+  "spawn_count": 2
 }

@@ -58,8 +58,8 @@
   "parent_hash": [
     "9bc7ba068651b260"
   ],
-  "depth": 28,
-  "spawn_count": 1,
+  "depth": 50,
+  "spawn_count": 3,
   "lineage_root": "lineage_agents_apply_phase",
   "parent_hashes": [
     [

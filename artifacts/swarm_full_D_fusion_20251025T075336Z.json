@@ -73,5 +73,10 @@
     "b716ea8bc8bc54d6"
   ],
   "artifact_hash": "9e78237fde586168",
-  "confidence": 0.7025
+  "confidence": 0.7025,
+  "parent_hash": [
+    "312a7a9a91802248"
+  ],
+  "depth": 100,
+  "spawn_count": 2
 }

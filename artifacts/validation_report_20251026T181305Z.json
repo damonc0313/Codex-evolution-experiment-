@@ -64,5 +64,11 @@
         }
       ]
     }
-  ]
+  ],
+  "artifact_hash": "d4d590575593089e",
+  "parent_hash": [
+    "13d997740c14d322"
+  ],
+  "depth": 158,
+  "spawn_count": 2
 }

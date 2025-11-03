@@ -21,5 +21,11 @@
   ],
   "estimated_rollout_duration": "40 cycles (3 stages)",
   "confidence": 0.95,
-  "recommendation": "APPROVED - Begin graduated autonomous expansion"
+  "recommendation": "APPROVED - Begin graduated autonomous expansion",
+  "artifact_hash": "4091a2451ed2a030",
+  "parent_hash": [
+    "7d8760cc06c2eba4"
+  ],
+  "depth": 162,
+  "spawn_count": 2
 }

@@ -28,10 +28,10 @@
   },
   "artifact_hash": "a71bed1dae933b12",
   "parent_hash": [
-    "634809eae171be72"
+    "28b9fb272d52eb2a"
   ],
-  "depth": 20,
-  "spawn_count": 1,
+  "depth": 23,
+  "spawn_count": 3,
   "lineage_root": "lineage_17612834",
   "parent_hashes": [
     [

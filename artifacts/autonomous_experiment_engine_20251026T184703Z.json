@@ -1123,5 +1123,11 @@
       "insight": "Meta-cognitive loop enables continuous improvement",
       "evidence": "Generated 30 actionable insights"
     }
-  ]
+  ],
+  "artifact_hash": "207612ddc63b08f3",
+  "parent_hash": [
+    "c11af3ee3b5445bd"
+  ],
+  "depth": 127,
+  "spawn_count": 2
 }

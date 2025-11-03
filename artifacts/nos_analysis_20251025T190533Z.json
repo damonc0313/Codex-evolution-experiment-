@@ -83,5 +83,10 @@
   "lineage_root": "autonomous_analysis",
   "parent_hashes": [],
   "artifact_hash": "cd542a3992097462",
-  "confidence": 0.815
+  "confidence": 0.815,
+  "parent_hash": [
+    "e2336b1d42cd890c"
+  ],
+  "depth": 144,
+  "spawn_count": 2
 }

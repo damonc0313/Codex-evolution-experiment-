@@ -289,7 +289,7 @@ def compute_continuity_ratio(artifacts_dir: Path | None = None) -> float:
             continue
         if not isinstance(payload, dict):
             continue
-        if any(key in payload for key in ("parent", "parent_artifact", "lineage", "digest_lineage")):
+        if any(key in payload for key in ("parent", "parent_artifact", "lineage", "digest_lineage", "parent_hash")):
             linked += 1
     return round(linked / len(files), 3)
 

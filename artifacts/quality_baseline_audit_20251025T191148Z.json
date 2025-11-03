@@ -149,5 +149,10 @@
   "confidence": 0.5525,
   "lineage_root": "lineage_20251025",
   "parent_hashes": [],
-  "artifact_hash": "9ce3c1b653029687"
+  "artifact_hash": "9ce3c1b653029687",
+  "parent_hash": [
+    "ffef7d401add36b2"
+  ],
+  "depth": 148,
+  "spawn_count": 2
 }
