@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-11-03T14:13:13.238939Z",
+    "generated_at": "2025-11-03T14:26:57.859521Z",
     "total_cycles": 1,
     "artifacts_dir": "artifacts",
     "policy_path": "runtime/loop_policy.yaml"
@@ -9,7 +9,7 @@
     "total_cycles": 1,
     "average_reward": 0.7558,
     "converged": false,
-    "convergence_progress": 0.078
+    "convergence_progress": 0.0942
   },
   "reward_statistics": {
     "count": 20,
@@ -29,9 +29,9 @@
       "confidence_threshold": 0.7
     },
     "current_state": {
-      "building_weight": 0.5219,
-      "analysis_weight": 0.283,
-      "hybrid_weight": 0.1951,
+      "building_weight": 0.5259,
+      "analysis_weight": 0.2805,
+      "hybrid_weight": 0.1936,
       "confidence_threshold": 0.7
     },
     "trajectory": [
@@ -151,9 +151,9 @@
       },
       {
         "cycle": 19,
-        "building_weight": 0.5219,
+        "building_weight": 0.5259,
         "confidence_threshold": 0.7,
-        "total_distance": 0.2281
+        "total_distance": 0.2241
       }
     ]
   },
@@ -170,8 +170,8 @@
         0.74,
         0.76
       ],
-      "current_weight": 0.5219,
-      "distance_to_attractor": 0.22809999999999997
+      "current_weight": 0.5259,
+      "distance_to_attractor": 0.22409999999999997
     }
   }
 }
