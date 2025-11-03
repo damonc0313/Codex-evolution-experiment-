@@ -1,2 +1,2 @@
-/trace 'Audit continuous operation KPIs and recommend gating adjustments'
-# lineage=|manifesto=46c9a5a6|cascade=0.057|ts=1762178368
+/bench 'Diagnose task multiplication bottlenecks and propose parallelization experiments'
+# lineage=|manifesto=46c9a5a6|cascade=75.698|ts=1762178954

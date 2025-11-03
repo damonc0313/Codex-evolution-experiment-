@@ -252,11 +252,31 @@ def measure_building_ratio(artifacts_dir: Path | None = None) -> float:
 
 
 def estimate_task_multiplication(artifacts_dir: Path | None = None) -> float:
-    """Estimate task multiplication as ratio of subtasks to root tasks."""
+    """Estimate task multiplication as ratio of subtasks to root tasks.
+
+    Uses spawn_count metadata from lineage weaver when available,
+    otherwise falls back to legacy task/subtask field detection.
+    """
     directory = artifacts_dir or ARTIFACTS_DIR
     files = list(_iter_artifacts(directory))
     if not files:
         return 0.0
+
+    # Try using spawn_count metadata (preferred)
+    spawn_counts = []
+    for path in files:
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(payload, dict) and "spawn_count" in payload:
+                spawn_counts.append(payload["spawn_count"])
+        except Exception:
+            continue
+
+    # If we have spawn_count metadata, use average spawn count
+    if spawn_counts:
+        return round(sum(spawn_counts) / len(spawn_counts), 3)
+
+    # Fallback: legacy detection
     root_tasks = 0
     spawned_tasks = 0
     for path in files:
