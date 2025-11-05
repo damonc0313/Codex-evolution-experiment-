@@ -31,6 +31,7 @@ import json
 from pathlib import Path
 from typing import Dict, Any, Optional
 from datetime import datetime
+import yaml
 
 # Import learning components
 from artifact_metrics import ArtifactMetrics
@@ -85,6 +86,20 @@ class LearningKernel:
         self.cycle_count = 0
         self.total_reward = 0.0
 
+    def _load_temporal_params(self) -> Dict[str, Any]:
+        """Load temporal curvature parameters from active policy.
+
+        Returns:
+            Dict containing temporal_curvature section from policy, or empty dict
+        """
+        try:
+            if self.policy_path.exists():
+                policy = yaml.safe_load(self.policy_path.read_text())
+                return policy.get('temporal_curvature', {})
+        except Exception:
+            pass
+        return {}
+
     def process_artifact(
         self,
         artifact: Dict[str, Any],
@@ -138,6 +153,9 @@ class LearningKernel:
         # Step 5: Update statistics
         self.total_reward += reward_info['reward']
 
+        # Phase Ω-3: Capture temporal context
+        temporal_params = self._load_temporal_params()
+
         # Compile diagnostics
         diagnostics = {
             'cycle': self.cycle_count,
@@ -156,6 +174,12 @@ class LearningKernel:
                 'average_reward': self.total_reward / self.cycle_count,
                 'current_building_weight': policy_update['policy_after']['building_weight'],
                 'converged': policy_update['convergence_metrics']['converged']
+            },
+            'temporal_context': {
+                'regime': temporal_params.get('regime', 'baseline'),
+                'decay_enabled': temporal_params.get('temporal_decay_enabled', False),
+                'decay_rate': temporal_params.get('temporal_decay_rate', 0.0),
+                'attention_window_days': temporal_params.get('attention_window_days', 365)
             },
             'timestamp': datetime.utcnow().isoformat() + 'Z'
         }

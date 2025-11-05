@@ -1,0 +1,31 @@
+{
+  "experiment": "phase_omega3_covariant_cognition",
+  "regime": "unknown",
+  "cycle": 0,
+  "timestamp": "2025-11-05T13:34:47.988056+00:00",
+  "temporal_parameters": {},
+  "measurements": {
+    "measurement_timestamp": "2025-11-05T13:34:47.708888+00:00",
+    "temporal_context": {
+      "regime": "baseline",
+      "decay_enabled": false,
+      "decay_rate_configured": 0.0,
+      "attention_window_days": 365
+    },
+    "constants": {
+      "lambda": {
+        "lambda": 0.03151228863157166,
+        "half_life_days": 21.996091387202267,
+        "r_squared": 0.5660398636113012,
+        "n_artifacts": 120
+      },
+      "delta_H_critical": {
+        "H_current": 0.804,
+        "H_target": 0.3,
+        "H_barrier": 0.504,
+        "delta_H_recommended": 0.756,
+        "interpretation": "Inject novelty with \u0394H > 0.756 to escape metastable state"
+      }
+    }
+  }
+}
