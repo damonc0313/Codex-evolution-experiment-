@@ -91,8 +91,7 @@
     "syntactic_depth_limit": "unbounded (language allows infinite recursion)",
     "semantic_breakdown_point": 10,
     "coherence_threshold": 0.50,
-    "
-_biological_parallel": {
+    "biological_parallel": {
       "working_memory_limit": "7±2 chunks (Miller's Law)",
       "explanation": "Each meta-level requires holding previous levels in working memory",
       "implication": "Depth limits are architectural, not algorithmic"
