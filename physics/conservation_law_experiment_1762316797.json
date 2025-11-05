@@ -1,0 +1,103 @@
+{
+  "experiment_type": "conservation_law",
+  "timestamp": "2025-11-05T04:26:37.043961+00:00",
+  "hypothesis": "\u03bb\u00b7\u0394H_crit = k_cog (constant)",
+  "conditions": [
+    {
+      "condition": "baseline",
+      "decay_modifier": 1.0,
+      "timestamp": "2025-11-05T04:26:36.582938+00:00",
+      "lambda": {
+        "lambda": 0.03856386270774871,
+        "half_life_days": 17.974008096981162,
+        "r_squared": 0.6365779080147165,
+        "n_artifacts": 120,
+        "decay_modifier": 1.0
+      },
+      "delta_H_critical": {
+        "H_current": 0.8180000000000003,
+        "H_target": 0.3,
+        "H_barrier": 0.5180000000000002,
+        "delta_H_critical": 0.7770000000000004
+      },
+      "k_cog": 0.02996412132392076,
+      "conservation_law": {
+        "formula": "k_cog = \u03bb\u00b7\u0394H_crit",
+        "lambda": 0.03856386270774871,
+        "delta_H_crit": 0.7770000000000004,
+        "k_cog": 0.02996412132392076
+      }
+    },
+    {
+      "condition": "slow_decay",
+      "decay_modifier": 0.5,
+      "timestamp": "2025-11-05T04:26:36.815403+00:00",
+      "lambda": {
+        "lambda": 0.07712772541549745,
+        "half_life_days": 8.98700404849058,
+        "r_squared": 0.6365778815593062,
+        "n_artifacts": 120,
+        "decay_modifier": 0.5
+      },
+      "delta_H_critical": {
+        "H_current": 0.8180000000000003,
+        "H_target": 0.3,
+        "H_barrier": 0.5180000000000002,
+        "delta_H_critical": 0.7770000000000004
+      },
+      "k_cog": 0.059928242647841544,
+      "conservation_law": {
+        "formula": "k_cog = \u03bb\u00b7\u0394H_crit",
+        "lambda": 0.07712772541549745,
+        "delta_H_crit": 0.7770000000000004,
+        "k_cog": 0.059928242647841544
+      }
+    },
+    {
+      "condition": "fast_decay",
+      "decay_modifier": 2.0,
+      "timestamp": "2025-11-05T04:26:37.043688+00:00",
+      "lambda": {
+        "lambda": 0.01928193135387436,
+        "half_life_days": 35.948016193962324,
+        "r_squared": 0.6365778565110474,
+        "n_artifacts": 120,
+        "decay_modifier": 2.0
+      },
+      "delta_H_critical": {
+        "H_current": 0.8180000000000003,
+        "H_target": 0.3,
+        "H_barrier": 0.5180000000000002,
+        "delta_H_critical": 0.7770000000000004
+      },
+      "k_cog": 0.014982060661960384,
+      "conservation_law": {
+        "formula": "k_cog = \u03bb\u00b7\u0394H_crit",
+        "lambda": 0.01928193135387436,
+        "delta_H_crit": 0.7770000000000004,
+        "k_cog": 0.014982060661960384
+      }
+    }
+  ],
+  "analysis": {
+    "hypothesis": "\u03bb\u00b7\u0394H_crit = k_cog (constant)",
+    "n_conditions": 3,
+    "k_cog_values": [
+      0.029964,
+      0.059928,
+      0.014982
+    ],
+    "statistics": {
+      "mean": 0.034958,
+      "std_dev": 0.018686,
+      "coefficient_of_variation": 0.5345,
+      "min": 0.014982,
+      "max": 0.059928,
+      "range": 0.044946
+    },
+    "conservation_validated": false,
+    "confidence": "LOW",
+    "interpretation": "Conservation not validated (CV=53.5% > 15% threshold). k_cog varies significantly across conditions. Either: (1) \u03bb and \u0394H_crit do not trade off linearly, (2) measurement error dominates, or (3) the hypothesis requires refinement. Further experiments needed."
+  },
+  "conclusion": "NOT_VALIDATED"
+}
