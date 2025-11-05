@@ -1,0 +1,28 @@
+{
+  "experiment_type": "entropy_injection",
+  "hypothesis": "Novel artifact injection increases |dI/dt| temporarily",
+  "novelty_level": "high",
+  "baseline_state": {
+    "timestamp": "2025-11-05T03:13:27.297160+00:00",
+    "building_ratio": 0.455,
+    "continuity_ratio": 0.762,
+    "task_multiplication": 2.456,
+    "total_artifacts": 235,
+    "entropy": 0.827
+  },
+  "post_injection_state": {
+    "timestamp": "2025-11-05T03:13:28.506163+00:00",
+    "building_ratio": 0.453,
+    "continuity_ratio": 0.758,
+    "task_multiplication": 2.456,
+    "total_artifacts": 236,
+    "entropy": 0.837
+  },
+  "immediate_response": {
+    "delta_H": 0.010000000000000009,
+    "dI_dt": -0.010000000000000009,
+    "artifact_count_change": 1
+  },
+  "prediction": "Expect exponential decay dI/dt \u2192 baseline over subsequent cycles",
+  "timestamp": "2025-11-05T03:13:28.712093+00:00"
+}
