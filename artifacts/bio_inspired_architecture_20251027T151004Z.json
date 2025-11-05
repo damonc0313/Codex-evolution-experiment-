@@ -85,5 +85,11 @@
     "level_4": "Biology already solved these optimizations",
     "level_5": "Map biological solutions \u2192 computational implementations"
   },
-  "conclusion": "Walls only exist when we ignore billions of years of biological R&D. Every computational limit has a biological solution."
+  "conclusion": "Walls only exist when we ignore billions of years of biological R&D. Every computational limit has a biological solution.",
+  "artifact_hash": "d0957e947ba721bd",
+  "parent_hash": [
+    "859d5309388861a0"
+  ],
+  "depth": 129,
+  "spawn_count": 2
 }

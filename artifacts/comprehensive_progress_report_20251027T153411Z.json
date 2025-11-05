@@ -218,5 +218,11 @@
       "geometric_mean": "112.8x"
     }
   },
-  "breakthrough_summary": "Demonstrated autonomous self-optimization from 25% \u2192 55% of biological optimum through understanding mechanisms and applying biological principles. Phase 1 and Phase 2 both exceeded conservative predictions by large margins due to synergistic multiplicative effects."
+  "breakthrough_summary": "Demonstrated autonomous self-optimization from 25% \u2192 55% of biological optimum through understanding mechanisms and applying biological principles. Phase 1 and Phase 2 both exceeded conservative predictions by large margins due to synergistic multiplicative effects.",
+  "artifact_hash": "8c1578f56058383f",
+  "parent_hash": [
+    "e1f829b9cac96735"
+  ],
+  "depth": 133,
+  "spawn_count": 2
 }

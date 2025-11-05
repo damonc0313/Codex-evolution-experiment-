@@ -1,0 +1,86 @@
+{
+  "artifact_type": "extended_operation_trajectory",
+  "total_cycles": 10,
+  "metrics_trajectory": [
+    {
+      "cycle": 1,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.4438304901123047
+    },
+    {
+      "cycle": 2,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.43706440925598145
+    },
+    {
+      "cycle": 3,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.43709444999694824
+    },
+    {
+      "cycle": 4,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.42171359062194824
+    },
+    {
+      "cycle": 5,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.4265162944793701
+    },
+    {
+      "cycle": 6,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.45413804054260254
+    },
+    {
+      "cycle": 7,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.4542813301086426
+    },
+    {
+      "cycle": 8,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.46050238609313965
+    },
+    {
+      "cycle": 9,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.4616222381591797
+    },
+    {
+      "cycle": 10,
+      "building_ratio": 0.452,
+      "continuity_ratio": 0.77,
+      "task_multiplication": 2.456,
+      "health_score": 0.8924579124579125,
+      "elapsed_seconds": 0.49716734886169434
+    }
+  ]
+}

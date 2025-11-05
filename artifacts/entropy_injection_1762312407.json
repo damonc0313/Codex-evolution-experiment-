@@ -1,0 +1,16 @@
+{
+  "artifact_type": "entropy_injection_experiment",
+  "novelty_level": "high",
+  "content": {
+    "novel_architecture": "Quantum-Inspired Policy Superposition",
+    "description": "Maintain multiple policy variants simultaneously, blend probabilistically based on reward",
+    "parameters": {
+      "superposition_count": 5,
+      "decoherence_rate": 0.1,
+      "measurement_collapse_threshold": 0.9
+    },
+    "biological_analogue": "Schr\u00f6dinger's Cat applied to optimization"
+  },
+  "timestamp": "2025-11-05T03:13:27.504717+00:00",
+  "experiment_id": "entropy_injection_1762312407"
+}

@@ -1,0 +1,18 @@
+{
+  "measurement_timestamp": "2025-11-05T03:58:59.285019+00:00",
+  "constants": {
+    "lambda": {
+      "lambda": 0.03856386270774869,
+      "half_life_days": 17.974008096981173,
+      "r_squared": 0.63674317911427,
+      "n_artifacts": 120
+    },
+    "delta_H_critical": {
+      "H_current": 0.837,
+      "H_target": 0.3,
+      "H_barrier": 0.5369999999999999,
+      "delta_H_recommended": 0.8054999999999999,
+      "interpretation": "Inject novelty with \u0394H > 0.805 to escape metastable state"
+    }
+  }
+}

@@ -276,6 +276,19 @@ class LearningKernel:
             'convergence_progress': convergence.get('convergence_progress', 0.0)
         }
 
+    def step(self, observation: Dict[str, Any], reward_hint: float = 0.5) -> Dict[str, Any]:
+        """Single learning step - simplified interface for loop integration.
+
+        Args:
+            observation: Artifact/observation data
+            reward_hint: Optional reward hint (0.0-1.0)
+
+        Returns:
+            Diagnostics from this learning step
+        """
+        artifact_name = observation.get('artifact_type', 'unknown')
+        return self.process_artifact(observation, artifact_name)
+
 
 def main():
     """Test learning kernel with sample artifacts."""

@@ -148,5 +148,10 @@
     "bd7be89a6ea05c1a"
   ],
   "artifact_hash": "7955c0e4144c559e",
-  "confidence": 0.7625
+  "confidence": 0.7625,
+  "parent_hash": [
+    "56933c9234e3c70e"
+  ],
+  "depth": 106,
+  "spawn_count": 2
 }

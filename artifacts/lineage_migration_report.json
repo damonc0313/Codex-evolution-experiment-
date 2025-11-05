@@ -1,4 +1,5 @@
 {
+  "artifact_type": "lineage_migration_report",
   "migration_type": "lineage_backfill",
   "dry_run": false,
   "timestamp": "2025-10-23T23:03:22.781055+00:00",
@@ -541,8 +542,8 @@
   "parent_hash": [
     "436940f231b11e38"
   ],
-  "depth": 82,
-  "spawn_count": 1,
+  "depth": 113,
+  "spawn_count": 3,
   "lineage_root": "lineage_2025-10-",
   "parent_hashes": [
     [

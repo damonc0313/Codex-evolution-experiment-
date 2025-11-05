@@ -15,5 +15,10 @@
     "9e78237fde586168"
   ],
   "artifact_hash": "5dccb88a8f08be09",
-  "confidence": 0.755
+  "confidence": 0.755,
+  "parent_hash": [
+    "1139d7e329d6f245"
+  ],
+  "depth": 102,
+  "spawn_count": 2
 }

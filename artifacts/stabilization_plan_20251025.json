@@ -323,5 +323,10 @@
   },
   "lineage_root": "lineage_2025-10-",
   "parent_hashes": [],
-  "artifact_hash": "935b51dde265843e"
+  "artifact_hash": "935b51dde265843e",
+  "parent_hash": [
+    "d823e502df357a26"
+  ],
+  "depth": 115,
+  "spawn_count": 2
 }

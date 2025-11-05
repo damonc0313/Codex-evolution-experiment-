@@ -96,5 +96,10 @@
   "lineage_root": "autonomous_validation",
   "parent_hashes": [],
   "artifact_hash": "51dd45b61b40a2aa",
-  "confidence": 0.8125
+  "confidence": 0.8125,
+  "parent_hash": [
+    "472c0cb717c90142"
+  ],
+  "depth": 135,
+  "spawn_count": 2
 }

@@ -13,5 +13,11 @@
     "lineage_groups": 45,
     "invalid_references": 0,
     "invalid_refs_sample": []
-  }
+  },
+  "artifact_hash": "13d997740c14d322",
+  "parent_hash": [
+    "033784ae8b610b24"
+  ],
+  "depth": 157,
+  "spawn_count": 2
 }

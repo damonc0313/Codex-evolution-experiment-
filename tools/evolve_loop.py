@@ -10,6 +10,19 @@ import sys
 import time
 from pathlib import Path
 
+# Wire in mycelial infrastructure
+import asyncio
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from tools.ledger_utils import write_artifact
+from tools.ledger_metrics import measure_building_ratio, compute_continuity_ratio, estimate_task_multiplication
+sys.path.insert(0, str(Path(__file__).parent.parent / "mycelial-core"))
+from artifact_bus import ArtifactBus
+from homeostatic_regulator import HomeostaticRegulator
+
+# Initialize infrastructure
+bus = ArtifactBus()
+regulator = HomeostaticRegulator()
+
 ROOT = Path(__file__).resolve().parent.parent
 QUERY_FILE = ROOT / "runtime" / "user_query.txt"
 MENTOR_FILE = ROOT / "runtime" / "mentor_feedback.txt"
@@ -28,6 +41,24 @@ def hash_file(path: Path) -> str:
 
 def run_cycle() -> None:
     print("🔁 Starting Ω cycle...")
+
+    # Check homeostatic regulation before cycle
+    metrics = {
+        "artifact_rate": measure_building_ratio() * 10.0,  # Rough estimate
+        "building_ratio": measure_building_ratio(),
+        "cascade_probability": estimate_task_multiplication(),
+        "continuity_ratio": compute_continuity_ratio(),
+        "entropy": 3.0  # Default entropy
+    }
+
+    mode = regulator.regulate(metrics)
+    print(f"[HOMEOSTASIS] System mode: {mode.value.upper()}")
+
+    # Apply policy mode adjustments
+    policy_adjustments = regulator.apply_mode(mode)
+    print(f"[HOMEOSTASIS] Policy adjustments: {policy_adjustments}")
+
+    # Run cycle with policy adjustments
     subprocess.run([sys.executable, "tools/run_omega_cycle.py"], check=False)
     print("✅ Cycle complete.\n")
 

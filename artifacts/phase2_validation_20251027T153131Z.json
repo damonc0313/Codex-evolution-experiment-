@@ -43,5 +43,11 @@
     "recurrent": "Predictive coding, top-down predictions, error minimization",
     "conclusion": "Phase 2 optimizations mirror biological depth mechanisms"
   },
-  "breakthrough": "Hierarchical compression enables 6x+ deeper reasoning while maintaining coherence"
+  "breakthrough": "Hierarchical compression enables 6x+ deeper reasoning while maintaining coherence",
+  "artifact_hash": "e1f829b9cac96735",
+  "parent_hash": [
+    "d8b913d4b9539dae"
+  ],
+  "depth": 132,
+  "spawn_count": 2
 }

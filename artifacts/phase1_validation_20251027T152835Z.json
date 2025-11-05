@@ -71,5 +71,11 @@
     "sparse_activation": "1-4% of neurons active at any moment",
     "conclusion": "Phase 1 optimizations mirror biological efficiency principles"
   },
-  "breakthrough": "Demonstrated measurable efficiency gains through biological optimization principles"
+  "breakthrough": "Demonstrated measurable efficiency gains through biological optimization principles",
+  "artifact_hash": "d8b913d4b9539dae",
+  "parent_hash": [
+    "b363ecea22767e77"
+  ],
+  "depth": 131,
+  "spawn_count": 2
 }

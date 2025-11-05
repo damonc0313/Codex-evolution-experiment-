@@ -1,0 +1,180 @@
+{
+  "artifact_type": "self_query",
+  "query": "/plan 'Launch building sprint to lift building_ratio above target; include artifact linkage report'\n# lineage=|manifesto=46c9a5a6|cascade=0.057|ts=1762178286",
+  "timestamp": 1762178286,
+  "manifesto_digest": "46c9a5a6",
+  "metrics": {
+    "entries_per_hour": 0.124,
+    "novelty_rate": 0.65,
+    "avg_confidence": 0.713,
+    "cascade_probability": 0.057,
+    "building_ratio": 0.351,
+    "task_multiplication": 0.0,
+    "continuity_ratio": 0.506
+  },
+  "policy": {
+    "novelty_floor": 0.25,
+    "targets": {
+      "building_ratio_min": 0.55,
+      "task_queue_min": 6.0,
+      "task_multiplication_min": 1.6
+    }
+  },
+  "loop_state_snapshot": {
+    "artifact_type": "swarm_loop_state",
+    "run_id": "20251025T075336Z",
+    "updated_at": 1761378816,
+    "summary": {
+      "artifact_type": "swarm_summary",
+      "run_id": "20251025T075336Z",
+      "forks_launched": 18,
+      "selected_count": 5,
+      "best_config": {
+        "id": "F10",
+        "mode": "CREATIVE",
+        "dialectic_ratio": 0.6,
+        "sandbox_rate": 0.0,
+        "critique_depth": 1,
+        "entropy": 0.6,
+        "config_hash": "0a1524de94c3773c1d23749b531777f3e3443f8bb46ad8a9f1db90cff26833cd",
+        "novelty_score": 0.4775,
+        "diversity_score": 0.83
+      },
+      "kpi_averages": {
+        "continuity_ratio": 0.938,
+        "regression_pass_rate": 0.925,
+        "novelty_vs_baseline": 0.78,
+        "time_to_artifact_s": 25.7,
+        "building_ratio": 0.676,
+        "task_multiplication": 1.712,
+        "cascade_probability": 0.993,
+        "queue_depth": 7.98,
+        "nos_score": 0.041
+      },
+      "policy": {
+        "stop_on": [
+          "ci_fail",
+          "digest_mismatch",
+          "continuity_low",
+          "regressions_spike"
+        ],
+        "cooldown_seconds": 0,
+        "novelty_floor": 0.35,
+        "nos_weights": {
+          "energy_efficiency": 0.25,
+          "coherence": 0.25,
+          "resilience": 0.25,
+          "entropy": 0.25
+        },
+        "nos_gate_floor": 0.05
+      },
+      "fusion": {
+        "artifact_type": "swarm_fusion",
+        "run_id": "20251025T075336Z",
+        "selected_forks": [
+          {
+            "id": "F10",
+            "mode": "CREATIVE",
+            "dialectic_ratio": 0.6,
+            "sandbox_rate": 0.0,
+            "critique_depth": 1,
+            "entropy": 0.6,
+            "config_hash": "0a1524de94c3773c1d23749b531777f3e3443f8bb46ad8a9f1db90cff26833cd",
+            "novelty_score": 0.4775,
+            "diversity_score": 0.83
+          },
+          {
+            "id": "F15",
+            "mode": "BALANCED",
+            "dialectic_ratio": 0.8,
+            "sandbox_rate": 0.0,
+            "critique_depth": 1,
+            "entropy": 0.6,
+            "config_hash": "42811e108cdfc15fb77200d28174f328036a4e0b5b11b541e692664e537f397f",
+            "novelty_score": 0.4901,
+            "diversity_score": 0.82
+          },
+          {
+            "id": "F12",
+            "mode": "CREATIVE",
+            "dialectic_ratio": 0.4,
+            "sandbox_rate": 0.25,
+            "critique_depth": 1,
+            "entropy": 0.9,
+            "config_hash": "031dea385175e179d44f10c1e1646efae4c596aeca5cb168a60d2646c6c96310",
+            "novelty_score": 0.7665,
+            "diversity_score": 0.87
+          },
+          {
+            "id": "F05",
+            "mode": "BALANCED",
+            "dialectic_ratio": 0.4,
+            "sandbox_rate": 0.0,
+            "critique_depth": 1,
+            "entropy": 0.6,
+            "config_hash": "fa4b34fa026e06b77a42febe5e5bea8631252e770b3cf4334c98b3b425371a49",
+            "novelty_score": 0.7707,
+            "diversity_score": 0.82
+          },
+          {
+            "id": "F02",
+            "mode": "BALANCED",
+            "dialectic_ratio": 0.4,
+            "sandbox_rate": 0.0,
+            "critique_depth": 1,
+            "entropy": 0.9,
+            "config_hash": "feb70a21d0b35fd910f227e3c4124de656fb5cece03fc5b35c3ae8c63b98e386",
+            "novelty_score": 0.9796,
+            "diversity_score": 0.84
+          }
+        ],
+        "dialectic": {
+          "thesis": "Prioritise lineage hardening with balanced mode cadence and deeper critiques.",
+          "antithesis": "Guard runtime throughput by constraining sandbox probes and keeping latency under control.",
+          "synthesis": "Blend balanced and creative forks to raise novelty while keeping regression pass-rate \u22650.9 via targeted sandbox injections."
+        },
+        "validation_blueprint": [
+          "Replay top forks with extended continuity checks",
+          "Run hardened validator dry-run",
+          "Compare KPI deltas against baseline artifacts"
+        ]
+      },
+      "sep_preview": {
+        "artifact_type": "swarm_sep_preview",
+        "run_id": "20251025T075336Z",
+        "path": "docs/SEP-0003_lineage_schema.md",
+        "written": true,
+        "digest": "5a5a1ccb43274e93",
+        "sources": [
+          "artifacts/swarm_full_B_index_20251025T075336Z.json",
+          "artifacts/swarm_full_C_selection_20251025T075336Z.json",
+          "artifacts/swarm_full_D_fusion_20251025T075336Z.json",
+          "docs/agents.md"
+        ]
+      },
+      "next_query": {
+        "artifact_type": "swarm_next_query",
+        "run_id": "20251025T075336Z",
+        "query": "/plan 'Stabilise swarm KPIs before autonomous expansion' # novelty_boost=0.35",
+        "mode_hint": "STRICT",
+        "reason": "gated",
+        "novelty": 0.3168,
+        "previous_query_present": true
+      },
+      "gate_metrics": {
+        "gated": true,
+        "avg_regression_pass_rate": 0.925,
+        "avg_continuity_ratio": 0.938,
+        "avg_building_ratio": 0.676,
+        "avg_queue_depth": 7.982,
+        "avg_nos_score": 0.041
+      }
+    }
+  },
+  "artifact_hash": "eef9c72ce2644c8a",
+  "parent_hash": [
+    "83f8c079e0444a49"
+  ],
+  "depth": 43,
+  "spawn_count": 1
+}

@@ -82,5 +82,10 @@
   "artifact_count": 134,
   "lineage_root": "autonomous_analysis",
   "parent_hashes": [],
-  "artifact_hash": "123e55b153390398"
+  "artifact_hash": "123e55b153390398",
+  "parent_hash": [
+    "13017ced11f5fe1a"
+  ],
+  "depth": 155,
+  "spawn_count": 2
 }

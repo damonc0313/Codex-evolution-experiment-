@@ -174,5 +174,11 @@
       "area": "Lineage",
       "recommendation": "Excellent lineage improvement: +99.2%. Maintain this coverage going forward."
     }
-  ]
+  ],
+  "artifact_hash": "7d8760cc06c2eba4",
+  "parent_hash": [
+    "5adfeec7b46e0ae5"
+  ],
+  "depth": 161,
+  "spawn_count": 2
 }

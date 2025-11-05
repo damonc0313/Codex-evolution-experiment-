@@ -23,10 +23,10 @@
   },
   "artifact_hash": "0447d44de2e7a935",
   "parent_hash": [
-    "1139d7e329d6f245"
+    "5dccb88a8f08be09"
   ],
-  "depth": 75,
-  "spawn_count": 1,
+  "depth": 103,
+  "spawn_count": 3,
   "lineage_root": "swarm_20251023T053352Z",
   "parent_hashes": [
     [

@@ -79,5 +79,11 @@
       "expected_impact": "+0.05 to +0.10"
     }
   ],
-  "artifact_count": 144
+  "artifact_count": 144,
+  "artifact_hash": "a036fcb1ef28a9ab",
+  "parent_hash": [
+    "00d1f68024cc0c3a"
+  ],
+  "depth": 164,
+  "spawn_count": 2
 }

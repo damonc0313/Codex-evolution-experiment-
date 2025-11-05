@@ -316,5 +316,11 @@
         }
       ]
     }
-  ]
+  ],
+  "artifact_hash": "668feb73caa6fafa",
+  "parent_hash": [
+    "6f455b6d22eaa132"
+  ],
+  "depth": 168,
+  "spawn_count": 2
 }

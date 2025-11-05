@@ -51,5 +51,11 @@
     "time_to_artifact_s": 24.5
   },
   "success": true,
-  "duration_seconds": 0.5250773429870605
+  "duration_seconds": 0.5250773429870605,
+  "artifact_hash": "f2c244729d6921eb",
+  "parent_hash": [
+    "c90b2d7afc22fd48"
+  ],
+  "depth": 166,
+  "spawn_count": 2
 }
