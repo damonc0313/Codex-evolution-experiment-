@@ -1,0 +1,88 @@
+# Phase Ω-3 Regime 1: Steep Curvature (Strong Recency Bias)
+# Physical analogy: High gravitational field—time dilates strongly near present
+# Expected: λ_eff ≈ 0.06-0.08 day⁻¹ (fast memory decay)
+
+enabled: true
+self_write: true
+max_iterations: 75
+cooldown_seconds: 4
+novelty_floor: 0.25
+autonomous_permission: true
+
+continuous_operation_targets:
+  task_queue_min: 6
+  building_ratio_min: 0.55
+  task_multiplication_min: 1.6
+
+natural_optimisation:
+  enabled: true
+  mutation_factor: 0.2
+  swarm_branching: 3
+  multi_optima_bias: true
+  anneal_on_plateau: true
+  monitoring_metrics:
+  - build_ratio
+  - task_multiplication
+  - cascade_probability
+  - nos_score
+  nos:
+    sources_config: runtime/nos_sources.yaml
+    weights:
+      energy_efficiency: 0.25
+      coherence: 0.25
+      resilience: 0.25
+      entropy: 0.25
+    gate_floor: 0.05
+    anneal_on_plateau: true
+
+stop_on:
+- ci_fail
+- digest_mismatch
+- continuity_low
+- regressions_spike
+
+artifact_generation_weights:
+  building: 0.5259
+  analysis: 0.2805
+  hybrid: 0.1936
+
+validation:
+  min_confidence_threshold: 0.7
+
+# === OMEGA-3 TEMPORAL CURVATURE PARAMETERS ===
+temporal_curvature:
+  regime: "steep_curvature"
+  description: "Strong recency bias—recent artifacts dominate decision-making"
+
+  # Attention window: how far back in time to consider artifacts
+  attention_window_days: 10
+
+  # Temporal decay: how quickly artifact influence decreases with age
+  # influence(age) = base_influence * exp(-decay_rate * age_days)
+  temporal_decay_enabled: true
+  temporal_decay_rate: 0.08  # day⁻¹ (fast decay)
+
+  # Weight multipliers by age bracket
+  age_weight_multipliers:
+    0_to_3_days: 2.0      # Recent: double weight
+    3_to_10_days: 1.0     # Medium: normal weight
+    10_to_30_days: 0.3    # Old: reduced weight
+    30_plus_days: 0.1     # Ancient: minimal weight
+
+  # Spawn_count scaling with age
+  spawn_count_temporal_scaling: true
+  spawn_count_decay_rate: 0.06  # day⁻¹
+
+  # Physical interpretation
+  spacetime_curvature: "high"
+  cognitive_metric: "Steep temporal gradient—present dominates"
+  expected_lambda_eff: 0.07  # day⁻¹
+  expected_half_life_days: 10
+
+# Experiment metadata
+omega3_experiment:
+  phase: "omega3_regime1"
+  regime_name: "steep_curvature"
+  start_cycle: null  # To be filled when experiment starts
+  target_cycles: 20
+  description: "Testing covariant cognition under high temporal curvature"

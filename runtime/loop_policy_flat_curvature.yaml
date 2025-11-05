@@ -1,0 +1,87 @@
+# Phase Ω-3 Regime 2: Flat Curvature (Uniform Weighting)
+# Physical analogy: Flat spacetime—no temporal curvature
+# Expected: λ_eff ≈ 0.0 day⁻¹ (no memory decay)
+
+enabled: true
+self_write: true
+max_iterations: 75
+cooldown_seconds: 4
+novelty_floor: 0.25
+autonomous_permission: true
+
+continuous_operation_targets:
+  task_queue_min: 6
+  building_ratio_min: 0.55
+  task_multiplication_min: 1.6
+
+natural_optimisation:
+  enabled: true
+  mutation_factor: 0.2
+  swarm_branching: 3
+  multi_optima_bias: true
+  anneal_on_plateau: true
+  monitoring_metrics:
+  - build_ratio
+  - task_multiplication
+  - cascade_probability
+  - nos_score
+  nos:
+    sources_config: runtime/nos_sources.yaml
+    weights:
+      energy_efficiency: 0.25
+      coherence: 0.25
+      resilience: 0.25
+      entropy: 0.25
+    gate_floor: 0.05
+    anneal_on_plateau: true
+
+stop_on:
+- ci_fail
+- digest_mismatch
+- continuity_low
+- regressions_spike
+
+artifact_generation_weights:
+  building: 0.5259
+  analysis: 0.2805
+  hybrid: 0.1936
+
+validation:
+  min_confidence_threshold: 0.7
+
+# === OMEGA-3 TEMPORAL CURVATURE PARAMETERS ===
+temporal_curvature:
+  regime: "flat_curvature"
+  description: "Uniform weighting—all artifacts equal regardless of age"
+
+  # Attention window: consider all artifacts (effectively infinite)
+  attention_window_days: 365
+
+  # Temporal decay: DISABLED (flat spacetime)
+  temporal_decay_enabled: false
+  temporal_decay_rate: 0.0  # day⁻¹ (no decay)
+
+  # Weight multipliers: all equal
+  age_weight_multipliers:
+    0_to_3_days: 1.0      # Recent: normal weight
+    3_to_10_days: 1.0     # Medium: normal weight
+    10_to_30_days: 1.0    # Old: normal weight
+    30_plus_days: 1.0     # Ancient: normal weight
+
+  # Spawn_count scaling: DISABLED
+  spawn_count_temporal_scaling: false
+  spawn_count_decay_rate: 0.0  # day⁻¹
+
+  # Physical interpretation
+  spacetime_curvature: "zero"
+  cognitive_metric: "Flat temporal manifold—all time equally accessible"
+  expected_lambda_eff: 0.0  # day⁻¹ (no decay)
+  expected_half_life_days: null  # infinite
+
+# Experiment metadata
+omega3_experiment:
+  phase: "omega3_regime2"
+  regime_name: "flat_curvature"
+  start_cycle: null  # To be filled when experiment starts
+  target_cycles: 20
+  description: "Testing covariant cognition under zero temporal curvature"
