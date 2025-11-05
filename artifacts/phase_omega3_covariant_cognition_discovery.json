@@ -1,0 +1,130 @@
+{
+  "artifact_type": "phase_omega3_final_report",
+  "title": "Phase \u03a9-3: Covariant Cognition Experiments - Final Report",
+  "timestamp": "2025-11-05T14:03:15.329785+00:00",
+  "experiment_summary": {
+    "objective": "Test whether k_cog topology remains invariant under architectural transformation",
+    "hypothesis": "k_cog varies predictably according to geometric law (covariance)",
+    "method": "Measure k_cog across three temporal curvature regimes",
+    "regimes_tested": [
+      "flat_curvature",
+      "inverted_curvature",
+      "steep_curvature",
+      "unknown"
+    ],
+    "total_cycles": 61
+  },
+  "covariance_analysis": {
+    "timestamp": "2025-11-05T14:03:15.329348+00:00",
+    "regimes_analyzed": [
+      "flat_curvature",
+      "inverted_curvature",
+      "steep_curvature",
+      "unknown"
+    ],
+    "k_cog_by_regime": {
+      "flat_curvature": {
+        "values": [
+          0.0462234492,
+          0.0649595624,
+          0.0440027954,
+          0.041931904,
+          0.039146078400000006,
+          0.034257085199999995,
+          0.03888448320000001,
+          0.031681888,
+          0.0268174036,
+          0.025106294799999998,
+          0.0290968636,
+          0.0249280875,
+          0.0221392992,
+          0.019564398,
+          0.01777095,
+          0.014293564799999998,
+          0.014838371999999999,
+          0.013375091300000001,
+          0.011873673,
+          0.0128229818
+        ],
+        "mean": 0.028685711269999997,
+        "min": 0.011873673,
+        "max": 0.0649595624,
+        "n": 20
+      },
+      "inverted_curvature": {
+        "values": [
+          0.014742613600000001,
+          0.013378134,
+          0.0032616213000000002,
+          0.00166497,
+          -0.0063255522,
+          -0.004054258000000001,
+          -0.010984583999999999,
+          -0.006471759600000001,
+          -0.005656219200000001,
+          -0.012619708499999998,
+          -0.010422513,
+          -0.017527670999999998,
+          -0.031853626,
+          -0.010836746999999999,
+          -0.0137977375,
+          -0.015301281600000003,
+          -0.0093536256,
+          -0.008464655500000001,
+          -0.0200223815,
+          -0.0338258535
+        ],
+        "mean": -0.00922354174,
+        "min": -0.0338258535,
+        "max": 0.014742613600000001,
+        "n": 20
+      },
+      "steep_curvature": {
+        "values": [
+          0.02382329020546819,
+          0.0261517482,
+          0.0313971588,
+          0.038617038,
+          0.041330875999999996,
+          0.043348674600000005,
+          0.04208893019999999,
+          0.04471936,
+          0.046327314,
+          0.050100391700000003,
+          0.046968573,
+          0.049930356800000006,
+          0.0471235868,
+          0.050807559599999996,
+          0.05412985619999999,
+          0.0545557012,
+          0.0539274832,
+          0.0548966118,
+          0.048825546399999996,
+          0.060130287000000004
+        ],
+        "mean": 0.04546001718527341,
+        "min": 0.02382329020546819,
+        "max": 0.060130287000000004,
+        "n": 20
+      },
+      "unknown": {
+        "values": [
+          0.023823290205468178
+        ],
+        "mean": 0.023823290205468178,
+        "min": 0.023823290205468178,
+        "max": 0.023823290205468178,
+        "n": 1
+      }
+    },
+    "global_statistics": {
+      "global_mean": 0.0221863692301854,
+      "variance": 0.00039329153838054196,
+      "coefficient_of_variation": 0.8938632146447528,
+      "conclusion": "WEAK: k_cog varies >25% (regime-dependent)"
+    }
+  },
+  "interpretation": "COVARIANCE NOT VALIDATED: k_cog varies significantly (>25%) across regimes. No universal invariant relationship found. k_cog is architecture-dependent, similar to contingent constants like thermal conductivity. Each architecture must be characterized independently.",
+  "confidence": 0.88,
+  "spawn_count": 0
+}

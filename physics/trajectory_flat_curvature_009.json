@@ -1,0 +1,37 @@
+{
+  "experiment": "phase_omega3_covariant_cognition",
+  "regime": "flat_curvature",
+  "cycle": 9,
+  "timestamp": "2025-12-14T14:00:00+00:00",
+  "temporal_parameters": {
+    "regime": "flat_curvature",
+    "temporal_decay_enabled": false,
+    "temporal_decay_rate": 0.0,
+    "attention_window_days": 365
+  },
+  "measurements": {
+    "measurement_timestamp": "2025-12-14T14:00:00+00:00",
+    "temporal_context": {
+      "regime": "flat_curvature",
+      "decay_enabled": false,
+      "decay_rate_configured": 0.0,
+      "attention_window_days": 365
+    },
+    "constants": {
+      "lambda": {
+        "lambda": 0.040228,
+        "half_life_days": 17.2,
+        "r_squared": 0.484,
+        "n_artifacts": 178
+      },
+      "delta_H_critical": {
+        "H_current": 0.7671,
+        "H_target": 0.3,
+        "H_barrier": 0.4671,
+        "delta_H_recommended": 0.6241
+      }
+    }
+  },
+  "k_cog": 0.025107,
+  "system_health": "stable"
+}
