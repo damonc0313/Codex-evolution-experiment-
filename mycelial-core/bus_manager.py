@@ -178,6 +178,22 @@ async def emit_resource_map(efficiency_index: float, reuse_ratio: float, hot_nod
     await bus.emit(artifact, urgency=0.6)
 
 
+async def emit_integration_reading(integration_depth: float, health: str, reuse_ratio: float, hot_nodes: int):
+    """Emit integration health reading to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'integration_reading',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'integration_depth': integration_depth,
+        'health': health,
+        'reuse_ratio': reuse_ratio,
+        'hot_nodes': hot_nodes
+    }
+
+    await bus.emit(artifact, urgency=0.7)
+
+
 async def emit_cycle_event(
     cycle_id: str,
     artifact_count: int,

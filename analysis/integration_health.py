@@ -17,12 +17,21 @@ import sys
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List
+import asyncio
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 ROOT = Path(__file__).parent.parent
 RESOURCE_MAP_PATH = ROOT / "analysis" / "resource_map.json"
 INTEGRATION_LOG_PATH = ROOT / "diagnostics" / "integration_health.jsonl"
+
+# Import bus for event emission
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_integration_reading
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def load_resource_map() -> Dict:
@@ -251,6 +260,20 @@ def display_integration_health():
 
     # Log current state
     log_integration_health(resource_map, integration_depth, health)
+
+    # Emit to event bus (mycelial propagation)
+    if BUS_AVAILABLE:
+        try:
+            asyncio.run(emit_integration_reading(
+                integration_depth=integration_depth,
+                health=health,
+                reuse_ratio=metrics['reuse_ratio'],
+                hot_nodes=metrics['hot_modules']
+            ))
+            print("[BUS] Integration reading emitted to mycelial network")
+        except Exception as e:
+            print(f"[BUS] Warning: Could not emit to bus: {e}")
+
     print(f"Integration health logged to: {INTEGRATION_LOG_PATH}")
     print()
 

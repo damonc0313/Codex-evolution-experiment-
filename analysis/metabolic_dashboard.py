@@ -25,6 +25,7 @@ from datetime import datetime, timezone
 from typing import Dict, List, Tuple
 import statistics
 import math
+import asyncio
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -32,6 +33,14 @@ ROOT = Path(__file__).parent.parent
 ARTIFACTS_DIR = ROOT / "artifacts"
 LEDGER_PATH = ROOT / "continuity_ledger.jsonl"
 METABOLIC_LOG_PATH = ROOT / "diagnostics" / "metabolic_log.jsonl"
+
+# Import bus for event emission
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_metabolic_reading
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def measure_lambda_current(lookback_days: int = 14) -> Dict:
@@ -412,6 +421,19 @@ def main():
     dashboard = generate_dashboard()
     display_dashboard(dashboard)
     log_metabolic_state(dashboard)
+
+    # Emit to event bus (mycelial propagation)
+    if BUS_AVAILABLE:
+        try:
+            asyncio.run(emit_metabolic_reading(
+                lambda_val=dashboard["lambda"].get("lambda", 0),
+                entropy=dashboard["entropy"].get("mean_entropy", 0),
+                k_cog=dashboard["k_cog"].get("k_cog", 0),
+                state=dashboard["state"]
+            ))
+            print("[BUS] Metabolic reading emitted to mycelial network")
+        except Exception as e:
+            print(f"[BUS] Warning: Could not emit to bus: {e}")
 
     print(f"Metabolic state logged to: {METABOLIC_LOG_PATH}")
     print()

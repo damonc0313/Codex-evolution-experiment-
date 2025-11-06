@@ -23,10 +23,19 @@ from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Set
 from collections import defaultdict
+import asyncio
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 ROOT = Path(__file__).parent.parent
+
+# Import bus for event emission
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_resource_map
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def find_python_files(directory: Path) -> List[Path]:
@@ -332,6 +341,19 @@ def main():
     resource_map = generate_resource_map()
     display_resource_map(resource_map)
     save_resource_map(resource_map)
+
+    # Emit to event bus (mycelial propagation)
+    if BUS_AVAILABLE:
+        try:
+            metrics = resource_map['efficiency_metrics']
+            asyncio.run(emit_resource_map(
+                efficiency_index=metrics['efficiency_index'],
+                reuse_ratio=metrics['reuse_ratio'],
+                hot_nodes=metrics['hot_modules']
+            ))
+            print("[BUS] Resource map emitted to mycelial network")
+        except Exception as e:
+            print(f"[BUS] Warning: Could not emit to bus: {e}")
 
 
 if __name__ == "__main__":
