@@ -1,0 +1,16 @@
+{
+  "artifact_type": "sep_proposal",
+  "title": "Intervention sep_proposal 22",
+  "timestamp": "2025-11-05T15:37:29.670115+00:00",
+  "spawn_count": 25,
+  "confidence": 0.7346246450620215,
+  "intervention_period": true,
+  "intervention_regime": "steep_curvature",
+  "observation": "Generated with target \u03bb=0.075",
+  "metadata": {
+    "age_days_at_creation": 0.4435640665711158,
+    "target_lambda": 0.075,
+    "expected_spawn": 24.181999156611948,
+    "intervention_experiment": "phase_omega1_step_b"
+  }
+}

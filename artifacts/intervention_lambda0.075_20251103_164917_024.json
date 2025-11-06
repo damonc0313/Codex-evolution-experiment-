@@ -1,0 +1,16 @@
+{
+  "artifact_type": "validator",
+  "title": "Intervention validator 24",
+  "timestamp": "2025-11-03T16:49:17.668999+00:00",
+  "spawn_count": 19,
+  "confidence": 0.7972969176067902,
+  "intervention_period": true,
+  "intervention_regime": "steep_curvature",
+  "observation": "Generated with target \u03bb=0.075",
+  "metadata": {
+    "age_days_at_creation": 2.3937029683839013,
+    "target_lambda": 0.075,
+    "expected_spawn": 20.891619594935896,
+    "intervention_experiment": "phase_omega1_step_b"
+  }
+}

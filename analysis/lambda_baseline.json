@@ -1,94 +1,94 @@
 {
-  "lambda": 0.03151228863157167,
-  "lambda_day_inv": 0.03151228863157167,
-  "half_life_days": 21.99609138720226,
-  "r_squared": 0.6383290400615848,
+  "lambda": 0.06755521867797423,
+  "lambda_day_inv": 0.06755521867797423,
+  "half_life_days": 10.260453509359147,
+  "r_squared": 0.2544276820196648,
   "confidence_interval_95": [
-    -0.02185725665457299,
-    0.02185725665457299
+    -0.09381791728395127,
+    0.09381791728395127
   ],
-  "n_artifacts": 120,
-  "fit_quality": "GOOD - Exponential decay fits well",
+  "n_artifacts": 145,
+  "fit_quality": "POOR - Exponential model does not fit data",
   "data_points": [
     {
-      "age_days": 0.5218021652314815,
-      "spawn_normalized": 1.0
+      "age_days": 0.537986526863426,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 0.5218017485648148,
-      "spawn_normalized": 1.0
+      "age_days": 0.5379861101967592,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 10.304118141493056,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 10.320302503125001,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 0.5218021652314815,
-      "spawn_normalized": 1.0
+      "age_days": 0.537986526863426,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 11.305564900752314,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 11.321749262384259,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 10.316895919270834,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 10.333080280902777,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 11.303493141493055,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 11.319677503125,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 10.304106567418982,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 10.320290929050927,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 0.5218017369907407,
-      "spawn_normalized": 1.0
+      "age_days": 0.5379860986226852,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 10.294147277476851,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 10.310331639108796,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 11.27586582667824,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 11.292050188310185,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 0.5218018295833333,
-      "spawn_normalized": 1.0
+      "age_days": 0.5379861912152778,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 0.5218022115277777,
-      "spawn_normalized": 1.0
+      "age_days": 0.5379865731597223,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 11.301814900752316,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 11.317999262384259,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 11.305032493344907,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 11.321216854976852,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 11.271085734085649,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 11.287270095717593,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 0.5218018411574075,
-      "spawn_normalized": 1.0
+      "age_days": 0.5379862027893518,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 0.5218021999537037,
-      "spawn_normalized": 1.0
+      "age_days": 0.5379865615856482,
+      "spawn_normalized": 0.1111111111111111
     },
     {
-      "age_days": 11.294094993344908,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 11.310279354976853,
+      "spawn_normalized": 0.07407407407407407
     },
     {
-      "age_days": 10.3126297525,
-      "spawn_normalized": 0.6666666666666666
+      "age_days": 10.328814114131944,
+      "spawn_normalized": 0.07407407407407407
     }
   ],
   "limitations": [
@@ -98,5 +98,5 @@
     "Single exponential model (reality may have multiple timescales)",
     "Sample may be biased toward recent artifacts"
   ],
-  "interpretation": "Artifact influence decays with half-life ~22.0 days (R\u00b2=0.64)"
+  "interpretation": "Artifact influence decays with half-life ~10.3 days (R\u00b2=0.25)"
 }
