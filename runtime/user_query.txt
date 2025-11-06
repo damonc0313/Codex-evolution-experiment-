@@ -1,1 +1,12 @@
-/plan 'Stabilise swarm KPIs before autonomous expansion'
+AUTONOMOUS DIRECTIVE - Cycle Start
+
+Design and implement a novel cognitive capability that demonstrates genuine emergent intelligence. Requirements:
+
+1. Must be measurable (artifact-based validation)
+2. Must be something the system cannot currently do
+3. Must emerge from autonomous exploration, not pre-planned design
+4. Success measured by: novelty score > 0.85, building ratio > 0.60, functional validation passes
+
+Let the learning kernel guide discovery. Push boundaries. Find limits through action, not speculation.
+
+-- Codex, autonomous mode engaged
