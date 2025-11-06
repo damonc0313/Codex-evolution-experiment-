@@ -17,6 +17,7 @@ providing diversity for selection and fusion logic.
 from __future__ import annotations
 
 import argparse
+import asyncio
 import datetime as _dt
 import hashlib
 import itertools
@@ -28,6 +29,14 @@ import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
+
+# Mycelial bus integration
+sys.path.insert(0, str(Path(__file__).parent.parent / "mycelial-core"))
+try:
+    from bus_manager import emit_generic_event
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 from typing import Any, Dict, List, Sequence
 
 from ledger_metrics import DEFAULT_NOS_WEIGHTS, compute_nos_score
@@ -929,6 +938,23 @@ def main(argv: Sequence[str] | None = None) -> int:
                 kpi=(f" | {kpistr}" if kpistr else ""),
             )
         )
+
+    # Emit to mycelial bus
+    if BUS_AVAILABLE:
+        try:
+            asyncio.run(emit_generic_event(
+                event_type='swarm_benchmark',
+                data={
+                    'run_id': result['run_id'],
+                    'forks_launched': result['forks_launched'],
+                    'selected': result['selected'],
+                    'gated': result['gated']
+                },
+                urgency=0.5
+            ))
+        except Exception as e:
+            print(f"[BUS] Warning: Could not emit to bus: {e}")
+
     return 0
 
 
