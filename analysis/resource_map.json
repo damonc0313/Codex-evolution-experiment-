@@ -1,0 +1,1646 @@
+{
+  "timestamp": "2025-11-06T06:07:25.837225+00:00",
+  "import_graph": {
+    "swarm_bench": {
+      "path": "tools/swarm_bench.py",
+      "imports": [
+        "dataclasses",
+        "bus_manager",
+        "json",
+        "pathlib",
+        "random",
+        "time",
+        "typing",
+        "statistics",
+        "hashlib",
+        "ledger_metrics",
+        "itertools",
+        "yaml",
+        "datetime",
+        "argparse",
+        "__future__",
+        "math",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.0008544800651294214,
+      "size_bytes": 36134,
+      "imported_by_count": 1,
+      "imported_by": [
+        "nos_pipeline"
+      ],
+      "energy_class": "warm"
+    },
+    "reward_model": {
+      "path": "tools/reward_model.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "__future__",
+        "collections"
+      ],
+      "modification_age_days": 0.7012309521050365,
+      "size_bytes": 14725,
+      "imported_by_count": 1,
+      "imported_by": [
+        "learning_kernel"
+      ],
+      "energy_class": "warm"
+    },
+    "cascade_experiment": {
+      "path": "tools/cascade_experiment.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "time",
+        "artifact_metrics",
+        "datetime",
+        "homeostatic_regulator",
+        "sys"
+      ],
+      "modification_age_days": 0.7012311353506865,
+      "size_bytes": 13548,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "computational_limit_tester": {
+      "path": "tools/computational_limit_tester.py",
+      "imports": [
+        "dataclasses",
+        "traceback",
+        "json",
+        "pathlib",
+        "time",
+        "typing",
+        "hashlib",
+        "datetime",
+        "sys"
+      ],
+      "modification_age_days": 0.7012311826646328,
+      "size_bytes": 23898,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "reflexive_experimenter": {
+      "path": "tools/reflexive_experimenter.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "time",
+        "typing",
+        "datetime",
+        "tools.ledger_metrics",
+        "argparse",
+        "__future__",
+        "sys"
+      ],
+      "modification_age_days": 0.7012310786462492,
+      "size_bytes": 9989,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "meta_recursive_analyzer": {
+      "path": "tools/meta_recursive_analyzer.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "sys"
+      ],
+      "modification_age_days": 0.7012311779624886,
+      "size_bytes": 17510,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "metrics_recalibration_audit": {
+      "path": "tools/metrics_recalibration_audit.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "__future__"
+      ],
+      "modification_age_days": 0.7012311942240707,
+      "size_bytes": 11239,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "run_kael_bench": {
+      "path": "tools/run_kael_bench.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "time",
+        "statistics",
+        "tempfile",
+        "shutil",
+        "tools.ledger_metrics",
+        "argparse",
+        "__future__",
+        "sys"
+      ],
+      "modification_age_days": 0.7012311544904003,
+      "size_bytes": 4355,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "run_omega_cycle": {
+      "path": "tools/run_omega_cycle.py",
+      "imports": [
+        "agents_protocol",
+        "pathlib",
+        "typing",
+        "datetime",
+        "argparse",
+        "__future__",
+        "tools.learning_kernel",
+        "sys"
+      ],
+      "modification_age_days": 0.7012311659366997,
+      "size_bytes": 2686,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "artifact_validator": {
+      "path": "tools/artifact_validator.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "enum",
+        "datetime",
+        "argparse",
+        "sys"
+      ],
+      "modification_age_days": 0.7012313763576525,
+      "size_bytes": 13503,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "lineage_weaver": {
+      "path": "tools/lineage_weaver.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "hashlib",
+        "datetime",
+        "argparse"
+      ],
+      "modification_age_days": 0.7012313134857902,
+      "size_bytes": 10857,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "nos_analyzer": {
+      "path": "tools/nos_analyzer.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "statistics",
+        "datetime",
+        "math",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012313527558689,
+      "size_bytes": 22387,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "evolve_loop": {
+      "path": "tools/evolve_loop.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "time",
+        "subprocess",
+        "artifact_bus",
+        "hashlib",
+        "tools.ledger_utils",
+        "tools.ledger_metrics",
+        "__future__",
+        "homeostatic_regulator",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.0014773487658412369,
+      "size_bytes": 5759,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "learning_kernel": {
+      "path": "tools/learning_kernel.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "reward_model",
+        "policy_updater",
+        "typing",
+        "artifact_metrics",
+        "shutil",
+        "yaml",
+        "datetime",
+        "__future__",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.10777354835912033,
+      "size_bytes": 18942,
+      "imported_by_count": 1,
+      "imported_by": [
+        "validate_homeostasis"
+      ],
+      "energy_class": "warm"
+    },
+    "limit_discovery_reporter": {
+      "path": "tools/limit_discovery_reporter.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "sys"
+      ],
+      "modification_age_days": 0.7012314889717985,
+      "size_bytes": 17847,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "ledger_metrics": {
+      "path": "tools/ledger_metrics.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "collections.abc",
+        "__future__",
+        "re"
+      ],
+      "modification_age_days": 0.701231521655012,
+      "size_bytes": 10491,
+      "imported_by_count": 3,
+      "imported_by": [
+        "nos_pipeline",
+        "swarm_bench",
+        "natural_reflection"
+      ],
+      "energy_class": "hot"
+    },
+    "policy_updater": {
+      "path": "tools/policy_updater.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "typing",
+        "yaml",
+        "datetime",
+        "__future__",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.09345896581256831,
+      "size_bytes": 27648,
+      "imported_by_count": 1,
+      "imported_by": [
+        "learning_kernel"
+      ],
+      "energy_class": "warm"
+    },
+    "entropy_optimizer": {
+      "path": "tools/entropy_optimizer.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "argparse",
+        "sys"
+      ],
+      "modification_age_days": 0.7012316511240271,
+      "size_bytes": 14351,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "meta_synthesis": {
+      "path": "tools/meta_synthesis.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "statistics",
+        "datetime",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012316668171573,
+      "size_bytes": 22607,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "kpi_validator": {
+      "path": "tools/kpi_validator.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "sys"
+      ],
+      "modification_age_days": 0.7012317401060352,
+      "size_bytes": 12571,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "dispersal_experiment": {
+      "path": "tools/dispersal_experiment.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "collections",
+        "spore_disperser",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.00463939394387934,
+      "size_bytes": 17129,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "homeostatic_mapping": {
+      "path": "tools/homeostatic_mapping.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "homeostatic_regulator",
+        "sys"
+      ],
+      "modification_age_days": 0.7012318749808603,
+      "size_bytes": 16630,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "expansion_configurator": {
+      "path": "tools/expansion_configurator.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "argparse",
+        "sys"
+      ],
+      "modification_age_days": 0.7012319139032452,
+      "size_bytes": 12977,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "recursive_self_optimizer": {
+      "path": "tools/recursive_self_optimizer.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "random",
+        "time",
+        "typing",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012318513321656,
+      "size_bytes": 19932,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "confidence_scorer": {
+      "path": "tools/confidence_scorer.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "argparse",
+        "sys"
+      ],
+      "modification_age_days": 0.7012320233026037,
+      "size_bytes": 16344,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "autonomous_experiment_engine": {
+      "path": "tools/autonomous_experiment_engine.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "random",
+        "typing",
+        "statistics",
+        "datetime",
+        "argparse",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012321188687174,
+      "size_bytes": 23300,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "agents_protocol": {
+      "path": "tools/agents_protocol.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "typing",
+        "tools",
+        "yaml",
+        "__future__",
+        "re"
+      ],
+      "modification_age_days": 0.7012321534863225,
+      "size_bytes": 5774,
+      "imported_by_count": 1,
+      "imported_by": [
+        "run_omega_cycle"
+      ],
+      "energy_class": "warm"
+    },
+    "artifact_deduplicator": {
+      "path": "tools/artifact_deduplicator.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "hashlib",
+        "datetime",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012321949446643,
+      "size_bytes": 14344,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "self_query": {
+      "path": "tools/self_query.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "random",
+        "time",
+        "typing",
+        "hashlib",
+        "yaml",
+        "tools.ledger_metrics",
+        "__future__"
+      ],
+      "modification_age_days": 0.7012320371524051,
+      "size_bytes": 8015,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "meta_cognitive_introspector": {
+      "path": "tools/meta_cognitive_introspector.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "random",
+        "time",
+        "typing",
+        "statistics",
+        "datetime",
+        "argparse",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012322001407544,
+      "size_bytes": 26063,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "omega3_tracker": {
+      "path": "tools/omega3_tracker.py",
+      "imports": [
+        "tools.cognitive_physics",
+        "bus_manager",
+        "json",
+        "pathlib",
+        "traceback",
+        "yaml",
+        "datetime",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.004063973597906254,
+      "size_bytes": 5121,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "artifact_metrics": {
+      "path": "tools/artifact_metrics.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "__future__",
+        "datetime",
+        "re",
+        "collections"
+      ],
+      "modification_age_days": 0.7012323551873366,
+      "size_bytes": 14384,
+      "imported_by_count": 2,
+      "imported_by": [
+        "learning_kernel",
+        "cascade_experiment"
+      ],
+      "energy_class": "warm"
+    },
+    "spore_disperser": {
+      "path": "tools/spore_disperser.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "datetime",
+        "typing"
+      ],
+      "modification_age_days": 0.7012321758904942,
+      "size_bytes": 6102,
+      "imported_by_count": 1,
+      "imported_by": [
+        "dispersal_experiment"
+      ],
+      "energy_class": "warm"
+    },
+    "cognitive_physics": {
+      "path": "tools/cognitive_physics.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "typing",
+        "yaml",
+        "datetime",
+        "tools.ledger_metrics",
+        "argparse",
+        "__future__",
+        "math",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.005285325983056316,
+      "size_bytes": 15453,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "production_monitor": {
+      "path": "tools/production_monitor.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "time",
+        "typing",
+        "datetime",
+        "tools.ledger_metrics",
+        "argparse",
+        "__future__",
+        "sys"
+      ],
+      "modification_age_days": 0.7012322711006359,
+      "size_bytes": 3748,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "migrate_lineage": {
+      "path": "tools/migrate_lineage.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "timestamp_utils",
+        "typing",
+        "shutil",
+        "__future__",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012323537054989,
+      "size_bytes": 18702,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "autonomous_operations_framework": {
+      "path": "tools/autonomous_operations_framework.py",
+      "imports": [
+        "traceback",
+        "json",
+        "pathlib",
+        "time",
+        "typing",
+        "enum",
+        "statistics",
+        "hashlib",
+        "subprocess",
+        "datetime",
+        "argparse",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012325607792095,
+      "size_bytes": 29494,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "conservation_law_experiment": {
+      "path": "tools/conservation_law_experiment.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "tools.ledger_metrics",
+        "argparse",
+        "__future__",
+        "math",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.0049809770313677965,
+      "size_bytes": 15825,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "hyphal_network_integration": {
+      "path": "tools/hyphal_network_integration.py",
+      "imports": [
+        "hyphal_connections",
+        "pathlib",
+        "sys"
+      ],
+      "modification_age_days": 0.7012325464161457,
+      "size_bytes": 2457,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "production_deployment_system": {
+      "path": "tools/production_deployment_system.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "time",
+        "subprocess",
+        "typing",
+        "enum",
+        "hashlib",
+        "tempfile",
+        "shutil",
+        "os",
+        "datetime",
+        "argparse",
+        "sys"
+      ],
+      "modification_age_days": 0.7012325294564168,
+      "size_bytes": 22024,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "omega3_analyzer": {
+      "path": "tools/omega3_analyzer.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "argparse",
+        "collections",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.00435452652198297,
+      "size_bytes": 11619,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "framework_evolution_engine": {
+      "path": "tools/framework_evolution_engine.py",
+      "imports": [],
+      "modification_age_days": 0.7012326540549596,
+      "size_bytes": 8604,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "phase2_architectural_optimizer": {
+      "path": "tools/phase2_architectural_optimizer.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "random",
+        "time",
+        "typing",
+        "datetime",
+        "math",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012326432185041,
+      "size_bytes": 25549,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "measure_cascade_probability": {
+      "path": "tools/measure_cascade_probability.py",
+      "imports": [
+        "bus_manager",
+        "json",
+        "pathlib",
+        "timestamp_utils",
+        "typing",
+        "datetime",
+        "__future__",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.0037195341371827656,
+      "size_bytes": 9703,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "nos_data_sources": {
+      "path": "tools/nos_data_sources.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "typing",
+        "hashlib",
+        "pandas",
+        "yaml",
+        "__future__",
+        "csv"
+      ],
+      "modification_age_days": 0.7012327172689967,
+      "size_bytes": 9103,
+      "imported_by_count": 2,
+      "imported_by": [
+        "nos_pipeline",
+        "natural_reflection"
+      ],
+      "energy_class": "warm"
+    },
+    "bio_inspired_cognitive_architecture": {
+      "path": "tools/bio_inspired_cognitive_architecture.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012328756517834,
+      "size_bytes": 22933,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "capability_detector": {
+      "path": "tools/capability_detector.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "re",
+        "collections"
+      ],
+      "modification_age_days": 0.701232895779389,
+      "size_bytes": 5954,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "enhanced_capability_detector": {
+      "path": "tools/enhanced_capability_detector.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012329100237953,
+      "size_bytes": 16551,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "lineage_migrator": {
+      "path": "tools/lineage_migrator.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "hashlib",
+        "shutil",
+        "datetime",
+        "argparse",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012329115415061,
+      "size_bytes": 15777,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "timestamp_utils": {
+      "path": "tools/timestamp_utils.py",
+      "imports": [
+        "doctest",
+        "datetime",
+        "typing"
+      ],
+      "modification_age_days": 0.7012328369335996,
+      "size_bytes": 7673,
+      "imported_by_count": 3,
+      "imported_by": [
+        "enhanced_ledger_metrics_v2",
+        "measure_cascade_probability",
+        "migrate_lineage"
+      ],
+      "energy_class": "hot"
+    },
+    "real_time_boundary_test": {
+      "path": "tools/real_time_boundary_test.py",
+      "imports": [
+        "json",
+        "datetime",
+        "sys"
+      ],
+      "modification_age_days": 0.7012328862757594,
+      "size_bytes": 17254,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "nos_pipeline": {
+      "path": "tools/nos_pipeline.py",
+      "imports": [
+        "dataclasses",
+        "bus_manager",
+        "json",
+        "pathlib",
+        "typing",
+        "ledger_metrics",
+        "swarm_bench",
+        "yaml",
+        "datetime",
+        "argparse",
+        "nos_calibration",
+        "__future__",
+        "nos_data_sources",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.00017189131290824326,
+      "size_bytes": 20247,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "validate_kernel": {
+      "path": "tools/validate_kernel.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "hashlib",
+        "__future__",
+        "yaml",
+        "re",
+        "sys"
+      ],
+      "modification_age_days": 0.7012329302176281,
+      "size_bytes": 4911,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "enhanced_ledger_metrics_v2": {
+      "path": "tools/enhanced_ledger_metrics_v2.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "timestamp_utils",
+        "typing",
+        "__future__",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012330994589461,
+      "size_bytes": 12700,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "enhanced_ledger_metrics": {
+      "path": "tools/enhanced_ledger_metrics.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "__future__"
+      ],
+      "modification_age_days": 0.7012331394326907,
+      "size_bytes": 11449,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "natural_reflection": {
+      "path": "tools/natural_reflection.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "time",
+        "typing",
+        "statistics",
+        "ledger_metrics",
+        "argparse",
+        "nos_calibration",
+        "__future__",
+        "nos_data_sources"
+      ],
+      "modification_age_days": 0.7012330994920598,
+      "size_bytes": 11863,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "phase1_quick_wins_optimizer": {
+      "path": "tools/phase1_quick_wins_optimizer.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "random",
+        "time",
+        "typing",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012331443638713,
+      "size_bytes": 26978,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "ledger_utils": {
+      "path": "tools/ledger_utils.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "tools.lineage_weaver",
+        "datetime",
+        "__future__"
+      ],
+      "modification_age_days": 0.7012332118771695,
+      "size_bytes": 1981,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "cascade_analysis": {
+      "path": "tools/cascade_analysis.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "__future__"
+      ],
+      "modification_age_days": 0.7012332947138283,
+      "size_bytes": 9024,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "boundary_pusher": {
+      "path": "tools/boundary_pusher.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "statistics",
+        "itertools",
+        "datetime",
+        "argparse",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012334240089964,
+      "size_bytes": 25076,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "phase3_infrastructure_optimizer": {
+      "path": "tools/phase3_infrastructure_optimizer.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "random",
+        "time",
+        "typing",
+        "concurrent.futures",
+        "datetime",
+        "math",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012333547323942,
+      "size_bytes": 24192,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "nos_calibration": {
+      "path": "tools/nos_calibration.py",
+      "imports": [
+        "dataclasses",
+        "math",
+        "typing",
+        "__future__"
+      ],
+      "modification_age_days": 0.7012333802575315,
+      "size_bytes": 3780,
+      "imported_by_count": 2,
+      "imported_by": [
+        "nos_pipeline",
+        "natural_reflection"
+      ],
+      "energy_class": "warm"
+    },
+    "quality_baseline_auditor": {
+      "path": "tools/quality_baseline_auditor.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "hashlib",
+        "datetime",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.701233397650498,
+      "size_bytes": 16763,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "comprehensive_progress_report": {
+      "path": "tools/comprehensive_progress_report.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012335614970436,
+      "size_bytes": 19718,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "self_query_encoder": {
+      "path": "tools/self_query_encoder.py",
+      "imports": [
+        "pathlib",
+        "tools.self_query",
+        "sys",
+        "__future__"
+      ],
+      "modification_age_days": 0.7012334271989487,
+      "size_bytes": 403,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "advanced_analytics_engine": {
+      "path": "tools/advanced_analytics_engine.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "statistics",
+        "hashlib",
+        "datetime",
+        "math",
+        "collections",
+        "sys"
+      ],
+      "modification_age_days": 0.7012336969596368,
+      "size_bytes": 21915,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "meta_cognitive_optimizer": {
+      "path": "tools/meta_cognitive_optimizer.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.7012336016446352,
+      "size_bytes": 13728,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "extract_entropy_trajectory": {
+      "path": "tools/extract_entropy_trajectory.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "statistics",
+        "datetime",
+        "tools.ledger_metrics",
+        "sys"
+      ],
+      "modification_age_days": 0.17886020522150728,
+      "size_bytes": 8852,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "extract_lambda_from_artifacts": {
+      "path": "tools/extract_lambda_from_artifacts.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "statistics",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.17956205517881446,
+      "size_bytes": 8611,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "compare_baseline_vs_intervention": {
+      "path": "tools/compare_baseline_vs_intervention.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "statistics",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.16268074939372362,
+      "size_bytes": 10330,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "correlate_kcog_throughput": {
+      "path": "tools/correlate_kcog_throughput.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "statistics",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.1762292565929669,
+      "size_bytes": 10428,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "metabolic_monitor": {
+      "path": "tools/metabolic_monitor.py",
+      "imports": [
+        "pathlib",
+        "time",
+        "argparse",
+        "analysis.metabolic_dashboard",
+        "sys"
+      ],
+      "modification_age_days": 0.1426855845031915,
+      "size_bytes": 2485,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "metabolic_monitor_bus": {
+      "path": "tools/metabolic_monitor_bus.py",
+      "imports": [
+        "bus_manager",
+        "pathlib",
+        "analysis.metabolic_dashboard",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.13065787131863613,
+      "size_bytes": 1807,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "simulate_steep_curvature_effect": {
+      "path": "tools/simulate_steep_curvature_effect.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "shutil",
+        "datetime",
+        "sys"
+      ],
+      "modification_age_days": 0.1618440852617776,
+      "size_bytes": 8980,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "generate_intervention_artifacts": {
+      "path": "tools/generate_intervention_artifacts.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "random",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.1636865723160682,
+      "size_bytes": 8026,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "validate_homeostasis": {
+      "path": "tools/validate_homeostasis.py",
+      "imports": [
+        "traceback",
+        "json",
+        "pathlib",
+        "typing",
+        "learning_kernel",
+        "resource_map",
+        "datetime",
+        "argparse",
+        "integration_health",
+        "sys"
+      ],
+      "modification_age_days": 0.08293696114310511,
+      "size_bytes": 14833,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "monitor_lambda_intervention": {
+      "path": "tools/monitor_lambda_intervention.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "statistics",
+        "datetime",
+        "math",
+        "sys"
+      ],
+      "modification_age_days": 0.16902278266847134,
+      "size_bytes": 9844,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "homeostatic_regulator": {
+      "path": "mycelial-core/homeostatic_regulator.py",
+      "imports": [
+        "dataclasses",
+        "typing",
+        "enum"
+      ],
+      "modification_age_days": 0.7012341181299201,
+      "size_bytes": 10258,
+      "imported_by_count": 3,
+      "imported_by": [
+        "homeostatic_mapping",
+        "cascade_experiment",
+        "evolve_loop"
+      ],
+      "energy_class": "hot"
+    },
+    "nutrient_gradient": {
+      "path": "mycelial-core/nutrient_gradient.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "time",
+        "yaml",
+        "math",
+        "collections"
+      ],
+      "modification_age_days": 0.6929830919012979,
+      "size_bytes": 10844,
+      "imported_by_count": 1,
+      "imported_by": [
+        "chemotropic_allocator"
+      ],
+      "energy_class": "warm"
+    },
+    "swarm_anastomosis": {
+      "path": "mycelial-core/swarm_anastomosis.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "typing",
+        "time",
+        "hashlib",
+        "datetime",
+        "asyncio"
+      ],
+      "modification_age_days": 0.7012341622401167,
+      "size_bytes": 8724,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "chemotropic_allocator": {
+      "path": "mycelial-core/chemotropic_allocator.py",
+      "imports": [
+        "dataclasses",
+        "typing",
+        "time",
+        "nutrient_gradient",
+        "asyncio"
+      ],
+      "modification_age_days": 0.7012341915898853,
+      "size_bytes": 5773,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "hyphal_connections": {
+      "path": "mycelial-core/hyphal_connections.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "random",
+        "typing",
+        "time",
+        "yaml",
+        "datetime",
+        "asyncio"
+      ],
+      "modification_age_days": 0.692299326316074,
+      "size_bytes": 13842,
+      "imported_by_count": 1,
+      "imported_by": [
+        "hyphal_network_integration"
+      ],
+      "energy_class": "warm"
+    },
+    "artifact_bus": {
+      "path": "mycelial-core/artifact_bus.py",
+      "imports": [
+        "dataclasses",
+        "json",
+        "pathlib",
+        "typing",
+        "time",
+        "yaml",
+        "datetime",
+        "math",
+        "asyncio"
+      ],
+      "modification_age_days": 0.6936220777669438,
+      "size_bytes": 15682,
+      "imported_by_count": 2,
+      "imported_by": [
+        "bus_manager",
+        "evolve_loop"
+      ],
+      "energy_class": "warm"
+    },
+    "bus_manager": {
+      "path": "mycelial-core/bus_manager.py",
+      "imports": [
+        "json",
+        "pathlib",
+        "metabolic_dashboard",
+        "typing",
+        "artifact_bus",
+        "datetime",
+        "sys",
+        "asyncio"
+      ],
+      "modification_age_days": 0.0026850753995003524,
+      "size_bytes": 12791,
+      "imported_by_count": 12,
+      "imported_by": [
+        "evolve_loop",
+        "omega3_tracker",
+        "swarm_bench",
+        "learning_kernel",
+        "conservation_law_experiment",
+        "cognitive_physics",
+        "metabolic_monitor_bus",
+        "measure_cascade_probability",
+        "omega3_analyzer",
+        "nos_pipeline",
+        "policy_updater",
+        "dispersal_experiment"
+      ],
+      "energy_class": "hot"
+    }
+  },
+  "efficiency_metrics": {
+    "total_modules": 84,
+    "hot_modules": 4,
+    "warm_modules": 12,
+    "recent_modules": 68,
+    "cold_modules": 0,
+    "dormant_modules": 0,
+    "active_modules": 84,
+    "efficiency_index": 1.0,
+    "reuse_ratio": 0.058544303797468354,
+    "mean_import_depth": 7.523809523809524,
+    "waste_ratio": 0.0
+  },
+  "hot_nodes": [
+    {
+      "module": "bus_manager",
+      "imported_by_count": 12,
+      "imported_by": [
+        "evolve_loop",
+        "omega3_tracker",
+        "swarm_bench",
+        "learning_kernel",
+        "conservation_law_experiment",
+        "cognitive_physics",
+        "metabolic_monitor_bus",
+        "measure_cascade_probability",
+        "omega3_analyzer",
+        "nos_pipeline",
+        "policy_updater",
+        "dispersal_experiment"
+      ],
+      "path": "mycelial-core/bus_manager.py"
+    },
+    {
+      "module": "ledger_metrics",
+      "imported_by_count": 3,
+      "imported_by": [
+        "nos_pipeline",
+        "swarm_bench",
+        "natural_reflection"
+      ],
+      "path": "tools/ledger_metrics.py"
+    },
+    {
+      "module": "timestamp_utils",
+      "imported_by_count": 3,
+      "imported_by": [
+        "enhanced_ledger_metrics_v2",
+        "measure_cascade_probability",
+        "migrate_lineage"
+      ],
+      "path": "tools/timestamp_utils.py"
+    },
+    {
+      "module": "homeostatic_regulator",
+      "imported_by_count": 3,
+      "imported_by": [
+        "homeostatic_mapping",
+        "cascade_experiment",
+        "evolve_loop"
+      ],
+      "path": "mycelial-core/homeostatic_regulator.py"
+    },
+    {
+      "module": "artifact_metrics",
+      "imported_by_count": 2,
+      "imported_by": [
+        "learning_kernel",
+        "cascade_experiment"
+      ],
+      "path": "tools/artifact_metrics.py"
+    },
+    {
+      "module": "nos_data_sources",
+      "imported_by_count": 2,
+      "imported_by": [
+        "nos_pipeline",
+        "natural_reflection"
+      ],
+      "path": "tools/nos_data_sources.py"
+    },
+    {
+      "module": "nos_calibration",
+      "imported_by_count": 2,
+      "imported_by": [
+        "nos_pipeline",
+        "natural_reflection"
+      ],
+      "path": "tools/nos_calibration.py"
+    },
+    {
+      "module": "artifact_bus",
+      "imported_by_count": 2,
+      "imported_by": [
+        "bus_manager",
+        "evolve_loop"
+      ],
+      "path": "mycelial-core/artifact_bus.py"
+    },
+    {
+      "module": "swarm_bench",
+      "imported_by_count": 1,
+      "imported_by": [
+        "nos_pipeline"
+      ],
+      "path": "tools/swarm_bench.py"
+    },
+    {
+      "module": "reward_model",
+      "imported_by_count": 1,
+      "imported_by": [
+        "learning_kernel"
+      ],
+      "path": "tools/reward_model.py"
+    }
+  ],
+  "cold_nodes": []
+}

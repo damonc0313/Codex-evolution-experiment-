@@ -1,0 +1,39 @@
+{
+  "baseline": {
+    "integration_depth": 0.10190356957762663,
+    "reuse_ratio": 0.0,
+    "hot_nodes": 0,
+    "total_modules": 0,
+    "health_classification": "weak",
+    "timestamp": "2025-11-06T04:08:09.966923Z"
+  },
+  "final": {
+    "integration_depth": 0.10190356957762663,
+    "reuse_ratio": 0.0,
+    "hot_nodes": 0,
+    "total_modules": 0,
+    "health_classification": "weak",
+    "timestamp": "2025-11-06T04:08:10.642912Z",
+    "cycle": 10
+  },
+  "checkpoints": [
+    {
+      "integration_depth": 0.10190356957762663,
+      "reuse_ratio": 0.0,
+      "hot_nodes": 0,
+      "total_modules": 0,
+      "health_classification": "weak",
+      "timestamp": "2025-11-06T04:08:10.367267Z",
+      "cycle": 10
+    }
+  ],
+  "homeostatic_adjustments": [],
+  "predictions_validated": {
+    "integration_depth": false,
+    "reuse_ratio": false,
+    "hot_nodes": false,
+    "homeostasis_active": false
+  },
+  "overall_validation": "PARTIAL",
+  "timestamp": "2025-11-06T04:08:10.643178Z"
+}

@@ -23,10 +23,11 @@ import asyncio
 import time
 from typing import Dict, Callable, Any, Optional, List
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 from pathlib import Path
 import math
+import yaml
 
 
 @dataclass
@@ -104,6 +105,69 @@ class ArtifactBus:
         except Exception as e:
             print(f"Warning: Could not load pheromone trails: {e}")
 
+    def _load_temporal_params(self) -> Dict[str, Any]:
+        """Load temporal curvature parameters from active policy.
+
+        Returns:
+            Dict containing temporal_curvature section from policy, or empty dict
+        """
+        try:
+            policy_path = Path("runtime/loop_policy.yaml")
+            if policy_path.exists():
+                policy = yaml.safe_load(policy_path.read_text())
+                return policy.get('temporal_curvature', {})
+        except Exception:
+            pass
+        return {}
+
+    def _calculate_artifact_age(self, artifact: Dict[str, Any]) -> float:
+        """Calculate age of artifact in days.
+
+        Args:
+            artifact: Artifact dict with optional 'timestamp' field
+
+        Returns:
+            Age in days (float)
+        """
+        if 'timestamp' in artifact:
+            ts_str = artifact['timestamp']
+            if isinstance(ts_str, str):
+                # Handle ISO format with 'Z' or '+00:00' timezone
+                ts_str = ts_str.replace('Z', '+00:00')
+                ts = datetime.fromisoformat(ts_str)
+                if ts.tzinfo is None:
+                    ts = ts.replace(tzinfo=timezone.utc)
+                age_seconds = (datetime.now(timezone.utc) - ts).total_seconds()
+            else:
+                # Assume timestamp is already a Unix timestamp
+                age_seconds = time.time() - ts_str
+        else:
+            # No timestamp, assume current (age = 0)
+            age_seconds = 0.0
+
+        return age_seconds / 86400.0  # Convert to days
+
+    def _get_age_multiplier(self, age_days: float, temporal_params: Dict[str, Any]) -> float:
+        """Get weight multiplier based on age bracket.
+
+        Args:
+            age_days: Age of artifact in days
+            temporal_params: Temporal curvature parameters from policy
+
+        Returns:
+            Multiplier (float, typically 0.1-2.0)
+        """
+        multipliers = temporal_params.get('age_weight_multipliers', {})
+
+        if age_days <= 3:
+            return multipliers.get('0_to_3_days', 1.0)
+        elif age_days <= 10:
+            return multipliers.get('3_to_10_days', 1.0)
+        elif age_days <= 30:
+            return multipliers.get('10_to_30_days', 1.0)
+        else:
+            return multipliers.get('30_plus_days', 1.0)
+
     def _save_trails(self):
         """Persist pheromone trails to disk."""
         try:
@@ -152,19 +216,46 @@ class ArtifactBus:
         """
         artifact_type = artifact.get('artifact_type', 'unknown')
 
+        # Phase Ω-3: Apply temporal curvature weighting to urgency
+        temporal_params = self._load_temporal_params()
+        final_urgency = urgency
+
+        if temporal_params.get('temporal_decay_enabled', False):
+            # Calculate artifact age
+            age_days = self._calculate_artifact_age(artifact)
+
+            # Check attention window (filter old artifacts)
+            attention_window = temporal_params.get('attention_window_days', 365)
+            if age_days > attention_window:
+                # Artifact too old, drastically reduce urgency
+                final_urgency = urgency * 0.01
+            else:
+                # Apply temporal decay: w(t) = e^(-λt)
+                decay_rate = temporal_params.get('temporal_decay_rate', 0.0)
+                decay_weight = math.exp(-decay_rate * age_days)
+
+                # Apply age bracket multiplier
+                age_multiplier = self._get_age_multiplier(age_days, temporal_params)
+
+                # Combined temporal weighting
+                final_urgency = urgency * decay_weight * age_multiplier
+
+                # Clamp to valid range [0.0, 1.0]
+                final_urgency = max(0.0, min(1.0, final_urgency))
+
         # Update pheromone trail
         if artifact_type not in self.pheromone_trails:
             self.pheromone_trails[artifact_type] = PheromoneTrail(artifact_type)
 
         trail = self.pheromone_trails[artifact_type]
         trail.decay(time.time(), self.PHEROMONE_DECAY_RATE)
-        trail.reinforce(urgency)
+        trail.reinforce(final_urgency)  # Use temporal-weighted urgency
 
         # Create event
         event = ArtifactEvent(
             artifact=artifact,
             artifact_type=artifact_type,
-            urgency=urgency
+            urgency=final_urgency  # Use temporal-weighted urgency
         )
 
         # Add to priority queue

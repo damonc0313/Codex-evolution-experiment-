@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-11-06T02:16:32.984133+00:00",
+  "baseline": {
+    "window": "baseline",
+    "lambda": 0.012679005294504615,
+    "half_life_days": 54.66889274510926,
+    "r_squared": 0.09101974284048897,
+    "n_artifacts": 170,
+    "age_range": [
+      0.5408999511689815,
+      14.080134070046295
+    ],
+    "spawn_range": [
+      1,
+      3
+    ]
+  },
+  "intervention": {
+    "window": "intervention",
+    "lambda": 0.09908868357414831,
+    "half_life_days": 6.995220398111975,
+    "r_squared": 0.7390030093907518,
+    "n_artifacts": 25,
+    "age_range": [
+      0.0924392015625,
+      5.5613077975694445
+    ],
+    "spawn_range": [
+      15,
+      29
+    ]
+  },
+  "comparison": {
+    "delta_lambda": 0.08640967827964369,
+    "percent_change": 681.5178026394209,
+    "target_lambda": 0.08,
+    "convergence_percent": 71.64527402238441,
+    "outcome": "UNCERTAIN",
+    "interpretation": "Poor fit quality (R\u00b2 < 0.3) limits conclusions"
+  },
+  "experiment": {
+    "phase": "omega1_step_b",
+    "intervention": "steep_curvature",
+    "configured_lambda": 0.08,
+    "hypothesis": "\u03bb should increase from baseline toward configured value"
+  }
+}

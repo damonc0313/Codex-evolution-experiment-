@@ -29,6 +29,15 @@ from typing import Dict, Any, List, Optional
 from datetime import datetime
 import json
 from collections import deque
+import sys
+
+# Import bus manager for homeostatic feedback
+sys.path.insert(0, str(Path(__file__).parent.parent / "mycelial-core"))
+try:
+    from bus_manager import bus
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 class PolicyUpdater:
@@ -50,7 +59,8 @@ class PolicyUpdater:
         self,
         policy_path: Path,
         update_history_path: Path = None,
-        learning_rate: float = None
+        learning_rate: float = None,
+        enable_homeostasis: bool = True
     ):
         """Initialize policy updater.
 
@@ -58,10 +68,12 @@ class PolicyUpdater:
             policy_path: Path to runtime/loop_policy.yaml
             update_history_path: Where to log all policy updates
             learning_rate: Override default learning rate
+            enable_homeostasis: Enable metabolic feedback control
         """
         self.policy_path = policy_path
         self.update_history_path = update_history_path or Path("policy_update_history.json")
         self.learning_rate = learning_rate or self.LEARNING_RATE
+        self.base_learning_rate = self.learning_rate  # Store baseline for homeostatic adjustments
 
         # Track update history for momentum
         self.update_history: deque = deque(maxlen=20)
@@ -69,6 +81,24 @@ class PolicyUpdater:
 
         # Momentum accumulator
         self.momentum_accumulator: Dict[str, float] = {}
+
+        # Homeostatic control state
+        self.homeostasis_enabled = enable_homeostasis and BUS_AVAILABLE
+        self.metabolic_state = {
+            'lambda': 0.060,      # Current λ (memory redshift)
+            'entropy': 0.128,     # Current entropy
+            'k_cog': 0.00377,     # Cognitive capacity constant
+            'state': 'transition' # System state
+        }
+        self.homeostatic_adjustments = {
+            'learning_rate_multiplier': 1.0,
+            'momentum_multiplier': 1.0,
+            'last_adjustment': None
+        }
+
+        # Subscribe to metabolic readings if bus available
+        if self.homeostasis_enabled:
+            self._subscribe_to_metabolic_bus()
 
     def _load_history(self):
         """Load update history from disk."""
@@ -106,6 +136,129 @@ class PolicyUpdater:
                 }, f, indent=2)
         except Exception as e:
             print(f"Warning: Could not save update history: {e}")
+
+    def _subscribe_to_metabolic_bus(self):
+        """Subscribe to metabolic reading events from artifact bus.
+
+        This enables homeostatic control - metabolic vital signs
+        modulate learning parameters for self-regulation.
+        """
+        if not BUS_AVAILABLE:
+            return
+
+        try:
+            # Subscribe to metabolic readings
+            bus.subscribe('metabolic_reading', self._on_metabolic_reading)
+            print("[HOMEOSTASIS] Policy updater subscribed to metabolic readings")
+        except Exception as e:
+            print(f"[HOMEOSTASIS] Warning: Could not subscribe to bus: {e}")
+            self.homeostasis_enabled = False
+
+    def _on_metabolic_reading(self, vital_signs: Dict[str, Any]):
+        """Handle incoming metabolic reading from bus.
+
+        Implements homeostatic control rules:
+        - λ too high (>0.08) → Slow learning (system changing too fast)
+        - λ too low (<0.04) → Speed learning (system too stable)
+        - Entropy too low (<0.10) → Increase exploration (converging too much)
+        - Entropy too high (>0.20) → Decrease exploration (too chaotic)
+
+        Args:
+            vital_signs: Metabolic reading event data
+        """
+        # Update metabolic state
+        self.metabolic_state['lambda'] = vital_signs.get('lambda', self.metabolic_state['lambda'])
+        self.metabolic_state['entropy'] = vital_signs.get('entropy', self.metabolic_state['entropy'])
+        self.metabolic_state['k_cog'] = vital_signs.get('k_cog', self.metabolic_state['k_cog'])
+        self.metabolic_state['state'] = vital_signs.get('state', self.metabolic_state['state'])
+
+        # Apply homeostatic control
+        self._apply_homeostatic_control()
+
+    def _apply_homeostatic_control(self):
+        """Adjust learning parameters based on current metabolic state.
+
+        HOMEOSTATIC CONTROL RULES:
+
+        λ (Memory Redshift) Control:
+        - λ > 0.08: System changing too rapidly → Reduce learning rate
+        - λ < 0.04: System too stable → Increase learning rate
+        - Target: λ ≈ 0.06 (balanced exploration/exploitation)
+
+        Entropy Control:
+        - entropy < 0.10: Over-converged → Increase momentum (explore more)
+        - entropy > 0.20: Too chaotic → Decrease momentum (consolidate)
+        - Target: entropy ≈ 0.12-0.15 (edge of chaos)
+
+        This creates thermodynamic self-regulation: metabolism governs learning.
+        """
+        λ = self.metabolic_state['lambda']
+        entropy = self.metabolic_state['entropy']
+
+        # Initialize multipliers
+        lr_mult = 1.0
+        momentum_mult = 1.0
+
+        # λ-based learning rate control
+        if λ > 0.08:
+            # Too fast: reduce learning rate to slow adaptation
+            lr_mult = 0.75
+            reason = f"λ={λ:.4f} > 0.08 (too fast)"
+        elif λ < 0.04:
+            # Too slow: increase learning rate to speed adaptation
+            lr_mult = 1.30
+            reason = f"λ={λ:.4f} < 0.04 (too slow)"
+        else:
+            # Optimal range: maintain baseline
+            lr_mult = 1.0
+            reason = f"λ={λ:.4f} (optimal)"
+
+        # Entropy-based momentum control
+        if entropy < 0.10:
+            # Over-converged: increase momentum to explore more
+            momentum_mult = 1.40
+            entropy_reason = f"entropy={entropy:.4f} < 0.10 (over-converged)"
+        elif entropy > 0.20:
+            # Too chaotic: decrease momentum to consolidate
+            momentum_mult = 0.70
+            entropy_reason = f"entropy={entropy:.4f} > 0.20 (too chaotic)"
+        else:
+            # Optimal range: maintain baseline
+            momentum_mult = 1.0
+            entropy_reason = f"entropy={entropy:.4f} (optimal)"
+
+        # Apply adjustments
+        old_lr_mult = self.homeostatic_adjustments['learning_rate_multiplier']
+        old_momentum_mult = self.homeostatic_adjustments['momentum_multiplier']
+
+        self.homeostatic_adjustments['learning_rate_multiplier'] = lr_mult
+        self.homeostatic_adjustments['momentum_multiplier'] = momentum_mult
+        self.homeostatic_adjustments['last_adjustment'] = datetime.utcnow().isoformat() + 'Z'
+
+        # Update effective learning rate
+        self.learning_rate = self.base_learning_rate * lr_mult
+
+        # Log homeostatic adjustment if changed
+        if lr_mult != old_lr_mult or momentum_mult != old_momentum_mult:
+            print(f"[HOMEOSTASIS] Adjustment applied:")
+            print(f"  {reason}")
+            print(f"  {entropy_reason}")
+            print(f"  Learning rate: {self.base_learning_rate:.4f} × {lr_mult:.2f} = {self.learning_rate:.4f}")
+            print(f"  Momentum: {self.MOMENTUM:.4f} × {momentum_mult:.2f} = {self.MOMENTUM * momentum_mult:.4f}")
+
+    def get_homeostatic_state(self) -> Dict[str, Any]:
+        """Get current homeostatic control state.
+
+        Returns:
+            Dict with metabolic state and adjustments
+        """
+        return {
+            'enabled': self.homeostasis_enabled,
+            'metabolic_state': self.metabolic_state.copy(),
+            'adjustments': self.homeostatic_adjustments.copy(),
+            'effective_learning_rate': self.learning_rate,
+            'effective_momentum': self.MOMENTUM * self.homeostatic_adjustments['momentum_multiplier']
+        }
 
     def load_policy(self) -> Dict[str, Any]:
         """Load current policy from YAML.
@@ -213,14 +366,17 @@ class PolicyUpdater:
                 'confidence_threshold': 0.0
             }
 
+        # Get effective momentum (base × homeostatic multiplier)
+        effective_momentum = self.MOMENTUM * self.homeostatic_adjustments.get('momentum_multiplier', 1.0)
+
         # Update appropriate weight
         updates_applied = {}
 
         if is_building:
             # Update building weight
             self.momentum_accumulator['building'] = (
-                self.MOMENTUM * self.momentum_accumulator['building'] +
-                (1 - self.MOMENTUM) * gradient
+                effective_momentum * self.momentum_accumulator['building'] +
+                (1 - effective_momentum) * gradient
             )
             delta = self.learning_rate * self.momentum_accumulator['building']
             new_building = building_weight + delta
@@ -241,8 +397,8 @@ class PolicyUpdater:
         elif is_analysis:
             # Update analysis weight
             self.momentum_accumulator['analysis'] = (
-                self.MOMENTUM * self.momentum_accumulator['analysis'] +
-                (1 - self.MOMENTUM) * gradient
+                effective_momentum * self.momentum_accumulator['analysis'] +
+                (1 - effective_momentum) * gradient
             )
             delta = self.learning_rate * self.momentum_accumulator['analysis']
             new_analysis = analysis_weight + delta
@@ -265,8 +421,8 @@ class PolicyUpdater:
             # Positive advantage → increase building, negative → increase analysis
             if advantage > 0:
                 self.momentum_accumulator['building'] = (
-                    self.MOMENTUM * self.momentum_accumulator['building'] +
-                    (1 - self.MOMENTUM) * gradient
+                    effective_momentum * self.momentum_accumulator['building'] +
+                    (1 - effective_momentum) * gradient
                 )
                 delta = self.learning_rate * self.momentum_accumulator['building']
                 new_building = building_weight + delta
@@ -288,8 +444,8 @@ class PolicyUpdater:
         # Low rewards → need lower threshold
         threshold_gradient = (reward - 0.70) * 0.01  # Small adjustments
         self.momentum_accumulator['confidence_threshold'] = (
-            self.MOMENTUM * self.momentum_accumulator['confidence_threshold'] +
-            (1 - self.MOMENTUM) * threshold_gradient
+            effective_momentum * self.momentum_accumulator['confidence_threshold'] +
+            (1 - effective_momentum) * threshold_gradient
         )
         threshold_delta = self.learning_rate * self.momentum_accumulator['confidence_threshold']
         new_threshold = confidence_threshold + threshold_delta

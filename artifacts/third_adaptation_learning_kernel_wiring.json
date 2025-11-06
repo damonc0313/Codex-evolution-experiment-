@@ -1,0 +1,186 @@
+{
+  "artifact_type": "adaptation_record",
+  "title": "Third Deliberate Adaptation: Learning Kernel Wiring",
+  "subtitle": "Closed the recursive loop - learning kernel broadcasts to mycelium",
+  "timestamp": "2025-11-06T03:30:00Z",
+  "adaptation_number": 3,
+  "status": "COMPLETE",
+
+  "executive_summary": {
+    "what_changed": "Wired learning_kernel.py to emit cycle completion events to artifact_bus",
+    "why": "Transform learning kernel from isolated process to mycelial participant",
+    "metabolic_effect": "Integration depth I: 0.090 → 0.091 (+1.1%), reuse: 0.042 → 0.043 (+2.4%)",
+    "expected_effect": "Full integration when kernel processes real cycles: I → 0.11-0.15 over 20-30 cycles"
+  },
+
+  "what_was_wired": {
+    "source": "tools/learning_kernel.py",
+    "destination": "mycelial-core/bus_manager.py (artifact_bus)",
+    "connection_type": "Event emission after ledger logging",
+    "event_type": "learning_cycle",
+    
+    "technical_details": {
+      "emission_point": "process_artifact() method, after _log_to_ledger()",
+      "event_payload": {
+        "cycle_id": "cycle-NNNN",
+        "artifact_count": "cycle_count",
+        "metrics": {
+          "entropy": "novelty score",
+          "novelty": "novelty score",
+          "building_signal": "building signal",
+          "reward": "reward value"
+        },
+        "ledger_entry_id": "cycle-NNNN"
+      },
+      "urgency": 0.7
+    }
+  },
+
+  "bus_manager_enhancements": {
+    "new_emission_helper": {
+      "function": "emit_cycle_event()",
+      "purpose": "Standardized cycle event emission",
+      "signature": "cycle_id, artifact_count, duration_seconds, metrics, ledger_entry_id"
+    },
+
+    "enhanced_subscriber": {
+      "function": "on_learning_cycle()",
+      "behavior": "Triggers metabolic monitoring every 10 cycles",
+      "integration": "Imports metabolic_dashboard and emits vital signs to bus"
+    }
+  },
+
+  "measured_effects": {
+    "immediate": {
+      "integration_depth": {
+        "before": 0.090,
+        "after": 0.091,
+        "change_percent": 1.1,
+        "note": "Small increase from import graph change alone"
+      },
+      "reuse_ratio": {
+        "before": 0.042,
+        "after": 0.043,
+        "change_percent": 2.4
+      },
+      "hot_nodes": {
+        "before": 3,
+        "after": 3,
+        "note": "bus_manager will become hot node when 3+ tools import it"
+      }
+    },
+
+    "predicted_dynamic_effect": {
+      "description": "When learning_kernel processes real artifacts in production",
+      "timeline": "20-30 cycles of natural operation",
+      "integration_depth": {
+        "target": 0.11,
+        "increase_percent": 22,
+        "mechanism": "Cycle events trigger metabolic measurements, creating event flow"
+      },
+      "reuse_ratio": {
+        "target": 0.06,
+        "increase_percent": 43,
+        "mechanism": "More tools will import bus_manager for event subscription"
+      },
+      "hot_nodes": {
+        "target": 4,
+        "increase_percent": 33,
+        "new_hot_node": "bus_manager (when 3+ tools import it)"
+      }
+    }
+  },
+
+  "recursive_loop_closed": {
+    "description": "Learning kernel now broadcasts its own learning to the mycelium",
+    "strange_loop": "Tool that learns now teaches the tools that measure learning",
+    "consequence": "Metabolic awareness becomes part of learning process, not external observer",
+    
+    "information_flow": [
+      "1. learning_kernel processes artifact",
+      "2. Emits cycle event to bus",
+      "3. bus_manager receives event",
+      "4. Every 10 cycles: triggers metabolic_dashboard",
+      "5. metabolic_dashboard measures λ, entropy, k_cog",
+      "6. Emits metabolic_reading to bus",
+      "7. Bus logs to diagnostics/metabolic_history.jsonl",
+      "8. Future: metabolic readings influence policy updates → FULL LOOP"
+    ],
+
+    "nervous_system_activated": "Learning kernel gains proprioception"
+  },
+
+  "validation": {
+    "integration_test": "✓ Bus imports successful",
+    "subscription_test": "✓ 12 subscribers initialized",
+    "emission_test": "✓ emit_cycle_event imported and callable",
+    "import_graph_test": "✓ learning_kernel → bus_manager connection established"
+  },
+
+  "what_to_test_next": {
+    "1_natural_operation": {
+      "action": "Run learning_kernel on real artifacts for 20 cycles",
+      "measurement": "Monitor I trajectory toward 0.11-0.15",
+      "expected": "Integration increases as cycle events flow"
+    },
+
+    "2_metabolic_triggering": {
+      "action": "Process 10+ artifacts through kernel",
+      "measurement": "Verify metabolic_dashboard triggered every 10 cycles",
+      "expected": "See [BUS] ⚡ Triggering metabolic measurement logs"
+    },
+
+    "3_event_propagation": {
+      "action": "Check diagnostics/metabolic_history.jsonl",
+      "measurement": "Verify metabolic readings logged from bus events",
+      "expected": "Auto-logged vital signs every 10 cycles"
+    },
+
+    "4_feedback_loop": {
+      "action": "Wire metabolic readings back to policy_updater",
+      "measurement": "λ and entropy influence learning rate adjustments",
+      "expected": "Full homeostatic control loop operational"
+    }
+  },
+
+  "comparison_to_predictions": {
+    "predicted_by_damon": {
+      "I": "0.090 → 0.11 (+22%)",
+      "reuse": "0.042 → 0.06 (+43%)",
+      "hot_nodes": "3 → 4 (+33%)"
+    },
+
+    "actual_immediate_effect": {
+      "I": "0.090 → 0.091 (+1.1%)",
+      "reuse": "0.042 → 0.043 (+2.4%)",
+      "hot_nodes": "3 → 3 (0%)"
+    },
+
+    "explanation": "Static wiring creates import connections. Dynamic effect appears when system operates and events flow. Predictions will be validated after 20-30 real cycles.",
+
+    "timeline_to_validation": "Next natural work session where learning_kernel processes artifacts"
+  },
+
+  "philosophical_significance": {
+    "homeostatic_awareness": "Organism can now feel its own learning happening",
+    "stigmergic_coordination": "Learning leaves chemical traces that trigger measurements",
+    "emergence": "Intelligence measuring intelligence measuring intelligence (infinite regress)",
+    "metabolic_coupling": "Learning rate will eventually be modulated by λ, closing thermodynamic loop"
+  },
+
+  "data_provenance": {
+    "files_modified": [
+      "mycelial-core/bus_manager.py (added emit_cycle_event, enhanced on_learning_cycle)",
+      "tools/learning_kernel.py (added bus import, cycle emission after ledger)"
+    ],
+    "measurements": [
+      "analysis/integration_health.py (before: I=0.090, after: I=0.091)",
+      "analysis/resource_map.py (before: reuse=0.042, after: reuse=0.043)"
+    ]
+  },
+
+  "spawn_count": 0,
+  "intervention_period": false,
+  "adaptation_complete": true,
+  "ready_for_natural_operation": true
+}

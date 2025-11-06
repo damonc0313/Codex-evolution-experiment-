@@ -25,6 +25,7 @@ from collections import Counter
 import math
 from pathlib import Path
 import json
+import yaml
 
 
 class NutrientGradient:
@@ -61,6 +62,21 @@ class NutrientGradient:
         except Exception as e:
             print(f"Warning: Could not load nutrient gradient: {e}")
 
+    def _load_temporal_params(self) -> Dict[str, Any]:
+        """Load temporal curvature parameters from active policy.
+
+        Returns:
+            Dict containing temporal_curvature section from policy, or empty dict
+        """
+        try:
+            policy_path = Path("runtime/loop_policy.yaml")
+            if policy_path.exists():
+                policy = yaml.safe_load(policy_path.read_text())
+                return policy.get('temporal_curvature', {})
+        except Exception:
+            pass
+        return {}
+
     def _save_gradient(self):
         """Persist gradient state."""
         try:
@@ -78,14 +94,30 @@ class NutrientGradient:
             print(f"Warning: Could not save nutrient gradient: {e}")
 
     def _decay_density(self, artifact_type: str, current_time: float):
-        """Apply exponential decay to density measurement."""
+        """Apply exponential decay to density measurement.
+
+        Phase Ω-3: Uses configured decay rate if temporal curvature enabled.
+        """
         if artifact_type not in self.measurement_times:
             return
 
         last_time = self.measurement_times[artifact_type]
         hours_elapsed = (current_time - last_time) / 3600.0
 
-        decay_factor = self.DECAY_RATE ** hours_elapsed
+        # Phase Ω-3: Check for configured temporal decay rate
+        temporal_params = self._load_temporal_params()
+        if temporal_params.get('temporal_decay_enabled', False):
+            # Convert day⁻¹ decay rate to hour⁻¹ for consistency
+            # λ_day = 0.08 day⁻¹ → λ_hour = 0.08/24 hour⁻¹
+            day_decay_rate = temporal_params.get('temporal_decay_rate', 0.0)
+            hour_decay_rate = day_decay_rate / 24.0
+
+            # Apply exponential decay: density *= e^(-λt)
+            decay_factor = math.exp(-hour_decay_rate * hours_elapsed)
+        else:
+            # Default behavior: 0.95 per hour
+            decay_factor = self.DECAY_RATE ** hours_elapsed
+
         self.density_map[artifact_type] *= decay_factor
 
     def measure(self, artifact: Dict[str, Any]):

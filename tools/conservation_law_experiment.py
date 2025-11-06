@@ -14,6 +14,7 @@ and vice versa. The product defines the "metabolic efficiency of thought".
 
 from __future__ import annotations
 
+import asyncio
 import json
 import math
 import sys
@@ -34,6 +35,14 @@ ARTIFACTS_DIR = ROOT / "artifacts"
 EXPERIMENTS_DIR = ROOT / "experiments"
 PHYSICS_DIR = ROOT / "physics"
 PHYSICS_DIR.mkdir(exist_ok=True)
+
+# Mycelial bus integration
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_experiment_result
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def mean(values: List[float]) -> float:
@@ -398,6 +407,18 @@ class ConservationLawExperiment:
         print(f"Results saved: {results_path}")
         print("="*70)
         print()
+
+        # Emit to mycelial bus
+        if BUS_AVAILABLE:
+            try:
+                asyncio.run(emit_experiment_result(
+                    experiment_type="conservation_law",
+                    conclusion=results["conclusion"],
+                    analysis=analysis
+                ))
+                print("[BUS] Experiment result emitted to mycelial network")
+            except Exception as e:
+                print(f"[BUS] Warning: Could not emit to bus: {e}")
 
         return results
 

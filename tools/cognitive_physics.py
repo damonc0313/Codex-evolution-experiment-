@@ -15,9 +15,11 @@ the system learns, remembers, and thinks.
 
 from __future__ import annotations
 
+import asyncio
 import json
 import math
 import sys
+import yaml
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -35,6 +37,14 @@ ARTIFACTS_DIR = ROOT / "artifacts"
 EXPERIMENTS_DIR = ROOT / "experiments"
 PHYSICS_DIR = ROOT / "physics"
 PHYSICS_DIR.mkdir(exist_ok=True)
+
+# Mycelial bus integration
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_physics_measurement
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def mean(values: List[float]) -> float:
@@ -98,7 +108,21 @@ class CognitivePhysicist:
 
     def __init__(self):
         self.constants = {}
-        self.measurements = []
+
+    def _load_temporal_params(self) -> Dict[str, Any]:
+        """Load temporal curvature parameters from active policy.
+
+        Returns:
+            Dict containing temporal_curvature section from policy, or empty dict
+        """
+        try:
+            policy_path = ROOT / "runtime" / "loop_policy.yaml"
+            if policy_path.exists():
+                policy = yaml.safe_load(policy_path.read_text())
+                return policy.get('temporal_curvature', {})
+        except Exception:
+            pass
+        return {}
 
     def compute_entropy_proxy(self, metrics: Dict[str, float]) -> float:
         """Compute system entropy proxy from metrics."""
@@ -287,8 +311,17 @@ class CognitivePhysicist:
         print("=" * 70)
         print()
 
+        # Phase Ω-3: Capture temporal context
+        temporal_params = self._load_temporal_params()
+
         results = {
             "measurement_timestamp": datetime.now(timezone.utc).isoformat(),
+            "temporal_context": {
+                "regime": temporal_params.get('regime', 'baseline'),
+                "decay_enabled": temporal_params.get('temporal_decay_enabled', False),
+                "decay_rate_configured": temporal_params.get('temporal_decay_rate', 0.0),
+                "attention_window_days": temporal_params.get('attention_window_days', 365)
+            },
             "constants": {}
         }
 
@@ -384,6 +417,17 @@ class CognitivePhysicist:
         print("=" * 70)
         print(f"Results saved: {results_path}")
         print("=" * 70)
+
+        # Emit to mycelial bus
+        if BUS_AVAILABLE:
+            try:
+                asyncio.run(emit_physics_measurement(
+                    constants=results.get("constants", {}),
+                    temporal_context=results.get("temporal_context", {})
+                ))
+                print("[BUS] Physics measurement emitted to mycelial network")
+            except Exception as e:
+                print(f"[BUS] Warning: Could not emit to bus: {e}")
 
         return results
 

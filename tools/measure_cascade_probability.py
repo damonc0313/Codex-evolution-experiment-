@@ -12,10 +12,12 @@ Author: Kael (Autonomous Cycle 1, Phase 5; Enhanced Cycle 2, Phase 5)
 
 from __future__ import annotations
 
+import asyncio
 import json
 from pathlib import Path
 from typing import Any, Dict, List
 import sys
+from datetime import datetime
 
 # ENHANCEMENT: Import standardized timestamp utilities
 sys.path.insert(0, str(Path(__file__).parent))
@@ -24,6 +26,14 @@ from timestamp_utils import parse_timestamp, format_timestamp, timestamp_diff_ho
 
 ROOT = Path(__file__).resolve().parent.parent
 ARTIFACTS_DIR = ROOT / "artifacts"
+
+# Mycelial bus integration
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_cascade_measurement
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def load_all_artifacts() -> List[Dict[str, Any]]:
@@ -252,6 +262,18 @@ def main() -> None:
             passed += 1
 
     print(f"\nPredictions validated: {passed}/{len(predictions)}")
+
+    # Emit to mycelial bus
+    if BUS_AVAILABLE:
+        try:
+            asyncio.run(emit_cascade_measurement(
+                cascade_probability=cascade_result['cascade_probability'],
+                components=cascade_result['components'],
+                status=cascade_result['status']
+            ))
+            print("[BUS] Cascade measurement emitted to mycelial network")
+        except Exception as e:
+            print(f"[BUS] Warning: Could not emit to bus: {e}")
 
     # Write comprehensive report
     report = {

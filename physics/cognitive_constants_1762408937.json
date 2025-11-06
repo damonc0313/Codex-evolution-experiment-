@@ -1,0 +1,24 @@
+{
+  "measurement_timestamp": "2025-11-06T06:02:17.250791+00:00",
+  "temporal_context": {
+    "regime": "steep_curvature",
+    "decay_enabled": true,
+    "decay_rate_configured": 0.08,
+    "attention_window_days": 10
+  },
+  "constants": {
+    "lambda": {
+      "lambda": 0.08043562976804139,
+      "half_life_days": 8.617414727264881,
+      "r_squared": -3.831283592892321,
+      "n_artifacts": 145
+    },
+    "delta_H_critical": {
+      "H_current": 3.335,
+      "H_target": 0.3,
+      "H_barrier": 3.035,
+      "delta_H_recommended": 4.5525,
+      "interpretation": "Inject novelty with \u0394H > 4.553 to escape metastable state"
+    }
+  }
+}

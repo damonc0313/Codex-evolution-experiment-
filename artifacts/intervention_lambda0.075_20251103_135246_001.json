@@ -1,0 +1,16 @@
+{
+  "artifact_type": "tool_implementation",
+  "title": "Intervention tool_implementation 1",
+  "timestamp": "2025-11-03T13:52:46.387795+00:00",
+  "spawn_count": 21,
+  "confidence": 0.7500280823898453,
+  "intervention_period": true,
+  "intervention_regime": "steep_curvature",
+  "observation": "Generated with target \u03bb=0.075",
+  "metadata": {
+    "age_days_at_creation": 2.5162872415717508,
+    "target_lambda": 0.075,
+    "expected_spawn": 20.70042604099948,
+    "intervention_experiment": "phase_omega1_step_b"
+  }
+}

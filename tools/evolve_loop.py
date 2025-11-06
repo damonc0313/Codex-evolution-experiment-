@@ -19,6 +19,13 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "mycelial-core"))
 from artifact_bus import ArtifactBus
 from homeostatic_regulator import HomeostaticRegulator
 
+# Import emission helpers
+try:
+    from bus_manager import emit_evolution_cycle
+    BUS_EMIT_AVAILABLE = True
+except ImportError:
+    BUS_EMIT_AVAILABLE = False
+
 # Initialize infrastructure
 bus = ArtifactBus()
 regulator = HomeostaticRegulator()
@@ -60,6 +67,18 @@ def run_cycle() -> None:
 
     # Run cycle with policy adjustments
     subprocess.run([sys.executable, "tools/run_omega_cycle.py"], check=False)
+
+    # Emit to mycelial bus
+    if BUS_EMIT_AVAILABLE:
+        try:
+            cycle_count = int(time.time() / 3600)  # Approximate cycle count
+            asyncio.run(emit_evolution_cycle(
+                cycle_count=cycle_count,
+                metrics=metrics
+            ))
+        except Exception as e:
+            print(f"[BUS] Warning: Could not emit to bus: {e}")
+
     print("✅ Cycle complete.\n")
 
     if MENTOR_FILE.exists():

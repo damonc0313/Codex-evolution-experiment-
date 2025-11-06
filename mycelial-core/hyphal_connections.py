@@ -27,6 +27,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 import json
 from pathlib import Path
+import yaml
 
 
 @dataclass
@@ -151,6 +152,21 @@ class HyphalNetwork:
         except Exception as e:
             print(f"Warning: Could not load hyphal network: {e}")
 
+    def _load_temporal_params(self) -> Dict[str, Any]:
+        """Load temporal curvature parameters from active policy.
+
+        Returns:
+            Dict containing temporal_curvature section from policy, or empty dict
+        """
+        try:
+            policy_path = Path("runtime/loop_policy.yaml")
+            if policy_path.exists():
+                policy = yaml.safe_load(policy_path.read_text())
+                return policy.get('temporal_curvature', {})
+        except Exception:
+            pass
+        return {}
+
     def _save_network(self):
         """Persist network state."""
         try:
@@ -244,16 +260,34 @@ class HyphalNetwork:
     def get_highways(self, min_bandwidth: float = 5.0) -> List[HyphalConnection]:
         """Get high-throughput highway connections.
 
+        Phase Ω-3: Filters by temporal attention window if enabled.
+
         Args:
             min_bandwidth: Minimum bandwidth threshold
 
         Returns:
-            List of highway connections
+            List of highway connections (filtered by recency if temporal curvature active)
         """
-        return [
-            conn for conn in self.connections.values()
-            if conn.bandwidth >= min_bandwidth
-        ]
+        # Phase Ω-3: Load temporal parameters
+        temporal_params = self._load_temporal_params()
+        attention_window_days = temporal_params.get('attention_window_days', 365)
+        temporal_enabled = temporal_params.get('temporal_decay_enabled', False)
+
+        highways = []
+        current_time = time.time()
+
+        for conn in self.connections.values():
+            if conn.bandwidth >= min_bandwidth:
+                # Check temporal recency if enabled
+                if temporal_enabled:
+                    age_days = (current_time - conn.last_used) / 86400.0
+                    if age_days <= attention_window_days:
+                        highways.append(conn)
+                else:
+                    # Default behavior: no temporal filtering
+                    highways.append(conn)
+
+        return highways
 
     def get_statistics(self) -> Dict[str, Any]:
         """Get network statistics."""

@@ -1,0 +1,49 @@
+{
+  "experiment": "phase_omega3_covariant_cognition",
+  "regime": "steep_curvature",
+  "cycle": 0,
+  "timestamp": "2025-11-05T13:54:41.433752+00:00",
+  "temporal_parameters": {
+    "regime": "steep_curvature",
+    "description": "Strong recency bias\u2014recent artifacts dominate decision-making",
+    "attention_window_days": 10,
+    "temporal_decay_enabled": true,
+    "temporal_decay_rate": 0.08,
+    "age_weight_multipliers": {
+      "0_to_3_days": 2.0,
+      "3_to_10_days": 1.0,
+      "10_to_30_days": 0.3,
+      "30_plus_days": 0.1
+    },
+    "spawn_count_temporal_scaling": true,
+    "spawn_count_decay_rate": 0.06,
+    "spacetime_curvature": "high",
+    "cognitive_metric": "Steep temporal gradient\u2014present dominates",
+    "expected_lambda_eff": 0.07,
+    "expected_half_life_days": 10
+  },
+  "measurements": {
+    "measurement_timestamp": "2025-11-05T13:54:41.167223+00:00",
+    "temporal_context": {
+      "regime": "steep_curvature",
+      "decay_enabled": true,
+      "decay_rate_configured": 0.08,
+      "attention_window_days": 10
+    },
+    "constants": {
+      "lambda": {
+        "lambda": 0.03151228863157168,
+        "half_life_days": 21.99609138720225,
+        "r_squared": 0.5673366417158208,
+        "n_artifacts": 120
+      },
+      "delta_H_critical": {
+        "H_current": 0.804,
+        "H_target": 0.3,
+        "H_barrier": 0.504,
+        "delta_H_recommended": 0.756,
+        "interpretation": "Inject novelty with \u0394H > 0.756 to escape metastable state"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "artifact_type": "pipeline",
+  "title": "Intervention pipeline 5",
+  "timestamp": "2025-11-05T00:18:12.703854+00:00",
+  "spawn_count": 23,
+  "confidence": 0.7612271527080459,
+  "intervention_period": true,
+  "intervention_regime": "steep_curvature",
+  "observation": "Generated with target \u03bb=0.075",
+  "metadata": {
+    "age_days_at_creation": 1.0819548797784218,
+    "target_lambda": 0.075,
+    "expected_spawn": 23.051462325525893,
+    "intervention_experiment": "phase_omega1_step_b"
+  }
+}

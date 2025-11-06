@@ -13,6 +13,7 @@ local rehearsals.
 from __future__ import annotations
 
 import argparse
+import asyncio
 import datetime as dt
 import json
 import sys
@@ -30,6 +31,14 @@ from ledger_metrics import DEFAULT_NOS_WEIGHTS
 from nos_calibration import DEFAULT_WEIGHTS, calibrate_weights, prepare_samples
 from nos_data_sources import load_config, summarise_sources, extract_primitives
 from swarm_bench import run_swarm
+
+# Mycelial bus integration
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "mycelial-core"))
+try:
+    from bus_manager import emit_generic_event
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 # ---------------------------------------------------------------------------
 # Constants and helpers
@@ -494,6 +503,22 @@ def main(argv: List[str] | None = None) -> int:
             delta=summary.delta_nos,
         )
     )
+
+    # Emit to mycelial bus
+    if BUS_AVAILABLE:
+        try:
+            asyncio.run(emit_generic_event(
+                event_type='nos_cycle',
+                data={
+                    'run_id': summary.run_id,
+                    'delta_nos': summary.delta_nos,
+                    'gated': summary.gated
+                },
+                urgency=0.6
+            ))
+        except Exception as e:
+            print(f"[BUS] Warning: Could not emit to bus: {e}")
+
     return 0
 
 

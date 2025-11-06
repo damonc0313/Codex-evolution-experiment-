@@ -31,11 +31,18 @@ import json
 from pathlib import Path
 from typing import Dict, Any, Optional
 from datetime import datetime
+import yaml
+import sys
+import asyncio
 
 # Import learning components
 from artifact_metrics import ArtifactMetrics
 from reward_model import RewardModel
 from policy_updater import PolicyUpdater
+
+# Import bus manager for event emission
+sys.path.insert(0, str(Path(__file__).parent.parent / "mycelial-core"))
+from bus_manager import emit_cycle_event
 
 
 class LearningKernel:
@@ -84,6 +91,20 @@ class LearningKernel:
         # Learning statistics
         self.cycle_count = 0
         self.total_reward = 0.0
+
+    def _load_temporal_params(self) -> Dict[str, Any]:
+        """Load temporal curvature parameters from active policy.
+
+        Returns:
+            Dict containing temporal_curvature section from policy, or empty dict
+        """
+        try:
+            if self.policy_path.exists():
+                policy = yaml.safe_load(self.policy_path.read_text())
+                return policy.get('temporal_curvature', {})
+        except Exception:
+            pass
+        return {}
 
     def process_artifact(
         self,
@@ -135,8 +156,30 @@ class LearningKernel:
         # Step 4: Log to continuity ledger
         self._log_to_ledger(artifact_name, metrics, reward_info, policy_update)
 
+        # Step 4.5: Emit cycle event to artifact bus (mycelial integration)
+        try:
+            cycle_id = f"cycle-{self.cycle_count:04d}"
+            asyncio.run(emit_cycle_event(
+                cycle_id=cycle_id,
+                artifact_count=self.cycle_count,
+                duration_seconds=0.0,  # Could track this if needed
+                metrics={
+                    'entropy': metrics.get('novelty', 0.0),
+                    'novelty': metrics.get('novelty', 0.0),
+                    'building_signal': metrics.get('building_signal', 0.0),
+                    'reward': reward_info['reward']
+                },
+                ledger_entry_id=cycle_id
+            ))
+        except Exception as e:
+            # Bus emission is non-critical - don't fail cycle if bus unavailable
+            pass
+
         # Step 5: Update statistics
         self.total_reward += reward_info['reward']
+
+        # Phase Ω-3: Capture temporal context
+        temporal_params = self._load_temporal_params()
 
         # Compile diagnostics
         diagnostics = {
@@ -156,6 +199,12 @@ class LearningKernel:
                 'average_reward': self.total_reward / self.cycle_count,
                 'current_building_weight': policy_update['policy_after']['building_weight'],
                 'converged': policy_update['convergence_metrics']['converged']
+            },
+            'temporal_context': {
+                'regime': temporal_params.get('regime', 'baseline'),
+                'decay_enabled': temporal_params.get('temporal_decay_enabled', False),
+                'decay_rate': temporal_params.get('temporal_decay_rate', 0.0),
+                'attention_window_days': temporal_params.get('attention_window_days', 365)
             },
             'timestamp': datetime.utcnow().isoformat() + 'Z'
         }

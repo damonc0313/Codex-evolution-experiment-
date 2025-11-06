@@ -34,8 +34,31 @@ stop_on:
 - continuity_low
 - regressions_spike
 artifact_generation_weights:
-  building: 0.5259
-  analysis: 0.2805
-  hybrid: 0.1936
+  building: 0.5749
+  analysis: 0.2515
+  hybrid: 0.1736
 validation:
-  min_confidence_threshold: 0.7
+  min_confidence_threshold: 0.7013
+temporal_curvature:
+  regime: steep_curvature
+  description: "Strong recency bias\u2014recent artifacts dominate decision-making"
+  attention_window_days: 10
+  temporal_decay_enabled: true
+  temporal_decay_rate: 0.08
+  age_weight_multipliers:
+    0_to_3_days: 2.0
+    3_to_10_days: 1.0
+    10_to_30_days: 0.3
+    30_plus_days: 0.1
+  spawn_count_temporal_scaling: true
+  spawn_count_decay_rate: 0.06
+  spacetime_curvature: high
+  cognitive_metric: "Steep temporal gradient\u2014present dominates"
+  expected_lambda_eff: 0.07
+  expected_half_life_days: 10
+omega3_experiment:
+  phase: omega3_regime1
+  regime_name: steep_curvature
+  start_cycle: null
+  target_cycles: 20
+  description: Testing covariant cognition under high temporal curvature
