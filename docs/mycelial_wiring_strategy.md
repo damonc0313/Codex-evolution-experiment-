@@ -2,11 +2,13 @@
 
 ## Current State
 
-**Wired:** 3/87 modules (3.4%)
-**Unwired:** 84/87 modules (96.6%)
+**Wired:** 12/87 modules (13.8%)
+**Unwired:** 75/87 modules (86.2%)
 
-**Bottleneck identified:** Integration I = 0.102 (WEAK)
-**Root cause:** Modules isolated, low reuse (0.046), low hot nodes (4.8%)
+**Metrics:**
+- Integration I: 0.102 (WEAK, target 0.20+)
+- Reuse ratio: 0.059 (up from 0.046, +28%)
+- bus_manager imports: 12 modules (now primary hot node)
 
 ## Target State
 
@@ -16,12 +18,30 @@
 - Reuse ratio: 0.046 → 0.80+ (most modules share bus)
 - Hot nodes: 4 → 15-20 (bus_manager becomes central hub)
 
-## Modules Already Wired (3)
+## Modules Already Wired (12)
 
 ### Batch 1: Measurement Tools ✓
 - `analysis/metabolic_dashboard.py` - emits metabolic_reading
 - `analysis/resource_map.py` - emits resource_map
 - `analysis/integration_health.py` - emits integration_reading
+
+### Batch 2: Cognitive Physics Tools ✓
+- `tools/cognitive_physics.py` - emits physics_measurement
+- `tools/conservation_law_experiment.py` - emits experiment_result
+- `tools/dispersal_experiment.py` - emits dispersal_result
+- `tools/omega3_analyzer.py` - emits omega_analysis
+- `tools/omega3_tracker.py` - emits omega_tracking
+- `tools/measure_cascade_probability.py` - emits cascade_measurement
+
+### Batch 3: Evolution & Learning (partial) 🔄
+- `tools/evolve_loop.py` - emits evolution_cycle ✓
+- `tools/swarm_bench.py` - emits swarm_benchmark ✓
+- `tools/nos_pipeline.py` - emits nos_cycle ✓
+- `tools/framework_evolution_engine.py` - TODO
+- `tools/reflexive_experimenter.py` - TODO
+- `tools/autonomous_operations_framework.py` - TODO
+- `tools/enhanced_ledger_metrics.py` - TODO
+- `tools/enhanced_capability_detector.py` - TODO
 
 ### Batch 0: Core Learning (completed earlier)
 - `tools/learning_kernel.py` - emits learning_cycle
