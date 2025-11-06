@@ -1,0 +1,2 @@
+{"timestamp": "2025-11-06T02:59:26.581444+00:00", "type": "metabolic_reading", "data": {"artifact_type": "metabolic_reading", "timestamp": "2025-11-06T02:59:26.581444+00:00", "lambda": 0.06, "entropy": 0.128, "k_cog": 0.00377, "state": "transition"}}
+{"timestamp": "2025-11-06T02:59:26.585331+00:00", "type": "resource_map", "data": {"artifact_type": "resource_map", "timestamp": "2025-11-06T02:59:26.585331+00:00", "efficiency_index": 1.0, "reuse_ratio": 0.039, "hot_nodes": 3}}

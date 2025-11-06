@@ -1,17 +1,17 @@
 {
-  "timestamp": "2025-11-06T02:54:31.879601+00:00",
+  "timestamp": "2025-11-06T02:59:59.476539+00:00",
   "import_graph": {
     "confidence_scorer": {
       "path": "tools/confidence_scorer.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
+        "datetime",
+        "sys",
+        "pathlib",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672728804195368,
+      "modification_age_days": 0.5710644669140931,
       "size_bytes": 16344,
       "imported_by_count": 0,
       "imported_by": [],
@@ -20,21 +20,21 @@
     "autonomous_operations_framework": {
       "path": "tools/autonomous_operations_framework.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "enum",
+        "json",
         "time",
+        "hashlib",
+        "collections",
         "sys",
         "datetime",
-        "traceback",
-        "json",
-        "argparse",
+        "pathlib",
         "subprocess",
-        "collections",
-        "hashlib"
+        "traceback",
+        "enum",
+        "typing",
+        "argparse",
+        "statistics"
       ],
-      "modification_age_days": 0.567273029193834,
+      "modification_age_days": 0.5710646094464593,
       "size_bytes": 29494,
       "imported_by_count": 0,
       "imported_by": [],
@@ -43,20 +43,20 @@
     "evolve_loop": {
       "path": "tools/evolve_loop.py",
       "imports": [
-        "tools.ledger_utils",
-        "pathlib",
-        "sys",
-        "time",
-        "tools.ledger_metrics",
-        "asyncio",
-        "artifact_bus",
         "json",
+        "time",
         "__future__",
         "subprocess",
+        "sys",
         "hashlib",
-        "homeostatic_regulator"
+        "pathlib",
+        "tools.ledger_utils",
+        "tools.ledger_metrics",
+        "homeostatic_regulator",
+        "artifact_bus",
+        "asyncio"
       ],
-      "modification_age_days": 0.5672729895622642,
+      "modification_age_days": 0.5710645692602352,
       "size_bytes": 5222,
       "imported_by_count": 0,
       "imported_by": [],
@@ -65,21 +65,21 @@
     "production_deployment_system": {
       "path": "tools/production_deployment_system.py",
       "imports": [
-        "typing",
-        "os",
-        "shutil",
-        "pathlib",
-        "time",
-        "sys",
-        "enum",
-        "tempfile",
-        "datetime",
         "json",
+        "time",
         "subprocess",
-        "argparse",
-        "hashlib"
+        "hashlib",
+        "sys",
+        "datetime",
+        "pathlib",
+        "tempfile",
+        "enum",
+        "shutil",
+        "os",
+        "typing",
+        "argparse"
       ],
-      "modification_age_days": 0.5672729680907947,
+      "modification_age_days": 0.5710645609486986,
       "size_bytes": 22024,
       "imported_by_count": 0,
       "imported_by": [],
@@ -88,18 +88,18 @@
     "self_query": {
       "path": "tools/self_query.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
+        "json",
         "time",
-        "yaml",
+        "__future__",
+        "hashlib",
+        "pathlib",
         "random",
         "tools.ledger_metrics",
-        "json",
-        "__future__",
-        "hashlib"
+        "typing",
+        "yaml",
+        "dataclasses"
       ],
-      "modification_age_days": 0.5672729779752317,
+      "modification_age_days": 0.571064570347468,
       "size_bytes": 8015,
       "imported_by_count": 0,
       "imported_by": [],
@@ -109,15 +109,15 @@
       "path": "tools/timestamp_utils.py",
       "imports": [
         "doctest",
-        "typing",
-        "datetime"
+        "datetime",
+        "typing"
       ],
-      "modification_age_days": 0.5672729832982576,
+      "modification_age_days": 0.5710645761009719,
       "size_bytes": 7673,
       "imported_by_count": 3,
       "imported_by": [
-        "enhanced_ledger_metrics_v2",
         "measure_cascade_probability",
+        "enhanced_ledger_metrics_v2",
         "migrate_lineage"
       ],
       "energy_class": "hot"
@@ -125,13 +125,13 @@
     "enhanced_ledger_metrics": {
       "path": "tools/enhanced_ledger_metrics.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
         "json",
-        "__future__"
+        "__future__",
+        "datetime",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.567273157697033,
+      "modification_age_days": 0.5710647457893248,
       "size_bytes": 11449,
       "imported_by_count": 0,
       "imported_by": [],
@@ -140,17 +140,17 @@
     "autonomous_experiment_engine": {
       "path": "tools/autonomous_experiment_engine.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
-        "random",
         "json",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
         "math",
-        "argparse"
+        "typing",
+        "argparse",
+        "statistics"
       ],
-      "modification_age_days": 0.5672732818319842,
+      "modification_age_days": 0.571064880501341,
       "size_bytes": 23300,
       "imported_by_count": 0,
       "imported_by": [],
@@ -159,14 +159,14 @@
     "ledger_utils": {
       "path": "tools/ledger_utils.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
-        "tools.lineage_weaver",
         "json",
-        "__future__"
+        "__future__",
+        "datetime",
+        "pathlib",
+        "typing",
+        "tools.lineage_weaver"
       ],
-      "modification_age_days": 0.5672732105795983,
+      "modification_age_days": 0.5710648092241198,
       "size_bytes": 1981,
       "imported_by_count": 0,
       "imported_by": [],
@@ -175,14 +175,14 @@
     "ledger_metrics": {
       "path": "tools/ledger_metrics.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "collections.abc",
-        "re",
         "json",
-        "__future__"
+        "__future__",
+        "pathlib",
+        "re",
+        "typing",
+        "collections.abc"
       ],
-      "modification_age_days": 0.5672732492481117,
+      "modification_age_days": 0.5710648498628978,
       "size_bytes": 10491,
       "imported_by_count": 3,
       "imported_by": [
@@ -195,17 +195,17 @@
     "production_monitor": {
       "path": "tools/production_monitor.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "time",
-        "sys",
-        "datetime",
-        "tools.ledger_metrics",
         "json",
+        "time",
         "__future__",
+        "datetime",
+        "sys",
+        "pathlib",
+        "tools.ledger_metrics",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672731942821432,
+      "modification_age_days": 0.5710647952777368,
       "size_bytes": 3748,
       "imported_by_count": 0,
       "imported_by": [],
@@ -214,16 +214,16 @@
     "recursive_self_optimizer": {
       "path": "tools/recursive_self_optimizer.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "time",
-        "sys",
-        "datetime",
-        "random",
         "json",
-        "math"
+        "time",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
+        "math",
+        "typing"
       ],
-      "modification_age_days": 0.5672732378487234,
+      "modification_age_days": 0.5710648347575356,
       "size_bytes": 19932,
       "imported_by_count": 0,
       "imported_by": [],
@@ -232,13 +232,13 @@
     "kpi_validator": {
       "path": "tools/kpi_validator.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
+        "json",
         "datetime",
-        "json"
+        "sys",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.567273373314076,
+      "modification_age_days": 0.5710649689369731,
       "size_bytes": 12571,
       "imported_by_count": 0,
       "imported_by": [],
@@ -247,16 +247,16 @@
     "agents_protocol": {
       "path": "tools/agents_protocol.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
-        "yaml",
-        "re",
         "json",
         "__future__",
-        "tools"
+        "pathlib",
+        "tools",
+        "re",
+        "typing",
+        "yaml",
+        "dataclasses"
       ],
-      "modification_age_days": 0.5672734789826251,
+      "modification_age_days": 0.5710650737749206,
       "size_bytes": 5774,
       "imported_by_count": 1,
       "imported_by": [
@@ -267,18 +267,18 @@
     "meta_cognitive_introspector": {
       "path": "tools/meta_cognitive_introspector.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "time",
-        "sys",
-        "datetime",
-        "random",
         "json",
+        "time",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
         "math",
-        "argparse"
+        "typing",
+        "argparse",
+        "statistics"
       ],
-      "modification_age_days": 0.5672734643298166,
+      "modification_age_days": 0.5710650565751173,
       "size_bytes": 26063,
       "imported_by_count": 0,
       "imported_by": [],
@@ -287,37 +287,37 @@
     "artifact_metrics": {
       "path": "tools/artifact_metrics.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
-        "re",
         "json",
         "__future__",
-        "collections"
+        "collections",
+        "datetime",
+        "pathlib",
+        "re",
+        "typing"
       ],
-      "modification_age_days": 0.5672736111255707,
+      "modification_age_days": 0.571065201425442,
       "size_bytes": 14384,
       "imported_by_count": 2,
       "imported_by": [
-        "learning_kernel",
-        "cascade_experiment"
+        "cascade_experiment",
+        "learning_kernel"
       ],
       "energy_class": "warm"
     },
     "computational_limit_tester": {
       "path": "tools/computational_limit_tester.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
+        "json",
         "time",
+        "hashlib",
         "sys",
         "datetime",
+        "pathlib",
         "traceback",
-        "json",
-        "hashlib"
+        "typing",
+        "dataclasses"
       ],
-      "modification_age_days": 0.5672736371667296,
+      "modification_age_days": 0.5710652296548641,
       "size_bytes": 23898,
       "imported_by_count": 0,
       "imported_by": [],
@@ -326,17 +326,17 @@
     "boundary_pusher": {
       "path": "tools/boundary_pusher.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
+        "datetime",
+        "sys",
+        "pathlib",
         "math",
+        "typing",
         "argparse",
+        "statistics",
         "itertools"
       ],
-      "modification_age_days": 0.5672737550155984,
+      "modification_age_days": 0.5710653486489146,
       "size_bytes": 25076,
       "imported_by_count": 0,
       "imported_by": [],
@@ -345,19 +345,19 @@
     "phase3_infrastructure_optimizer": {
       "path": "tools/phase3_infrastructure_optimizer.py",
       "imports": [
-        "concurrent.futures",
-        "typing",
-        "pathlib",
-        "dataclasses",
-        "time",
-        "sys",
-        "datetime",
-        "random",
         "json",
+        "time",
+        "concurrent.futures",
+        "collections",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
         "math",
-        "collections"
+        "typing",
+        "dataclasses"
       ],
-      "modification_age_days": 0.5672736950108298,
+      "modification_age_days": 0.5710652931117349,
       "size_bytes": 24192,
       "imported_by_count": 0,
       "imported_by": [],
@@ -366,13 +366,13 @@
     "capability_detector": {
       "path": "tools/capability_detector.py",
       "imports": [
-        "typing",
+        "json",
+        "collections",
         "pathlib",
         "re",
-        "json",
-        "collections"
+        "typing"
       ],
-      "modification_age_days": 0.5672738421570371,
+      "modification_age_days": 0.5710654414169214,
       "size_bytes": 5954,
       "imported_by_count": 0,
       "imported_by": [],
@@ -381,14 +381,14 @@
     "reward_model": {
       "path": "tools/reward_model.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
         "json",
         "__future__",
-        "collections"
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672737236679705,
+      "modification_age_days": 0.5710653248374109,
       "size_bytes": 14725,
       "imported_by_count": 1,
       "imported_by": [
@@ -399,17 +399,17 @@
     "lineage_migrator": {
       "path": "tools/lineage_migrator.py",
       "imports": [
-        "typing",
-        "shutil",
-        "pathlib",
+        "json",
+        "hashlib",
+        "collections",
         "sys",
         "datetime",
-        "json",
-        "argparse",
-        "collections",
-        "hashlib"
+        "pathlib",
+        "shutil",
+        "typing",
+        "argparse"
       ],
-      "modification_age_days": 0.5672738624778059,
+      "modification_age_days": 0.5710654629077072,
       "size_bytes": 15777,
       "imported_by_count": 0,
       "imported_by": [],
@@ -418,18 +418,18 @@
     "learning_kernel": {
       "path": "tools/learning_kernel.py",
       "imports": [
-        "reward_model",
-        "typing",
-        "pathlib",
-        "shutil",
-        "artifact_metrics",
-        "yaml",
-        "datetime",
         "json",
         "__future__",
-        "policy_updater"
+        "datetime",
+        "policy_updater",
+        "pathlib",
+        "reward_model",
+        "artifact_metrics",
+        "shutil",
+        "typing",
+        "yaml"
       ],
-      "modification_age_days": 0.5575978649021299,
+      "modification_age_days": 0.5613894694519264,
       "size_bytes": 17945,
       "imported_by_count": 0,
       "imported_by": [],
@@ -438,15 +438,15 @@
     "quality_baseline_auditor": {
       "path": "tools/quality_baseline_auditor.py",
       "imports": [
-        "typing",
-        "pathlib",
+        "json",
+        "hashlib",
+        "collections",
         "sys",
         "datetime",
-        "json",
-        "collections",
-        "hashlib"
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672739112294383,
+      "modification_age_days": 0.5710655151969857,
       "size_bytes": 16763,
       "imported_by_count": 0,
       "imported_by": [],
@@ -455,14 +455,14 @@
     "enhanced_capability_detector": {
       "path": "tools/enhanced_capability_detector.py",
       "imports": [
-        "typing",
-        "pathlib",
+        "json",
+        "collections",
         "sys",
         "datetime",
-        "json",
-        "collections"
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672740840056428,
+      "modification_age_days": 0.5710656869107926,
       "size_bytes": 16551,
       "imported_by_count": 0,
       "imported_by": [],
@@ -471,14 +471,14 @@
     "bio_inspired_cognitive_architecture": {
       "path": "tools/bio_inspired_cognitive_architecture.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
-        "math"
+        "datetime",
+        "sys",
+        "pathlib",
+        "math",
+        "typing"
       ],
-      "modification_age_days": 0.5672741735809379,
+      "modification_age_days": 0.5710657780479502,
       "size_bytes": 22933,
       "imported_by_count": 0,
       "imported_by": [],
@@ -487,14 +487,14 @@
     "entropy_optimizer": {
       "path": "tools/entropy_optimizer.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
+        "datetime",
+        "sys",
+        "pathlib",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672741875245615,
+      "modification_age_days": 0.5710657979768735,
       "size_bytes": 14351,
       "imported_by_count": 0,
       "imported_by": [],
@@ -503,16 +503,16 @@
     "nos_analyzer": {
       "path": "tools/nos_analyzer.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
+        "json",
+        "collections",
         "sys",
         "datetime",
-        "json",
+        "pathlib",
         "math",
-        "collections"
+        "typing",
+        "statistics"
       ],
-      "modification_age_days": 0.5672742060295961,
+      "modification_age_days": 0.5710658214931135,
       "size_bytes": 22387,
       "imported_by_count": 0,
       "imported_by": [],
@@ -521,17 +521,17 @@
     "nos_data_sources": {
       "path": "tools/nos_data_sources.py",
       "imports": [
-        "pandas",
-        "typing",
-        "csv",
-        "dataclasses",
-        "pathlib",
-        "yaml",
         "json",
+        "hashlib",
         "__future__",
-        "hashlib"
+        "pathlib",
+        "csv",
+        "typing",
+        "yaml",
+        "dataclasses",
+        "pandas"
       ],
-      "modification_age_days": 0.5672742272692698,
+      "modification_age_days": 0.5710658409501668,
       "size_bytes": 9103,
       "imported_by_count": 2,
       "imported_by": [
@@ -543,15 +543,15 @@
     "validate_kernel": {
       "path": "tools/validate_kernel.py",
       "imports": [
-        "pathlib",
-        "sys",
-        "yaml",
-        "re",
         "json",
+        "hashlib",
         "__future__",
-        "hashlib"
+        "sys",
+        "pathlib",
+        "re",
+        "yaml"
       ],
-      "modification_age_days": 0.5672741762245143,
+      "modification_age_days": 0.5710657889920252,
       "size_bytes": 4911,
       "imported_by_count": 0,
       "imported_by": [],
@@ -560,18 +560,18 @@
     "run_kael_bench": {
       "path": "tools/run_kael_bench.py",
       "imports": [
-        "statistics",
-        "shutil",
-        "pathlib",
+        "json",
         "time",
+        "__future__",
         "sys",
+        "pathlib",
         "tempfile",
         "tools.ledger_metrics",
-        "json",
-        "__future__",
-        "argparse"
+        "shutil",
+        "argparse",
+        "statistics"
       ],
-      "modification_age_days": 0.567274217961563,
+      "modification_age_days": 0.5710658297798148,
       "size_bytes": 4355,
       "imported_by_count": 0,
       "imported_by": [],
@@ -580,7 +580,7 @@
     "framework_evolution_engine": {
       "path": "tools/framework_evolution_engine.py",
       "imports": [],
-      "modification_age_days": 0.5672743332330827,
+      "modification_age_days": 0.5710659451423972,
       "size_bytes": 8604,
       "imported_by_count": 0,
       "imported_by": [],
@@ -589,15 +589,15 @@
     "meta_synthesis": {
       "path": "tools/meta_synthesis.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
-        "collections"
+        "collections",
+        "datetime",
+        "sys",
+        "pathlib",
+        "typing",
+        "statistics"
       ],
-      "modification_age_days": 0.5672743636562868,
+      "modification_age_days": 0.5710659729275438,
       "size_bytes": 22607,
       "imported_by_count": 0,
       "imported_by": [],
@@ -606,18 +606,18 @@
     "natural_reflection": {
       "path": "tools/natural_reflection.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "nos_data_sources",
-        "ledger_metrics",
-        "time",
         "json",
+        "time",
         "__future__",
+        "pathlib",
+        "nos_calibration",
+        "ledger_metrics",
+        "nos_data_sources",
+        "typing",
         "argparse",
-        "nos_calibration"
+        "statistics"
       ],
-      "modification_age_days": 0.5672743894794473,
+      "modification_age_days": 0.5710659959029268,
       "size_bytes": 11863,
       "imported_by_count": 0,
       "imported_by": [],
@@ -626,17 +626,17 @@
     "phase1_quick_wins_optimizer": {
       "path": "tools/phase1_quick_wins_optimizer.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
-        "time",
-        "sys",
-        "datetime",
-        "random",
         "json",
-        "math"
+        "time",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
+        "math",
+        "typing",
+        "dataclasses"
       ],
-      "modification_age_days": 0.5672744472324848,
+      "modification_age_days": 0.5710660625000795,
       "size_bytes": 26978,
       "imported_by_count": 0,
       "imported_by": [],
@@ -645,14 +645,14 @@
     "measure_cascade_probability": {
       "path": "tools/measure_cascade_probability.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
         "json",
         "__future__",
-        "timestamp_utils"
+        "sys",
+        "pathlib",
+        "timestamp_utils",
+        "typing"
       ],
-      "modification_age_days": 0.5672745307314175,
+      "modification_age_days": 0.571066137375655,
       "size_bytes": 8975,
       "imported_by_count": 0,
       "imported_by": [],
@@ -661,18 +661,18 @@
     "phase2_architectural_optimizer": {
       "path": "tools/phase2_architectural_optimizer.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
-        "time",
-        "sys",
-        "datetime",
-        "random",
         "json",
+        "time",
+        "collections",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
         "math",
-        "collections"
+        "typing",
+        "dataclasses"
       ],
-      "modification_age_days": 0.5672745510990973,
+      "modification_age_days": 0.571066153159848,
       "size_bytes": 25549,
       "imported_by_count": 0,
       "imported_by": [],
@@ -681,13 +681,13 @@
     "metrics_recalibration_audit": {
       "path": "tools/metrics_recalibration_audit.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
         "json",
-        "__future__"
+        "__future__",
+        "datetime",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672746028475187,
+      "modification_age_days": 0.5710662042487551,
       "size_bytes": 11239,
       "imported_by_count": 0,
       "imported_by": [],
@@ -696,12 +696,12 @@
     "nos_calibration": {
       "path": "tools/nos_calibration.py",
       "imports": [
-        "__future__",
         "dataclasses",
+        "__future__",
         "math",
         "typing"
       ],
-      "modification_age_days": 0.5672746052206666,
+      "modification_age_days": 0.5710662062852471,
       "size_bytes": 3780,
       "imported_by_count": 2,
       "imported_by": [
@@ -713,15 +713,15 @@
     "artifact_deduplicator": {
       "path": "tools/artifact_deduplicator.py",
       "imports": [
-        "typing",
-        "pathlib",
+        "json",
+        "hashlib",
+        "collections",
         "sys",
         "datetime",
-        "json",
-        "collections",
-        "hashlib"
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672747902461776,
+      "modification_age_days": 0.5710663907781796,
       "size_bytes": 14344,
       "imported_by_count": 0,
       "imported_by": [],
@@ -730,17 +730,17 @@
     "reflexive_experimenter": {
       "path": "tools/reflexive_experimenter.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "time",
-        "sys",
-        "datetime",
-        "tools.ledger_metrics",
         "json",
+        "time",
         "__future__",
+        "datetime",
+        "sys",
+        "pathlib",
+        "tools.ledger_metrics",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672746426750113,
+      "modification_age_days": 0.5710662423046651,
       "size_bytes": 9989,
       "imported_by_count": 0,
       "imported_by": [],
@@ -749,12 +749,12 @@
     "self_query_encoder": {
       "path": "tools/self_query_encoder.py",
       "imports": [
-        "__future__",
-        "sys",
         "pathlib",
-        "tools.self_query"
+        "tools.self_query",
+        "__future__",
+        "sys"
       ],
-      "modification_age_days": 0.5672746358453123,
+      "modification_age_days": 0.5710662353811441,
       "size_bytes": 403,
       "imported_by_count": 0,
       "imported_by": [],
@@ -763,14 +763,14 @@
     "lineage_weaver": {
       "path": "tools/lineage_weaver.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
         "json",
-        "argparse",
-        "hashlib"
+        "hashlib",
+        "datetime",
+        "pathlib",
+        "typing",
+        "argparse"
       ],
-      "modification_age_days": 0.5672747481973083,
+      "modification_age_days": 0.5710663484616412,
       "size_bytes": 10857,
       "imported_by_count": 0,
       "imported_by": [],
@@ -779,13 +779,13 @@
     "limit_discovery_reporter": {
       "path": "tools/limit_discovery_reporter.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
+        "json",
         "datetime",
-        "json"
+        "sys",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672748099433051,
+      "modification_age_days": 0.5710664095260479,
       "size_bytes": 17847,
       "imported_by_count": 0,
       "imported_by": [],
@@ -794,12 +794,12 @@
     "spore_disperser": {
       "path": "tools/spore_disperser.py",
       "imports": [
-        "pathlib",
         "json",
-        "typing",
-        "datetime"
+        "datetime",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672747237042145,
+      "modification_age_days": 0.571066322721265,
       "size_bytes": 6102,
       "imported_by_count": 1,
       "imported_by": [
@@ -810,21 +810,21 @@
     "nos_pipeline": {
       "path": "tools/nos_pipeline.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
-        "ledger_metrics",
-        "sys",
-        "nos_data_sources",
-        "yaml",
-        "datetime",
         "json",
-        "__future__",
-        "argparse",
         "swarm_bench",
-        "nos_calibration"
+        "__future__",
+        "sys",
+        "datetime",
+        "pathlib",
+        "nos_calibration",
+        "ledger_metrics",
+        "nos_data_sources",
+        "typing",
+        "yaml",
+        "argparse",
+        "dataclasses"
       ],
-      "modification_age_days": 0.5672748504413498,
+      "modification_age_days": 0.5710664481145364,
       "size_bytes": 19530,
       "imported_by_count": 0,
       "imported_by": [],
@@ -833,14 +833,14 @@
     "comprehensive_progress_report": {
       "path": "tools/comprehensive_progress_report.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
-        "math"
+        "datetime",
+        "sys",
+        "pathlib",
+        "math",
+        "typing"
       ],
-      "modification_age_days": 0.5672749870629222,
+      "modification_age_days": 0.5710665870871808,
       "size_bytes": 19718,
       "imported_by_count": 0,
       "imported_by": [],
@@ -849,14 +849,14 @@
     "meta_cognitive_optimizer": {
       "path": "tools/meta_cognitive_optimizer.py",
       "imports": [
-        "typing",
-        "pathlib",
+        "json",
         "sys",
         "datetime",
-        "json",
-        "math"
+        "pathlib",
+        "math",
+        "typing"
       ],
-      "modification_age_days": 0.5672749547577567,
+      "modification_age_days": 0.5710665530104329,
       "size_bytes": 13728,
       "imported_by_count": 0,
       "imported_by": [],
@@ -865,16 +865,16 @@
     "cascade_experiment": {
       "path": "tools/cascade_experiment.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "artifact_metrics",
+        "json",
         "time",
         "sys",
         "datetime",
-        "json",
-        "homeostatic_regulator"
+        "pathlib",
+        "artifact_metrics",
+        "homeostatic_regulator",
+        "typing"
       ],
-      "modification_age_days": 0.5672750759041971,
+      "modification_age_days": 0.5710666704757346,
       "size_bytes": 13548,
       "imported_by_count": 0,
       "imported_by": [],
@@ -884,10 +884,10 @@
       "path": "tools/hyphal_network_integration.py",
       "imports": [
         "pathlib",
-        "sys",
-        "hyphal_connections"
+        "hyphal_connections",
+        "sys"
       ],
-      "modification_age_days": 0.5672750373984928,
+      "modification_age_days": 0.5710666317271965,
       "size_bytes": 2457,
       "imported_by_count": 0,
       "imported_by": [],
@@ -896,15 +896,15 @@
     "dispersal_experiment": {
       "path": "tools/dispersal_experiment.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
         "collections",
+        "datetime",
+        "sys",
+        "pathlib",
+        "typing",
         "spore_disperser"
       ],
-      "modification_age_days": 0.5672751153481227,
+      "modification_age_days": 0.5710667105570988,
       "size_bytes": 16355,
       "imported_by_count": 0,
       "imported_by": [],
@@ -913,15 +913,15 @@
     "artifact_validator": {
       "path": "tools/artifact_validator.py",
       "imports": [
-        "typing",
+        "json",
+        "datetime",
+        "sys",
         "pathlib",
         "enum",
-        "sys",
-        "datetime",
-        "json",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672752041921572,
+      "modification_age_days": 0.571066803926671,
       "size_bytes": 13503,
       "imported_by_count": 0,
       "imported_by": [],
@@ -930,15 +930,15 @@
     "enhanced_ledger_metrics_v2": {
       "path": "tools/enhanced_ledger_metrics_v2.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
         "json",
-        "__future__",
         "collections",
-        "timestamp_utils"
+        "__future__",
+        "sys",
+        "pathlib",
+        "timestamp_utils",
+        "typing"
       ],
-      "modification_age_days": 0.5672751802454392,
+      "modification_age_days": 0.5710667785091532,
       "size_bytes": 12700,
       "imported_by_count": 0,
       "imported_by": [],
@@ -947,16 +947,16 @@
     "run_omega_cycle": {
       "path": "tools/run_omega_cycle.py",
       "imports": [
-        "tools.learning_kernel",
-        "typing",
-        "pathlib",
-        "sys",
-        "agents_protocol",
-        "datetime",
         "__future__",
+        "tools.learning_kernel",
+        "sys",
+        "datetime",
+        "pathlib",
+        "agents_protocol",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672750759483488,
+      "modification_age_days": 0.5710666740051022,
       "size_bytes": 2686,
       "imported_by_count": 0,
       "imported_by": [],
@@ -965,16 +965,16 @@
     "migrate_lineage": {
       "path": "tools/migrate_lineage.py",
       "imports": [
-        "typing",
-        "shutil",
-        "pathlib",
-        "sys",
         "json",
         "__future__",
         "collections",
-        "timestamp_utils"
+        "sys",
+        "pathlib",
+        "timestamp_utils",
+        "shutil",
+        "typing"
       ],
-      "modification_age_days": 0.5672751886121653,
+      "modification_age_days": 0.5710667845137694,
       "size_bytes": 18702,
       "imported_by_count": 0,
       "imported_by": [],
@@ -983,15 +983,15 @@
     "policy_updater": {
       "path": "tools/policy_updater.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "yaml",
-        "datetime",
         "json",
         "__future__",
-        "collections"
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing",
+        "yaml"
       ],
-      "modification_age_days": 0.5672752122001515,
+      "modification_age_days": 0.5710668050111444,
       "size_bytes": 20988,
       "imported_by_count": 1,
       "imported_by": [
@@ -1002,14 +1002,14 @@
     "expansion_configurator": {
       "path": "tools/expansion_configurator.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
+        "datetime",
+        "sys",
+        "pathlib",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672753347815187,
+      "modification_age_days": 0.5710669276752958,
       "size_bytes": 12977,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1018,14 +1018,14 @@
     "homeostatic_mapping": {
       "path": "tools/homeostatic_mapping.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
-        "homeostatic_regulator"
+        "datetime",
+        "sys",
+        "pathlib",
+        "homeostatic_regulator",
+        "typing"
       ],
-      "modification_age_days": 0.5672753748297691,
+      "modification_age_days": 0.5710669672958277,
       "size_bytes": 16630,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1034,17 +1034,17 @@
     "conservation_law_experiment": {
       "path": "tools/conservation_law_experiment.py",
       "imports": [
-        "typing",
-        "pathlib",
+        "json",
+        "__future__",
         "sys",
         "datetime",
+        "pathlib",
         "tools.ledger_metrics",
-        "json",
         "math",
-        "__future__",
+        "typing",
         "argparse"
       ],
-      "modification_age_days": 0.5672754632102118,
+      "modification_age_days": 0.5710670533941852,
       "size_bytes": 15133,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1053,11 +1053,11 @@
     "real_time_boundary_test": {
       "path": "tools/real_time_boundary_test.py",
       "imports": [
-        "sys",
         "json",
+        "sys",
         "datetime"
       ],
-      "modification_age_days": 0.5672753676275413,
+      "modification_age_days": 0.5710669573286066,
       "size_bytes": 17254,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1066,13 +1066,13 @@
     "cascade_analysis": {
       "path": "tools/cascade_analysis.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
         "json",
-        "__future__"
+        "__future__",
+        "datetime",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672755313333537,
+      "modification_age_days": 0.5710671220857788,
       "size_bytes": 9024,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1081,13 +1081,13 @@
     "meta_recursive_analyzer": {
       "path": "tools/meta_recursive_analyzer.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
+        "json",
         "datetime",
-        "json"
+        "sys",
+        "pathlib",
+        "typing"
       ],
-      "modification_age_days": 0.5672754978940443,
+      "modification_age_days": 0.5710670911327557,
       "size_bytes": 17510,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1096,17 +1096,17 @@
     "advanced_analytics_engine": {
       "path": "tools/advanced_analytics_engine.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
+        "json",
+        "collections",
+        "hashlib",
         "sys",
         "datetime",
-        "json",
+        "pathlib",
         "math",
-        "collections",
-        "hashlib"
+        "typing",
+        "statistics"
       ],
-      "modification_age_days": 0.5672757123879812,
+      "modification_age_days": 0.571067307991562,
       "size_bytes": 21915,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1115,15 +1115,15 @@
     "omega3_tracker": {
       "path": "tools/omega3_tracker.py",
       "imports": [
-        "pathlib",
-        "sys",
-        "yaml",
-        "datetime",
-        "traceback",
         "json",
-        "tools.cognitive_physics"
+        "sys",
+        "datetime",
+        "pathlib",
+        "traceback",
+        "tools.cognitive_physics",
+        "yaml"
       ],
-      "modification_age_days": 0.5563807778032841,
+      "modification_age_days": 0.5601723739366841,
       "size_bytes": 4450,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1132,14 +1132,14 @@
     "omega3_analyzer": {
       "path": "tools/omega3_analyzer.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "datetime",
         "json",
-        "argparse",
-        "collections"
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing",
+        "argparse"
       ],
-      "modification_age_days": 0.555879352942661,
+      "modification_age_days": 0.5596709454887443,
       "size_bytes": 10904,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1148,18 +1148,18 @@
     "cognitive_physics": {
       "path": "tools/cognitive_physics.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "sys",
-        "yaml",
-        "datetime",
-        "tools.ledger_metrics",
         "json",
-        "math",
         "__future__",
+        "sys",
+        "datetime",
+        "pathlib",
+        "tools.ledger_metrics",
+        "math",
+        "typing",
+        "yaml",
         "argparse"
       ],
-      "modification_age_days": 0.5569003243192479,
+      "modification_age_days": 0.5606919133000904,
       "size_bytes": 14770,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1168,24 +1168,24 @@
     "swarm_bench": {
       "path": "tools/swarm_bench.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "dataclasses",
-        "ledger_metrics",
-        "sys",
-        "time",
-        "yaml",
-        "datetime",
-        "random",
         "json",
-        "math",
+        "time",
         "__future__",
-        "argparse",
         "hashlib",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
+        "math",
+        "ledger_metrics",
+        "dataclasses",
+        "typing",
+        "yaml",
+        "argparse",
+        "statistics",
         "itertools"
       ],
-      "modification_age_days": 0.5672757459155939,
+      "modification_age_days": 0.5710673296065242,
       "size_bytes": 35353,
       "imported_by_count": 1,
       "imported_by": [
@@ -1196,15 +1196,15 @@
     "correlate_kcog_throughput": {
       "path": "tools/correlate_kcog_throughput.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
-        "math"
+        "datetime",
+        "sys",
+        "pathlib",
+        "math",
+        "typing",
+        "statistics"
       ],
-      "modification_age_days": 0.042271389373474653,
+      "modification_age_days": 0.04606297448829368,
       "size_bytes": 10428,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1213,13 +1213,13 @@
     "simulate_steep_curvature_effect": {
       "path": "tools/simulate_steep_curvature_effect.py",
       "imports": [
-        "pathlib",
-        "shutil",
-        "sys",
+        "json",
         "datetime",
-        "json"
+        "sys",
+        "pathlib",
+        "shutil"
       ],
-      "modification_age_days": 0.027886201651008042,
+      "modification_age_days": 0.03167778704453398,
       "size_bytes": 8980,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1228,15 +1228,30 @@
     "compare_baseline_vs_intervention": {
       "path": "tools/compare_baseline_vs_intervention.py",
       "imports": [
-        "statistics",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
-        "math"
+        "datetime",
+        "sys",
+        "pathlib",
+        "math",
+        "statistics"
       ],
-      "modification_age_days": 0.028722973606652685,
+      "modification_age_days": 0.032514559612781914,
       "size_bytes": 10330,
+      "imported_by_count": 0,
+      "imported_by": [],
+      "energy_class": "recent"
+    },
+    "metabolic_monitor_bus": {
+      "path": "tools/metabolic_monitor_bus.py",
+      "imports": [
+        "bus_manager",
+        "analysis.metabolic_dashboard",
+        "sys",
+        "pathlib",
+        "asyncio"
+      ],
+      "modification_age_days": 0.0004916386554638545,
+      "size_bytes": 1807,
       "imported_by_count": 0,
       "imported_by": [],
       "energy_class": "recent"
@@ -1244,14 +1259,14 @@
     "generate_intervention_artifacts": {
       "path": "tools/generate_intervention_artifacts.py",
       "imports": [
-        "pathlib",
-        "sys",
-        "datetime",
-        "random",
         "json",
+        "datetime",
+        "sys",
+        "pathlib",
+        "random",
         "math"
       ],
-      "modification_age_days": 0.02972872378649535,
+      "modification_age_days": 0.03352031748879839,
       "size_bytes": 8026,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1260,14 +1275,14 @@
     "monitor_lambda_intervention": {
       "path": "tools/monitor_lambda_intervention.py",
       "imports": [
-        "statistics",
-        "pathlib",
-        "sys",
-        "datetime",
         "json",
-        "math"
+        "datetime",
+        "sys",
+        "pathlib",
+        "math",
+        "statistics"
       ],
-      "modification_age_days": 0.035064895492460994,
+      "modification_age_days": 0.038856490828372815,
       "size_bytes": 9844,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1276,13 +1291,13 @@
     "metabolic_monitor": {
       "path": "tools/metabolic_monitor.py",
       "imports": [
-        "analysis.metabolic_dashboard",
-        "pathlib",
         "time",
+        "analysis.metabolic_dashboard",
         "sys",
+        "pathlib",
         "argparse"
       ],
-      "modification_age_days": 0.008727834318523054,
+      "modification_age_days": 0.012519430603694032,
       "size_bytes": 2485,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1291,15 +1306,15 @@
     "extract_entropy_trajectory": {
       "path": "tools/extract_entropy_trajectory.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
-        "sys",
+        "json",
         "datetime",
+        "sys",
+        "pathlib",
         "tools.ledger_metrics",
-        "json"
+        "typing",
+        "statistics"
       ],
-      "modification_age_days": 0.044902586763103804,
+      "modification_age_days": 0.048694184052723424,
       "size_bytes": 8852,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1308,15 +1323,15 @@
     "extract_lambda_from_artifacts": {
       "path": "tools/extract_lambda_from_artifacts.py",
       "imports": [
-        "statistics",
-        "typing",
-        "pathlib",
+        "json",
         "sys",
         "datetime",
-        "json",
-        "math"
+        "pathlib",
+        "math",
+        "typing",
+        "statistics"
       ],
-      "modification_age_days": 0.04560443473910844,
+      "modification_age_days": 0.04939603225224548,
       "size_bytes": 8611,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1325,13 +1340,13 @@
     "chemotropic_allocator": {
       "path": "mycelial-core/chemotropic_allocator.py",
       "imports": [
+        "time",
+        "nutrient_gradient",
         "typing",
         "dataclasses",
-        "time",
-        "asyncio",
-        "nutrient_gradient"
+        "asyncio"
       ],
-      "modification_age_days": 0.5672762906303008,
+      "modification_age_days": 0.5710678846361461,
       "size_bytes": 5773,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1340,20 +1355,21 @@
     "artifact_bus": {
       "path": "mycelial-core/artifact_bus.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
         "time",
-        "yaml",
-        "datetime",
-        "asyncio",
         "json",
-        "math"
+        "datetime",
+        "pathlib",
+        "math",
+        "typing",
+        "yaml",
+        "dataclasses",
+        "asyncio"
       ],
-      "modification_age_days": 0.5596641490277316,
+      "modification_age_days": 0.563455742371303,
       "size_bytes": 15682,
-      "imported_by_count": 1,
+      "imported_by_count": 2,
       "imported_by": [
+        "bus_manager",
         "evolve_loop"
       ],
       "energy_class": "warm"
@@ -1365,12 +1381,12 @@
         "dataclasses",
         "typing"
       ],
-      "modification_age_days": 0.5672763621337987,
+      "modification_age_days": 0.5710679571358142,
       "size_bytes": 10258,
       "imported_by_count": 3,
       "imported_by": [
-        "homeostatic_mapping",
         "cascade_experiment",
+        "homeostatic_mapping",
         "evolve_loop"
       ],
       "energy_class": "hot"
@@ -1378,17 +1394,17 @@
     "hyphal_connections": {
       "path": "mycelial-core/hyphal_connections.py",
       "imports": [
-        "typing",
-        "pathlib",
-        "dataclasses",
         "time",
-        "yaml",
+        "json",
         "datetime",
+        "pathlib",
         "random",
-        "asyncio",
-        "json"
+        "typing",
+        "yaml",
+        "dataclasses",
+        "asyncio"
       ],
-      "modification_age_days": 0.5583415023678983,
+      "modification_age_days": 0.5621331024611438,
       "size_bytes": 13842,
       "imported_by_count": 1,
       "imported_by": [
@@ -1399,15 +1415,15 @@
     "swarm_anastomosis": {
       "path": "mycelial-core/swarm_anastomosis.py",
       "imports": [
+        "json",
+        "time",
+        "hashlib",
+        "datetime",
         "typing",
         "dataclasses",
-        "time",
-        "datetime",
-        "asyncio",
-        "json",
-        "hashlib"
+        "asyncio"
       ],
-      "modification_age_days": 0.5672764157586627,
+      "modification_age_days": 0.5710680209431384,
       "size_bytes": 8724,
       "imported_by_count": 0,
       "imported_by": [],
@@ -1416,34 +1432,53 @@
     "nutrient_gradient": {
       "path": "mycelial-core/nutrient_gradient.py",
       "imports": [
-        "typing",
-        "pathlib",
         "time",
-        "yaml",
         "json",
+        "collections",
+        "pathlib",
         "math",
-        "collections"
+        "typing",
+        "yaml"
       ],
-      "modification_age_days": 0.5590254009873779,
+      "modification_age_days": 0.5628170113017161,
       "size_bytes": 10844,
       "imported_by_count": 1,
       "imported_by": [
         "chemotropic_allocator"
       ],
       "energy_class": "warm"
+    },
+    "bus_manager": {
+      "path": "mycelial-core/bus_manager.py",
+      "imports": [
+        "json",
+        "sys",
+        "datetime",
+        "pathlib",
+        "artifact_bus",
+        "typing",
+        "asyncio"
+      ],
+      "modification_age_days": 0.0007474739904756899,
+      "size_bytes": 6818,
+      "imported_by_count": 1,
+      "imported_by": [
+        "metabolic_monitor_bus"
+      ],
+      "energy_class": "warm"
     }
   },
   "efficiency_metrics": {
-    "total_modules": 81,
+    "total_modules": 83,
     "hot_modules": 3,
-    "warm_modules": 11,
-    "recent_modules": 67,
+    "warm_modules": 12,
+    "recent_modules": 68,
     "cold_modules": 0,
     "dormant_modules": 0,
-    "active_modules": 81,
+    "active_modules": 83,
     "efficiency_index": 1.0,
-    "reuse_ratio": 0.039316239316239315,
-    "mean_import_depth": 7.222222222222222,
+    "reuse_ratio": 0.04187604690117253,
+    "mean_import_depth": 7.192771084337349,
     "waste_ratio": 0.0
   },
   "hot_nodes": [
@@ -1451,8 +1486,8 @@
       "module": "timestamp_utils",
       "imported_by_count": 3,
       "imported_by": [
-        "enhanced_ledger_metrics_v2",
         "measure_cascade_probability",
+        "enhanced_ledger_metrics_v2",
         "migrate_lineage"
       ],
       "path": "tools/timestamp_utils.py"
@@ -1471,8 +1506,8 @@
       "module": "homeostatic_regulator",
       "imported_by_count": 3,
       "imported_by": [
-        "homeostatic_mapping",
         "cascade_experiment",
+        "homeostatic_mapping",
         "evolve_loop"
       ],
       "path": "mycelial-core/homeostatic_regulator.py"
@@ -1481,8 +1516,8 @@
       "module": "artifact_metrics",
       "imported_by_count": 2,
       "imported_by": [
-        "learning_kernel",
-        "cascade_experiment"
+        "cascade_experiment",
+        "learning_kernel"
       ],
       "path": "tools/artifact_metrics.py"
     },
@@ -1503,6 +1538,15 @@
         "natural_reflection"
       ],
       "path": "tools/nos_calibration.py"
+    },
+    {
+      "module": "artifact_bus",
+      "imported_by_count": 2,
+      "imported_by": [
+        "bus_manager",
+        "evolve_loop"
+      ],
+      "path": "mycelial-core/artifact_bus.py"
     },
     {
       "module": "agents_protocol",
@@ -1527,14 +1571,6 @@
         "dispersal_experiment"
       ],
       "path": "tools/spore_disperser.py"
-    },
-    {
-      "module": "policy_updater",
-      "imported_by_count": 1,
-      "imported_by": [
-        "learning_kernel"
-      ],
-      "path": "tools/policy_updater.py"
     }
   ],
   "cold_nodes": []
