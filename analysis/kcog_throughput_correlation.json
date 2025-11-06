@@ -1,0 +1,37 @@
+{
+  "correlation_results": {
+    "k_cog_vs_reward": {
+      "r": 0.0,
+      "confidence_interval_95": [
+        -0.25095228466847613,
+        0.25095228466847613
+      ],
+      "significant": false,
+      "threshold": 0.3
+    }
+  },
+  "k_cog_statistics": {
+    "mean": 0.02127079482631088,
+    "std_dev": 0.0,
+    "min": 0.02127079482631088,
+    "max": 0.02127079482631088,
+    "range": 0.0,
+    "coefficient_of_variation": 0.0
+  },
+  "validation": {
+    "protocol": "Phase \u03a9-1 Empirical",
+    "criterion": "|r| > 0.3 for k_cog vs throughput",
+    "validated": false,
+    "confidence": "LOW"
+  },
+  "sample_size": 64,
+  "lambda_baseline": 0.03151228863157167,
+  "limitations": [
+    "\u0394H_crit estimated from barrier formula (no phase transitions observed)",
+    "Reward is single throughput proxy (may be incomplete)",
+    "System metrics constant over time (limits correlation range)",
+    "No time-series/lag analysis performed",
+    "Small sample size reduces statistical power"
+  ],
+  "interpretation": "k_cog does NOT correlate with observable reward (r=0.000). This suggests k_cog may not capture throughput, or reward is poor proxy."
+}

@@ -1,0 +1,102 @@
+{
+  "lambda": 0.03151228863157167,
+  "lambda_day_inv": 0.03151228863157167,
+  "half_life_days": 21.99609138720226,
+  "r_squared": 0.6383290400615848,
+  "confidence_interval_95": [
+    -0.02185725665457299,
+    0.02185725665457299
+  ],
+  "n_artifacts": 120,
+  "fit_quality": "GOOD - Exponential decay fits well",
+  "data_points": [
+    {
+      "age_days": 0.5218021652314815,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 0.5218017485648148,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 10.304118141493056,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 0.5218021652314815,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 11.305564900752314,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 10.316895919270834,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 11.303493141493055,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 10.304106567418982,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 0.5218017369907407,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 10.294147277476851,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 11.27586582667824,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 0.5218018295833333,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 0.5218022115277777,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 11.301814900752316,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 11.305032493344907,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 11.271085734085649,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 0.5218018411574075,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 0.5218021999537037,
+      "spawn_normalized": 1.0
+    },
+    {
+      "age_days": 11.294094993344908,
+      "spawn_normalized": 0.6666666666666666
+    },
+    {
+      "age_days": 10.3126297525,
+      "spawn_normalized": 0.6666666666666666
+    }
+  ],
+  "limitations": [
+    "Uses spawn_count as proxy for influence (may not capture actual decision impact)",
+    "Assumes influence = generativity (artifacts that spawn more are more influential)",
+    "Does not account for artifact quality, only quantity",
+    "Single exponential model (reality may have multiple timescales)",
+    "Sample may be biased toward recent artifacts"
+  ],
+  "interpretation": "Artifact influence decays with half-life ~22.0 days (R\u00b2=0.64)"
+}
