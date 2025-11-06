@@ -32,11 +32,17 @@ from pathlib import Path
 from typing import Dict, Any, Optional
 from datetime import datetime
 import yaml
+import sys
+import asyncio
 
 # Import learning components
 from artifact_metrics import ArtifactMetrics
 from reward_model import RewardModel
 from policy_updater import PolicyUpdater
+
+# Import bus manager for event emission
+sys.path.insert(0, str(Path(__file__).parent.parent / "mycelial-core"))
+from bus_manager import emit_cycle_event
 
 
 class LearningKernel:
@@ -149,6 +155,25 @@ class LearningKernel:
 
         # Step 4: Log to continuity ledger
         self._log_to_ledger(artifact_name, metrics, reward_info, policy_update)
+
+        # Step 4.5: Emit cycle event to artifact bus (mycelial integration)
+        try:
+            cycle_id = f"cycle-{self.cycle_count:04d}"
+            asyncio.run(emit_cycle_event(
+                cycle_id=cycle_id,
+                artifact_count=self.cycle_count,
+                duration_seconds=0.0,  # Could track this if needed
+                metrics={
+                    'entropy': metrics.get('novelty', 0.0),
+                    'novelty': metrics.get('novelty', 0.0),
+                    'building_signal': metrics.get('building_signal', 0.0),
+                    'reward': reward_info['reward']
+                },
+                ledger_entry_id=cycle_id
+            ))
+        except Exception as e:
+            # Bus emission is non-critical - don't fail cycle if bus unavailable
+            pass
 
         # Step 5: Update statistics
         self.total_reward += reward_info['reward']

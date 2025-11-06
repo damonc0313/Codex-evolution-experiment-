@@ -46,11 +46,40 @@ async def on_metabolic_measurement(artifact: Dict[str, Any]):
 
 
 async def on_learning_cycle(artifact: Dict[str, Any]):
-    """Handle learning cycle completion events."""
-    cycle = artifact.get('cycle', 'unknown')
-    reward = artifact.get('reward_info', {}).get('reward', 0)
+    """Handle learning cycle completion events.
 
-    print(f"[BUS] Learning cycle {cycle} complete: reward={reward:.3f}")
+    Triggers periodic metabolic monitoring every 10 cycles.
+    """
+    cycle_id = artifact.get('cycle_id', 'unknown')
+    artifact_count = artifact.get('artifact_count', 0)
+    metrics = artifact.get('metrics', {})
+
+    print(f"[BUS] Learning cycle {cycle_id}: {artifact_count} artifacts")
+
+    # Trigger metabolic monitoring every 10 artifacts
+    if artifact_count % 10 == 0:
+        print(f"[BUS] ⚡ Triggering metabolic measurement (10-cycle checkpoint)")
+
+        # Import here to avoid circular dependency
+        try:
+            from datetime import datetime, timezone
+            sys.path.insert(0, str(Path(__file__).parent.parent / "analysis"))
+            from metabolic_dashboard import generate_dashboard
+
+            dashboard = generate_dashboard()
+
+            # Emit metabolic reading
+            await emit_metabolic_reading(
+                lambda_val=dashboard['lambda'].get('lambda', 0),
+                entropy=dashboard['entropy'].get('mean_entropy', 0),
+                k_cog=dashboard['k_cog'].get('k_cog', 0),
+                state=dashboard['state']
+            )
+
+            print(f"[BUS] ✓ Metabolic reading complete: state={dashboard['state']}")
+
+        except Exception as e:
+            print(f"[BUS] ⚠ Metabolic measurement failed: {e}")
 
 
 async def on_artifact_created(artifact: Dict[str, Any]):
@@ -147,6 +176,33 @@ async def emit_resource_map(efficiency_index: float, reuse_ratio: float, hot_nod
     }
 
     await bus.emit(artifact, urgency=0.6)
+
+
+async def emit_cycle_event(
+    cycle_id: str,
+    artifact_count: int,
+    duration_seconds: float,
+    metrics: Dict[str, float],
+    ledger_entry_id: str = None
+):
+    """Emit learning cycle completion event to bus.
+
+    This creates mycelial awareness of each learning iteration,
+    triggering coordinated measurement and adaptation.
+    """
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'learning_cycle',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'cycle_id': cycle_id,
+        'artifact_count': artifact_count,
+        'duration_seconds': duration_seconds,
+        'metrics': metrics,
+        'ledger_entry_id': ledger_entry_id
+    }
+
+    await bus.emit(artifact, urgency=0.7)  # Medium-high urgency
 
 
 async def emit_phase_transition(from_state: str, to_state: str, trigger: str):
