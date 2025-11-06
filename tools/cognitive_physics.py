@@ -15,6 +15,7 @@ the system learns, remembers, and thinks.
 
 from __future__ import annotations
 
+import asyncio
 import json
 import math
 import sys
@@ -36,6 +37,14 @@ ARTIFACTS_DIR = ROOT / "artifacts"
 EXPERIMENTS_DIR = ROOT / "experiments"
 PHYSICS_DIR = ROOT / "physics"
 PHYSICS_DIR.mkdir(exist_ok=True)
+
+# Mycelial bus integration
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_physics_measurement
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def mean(values: List[float]) -> float:
@@ -408,6 +417,17 @@ class CognitivePhysicist:
         print("=" * 70)
         print(f"Results saved: {results_path}")
         print("=" * 70)
+
+        # Emit to mycelial bus
+        if BUS_AVAILABLE:
+            try:
+                asyncio.run(emit_physics_measurement(
+                    constants=results.get("constants", {}),
+                    temporal_context=results.get("temporal_context", {})
+                ))
+                print("[BUS] Physics measurement emitted to mycelial network")
+            except Exception as e:
+                print(f"[BUS] Warning: Could not emit to bus: {e}")
 
         return results
 

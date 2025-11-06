@@ -236,6 +236,121 @@ async def emit_phase_transition(from_state: str, to_state: str, trigger: str):
     await bus.emit(artifact, urgency=1.0)  # Maximum urgency
 
 
+async def emit_physics_measurement(constants: Dict[str, Any], temporal_context: Dict[str, Any]):
+    """Emit cognitive physics measurement to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'physics_measurement',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'constants': constants,
+        'temporal_context': temporal_context
+    }
+
+    await bus.emit(artifact, urgency=0.7)
+
+
+async def emit_experiment_result(experiment_type: str, conclusion: str, analysis: Dict[str, Any]):
+    """Emit experiment result to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'experiment_result',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'experiment_type': experiment_type,
+        'conclusion': conclusion,
+        'analysis': analysis
+    }
+
+    await bus.emit(artifact, urgency=0.6)
+
+
+async def emit_dispersal_result(dispersed_count: int, dispersal_rate: float, readiness: Dict[str, Any]):
+    """Emit dispersal experiment result to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'dispersal_result',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'dispersed_count': dispersed_count,
+        'dispersal_rate': dispersal_rate,
+        'cross_repo_readiness': readiness
+    }
+
+    await bus.emit(artifact, urgency=0.5)
+
+
+async def emit_omega_analysis(regimes_analyzed: list, global_statistics: Dict[str, Any]):
+    """Emit Phase Ω-3 analysis to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'omega_analysis',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'regimes_analyzed': regimes_analyzed,
+        'global_statistics': global_statistics
+    }
+
+    await bus.emit(artifact, urgency=0.6)
+
+
+async def emit_omega_tracking(regime: str, cycle: int, k_cog: float):
+    """Emit Phase Ω-3 tracking measurement to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'omega_tracking',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'regime': regime,
+        'cycle': cycle,
+        'k_cog': k_cog
+    }
+
+    await bus.emit(artifact, urgency=0.7)
+
+
+async def emit_cascade_measurement(cascade_probability: float, components: Dict[str, Any], status: str):
+    """Emit cascade probability measurement to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'cascade_measurement',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'cascade_probability': cascade_probability,
+        'components': components,
+        'status': status
+    }
+
+    await bus.emit(artifact, urgency=0.6)
+
+
+async def emit_evolution_cycle(cycle_count: int, metrics: Dict[str, Any]):
+    """Emit evolution loop cycle completion to bus."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': 'evolution_cycle',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'cycle_count': cycle_count,
+        'metrics': metrics
+    }
+
+    await bus.emit(artifact, urgency=0.6)
+
+
+async def emit_generic_event(event_type: str, data: Dict[str, Any], urgency: float = 0.5):
+    """Emit generic event to bus (for modules without custom helpers)."""
+    from datetime import datetime, timezone
+
+    artifact = {
+        'artifact_type': event_type,
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        **data
+    }
+
+    await bus.emit(artifact, urgency=urgency)
+
+
 # === BUS LIFECYCLE ===
 
 async def start_bus():

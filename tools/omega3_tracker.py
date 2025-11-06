@@ -17,6 +17,7 @@ Date: 2025-11-05
 Confidence: 0.95
 """
 
+import asyncio
 import json
 import yaml
 from pathlib import Path
@@ -27,6 +28,15 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from tools.cognitive_physics import CognitivePhysicist
+
+# Mycelial bus integration
+ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_omega_tracking
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 def track_cycle():
@@ -93,6 +103,18 @@ def track_cycle():
     if lambda_val and delta_h:
         k_cog = lambda_val * delta_h
         print(f"Step 4: Current k_cog = λ·ΔH_crit = {lambda_val:.6f} × {delta_h:.4f} = {k_cog:.6f}")
+
+        # Emit to mycelial bus
+        if BUS_AVAILABLE:
+            try:
+                asyncio.run(emit_omega_tracking(
+                    regime=regime,
+                    cycle=cycle,
+                    k_cog=k_cog
+                ))
+                print("[BUS] Omega tracking emitted to mycelial network")
+            except Exception as e:
+                print(f"[BUS] Warning: Could not emit to bus: {e}")
     else:
         print("Step 4: k_cog calculation incomplete (insufficient data)")
     print()

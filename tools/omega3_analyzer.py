@@ -14,12 +14,23 @@ Date: 2025-11-05
 Confidence: 0.94
 """
 
+import asyncio
 import json
 import argparse
+import sys
 from pathlib import Path
 from typing import Dict, List, Any
 from datetime import datetime, timezone
 from collections import defaultdict
+
+# Mycelial bus integration
+ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_omega_analysis
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 class Omega3Analyzer:
@@ -171,6 +182,17 @@ class Omega3Analyzer:
 
         print(f"Results saved: {output_path}")
         print()
+
+        # Emit to mycelial bus
+        if BUS_AVAILABLE:
+            try:
+                asyncio.run(emit_omega_analysis(
+                    regimes_analyzed=results["regimes_analyzed"],
+                    global_statistics=results["global_statistics"]
+                ))
+                print("[BUS] Omega analysis emitted to mycelial network")
+            except Exception as e:
+                print(f"[BUS] Warning: Could not emit to bus: {e}")
 
         return results
 

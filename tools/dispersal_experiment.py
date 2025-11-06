@@ -25,6 +25,7 @@ Date: 2025-10-25
 Version: 1.0.0
 """
 
+import asyncio
 import json
 import sys
 from pathlib import Path
@@ -36,6 +37,15 @@ from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent))
 
 from spore_disperser import SporeDisperser
+
+# Mycelial bus integration
+ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT / "mycelial-core"))
+try:
+    from bus_manager import emit_dispersal_result
+    BUS_AVAILABLE = True
+except ImportError:
+    BUS_AVAILABLE = False
 
 
 class DispersalExperiment:
@@ -369,6 +379,18 @@ class DispersalExperiment:
             json.dump(report, f, indent=2)
 
         print(f"\n✓ Report saved to: {report_path.name}")
+
+        # Emit to mycelial bus
+        if BUS_AVAILABLE:
+            try:
+                asyncio.run(emit_dispersal_result(
+                    dispersed_count=execution_results['dispersed_count'],
+                    dispersal_rate=execution_results['dispersal_rate'],
+                    readiness=readiness_assessment
+                ))
+                print("[BUS] Dispersal result emitted to mycelial network")
+            except Exception as e:
+                print(f"[BUS] Warning: Could not emit to bus: {e}")
 
         return report
 
