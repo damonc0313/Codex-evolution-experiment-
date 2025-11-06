@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/user/Codex-evolution-experiment-/tools/validate_homeostasis.py", line 41, in <module>
+    from integration_health import compute_integration_depth, analyze_integration_health
+ImportError: cannot import name 'analyze_integration_health' from 'integration_health' (/home/user/Codex-evolution-experiment-/analysis/integration_health.py)

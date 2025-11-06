@@ -1,0 +1,115 @@
+{
+  "rewards": [
+    {
+      "reward": 0.7402,
+      "baseline": 0.7,
+      "advantage": 0.0403,
+      "building_signal": 0.78,
+      "quality": 0.685,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.883014Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_ci.json"
+    },
+    {
+      "reward": 0.738,
+      "baseline": 0.7402,
+      "advantage": -0.0022,
+      "building_signal": 0.78,
+      "quality": 0.68,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.883459Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_cisim.json"
+    },
+    {
+      "reward": 0.7402,
+      "baseline": 0.7391,
+      "advantage": 0.0011,
+      "building_signal": 0.78,
+      "quality": 0.685,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.883931Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_digest.json"
+    },
+    {
+      "reward": 0.7335,
+      "baseline": 0.7395,
+      "advantage": -0.006,
+      "building_signal": 0.78,
+      "quality": 0.67,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.884334Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_draft.json"
+    },
+    {
+      "reward": 0.7335,
+      "baseline": 0.738,
+      "advantage": -0.0045,
+      "building_signal": 0.78,
+      "quality": 0.67,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.884763Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_harvest.json"
+    },
+    {
+      "reward": 0.738,
+      "baseline": 0.7371,
+      "advantage": 0.0009,
+      "building_signal": 0.78,
+      "quality": 0.68,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.885243Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_patch.json"
+    },
+    {
+      "reward": 0.7358,
+      "baseline": 0.7372,
+      "advantage": -0.0015,
+      "building_signal": 0.78,
+      "quality": 0.675,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.885816Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_runtime.json"
+    },
+    {
+      "reward": 0.7335,
+      "baseline": 0.737,
+      "advantage": -0.0035,
+      "building_signal": 0.78,
+      "quality": 0.67,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.886469Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_summary.json"
+    },
+    {
+      "reward": 0.7402,
+      "baseline": 0.7366,
+      "advantage": 0.0037,
+      "building_signal": 0.78,
+      "quality": 0.685,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.887073Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_tests.json"
+    },
+    {
+      "reward": 0.738,
+      "baseline": 0.737,
+      "advantage": 0.001,
+      "building_signal": 0.78,
+      "quality": 0.68,
+      "novelty": 0.8,
+      "timestamp": "2025-11-06T04:07:23.887603Z",
+      "artifact_type": "agents_apply_phase",
+      "artifact_name": "agents_apply_validator.json"
+    }
+  ],
+  "last_updated": "2025-11-06T04:07:23.887883Z"
+}
