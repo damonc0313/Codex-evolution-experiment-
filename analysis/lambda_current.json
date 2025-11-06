@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-11-06T02:04:11.597607+00:00",
+  "lambda": 0.012679005294504638,
+  "half_life_days": 54.66889274510916,
+  "r_squared": 0.09101974284048664,
+  "n_artifacts": 170,
+  "age_range_days": [
+    0.5323198177893519,
+    14.071553936666668
+  ],
+  "baseline_comparison": {
+    "baseline_lambda": 0.03151228863157167,
+    "baseline_timestamp": "unknown",
+    "delta_lambda": -0.018833283337067033,
+    "percent_change": -59.76488587438953,
+    "direction": "decreasing"
+  },
+  "configured_target": 0.08,
+  "distance_to_target": 0.06732099470549537,
+  "artifacts_analyzed": 170
+}

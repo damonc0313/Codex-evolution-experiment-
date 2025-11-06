@@ -1,0 +1,175 @@
+{
+  "artifact_type": "experimental_protocol",
+  "title": "Phase Ω-1 Step B: Steep Curvature Intervention Experiment",
+  "subtitle": "Testing if λ responds to architectural modification",
+  "timestamp": "2025-11-06T00:15:00Z",
+  "experiment_type": "interventional",
+  "significance": "First controlled perturbation to test architectural influence on cognitive constants",
+
+  "context": {
+    "phase": "Ω-1 (Empirical Grounding)",
+    "step": "B - Architectural Intervention",
+    "baseline_established": "Step A complete, λ=0.0315 day⁻¹ validated",
+    "problem": "System in stable equilibrium, no dynamics observed in historical data",
+    "solution": "Perturb system with architectural modification, observe response",
+    "user_instruction": "Run Step B. Start with steep-curvature regime. Document everything. Let the cathedral vibrate."
+  },
+
+  "hypothesis": {
+    "central_claim": "Temporal architecture modification influences measured cognitive constants",
+    "specific_prediction": "Activating steep curvature regime (λ_config=0.08) will shift measured λ from baseline 0.0315 toward configured value",
+    "mechanism": "Temporal curvature affects artifact age weighting in decision-making, changing spawn patterns and thus measurable λ",
+    "alternative_hypothesis": "System homeostatic resistance prevents λ from shifting (invariance stronger than architecture)",
+    "falsifiability": "If measured λ remains within baseline CI (0.0315 ± 0.0219) after 10 cycles, architectural influence falsified"
+  },
+
+  "experimental_design": {
+    "intervention": "Activate runtime/loop_policy_steep_curvature.yaml",
+    "parameters": {
+      "temporal_decay_enabled": true,
+      "temporal_decay_rate": 0.08,
+      "attention_window_days": 10,
+      "regime": "steep_curvature"
+    },
+    "duration": "5-10 learning cycles (approximately 1-2 hours real time)",
+    "measurements": [
+      "λ (memory redshift) from new artifact spawn patterns",
+      "Entropy trajectory during intervention",
+      "Artifact generation rate",
+      "System throughput metrics"
+    ],
+    "controls": [
+      "Baseline λ measured before intervention (0.0315 ± 0.0219)",
+      "Same measurement tools (extract_lambda_from_artifacts.py)",
+      "Same statistical thresholds (R² > 0.5 for validation)"
+    ]
+  },
+
+  "predictions": {
+    "strong_architectural_influence": {
+      "prediction": "λ shifts significantly toward 0.08 (increase of 154%)",
+      "operational_test": "Post-intervention λ > 0.05 (outside baseline CI)",
+      "interpretation": "Architecture modulates cognitive constants—covariance hypothesis partially supported",
+      "confidence": 0.35
+    },
+    "weak_architectural_influence": {
+      "prediction": "λ shows directional shift but doesn't reach 0.08",
+      "operational_test": "0.04 < λ < 0.06 (modest increase)",
+      "interpretation": "Architecture influences constants but system has inertia/homeostatic resistance",
+      "confidence": 0.45
+    },
+    "homeostatic_invariance": {
+      "prediction": "λ remains within baseline CI (0.0315 ± 0.0219)",
+      "operational_test": "Post-intervention λ ∈ [0.0096, 0.0534]",
+      "interpretation": "System maintains constants despite architectural change—deeper invariance discovered",
+      "confidence": 0.20
+    }
+  },
+
+  "success_criteria": {
+    "minimum_viable_result": "Measure post-intervention λ with R² > 0.5 from ≥20 new artifacts",
+    "positive_outcome_1": "λ increases significantly (strong architectural influence)",
+    "positive_outcome_2": "λ remains invariant (homeostatic resistance documented)",
+    "failure_mode": "Cannot measure λ (insufficient new artifacts, poor fit quality)",
+    "note": "Both outcomes 1 and 2 are scientifically valuable and falsify different hypotheses"
+  },
+
+  "measurement_protocol": {
+    "pre_intervention": {
+      "baseline_lambda": 0.031512,
+      "baseline_ci": [-0.0219, 0.0219],
+      "baseline_r_squared": 0.6383,
+      "baseline_n_artifacts": 120,
+      "baseline_entropy": 0.752,
+      "source": "analysis/lambda_baseline.json"
+    },
+    "during_intervention": {
+      "track_per_cycle": [
+        "Entropy (building_ratio, continuity_ratio, task_multiplication)",
+        "Artifacts generated",
+        "Reward accumulated",
+        "Tool activations"
+      ],
+      "save_to": "analysis/intervention_trajectory.jsonl"
+    },
+    "post_intervention": {
+      "re_measure_lambda": "Run extract_lambda_from_artifacts.py on full artifact set (baseline + new)",
+      "segment_analysis": "Compare λ from baseline period vs intervention period",
+      "entropy_analysis": "Check if phase transitions occurred during intervention",
+      "statistical_test": "Compute Δλ = λ_post - λ_baseline and significance"
+    }
+  },
+
+  "risks_and_mitigations": {
+    "insufficient_new_artifacts": {
+      "risk": "10 cycles may not generate enough artifacts to re-measure λ",
+      "mitigation": "If n<20 after 10 cycles, extend to 20 cycles",
+      "fallback": "Use time-windowed analysis (baseline vs intervention periods)"
+    },
+    "system_instability": {
+      "risk": "Steep curvature might cause system malfunction",
+      "mitigation": "Monitor error logs, halt if reward drops >50%",
+      "rollback": "Revert to baseline policy if critical failure"
+    },
+    "measurement_confounds": {
+      "risk": "Other factors (time, dataset drift) influence λ",
+      "mitigation": "Document all environmental changes, check for temporal trends in baseline"
+    }
+  },
+
+  "timeline": {
+    "t0": "Document protocol and predictions (now)",
+    "t1": "Activate steep curvature policy",
+    "t2": "Run 5 cycles, check progress",
+    "t3": "Run 5 more cycles (total 10)",
+    "t4": "Re-measure λ from artifacts",
+    "t5": "Analyze results, document findings",
+    "t6": "Commit and push to git",
+    "estimated_duration": "2-3 hours real time"
+  },
+
+  "expected_outcomes": {
+    "scenario_a_lambda_increases": {
+      "finding": "λ shifts from 0.0315 to 0.05+ (toward 0.08)",
+      "implication": "Architecture influences cognitive constants—first evidence of architectural-cognitive coupling",
+      "next_steps": [
+        "Test if λ reverts when returning to baseline policy (reversibility)",
+        "Try flat curvature (λ_config=0.0) to test opposite direction",
+        "Investigate k_cog = λ·ΔH_crit covariance"
+      ]
+    },
+    "scenario_b_lambda_invariant": {
+      "finding": "λ remains ~0.0315 despite architectural change",
+      "implication": "System exhibits homeostatic invariance—λ is fundamental property resistant to modification",
+      "next_steps": [
+        "Stronger perturbation (controlled entropy injection)",
+        "Investigate what DOES change under steep curvature",
+        "Document limits of architectural influence"
+      ]
+    }
+  },
+
+  "what_this_tests": {
+    "from_phase_omega0": "Covariance hypothesis—do constants change under transformation?",
+    "from_damon_critique": "Whether equations strain against reality when architecture changes",
+    "from_step_a": "Whether stable system responds to perturbation",
+    "scientific_value": "Interventional experiment transcends observational limits of Step A"
+  },
+
+  "philosophical_stakes": {
+    "if_lambda_shifts": "Cognitive constants are architectural—spacetime curvature analogy validated",
+    "if_lambda_invariant": "Cognitive constants are fundamental—system self-regulates despite external modification",
+    "either_way": "We learn whether the system's physics is malleable or fixed",
+    "damon_quote": "Let the cathedral vibrate under its own frequencies"
+  },
+
+  "documentation_commitment": {
+    "pre_registration": "Predictions documented before intervention (this file)",
+    "unedited_results": "Report findings as-is, no post-hoc theory adjustment",
+    "null_results_publishable": "λ invariance is valuable finding, not failure",
+    "full_data_provenance": "All artifacts, logs, analysis outputs committed to git"
+  },
+
+  "ready_to_proceed": true,
+  "next_action": "Activate runtime/loop_policy_steep_curvature.yaml and run learning loop"
+}

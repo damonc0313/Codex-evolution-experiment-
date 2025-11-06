@@ -1,19 +1,13 @@
-# Phase Ω-3 Regime 3: Inverted Curvature (Historical Bias)
-# Physical analogy: Reverse gravity—time dilates toward past
-# Expected: λ_eff < 0 day⁻¹ (negative decay = amplification with age)
-
 enabled: true
 self_write: true
 max_iterations: 75
 cooldown_seconds: 4
 novelty_floor: 0.25
 autonomous_permission: true
-
 continuous_operation_targets:
   task_queue_min: 6
   building_ratio_min: 0.55
   task_multiplication_min: 1.6
-
 natural_optimisation:
   enabled: true
   mutation_factor: 0.2
@@ -34,58 +28,37 @@ natural_optimisation:
       entropy: 0.25
     gate_floor: 0.05
     anneal_on_plateau: true
-
 stop_on:
 - ci_fail
 - digest_mismatch
 - continuity_low
 - regressions_spike
-
 artifact_generation_weights:
-  building: 0.5259
-  analysis: 0.2805
-  hybrid: 0.1936
-
+  building: 0.5263
+  analysis: 0.2803
+  hybrid: 0.1935
 validation:
   min_confidence_threshold: 0.7
-
-# === OMEGA-3 TEMPORAL CURVATURE PARAMETERS ===
 temporal_curvature:
-  regime: "inverted_curvature"
-  description: "Historical bias—older artifacts dominate decision-making"
-
-  # Attention window: consider all artifacts
-  attention_window_days: 365
-
-  # Temporal decay: INVERTED (older = more influential)
-  # influence(age) = base_influence * exp(+amplification_rate * age_days)
-  # Note: Must cap to prevent unbounded growth
+  regime: steep_curvature
+  description: "Strong recency bias\u2014recent artifacts dominate decision-making"
+  attention_window_days: 10
   temporal_decay_enabled: true
-  temporal_decay_rate: -0.03  # day⁻¹ (negative = amplification)
-  amplification_cap: 3.0  # Maximum multiplier for ancient artifacts
-
-  # Weight multipliers by age bracket
+  temporal_decay_rate: 0.08
   age_weight_multipliers:
-    0_to_3_days: 0.5      # Recent: reduced weight
-    3_to_10_days: 1.0     # Medium: normal weight
-    10_to_30_days: 1.5    # Old: increased weight
-    30_plus_days: 2.0     # Ancient: double weight (capped by amplification_cap)
-
-  # Spawn_count scaling with age: INVERTED
+    0_to_3_days: 2.0
+    3_to_10_days: 1.0
+    10_to_30_days: 0.3
+    30_plus_days: 0.1
   spawn_count_temporal_scaling: true
-  spawn_count_decay_rate: -0.02  # day⁻¹ (negative = older gets stronger)
-
-  # Physical interpretation
-  spacetime_curvature: "negative"
-  cognitive_metric: "Inverted temporal gradient—past dominates present"
-  expected_lambda_eff: -0.025  # day⁻¹ (negative decay)
-  expected_half_life_days: null  # amplification, not decay
-
-# Experiment metadata
+  spawn_count_decay_rate: 0.06
+  spacetime_curvature: high
+  cognitive_metric: "Steep temporal gradient\u2014present dominates"
+  expected_lambda_eff: 0.07
+  expected_half_life_days: 10
 omega3_experiment:
-  phase: "omega3_regime3"
-  regime_name: "inverted_curvature"
-  start_cycle: null  # To be filled when experiment starts
+  phase: omega3_regime1
+  regime_name: steep_curvature
+  start_cycle: null
   target_cycles: 20
-  description: "Testing covariant cognition under negative temporal curvature"
-  warning: "Inverted curvature may cause instability—monitor homeostatic_mode closely"
+  description: Testing covariant cognition under high temporal curvature
