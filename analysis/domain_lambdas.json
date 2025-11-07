@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-11-07T04:01:37.020376Z",
+  "method": "exponential_decay_fit",
+  "formula": "w ~ e^(-\u03bbt)",
+  "domains": {}
+}
