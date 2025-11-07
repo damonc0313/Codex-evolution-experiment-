@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-11-07T05:27:54.442016",
+  "method": "raw_weight_lambda_fit",
+  "ground_truth": {
+    "lambda": 0.05,
+    "n_cycles": 100,
+    "time_span_days": 30
+  },
+  "raw_weights": {
+    "lambda": -0.022889368153539192,
+    "r_squared": 0.33373525284564287,
+    "n_samples": 486,
+    "mean_age_days": 14.492676307028704,
+    "error_absolute": 0.07288936815353919,
+    "error_relative_pct": 145.7787363070784
+  },
+  "normalized_weights": {
+    "lambda": -0.005909874680181947,
+    "r_squared": 0.030609934357702873,
+    "n_samples": 486
+  },
+  "improvement": {
+    "delta_r_squared": 0.30312531848794,
+    "raw_weights_superior": true
+  },
+  "victory_gate": {
+    "criteria": {
+      "n \u2265 80": true,
+      "r\u00b2 \u2265 0.70": false,
+      "0.001 \u2264 \u03bb \u2264 1.0": false,
+      "|\u03bb_fit - \u03bb_true| \u2264 30%": false
+    },
+    "passed": false
+  }
+}
