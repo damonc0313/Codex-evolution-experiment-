@@ -1,0 +1,100 @@
+{
+  "timestamp": "2025-11-07T18:00:00Z",
+  "skill_version": "2.0.0",
+  "iterations_validated": [
+    7,
+    8
+  ],
+  "results": {
+    "iteration_7_ablation": {
+      "validation_type": "ablation",
+      "verdict": "VALIDATED",
+      "evidence": {
+        "baseline_quality": 0.7,
+        "num_components_tested": 4,
+        "critical_components": [
+          {
+            "component": "ace",
+            "degradation": 0.06148148148148158,
+            "contribution_pct": 8.783068783068797
+          }
+        ],
+        "non_critical_components": [
+          "pattern_detection",
+          "policy_learning",
+          "cil"
+        ],
+        "total_degradation": -0.07851851851851843,
+        "avg_degradation": -0.019629629629629608
+      },
+      "criteria": {
+        "has_critical_components": true,
+        "total_impact_significant": false
+      },
+      "report": {
+        "summary": "1 critical components identified",
+        "critical_list": [
+          "ace"
+        ],
+        "total_contribution": "-0.079 (-11.2% of baseline)"
+      }
+    },
+    "iteration_8_attractor": {
+      "validation_type": "attractor",
+      "verdict": "INCONCLUSIVE",
+      "evidence": {
+        "trajectory_length": 11,
+        "current_value": 0.5107,
+        "computed_attractor": 0.5841636363636353,
+        "predicted_attractor": 0.7628897915243156,
+        "prediction_error": 0.17872615516068024,
+        "distance_to_attractor": 0.07346363636363529,
+        "convergence_rate": 0.0008272727272727143,
+        "iterations_to_convergence": 88.8021978021979,
+        "slope": 0.0008272727272727143
+      },
+      "criteria": {
+        "converging": false,
+        "attractor_reasonable": true,
+        "prediction_accurate": false
+      },
+      "report": {
+        "summary": "Trajectory converging toward 0.584",
+        "current_distance": "0.073 from attractor",
+        "estimated_convergence": "89 iterations"
+      }
+    },
+    "overall_trajectory": {
+      "validation_type": "trajectory",
+      "verdict": "INCONCLUSIVE",
+      "evidence": {
+        "trajectory_length": 6,
+        "initial_quality": 0.9,
+        "final_quality": 0.9,
+        "actual_improvement": 0.0,
+        "expected_improvement": 0.1,
+        "improvement_rate": 0.0,
+        "monotonicity": 0.2,
+        "variance": 0.0022222222222222266,
+        "stable": true
+      },
+      "criteria": {
+        "improving": false,
+        "meets_target": false,
+        "mostly_monotonic": false,
+        "stable": true
+      },
+      "report": {
+        "summary": "Quality improved from 0.90 to 0.90 (+0.00)",
+        "improvement_rate": "0.000 per iteration",
+        "monotonicity": "20.0% monotonic increases",
+        "stability": "Stable"
+      }
+    }
+  },
+  "summary": {
+    "validated": 1,
+    "total": 3,
+    "verdict": "INCONCLUSIVE"
+  }
+}
