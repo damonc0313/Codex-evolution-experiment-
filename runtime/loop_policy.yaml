@@ -34,11 +34,11 @@ stop_on:
 - continuity_low
 - regressions_spike
 artifact_generation_weights:
-  building: 0.7705
+  building: 0.7707
   analysis: 0.2
-  hybrid: 0.0295
+  hybrid: 0.0293
 validation:
-  min_confidence_threshold: 0.7092
+  min_confidence_threshold: 0.7052
 temporal_curvature:
   regime: steep_curvature
   description: "Strong recency bias\u2014recent artifacts dominate decision-making"

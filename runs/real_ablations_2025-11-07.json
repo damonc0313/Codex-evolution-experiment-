@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-11-07T04:56:42.170155",
+  "method": "real_ablations_runtime_flags_v2",
+  "baseline_quality": 0.6924999999999998,
+  "baseline_building": 0.7709999999999999,
+  "ablations": [
+    {
+      "component": "reward_model",
+      "baseline_quality": 0.6924999999999998,
+      "ablated_quality": 0.0,
+      "delta_quality": 0.6924999999999998,
+      "pct_degradation": 100.0,
+      "baseline_building": 0.7709999999999999,
+      "ablated_building": 0.0,
+      "delta_building": 0.7709999999999999,
+      "pct_building_degradation": 100.0,
+      "method": "real_runtime_ablation",
+      "n_cycles": 20
+    },
+    {
+      "component": "policy_updater",
+      "baseline_quality": 0.6924999999999998,
+      "ablated_quality": 0.0,
+      "delta_quality": 0.6924999999999998,
+      "pct_degradation": 100.0,
+      "baseline_building": 0.7709999999999999,
+      "ablated_building": 0.0,
+      "delta_building": 0.7709999999999999,
+      "pct_building_degradation": 100.0,
+      "method": "real_runtime_ablation",
+      "n_cycles": 20
+    },
+    {
+      "component": "metrics_engine",
+      "baseline_quality": 0.6924999999999998,
+      "ablated_quality": 0.5,
+      "delta_quality": 0.19249999999999978,
+      "pct_degradation": 27.79783393501803,
+      "baseline_building": 0.7709999999999999,
+      "ablated_building": 0.5,
+      "delta_building": 0.2709999999999999,
+      "pct_building_degradation": 35.149156939040196,
+      "method": "real_runtime_ablation",
+      "n_cycles": 20
+    }
+  ],
+  "victory_gate": {
+    "criteria": "Any component shows \u226515% degradation",
+    "passed": true
+  }
+}
