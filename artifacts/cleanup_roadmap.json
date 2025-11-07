@@ -1,0 +1,239 @@
+{
+  "artifact_type": "cleanup_roadmap",
+  "timestamp": "2025-11-06T00:00:00Z",
+  "generated_by": "Codex",
+  "context": "Post-brutal-audit action plan to transform repo from 87% theatre into focused, honest system",
+
+  "current_state": {
+    "total_modules": 79,
+    "working_core": 10,
+    "orphaned": 69,
+    "orphan_rate": "87.3%",
+    "verdict": "UNSUSTAINABLE"
+  },
+
+  "goal": "Transform repo into honest, focused, maintainable system while preserving valuable work",
+
+  "strategy": "ORGANIZE → EVALUATE → INTEGRATE_OR_DELETE",
+
+  "phase_1_immediate_reorganization": {
+    "timeline": "1-2 hours",
+    "actions": [
+      {
+        "action": "Create new directory structure",
+        "structure": {
+          "tools/core/": "10 modules in active production use",
+          "tools/experiments/": "Completed experiments with artifacts",
+          "tools/archive/": "Abandoned or incomplete work",
+          "tools/integration_candidates/": "Orphaned modules worth considering for integration"
+        }
+      },
+      {
+        "action": "Move core 10 modules to tools/core/",
+        "modules": [
+          "evolve_loop.py",
+          "run_omega_cycle.py",
+          "learning_kernel.py",
+          "agents_protocol.py",
+          "artifact_metrics.py",
+          "reward_model.py",
+          "policy_updater.py",
+          "ledger_metrics.py",
+          "ledger_utils.py",
+          "lineage_weaver.py"
+        ],
+        "impact": "Makes production code immediately identifiable"
+      },
+      {
+        "action": "Identify experiments with artifacts",
+        "candidates": [
+          "swarm_bench.py (has swarm_* artifacts)",
+          "meta_recursive_analyzer.py (has meta_* artifacts)",
+          "cascade_experiment.py (has cascade_* artifacts)",
+          "boundary_pusher.py (has boundary_* artifacts)"
+        ],
+        "move_to": "tools/experiments/"
+      },
+      {
+        "action": "Move everything else to tools/archive/",
+        "rationale": "Preserve history but make it clear this isn't production code"
+      }
+    ],
+    "deliverables": [
+      "Clear directory structure",
+      "Updated imports in core modules",
+      "README documenting new organization",
+      "Migration map (old path → new path)"
+    ]
+  },
+
+  "phase_2_evaluation": {
+    "timeline": "2-4 hours",
+    "actions": [
+      {
+        "action": "Evaluate each archived module",
+        "criteria": {
+          "integration_value": "Does this solve a real problem?",
+          "integration_cost": "How hard to wire into core loop?",
+          "maintenance_burden": "Will this add complexity?",
+          "alternatives": "Can core do this already?"
+        }
+      },
+      {
+        "action": "Identify top integration candidates",
+        "method": "Value/Cost ratio - high value, low cost = integrate first",
+        "target": "5-10 modules worth integrating"
+      },
+      {
+        "action": "Identify definite deletes",
+        "criteria": [
+          "Duplicate functionality",
+          "Failed experiments",
+          "Superseded by newer approaches",
+          "No clear use case"
+        ],
+        "estimate": "~30-40 modules can be safely deleted"
+      }
+    ],
+    "deliverables": [
+      "Integration priority list",
+      "Delete candidates list",
+      "Keep-in-archive list (preserve but don't integrate)"
+    ]
+  },
+
+  "phase_3_high_value_integrations": {
+    "timeline": "Variable - 1-8 hours per module",
+    "priority_candidates": {
+      "swarm_bench": {
+        "value": "HIGH - Multi-variant policy testing",
+        "integration_path": "Add swarm mode to evolve_loop, run N parallel policies",
+        "cost": "MEDIUM - Needs process management and result aggregation",
+        "impact": "Could accelerate learning by testing multiple policies simultaneously"
+      },
+      "boundary_pusher": {
+        "value": "HIGH - Autonomous capability discovery",
+        "integration_path": "Periodic scheduled runs, results feed into policy",
+        "cost": "LOW - Standalone script, just needs scheduling",
+        "impact": "System automatically discovers its own limits"
+      },
+      "advanced_analytics_engine": {
+        "value": "MEDIUM - Better insights into learning patterns",
+        "integration_path": "Add analytics phase after each cycle",
+        "cost": "MEDIUM - Needs to export actionable recommendations",
+        "impact": "Higher quality policy updates from better pattern detection"
+      },
+      "complete_mycelial_integration": {
+        "value": "MEDIUM - Bio-inspired optimizations",
+        "components": {
+          "chemotropic_allocator": "Prioritize high-reward artifact types",
+          "nutrient_gradient": "Guide exploration toward promising areas",
+          "swarm_anastomosis": "Multi-fork consensus building"
+        },
+        "cost": "HIGH - Significant refactoring of core loop",
+        "impact": "More sophisticated resource allocation and exploration"
+      },
+      "nos_pipeline": {
+        "value": "MEDIUM - Natural optimization system",
+        "integration_path": "Run NOS analysis after each cycle, influence policy",
+        "cost": "LOW - Already structured as pipeline",
+        "impact": "Multi-objective optimization (energy, coherence, resilience, entropy)"
+      }
+    },
+    "integration_order": [
+      "1. boundary_pusher (low cost, high value)",
+      "2. nos_pipeline (low cost, medium value)",
+      "3. swarm_bench (medium cost, high value)",
+      "4. advanced_analytics_engine (medium cost, medium value)",
+      "5. mycelial completion (high cost, medium value)"
+    ]
+  },
+
+  "phase_4_deletion": {
+    "timeline": "1 hour",
+    "candidates_for_deletion": [
+      "Duplicate or superseded modules",
+      "Failed experiments with no artifacts",
+      "Modules that will never be integrated",
+      "Theatre code (looks sophisticated, no value)"
+    ],
+    "estimated_deletions": "30-40 modules",
+    "process": [
+      "1. Verify no imports from core",
+      "2. Check git history for context",
+      "3. Move to archive/ first (safe deletion)",
+      "4. After 30 days in archive with no issues, delete permanently"
+    ]
+  },
+
+  "phase_5_documentation_update": {
+    "timeline": "2 hours",
+    "actions": [
+      {
+        "action": "Update README with honest description",
+        "sections": {
+          "what_works": "Core 10-module autonomous learning system",
+          "what_is_experimental": "Experiments in tools/experiments/ with artifacts",
+          "what_is_archived": "Abandoned work preserved for reference",
+          "claimed_capabilities": "Only claim what's operational"
+        }
+      },
+      {
+        "action": "Create ARCHITECTURE.md",
+        "content": "Diagram of core loop, explain each component, show data flow"
+      },
+      {
+        "action": "Update existing docs to distinguish operational vs aspirational",
+        "targets": [
+          "MYCELIAL_ARCHITECTURE.md - mark what's integrated vs planned",
+          "AUTONOMOUS_EXPERIMENTATION_ARCHIVE.md - clarify experimental status",
+          "agents.md - update to reflect actual production system"
+        ]
+      },
+      {
+        "action": "Create INTEGRATION_GUIDE.md",
+        "content": "How to properly integrate experimental modules into core"
+      }
+    ]
+  },
+
+  "success_criteria": {
+    "directory_structure": "Clear separation of core/experiments/archive",
+    "import_paths": "All core modules import correctly from new locations",
+    "documentation": "Honest description of what works vs what's experimental",
+    "orphan_rate": "Reduced from 87% to <30%",
+    "integration_backlog": "Clear priority list with value/cost estimates",
+    "ongoing_discipline": "Policy established: INTEGRATE or DELETE within 30 days"
+  },
+
+  "risks_and_mitigation": {
+    "risk_breaking_imports": {
+      "mitigation": "Update all imports, test core loop before committing"
+    },
+    "risk_losing_valuable_work": {
+      "mitigation": "Archive first, delete later only after confirmation"
+    },
+    "risk_reorg_churn": {
+      "mitigation": "Do it once, do it right, establish policy to prevent recurrence"
+    }
+  },
+
+  "estimated_total_effort": "8-16 hours over 2-3 sessions",
+
+  "immediate_next_step": "Get user approval to proceed with Phase 1 (reorganization)",
+
+  "alternative_minimal_approach": {
+    "description": "If full reorganization is too aggressive",
+    "actions": [
+      "Just create README_HONEST.md documenting what actually works",
+      "Add comments to orphaned modules: '# ARCHIVED - not integrated'",
+      "Focus only on integrating top 2-3 high-value modules"
+    ],
+    "effort": "2-4 hours",
+    "impact": "Less dramatic but still improves clarity"
+  },
+
+  "recommendation": "Execute full Phase 1-5 plan. Repo deserves honest organization that matches its actual capabilities.",
+
+  "confidence": 0.92
+}

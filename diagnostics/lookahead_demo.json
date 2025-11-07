@@ -1,0 +1,30 @@
+{
+  "predictive_model": {
+    "building|high_novelty|steep_curvature|low_build": [
+      0.68
+    ],
+    "analysis|high_novelty|steep_curvature|low_build": [
+      0.5680000000000001
+    ],
+    "hybrid|high_novelty|steep_curvature|low_build": [
+      0.5680000000000001
+    ],
+    "experimental|high_novelty|steep_curvature|low_build": [
+      0.5680000000000001
+    ]
+  },
+  "simulation_history": [
+    {
+      "timestamp": "2025-11-06T20:51:30.730055Z",
+      "chosen_action": "building",
+      "predicted_outcome": 0.52,
+      "actual_outcome": 0.68,
+      "prediction_error": 0.16000000000000003,
+      "relative_error": 0.23529411764705885,
+      "confidence": 0.2,
+      "num_simulations": 4,
+      "counterfactual_updates": 3
+    }
+  ],
+  "last_updated": "2025-11-06T20:51:30.730195Z"
+}

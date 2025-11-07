@@ -34,9 +34,9 @@ stop_on:
 - continuity_low
 - regressions_spike
 artifact_generation_weights:
-  building: 0.5749
-  analysis: 0.2515
-  hybrid: 0.1736
+  building: 0.5876
+  analysis: 0.2439
+  hybrid: 0.1685
 validation:
   min_confidence_threshold: 0.7013
 temporal_curvature:
