@@ -28,5 +28,9 @@
   "add_hasattr": 0.5,
   "add_bounds_checking": 0.5,
   "add_default_dict": 0.5,
-  "walrus_operator": 0.55
+  "walrus_operator": 0.55,
+  "lambda_function": 0.55,
+  "list_comprehension": 0.55,
+  "try_except": 0.55,
+  "class_definition": 0.55
 }
