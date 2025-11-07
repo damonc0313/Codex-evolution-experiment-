@@ -51,7 +51,8 @@ class CausalInfluenceLedger:
         decision_type: str,
         inputs: List[Dict[str, any]],
         output: any,
-        metadata: Optional[Dict] = None
+        metadata: Optional[Dict] = None,
+        timestamp: Optional[str] = None
     ) -> str:
         """
         Log a decision with its causal inputs.
@@ -61,6 +62,7 @@ class CausalInfluenceLedger:
             inputs: List of {artifact_id, weight, reason} dicts
             output: The decision outcome
             metadata: Additional context
+            timestamp: Optional ISO timestamp (for temporal experiments, defaults to now)
 
         Returns:
             decision_id: UUID for this decision
@@ -82,7 +84,7 @@ class CausalInfluenceLedger:
 
         # Create decision record
         decision_id = str(uuid.uuid4())
-        timestamp = datetime.now().isoformat()
+        timestamp = timestamp or datetime.now().isoformat()
 
         decision = {
             'decision_id': decision_id,

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-11-07T04:29:26.964298",
+  "method": "synthetic_influence_chains",
+  "ground_truth": {
+    "lambda": 0.05,
+    "n_cycles": 100,
+    "time_span_days": 30
+  },
+  "fitted": {
+    "artifact_selection": {
+      "lambda": -0.0059098746801819904,
+      "error_absolute": 0.05590987468018199,
+      "error_relative_pct": 111.81974936036399,
+      "r_squared": 0.030609934357702873,
+      "n_samples": 486,
+      "mean_age_days": 14.492676267051849
+    }
+  },
+  "victory_gate": {
+    "criteria": {
+      "n \u2265 80": true,
+      "r\u00b2 \u2265 0.70": false,
+      "|\u03bb_fit - \u03bb_true| \u2264 20%": false
+    },
+    "passed": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-11-07T04:30:43.648321",
+  "environment": "baseline_random_policy",
+  "purpose": "cross_environment_replication",
+  "baseline_quality": 0.7055412598183173,
+  "ablations": [
+    {
+      "component": "reward_model",
+      "delta_quality": -0.0024368849669362813,
+      "pct_degradation": -0.3453922691301993,
+      "ci_95": 0.004480842654487294
+    },
+    {
+      "component": "policy_updater",
+      "delta_quality": -0.005104858186740224,
+      "pct_degradation": -0.7235378676584793,
+      "ci_95": 0.0037305903875101206
+    },
+    {
+      "component": "homeostatic_feedback",
+      "delta_quality": -0.008743212317408044,
+      "pct_degradation": -1.239220555245698,
+      "ci_95": 0.004503642044396963
+    }
+  ],
+  "victory_gate": {
+    "criteria": "all_ablations < 5%",
+    "passed": true
+  }
+}
