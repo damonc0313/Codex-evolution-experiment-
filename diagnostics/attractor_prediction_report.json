@@ -1,0 +1,143 @@
+{
+  "timestamp": "2025-11-07T18:01:17.962919",
+  "study": "attractor_prediction",
+  "iteration": 8,
+  "hypothesis": "Policy weights converge to stable attractors predictable from early trajectory",
+  "historical_policy": {
+    "source": "diagnostics/policy_update_history.json",
+    "update_count": 20,
+    "weights_tracked": [
+      "building_weight",
+      "analysis_weight",
+      "hybrid_weight",
+      "confidence_threshold"
+    ],
+    "predictions": {
+      "building_weight": {
+        "weight": "building_weight",
+        "model": "quadratic",
+        "attractor": 0.7628897915243156,
+        "r_squared": 0.9760034287010619,
+        "coefficients": [
+          2.7415128730923976e-05,
+          -0.00014111300979729457,
+          0.5028498051948053
+        ],
+        "current_value": 0.5107,
+        "initial_value": 0.5026,
+        "distance_to_attractor": 0.25218979152431553,
+        "trajectory_length": 20,
+        "note": "Quadratic extrapolation to t=100"
+      },
+      "analysis_weight": {
+        "weight": "analysis_weight",
+        "model": "quadratic",
+        "attractor": 0.003138014354073182,
+        "r_squared": 0.9687570549332065,
+        "coefficients": [
+          -3.0775803144223574e-05,
+          0.00012541695146958272,
+          0.2983543506493507
+        ],
+        "current_value": 0.29,
+        "initial_value": 0.2984,
+        "distance_to_attractor": 0.2868619856459268,
+        "trajectory_length": 20,
+        "note": "Quadratic extrapolation to t=100"
+      },
+      "hybrid_weight": {
+        "weight": "hybrid_weight",
+        "model": "quadratic",
+        "attractor": 0.2261409501025336,
+        "r_squared": 0.632882482118369,
+        "coefficients": [
+          2.4265208475739244e-06,
+          3.088858509911252e-05,
+          0.1987868831168831
+        ],
+        "current_value": 0.1993,
+        "initial_value": 0.199,
+        "distance_to_attractor": 0.026840950102533595,
+        "trajectory_length": 20,
+        "note": "Quadratic extrapolation to t=100"
+      },
+      "confidence_threshold": {
+        "weight": "confidence_threshold",
+        "model": "quadratic",
+        "attractor": 0.7000000000000167,
+        "r_squared": 0.25,
+        "coefficients": [
+          1.9747405181937774e-18,
+          -3.127445777961055e-17,
+          0.7000000000000001
+        ],
+        "current_value": 0.7,
+        "initial_value": 0.7,
+        "distance_to_attractor": 1.6764367671839864e-14,
+        "trajectory_length": 20,
+        "note": "Quadratic extrapolation to t=100"
+      }
+    }
+  },
+  "refactoring_policy": {
+    "source": "runtime/refactoring_policy.json",
+    "analysis": {
+      "total_patterns": 34,
+      "trained_patterns": 5,
+      "untrained_patterns": 29,
+      "trained_pattern_names": [
+        "walrus_operator",
+        "lambda_function",
+        "list_comprehension",
+        "try_except",
+        "class_definition"
+      ],
+      "avg_trained_weight": 0.55,
+      "avg_untrained_weight": 0.5,
+      "learning_delta": 0.05,
+      "observation": "Minimal weight increase (0.5 \u2192 0.55) despite high practice quality (0.8-0.9)",
+      "hypothesis": "Conservative learning rate OR policy updates not persisting properly",
+      "attractor_predictions": {
+        "walrus_operator": {
+          "current": 0.55,
+          "target": 0.85,
+          "iterations_needed": 29.999999999999993,
+          "estimated_final_value": 0.85
+        },
+        "lambda_function": {
+          "current": 0.55,
+          "target": 0.85,
+          "iterations_needed": 29.999999999999993,
+          "estimated_final_value": 0.85
+        },
+        "list_comprehension": {
+          "current": 0.55,
+          "target": 0.85,
+          "iterations_needed": 29.999999999999993,
+          "estimated_final_value": 0.85
+        },
+        "try_except": {
+          "current": 0.55,
+          "target": 0.85,
+          "iterations_needed": 29.999999999999993,
+          "estimated_final_value": 0.85
+        },
+        "class_definition": {
+          "current": 0.55,
+          "target": 0.85,
+          "iterations_needed": 29.999999999999993,
+          "estimated_final_value": 0.85
+        }
+      }
+    }
+  },
+  "meta_insights": {
+    "observation_1": "Historical policy shows exponential convergence (building_weight: 0.5 \u2192 ~0.51)",
+    "observation_2": "Refactoring policy shows minimal learning (0.5 \u2192 0.55 after 5 practice iterations)",
+    "observation_3": "Disconnect between practice quality (0.8-0.9) and policy weights (0.55)",
+    "hypothesis_1": "Learning rate is too conservative (0.01 per iteration)",
+    "hypothesis_2": "Policy updates may not be persisting to disk properly",
+    "hypothesis_3": "Need ~25 more iterations to reach attractor at current rate",
+    "recommendation": "Increase learning rate OR fix policy persistence"
+  }
+}
