@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-11-07T04:17:07.819270Z",
+  "regime": "drift_high",
+  "regime_params": {
+    "drift_intensity": 0.3,
+    "noise_level": 0.15,
+    "burst_probability": 0.2,
+    "memory_constraint": 0.6
+  },
+  "seed": 123,
+  "trials_per_component": 20,
+  "components_tested": 4,
+  "components_necessary": 2,
+  "results": {
+    "Reward Model": {
+      "quality_delta_mean": 0.1375568851124337,
+      "quality_delta_ci95": 0.014319487282582965,
+      "quality_percent": 17.635498091337652,
+      "throughput_delta_mean": 22.345497004685644,
+      "necessary": true,
+      "n_trials": 20
+    },
+    "Policy Updater": {
+      "quality_delta_mean": 0.1574899232178329,
+      "quality_delta_ci95": 0.02120601231113249,
+      "quality_percent": 20.191015797158062,
+      "throughput_delta_mean": 24.186211574667073,
+      "necessary": true,
+      "n_trials": 20
+    },
+    "Homeostatic Feedback": {
+      "quality_delta_mean": 0.07627357067726073,
+      "quality_delta_ci95": 0.008520673840215839,
+      "quality_percent": 9.77866290734112,
+      "throughput_delta_mean": 10.713331275688395,
+      "necessary": false,
+      "n_trials": 20
+    },
+    "Placebo (No-Op)": {
+      "quality_delta_mean": 0.0,
+      "quality_delta_ci95": 0.0,
+      "quality_percent": 0.0,
+      "throughput_delta_mean": 0.0,
+      "necessary": false,
+      "n_trials": 20
+    }
+  }
+}

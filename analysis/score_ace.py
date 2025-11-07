@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-ACE Prediction Scoring - Brier Score & Calibration
+ACE Prediction Scoring - Brier(sign) + RMSE(magnitude)
 
 Measures prediction accuracy for autonomous task selection.
 
-Victory Gate: Brier < 0.01 on delta_quality or improving calibration
+Victory Gate: Brier(sign) < 0.25, RMSE < 0.05 on delta_quality
 
 Author: Claude Code
 Date: 2025-11-07
@@ -16,14 +16,28 @@ from pathlib import Path
 
 # Input files
 PRED_FILE = Path("diagnostics/ace_proposals_task1-3.json")
+OUTCOMES_FILE = Path("runs/ace_outcomes_2025-11-07.jsonl")
 OUT_FILE = Path("runs/ace_predictions_2025-11-07.jsonl")
 
-# For now, we only have predictions, not outcomes yet
-# This script shows the framework - outcomes would come from executing tasks
+def brier_sign(predicted: float, observed: float) -> float:
+    """
+    Brier score for sign prediction (direction).
 
-def brier_score(predicted: float, observed: float) -> float:
-    """Brier score for continuous predictions"""
-    return (predicted - observed) ** 2
+    Converts continuous prediction to Bernoulli:
+    - predicted_prob = 1.0 if predicted > 0 else 0.0
+    - observed_event = 1.0 if observed > 0 else 0.0
+    - brier = (predicted_prob - observed_event)^2
+    """
+    pred_positive = 1.0 if predicted > 0 else 0.0
+    obs_positive = 1.0 if observed > 0 else 0.0
+    return (pred_positive - obs_positive) ** 2
+
+def rmse_magnitude(predictions: list, observations: list) -> float:
+    """Root mean squared error for magnitude"""
+    if not predictions:
+        return 0.0
+    mse = sum((p - o)**2 for p, o in zip(predictions, observations)) / len(predictions)
+    return math.sqrt(mse)
 
 def export_predictions():
     """Export ACE predictions to JSONL format"""
