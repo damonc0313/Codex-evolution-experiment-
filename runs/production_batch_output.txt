@@ -1,0 +1,3571 @@
+======================================================================
+PRODUCTION BATCH RUNNER - AUTONOMOUS LEARNING LOOP
+======================================================================
+
+Codebase: /home/user/Codex-evolution-experiment-
+Timestamp: 2025-11-07T06:34:20.245729
+
+Python files found: 123
+
+Processing files...
+  [1/123] analysis/compute_real_brier_scores.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_compute_real_brier_scores
+======================================================================
+
+Patterns detected:
+  context_manager: 3
+  function_definition: 2
+  type_hints: 3
+  docstring: 3
+  f_string: 8
+
+Complexity:
+  lines_of_code: 107
+  num_functions: 2
+  num_classes: 0
+  num_imports: 3
+  cyclomatic_complexity: 7
+  avg_function_length: 53.5
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [2/123] analysis/integration_health.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_integration_health
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  context_manager: 3
+  try_except: 5
+  function_definition: 8
+  type_hints: 10
+  docstring: 9
+  f_string: 12
+
+Complexity:
+  lines_of_code: 203
+  num_functions: 8
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 22
+  avg_function_length: 25.375
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [3/123] analysis/measure_ace_task1_outcome.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_measure_ace_task1_outcome
+======================================================================
+
+Patterns detected:
+  context_manager: 2
+  function_definition: 1
+  docstring: 2
+  f_string: 22
+
+Complexity:
+  lines_of_code: 105
+  num_functions: 1
+  num_classes: 0
+  num_imports: 3
+  cyclomatic_complexity: 7
+  avg_function_length: 105.0
+
+Quality score: 0.600
+Reward: 0.600
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [4/123] analysis/metabolic_dashboard.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_metabolic_dashboard
+======================================================================
+
+Patterns detected:
+  list_comprehension: 5
+  generator_expression: 5
+  context_manager: 3
+  try_except: 7
+  function_definition: 9
+  type_hints: 14
+  docstring: 10
+  f_string: 27
+
+Complexity:
+  lines_of_code: 325
+  num_functions: 9
+  num_classes: 0
+  num_imports: 9
+  cyclomatic_complexity: 35
+  avg_function_length: 36.111111111111114
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [5/123] analysis/resource_map.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_resource_map
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 8
+  lambda_function: 1
+  context_manager: 2
+  try_except: 5
+  class_definition: 1
+  function_definition: 10
+  type_hints: 22
+  docstring: 11
+  f_string: 24
+
+Complexity:
+  lines_of_code: 264
+  num_functions: 10
+  num_classes: 0
+  num_imports: 9
+  cyclomatic_complexity: 25
+  avg_function_length: 26.4
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [6/123] analysis/score_ace.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_score_ace
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  context_manager: 2
+  function_definition: 3
+  type_hints: 7
+  docstring: 4
+  f_string: 4
+
+Complexity:
+  lines_of_code: 68
+  num_functions: 3
+  num_classes: 0
+  num_imports: 3
+  cyclomatic_complexity: 5
+  avg_function_length: 22.666666666666668
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [7/123] core/autocurriculum_engine.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_autocurriculum_engine
+======================================================================
+
+Patterns detected:
+  list_comprehension: 5
+  generator_expression: 6
+  lambda_function: 1
+  context_manager: 3
+  try_except: 2
+  class_definition: 1
+  function_definition: 12
+  type_hints: 21
+  docstring: 13
+  f_string: 14
+
+Complexity:
+  lines_of_code: 446
+  num_functions: 12
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 28
+  avg_function_length: 37.166666666666664
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [8/123] core/causal_influence_ledger.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_causal_influence_ledger
+======================================================================
+
+Patterns detected:
+  list_comprehension: 3
+  generator_expression: 7
+  lambda_function: 3
+  context_manager: 3
+  try_except: 1
+  class_definition: 1
+  function_definition: 8
+  type_hints: 16
+  docstring: 9
+  f_string: 4
+
+Complexity:
+  lines_of_code: 270
+  num_functions: 8
+  num_classes: 1
+  num_imports: 7
+  cyclomatic_complexity: 27
+  avg_function_length: 33.75
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [9/123] experiments/ablation_suite.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_ablation_suite
+======================================================================
+
+Patterns detected:
+  list_comprehension: 6
+  generator_expression: 1
+  context_manager: 2
+  class_definition: 1
+  function_definition: 7
+  type_hints: 16
+  docstring: 8
+  f_string: 25
+
+Complexity:
+  lines_of_code: 309
+  num_functions: 7
+  num_classes: 1
+  num_imports: 8
+  cyclomatic_complexity: 16
+  avg_function_length: 44.142857142857146
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [10/123] experiments/ace_task4_megabench.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_ace_task4_megabench
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 3
+  context_manager: 8
+  class_definition: 1
+  function_definition: 11
+  type_hints: 17
+  docstring: 12
+  f_string: 33
+
+Complexity:
+  lines_of_code: 321
+  num_functions: 11
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 6
+  avg_function_length: 29.181818181818183
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [11/123] experiments/demonstrate_learning_loop.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_demonstrate_learning_loop
+======================================================================
+
+Patterns detected:
+  generator_expression: 4
+  lambda_function: 1
+  context_manager: 1
+  function_definition: 1
+  type_hints: 1
+  docstring: 2
+  f_string: 29
+
+Complexity:
+  lines_of_code: 74
+  num_functions: 1
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 4
+  avg_function_length: 74.0
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [12/123] experiments/experiment_1_learning_convergence.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_experiment_1_learning_convergence
+======================================================================
+
+Patterns detected:
+  generator_expression: 2
+  context_manager: 3
+  try_except: 2
+  function_definition: 1
+  type_hints: 3
+  docstring: 1
+  f_string: 40
+
+Complexity:
+  lines_of_code: 142
+  num_functions: 1
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 7
+  avg_function_length: 142.0
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [13/123] experiments/experiment_2_reward_correlation.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_experiment_2_reward_correlation
+======================================================================
+
+Patterns detected:
+  generator_expression: 6
+  context_manager: 1
+  function_definition: 2
+  docstring: 2
+  f_string: 24
+
+Complexity:
+  lines_of_code: 129
+  num_functions: 2
+  num_classes: 0
+  num_imports: 4
+  cyclomatic_complexity: 12
+  avg_function_length: 64.5
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [14/123] experiments/experiment_3_classification_validation.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_experiment_3_classification_validation
+======================================================================
+
+Patterns detected:
+  generator_expression: 7
+  context_manager: 1
+  try_except: 2
+  function_definition: 3
+  type_hints: 2
+  docstring: 3
+  f_string: 42
+
+Complexity:
+  lines_of_code: 178
+  num_functions: 3
+  num_classes: 0
+  num_imports: 4
+  cyclomatic_complexity: 12
+  avg_function_length: 59.333333333333336
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [15/123] experiments/experiment_4_cross_architecture_validation.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_experiment_4_cross_architecture_validation
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  context_manager: 1
+  function_definition: 4
+  docstring: 4
+  f_string: 39
+
+Complexity:
+  lines_of_code: 229
+  num_functions: 4
+  num_classes: 0
+  num_imports: 4
+  cyclomatic_complexity: 4
+  avg_function_length: 57.25
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [16/123] experiments/production_batch_runner.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_production_batch_runner
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 4
+  lambda_function: 4
+  context_manager: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 8
+  type_hints: 13
+  docstring: 9
+  f_string: 39
+
+Complexity:
+  lines_of_code: 260
+  num_functions: 8
+  num_classes: 1
+  num_imports: 10
+  cyclomatic_complexity: 33
+  avg_function_length: 32.5
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [17/123] experiments/refactor_bench.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_refactor_bench
+======================================================================
+
+Patterns detected:
+  generator_expression: 12
+  context_manager: 1
+  try_except: 4
+  class_definition: 2
+  function_definition: 7
+  type_hints: 14
+  docstring: 8
+  f_string: 23
+  match_statement: 1
+
+Complexity:
+  lines_of_code: 404
+  num_functions: 7
+  num_classes: 1
+  num_imports: 8
+  cyclomatic_complexity: 36
+  avg_function_length: 57.714285714285715
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [18/123] experiments/rigorous_replication_study.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_rigorous_replication_study
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 3
+  try_except: 2
+  function_definition: 5
+  docstring: 6
+  f_string: 30
+
+Complexity:
+  lines_of_code: 217
+  num_functions: 5
+  num_classes: 0
+  num_imports: 9
+  cyclomatic_complexity: 11
+  avg_function_length: 43.4
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [19/123] experiments/run_ablations.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_ablations
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 3
+  context_manager: 2
+  function_definition: 4
+  type_hints: 3
+  docstring: 5
+  f_string: 26
+
+Complexity:
+  lines_of_code: 227
+  num_functions: 4
+  num_classes: 0
+  num_imports: 9
+  cyclomatic_complexity: 21
+  avg_function_length: 56.75
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [20/123] experiments/run_baseline_env.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_baseline_env
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  context_manager: 1
+  function_definition: 3
+  type_hints: 4
+  docstring: 4
+  f_string: 6
+
+Complexity:
+  lines_of_code: 151
+  num_functions: 3
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 11
+  avg_function_length: 50.333333333333336
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [21/123] experiments/run_lambda_fit_raw.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_lambda_fit_raw
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 3
+  lambda_function: 10
+  context_manager: 1
+  function_definition: 2
+  type_hints: 1
+  docstring: 3
+  f_string: 29
+
+Complexity:
+  lines_of_code: 184
+  num_functions: 2
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 11
+  avg_function_length: 92.0
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [22/123] experiments/run_micro_cycles.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_micro_cycles
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 1
+  function_definition: 2
+  docstring: 3
+  f_string: 15
+
+Complexity:
+  lines_of_code: 85
+  num_functions: 2
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 8
+  avg_function_length: 42.5
+
+Quality score: 0.600
+Reward: 0.600
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [23/123] experiments/run_real_ablations.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_real_ablations
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  context_manager: 2
+  try_except: 3
+  function_definition: 5
+  docstring: 6
+  f_string: 16
+
+Complexity:
+  lines_of_code: 175
+  num_functions: 5
+  num_classes: 0
+  num_imports: 8
+  cyclomatic_complexity: 15
+  avg_function_length: 35.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [24/123] experiments/run_real_ablations_v2.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_real_ablations_v2
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  context_manager: 2
+  try_except: 2
+  function_definition: 5
+  docstring: 3
+  f_string: 18
+
+Complexity:
+  lines_of_code: 176
+  num_functions: 5
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 17
+  avg_function_length: 35.2
+
+Quality score: 0.500
+Reward: 0.400
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [25/123] experiments/run_synthetic_cil.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_synthetic_cil
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 4
+  lambda_function: 9
+  context_manager: 1
+  function_definition: 2
+  type_hints: 1
+  docstring: 3
+  f_string: 20
+
+Complexity:
+  lines_of_code: 166
+  num_functions: 2
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 12
+  avg_function_length: 83.0
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [26/123] experiments/run_temporal_cil.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_temporal_cil
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 5
+  lambda_function: 2
+  context_manager: 2
+  try_except: 1
+  function_definition: 3
+  docstring: 4
+  f_string: 12
+
+Complexity:
+  lines_of_code: 163
+  num_functions: 3
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 13
+  avg_function_length: 54.333333333333336
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [27/123] mycelial-core/artifact_bus.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_artifact_bus
+======================================================================
+
+Patterns detected:
+  async_await: 10
+  list_comprehension: 1
+  generator_expression: 8
+  lambda_function: 2
+  decorator: 2
+  context_manager: 2
+  try_except: 11
+  class_definition: 3
+  function_definition: 21
+  type_hints: 15
+  docstring: 24
+  f_string: 14
+
+Complexity:
+  lines_of_code: 325
+  num_functions: 17
+  num_classes: 3
+  num_imports: 9
+  cyclomatic_complexity: 28
+  avg_function_length: 19.11764705882353
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [28/123] mycelial-core/bus_manager.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_bus_manager
+======================================================================
+
+Patterns detected:
+  async_await: 38
+  generator_expression: 1
+  lambda_function: 1
+  context_manager: 3
+  try_except: 4
+  function_definition: 21
+  type_hints: 13
+  docstring: 22
+  f_string: 9
+
+Complexity:
+  lines_of_code: 288
+  num_functions: 2
+  num_classes: 0
+  num_imports: 21
+  cyclomatic_complexity: 4
+  avg_function_length: 144.0
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [29/123] mycelial-core/chemotropic_allocator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_chemotropic_allocator
+======================================================================
+
+Patterns detected:
+  async_await: 2
+  generator_expression: 2
+  lambda_function: 2
+  decorator: 1
+  try_except: 1
+  class_definition: 3
+  function_definition: 6
+  type_hints: 8
+  docstring: 9
+  f_string: 6
+
+Complexity:
+  lines_of_code: 131
+  num_functions: 5
+  num_classes: 2
+  num_imports: 5
+  cyclomatic_complexity: 10
+  avg_function_length: 26.2
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [30/123] mycelial-core/homeostatic_regulator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_homeostatic_regulator
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  decorator: 1
+  class_definition: 3
+  function_definition: 5
+  type_hints: 5
+  docstring: 9
+  f_string: 12
+
+Complexity:
+  lines_of_code: 205
+  num_functions: 5
+  num_classes: 3
+  num_imports: 3
+  cyclomatic_complexity: 15
+  avg_function_length: 41.0
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [31/123] mycelial-core/hyphal_connections.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_hyphal_connections
+======================================================================
+
+Patterns detected:
+  async_await: 6
+  list_comprehension: 1
+  generator_expression: 10
+  decorator: 1
+  context_manager: 2
+  try_except: 6
+  class_definition: 2
+  function_definition: 17
+  type_hints: 15
+  docstring: 20
+  f_string: 17
+
+Complexity:
+  lines_of_code: 314
+  num_functions: 14
+  num_classes: 2
+  num_imports: 9
+  cyclomatic_complexity: 25
+  avg_function_length: 22.428571428571427
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [32/123] mycelial-core/nutrient_gradient.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_nutrient_gradient
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 1
+  lambda_function: 1
+  context_manager: 2
+  try_except: 6
+  class_definition: 1
+  function_definition: 12
+  type_hints: 10
+  docstring: 14
+  f_string: 14
+
+Complexity:
+  lines_of_code: 240
+  num_functions: 12
+  num_classes: 1
+  num_imports: 7
+  cyclomatic_complexity: 24
+  avg_function_length: 20.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [33/123] mycelial-core/swarm_anastomosis.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_swarm_anastomosis
+======================================================================
+
+Patterns detected:
+  async_await: 7
+  generator_expression: 4
+  decorator: 1
+  class_definition: 2
+  function_definition: 8
+  type_hints: 10
+  docstring: 11
+  f_string: 21
+
+Complexity:
+  lines_of_code: 179
+  num_functions: 5
+  num_classes: 2
+  num_imports: 7
+  cyclomatic_complexity: 12
+  avg_function_length: 35.8
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [34/123] skills/causal_ablation.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_causal_ablation
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 2
+  context_manager: 1
+  try_except: 3
+  class_definition: 1
+  function_definition: 8
+  type_hints: 6
+  docstring: 9
+  f_string: 14
+
+Complexity:
+  lines_of_code: 259
+  num_functions: 8
+  num_classes: 1
+  num_imports: 7
+  cyclomatic_complexity: 13
+  avg_function_length: 32.375
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [35/123] skills/statistical_validation.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_statistical_validation
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  class_definition: 1
+  function_definition: 7
+  type_hints: 10
+  docstring: 8
+  f_string: 19
+
+Complexity:
+  lines_of_code: 246
+  num_functions: 7
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 9
+  avg_function_length: 35.142857142857146
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [36/123] tests/test_ledger_metrics.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_test_ledger_metrics
+======================================================================
+
+Patterns detected:
+  context_manager: 1
+  function_definition: 7
+  type_hints: 7
+  docstring: 7
+
+Complexity:
+  lines_of_code: 121
+  num_functions: 7
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 2
+  avg_function_length: 17.285714285714285
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [37/123] tests/test_nos_calibration.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_test_nos_calibration
+======================================================================
+
+Patterns detected:
+  function_definition: 3
+  docstring: 1
+
+Complexity:
+  lines_of_code: 29
+  num_functions: 3
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 1
+  avg_function_length: 9.666666666666666
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [38/123] tests/test_nos_pipeline.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_test_nos_pipeline
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 1
+  function_definition: 2
+
+Complexity:
+  lines_of_code: 60
+  num_functions: 2
+  num_classes: 0
+  num_imports: 3
+  cyclomatic_complexity: 1
+  avg_function_length: 30.0
+
+Quality score: 0.600
+Reward: 0.600
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [39/123] tools/ace_practice_generator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_ace_practice_generator
+======================================================================
+
+Patterns detected:
+  async_await: 1
+  list_comprehension: 1
+  generator_expression: 4
+  lambda_function: 2
+  context_manager: 4
+  class_definition: 3
+  function_definition: 8
+  type_hints: 17
+  docstring: 10
+  f_string: 38
+
+Complexity:
+  lines_of_code: 311
+  num_functions: 8
+  num_classes: 3
+  num_imports: 6
+  cyclomatic_complexity: 27
+  avg_function_length: 38.875
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [40/123] tools/advanced_analytics_engine.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_advanced_analytics_engine
+======================================================================
+
+Patterns detected:
+  list_comprehension: 8
+  generator_expression: 14
+  lambda_function: 2
+  decorator: 11
+  context_manager: 2
+  try_except: 2
+  class_definition: 5
+  function_definition: 18
+  type_hints: 41
+  docstring: 23
+  f_string: 20
+
+Complexity:
+  lines_of_code: 446
+  num_functions: 18
+  num_classes: 5
+  num_imports: 9
+  cyclomatic_complexity: 60
+  avg_function_length: 24.77777777777778
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [41/123] tools/agents_protocol.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_agents_protocol
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 5
+  decorator: 1
+  try_except: 6
+  class_definition: 2
+  function_definition: 6
+  type_hints: 13
+  docstring: 1
+
+Complexity:
+  lines_of_code: 144
+  num_functions: 6
+  num_classes: 1
+  num_imports: 8
+  cyclomatic_complexity: 22
+  avg_function_length: 24.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [42/123] tools/artifact_deduplicator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_artifact_deduplicator
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 7
+  lambda_function: 1
+  context_manager: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 11
+  type_hints: 21
+  docstring: 12
+  f_string: 38
+
+Complexity:
+  lines_of_code: 257
+  num_functions: 11
+  num_classes: 1
+  num_imports: 7
+  cyclomatic_complexity: 23
+  avg_function_length: 23.363636363636363
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [43/123] tools/artifact_metrics.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_artifact_metrics
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 14
+  context_manager: 1
+  try_except: 2
+  class_definition: 1
+  function_definition: 11
+  type_hints: 12
+  docstring: 10
+  f_string: 9
+
+Complexity:
+  lines_of_code: 284
+  num_functions: 10
+  num_classes: 1
+  num_imports: 7
+  cyclomatic_complexity: 43
+  avg_function_length: 28.4
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [44/123] tools/artifact_validator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_artifact_validator
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  lambda_function: 1
+  context_manager: 2
+  try_except: 2
+  class_definition: 3
+  function_definition: 9
+  type_hints: 31
+  docstring: 12
+  f_string: 22
+
+Complexity:
+  lines_of_code: 275
+  num_functions: 9
+  num_classes: 3
+  num_imports: 7
+  cyclomatic_complexity: 30
+  avg_function_length: 30.555555555555557
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [45/123] tools/autonomous_experiment_engine.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_autonomous_experiment_engine
+======================================================================
+
+Patterns detected:
+  list_comprehension: 9
+  generator_expression: 13
+  context_manager: 1
+  class_definition: 3
+  function_definition: 16
+  type_hints: 24
+  docstring: 17
+  f_string: 47
+
+Complexity:
+  lines_of_code: 470
+  num_functions: 16
+  num_classes: 3
+  num_imports: 9
+  cyclomatic_complexity: 42
+  avg_function_length: 29.375
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [46/123] tools/autonomous_operations_framework.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_autonomous_operations_framework
+======================================================================
+
+Patterns detected:
+  list_comprehension: 3
+  generator_expression: 7
+  lambda_function: 3
+  context_manager: 5
+  try_except: 6
+  class_definition: 7
+  function_definition: 23
+  type_hints: 25
+  docstring: 27
+  f_string: 47
+
+Complexity:
+  lines_of_code: 600
+  num_functions: 23
+  num_classes: 7
+  num_imports: 13
+  cyclomatic_complexity: 50
+  avg_function_length: 26.08695652173913
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [47/123] tools/baseline_comparison_experiment.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_baseline_comparison_experiment
+======================================================================
+
+Patterns detected:
+  generator_expression: 4
+  try_except: 1
+  function_definition: 3
+  docstring: 4
+  f_string: 9
+
+Complexity:
+  lines_of_code: 128
+  num_functions: 3
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 9
+  avg_function_length: 42.666666666666664
+
+Quality score: 0.600
+Reward: 0.600
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [48/123] tools/bio_inspired_cognitive_architecture.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_bio_inspired_cognitive_architecture
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  decorator: 4
+  context_manager: 1
+  class_definition: 3
+  function_definition: 10
+  type_hints: 6
+  docstring: 11
+  f_string: 33
+
+Complexity:
+  lines_of_code: 428
+  num_functions: 10
+  num_classes: 3
+  num_imports: 6
+  cyclomatic_complexity: 4
+  avg_function_length: 42.8
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [49/123] tools/boundary_pusher.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_boundary_pusher
+======================================================================
+
+Patterns detected:
+  list_comprehension: 18
+  generator_expression: 14
+  lambda_function: 1
+  context_manager: 1
+  try_except: 2
+  class_definition: 8
+  function_definition: 21
+  type_hints: 25
+  docstring: 20
+  f_string: 52
+
+Complexity:
+  lines_of_code: 465
+  num_functions: 21
+  num_classes: 8
+  num_imports: 9
+  cyclomatic_complexity: 55
+  avg_function_length: 22.142857142857142
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [50/123] tools/capability_detector.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_capability_detector
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 3
+  lambda_function: 1
+  context_manager: 1
+  try_except: 1
+  class_definition: 1
+  function_definition: 5
+  type_hints: 6
+  docstring: 7
+  f_string: 13
+
+Complexity:
+  lines_of_code: 115
+  num_functions: 5
+  num_classes: 1
+  num_imports: 5
+  cyclomatic_complexity: 11
+  avg_function_length: 23.0
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [51/123] tools/cascade_analysis.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_cascade_analysis
+======================================================================
+
+Patterns detected:
+  context_manager: 1
+  try_except: 6
+  function_definition: 4
+  type_hints: 4
+  docstring: 5
+  f_string: 11
+
+Complexity:
+  lines_of_code: 180
+  num_functions: 4
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 19
+  avg_function_length: 45.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [52/123] tools/cascade_experiment.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_cascade_experiment
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 3
+  context_manager: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 9
+  type_hints: 17
+  docstring: 10
+  f_string: 25
+
+Complexity:
+  lines_of_code: 260
+  num_functions: 9
+  num_classes: 1
+  num_imports: 8
+  cyclomatic_complexity: 18
+  avg_function_length: 28.88888888888889
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [53/123] tools/code_quality_tracker.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_code_quality_tracker
+======================================================================
+
+Patterns detected:
+  async_await: 2
+  list_comprehension: 2
+  generator_expression: 10
+  lambda_function: 1
+  context_manager: 4
+  try_except: 5
+  class_definition: 2
+  function_definition: 9
+  type_hints: 20
+  docstring: 11
+  f_string: 20
+  walrus_operator: 1
+
+Complexity:
+  lines_of_code: 268
+  num_functions: 7
+  num_classes: 2
+  num_imports: 9
+  cyclomatic_complexity: 27
+  avg_function_length: 38.285714285714285
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [54/123] tools/cognitive_lookahead.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_cognitive_lookahead
+======================================================================
+
+Patterns detected:
+  list_comprehension: 8
+  generator_expression: 8
+  lambda_function: 1
+  try_except: 2
+  class_definition: 1
+  function_definition: 11
+  type_hints: 24
+  docstring: 13
+  f_string: 15
+
+Complexity:
+  lines_of_code: 323
+  num_functions: 11
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 17
+  avg_function_length: 29.363636363636363
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [55/123] tools/cognitive_physics.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_cognitive_physics
+======================================================================
+
+Patterns detected:
+  list_comprehension: 11
+  generator_expression: 4
+  context_manager: 3
+  try_except: 14
+  class_definition: 1
+  function_definition: 13
+  type_hints: 23
+  docstring: 14
+  f_string: 22
+
+Complexity:
+  lines_of_code: 328
+  num_functions: 13
+  num_classes: 1
+  num_imports: 12
+  cyclomatic_complexity: 24
+  avg_function_length: 25.23076923076923
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [56/123] tools/compare_baseline_vs_intervention.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_compare_baseline_vs_intervention
+======================================================================
+
+Patterns detected:
+  list_comprehension: 7
+  generator_expression: 5
+  lambda_function: 5
+  context_manager: 2
+  try_except: 4
+  function_definition: 2
+  type_hints: 1
+  docstring: 3
+  f_string: 26
+
+Complexity:
+  lines_of_code: 202
+  num_functions: 2
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 17
+  avg_function_length: 101.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [57/123] tools/comprehensive_progress_report.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_comprehensive_progress_report
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 2
+  context_manager: 1
+  class_definition: 1
+  function_definition: 3
+  type_hints: 1
+  docstring: 4
+  f_string: 49
+
+Complexity:
+  lines_of_code: 385
+  num_functions: 3
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 7
+  avg_function_length: 128.33333333333334
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [58/123] tools/computational_limit_tester.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_computational_limit_tester
+======================================================================
+
+Patterns detected:
+  list_comprehension: 4
+  generator_expression: 7
+  decorator: 2
+  context_manager: 2
+  try_except: 7
+  class_definition: 5
+  function_definition: 17
+  type_hints: 30
+  docstring: 18
+  f_string: 29
+
+Complexity:
+  lines_of_code: 486
+  num_functions: 17
+  num_classes: 3
+  num_imports: 9
+  cyclomatic_complexity: 46
+  avg_function_length: 28.58823529411765
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [59/123] tools/confidence_scorer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_confidence_scorer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 6
+  context_manager: 3
+  try_except: 4
+  class_definition: 1
+  function_definition: 13
+  type_hints: 21
+  docstring: 14
+  f_string: 24
+
+Complexity:
+  lines_of_code: 304
+  num_functions: 13
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 45
+  avg_function_length: 23.384615384615383
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [60/123] tools/consciousness_test.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_consciousness_test
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  try_except: 2
+  function_definition: 1
+  type_hints: 3
+  docstring: 2
+  f_string: 12
+
+Complexity:
+  lines_of_code: 84
+  num_functions: 1
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 3
+  avg_function_length: 84.0
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [61/123] tools/conservation_law_experiment.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_conservation_law_experiment
+======================================================================
+
+Patterns detected:
+  list_comprehension: 7
+  generator_expression: 6
+  context_manager: 2
+  try_except: 8
+  class_definition: 1
+  function_definition: 12
+  type_hints: 17
+  docstring: 13
+  f_string: 41
+
+Complexity:
+  lines_of_code: 335
+  num_functions: 12
+  num_classes: 1
+  num_imports: 11
+  cyclomatic_complexity: 17
+  avg_function_length: 27.916666666666668
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [62/123] tools/correlate_kcog_throughput.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_correlate_kcog_throughput
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 1
+  context_manager: 4
+  try_except: 2
+  function_definition: 4
+  type_hints: 6
+  docstring: 5
+  f_string: 18
+
+Complexity:
+  lines_of_code: 225
+  num_functions: 4
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 15
+  avg_function_length: 56.25
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [63/123] tools/dispersal_experiment.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_dispersal_experiment
+======================================================================
+
+Patterns detected:
+  list_comprehension: 3
+  generator_expression: 4
+  lambda_function: 1
+  context_manager: 4
+  try_except: 10
+  class_definition: 1
+  function_definition: 10
+  type_hints: 19
+  docstring: 11
+  f_string: 39
+
+Complexity:
+  lines_of_code: 353
+  num_functions: 10
+  num_classes: 1
+  num_imports: 9
+  cyclomatic_complexity: 24
+  avg_function_length: 35.3
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [64/123] tools/enhanced_capability_detector.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_enhanced_capability_detector
+======================================================================
+
+Patterns detected:
+  list_comprehension: 17
+  generator_expression: 14
+  lambda_function: 1
+  context_manager: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 13
+  type_hints: 20
+  docstring: 14
+  f_string: 22
+
+Complexity:
+  lines_of_code: 298
+  num_functions: 13
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 11
+  avg_function_length: 22.923076923076923
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [65/123] tools/enhanced_ledger_metrics.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_enhanced_ledger_metrics
+======================================================================
+
+Patterns detected:
+  generator_expression: 6
+  try_except: 2
+  function_definition: 3
+  type_hints: 4
+  docstring: 4
+  f_string: 22
+
+Complexity:
+  lines_of_code: 217
+  num_functions: 3
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 15
+  avg_function_length: 72.33333333333333
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [66/123] tools/enhanced_ledger_metrics_v2.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_enhanced_ledger_metrics_v2
+======================================================================
+
+Patterns detected:
+  generator_expression: 8
+  try_except: 4
+  function_definition: 4
+  type_hints: 9
+  docstring: 5
+  f_string: 24
+
+Complexity:
+  lines_of_code: 254
+  num_functions: 4
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 13
+  avg_function_length: 63.5
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [67/123] tools/entropy_optimizer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_entropy_optimizer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 4
+  generator_expression: 8
+  lambda_function: 1
+  context_manager: 3
+  try_except: 2
+  class_definition: 1
+  function_definition: 7
+  type_hints: 14
+  docstring: 8
+  f_string: 32
+
+Complexity:
+  lines_of_code: 284
+  num_functions: 7
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 16
+  avg_function_length: 40.57142857142857
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [68/123] tools/evolve_loop.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_evolve_loop
+======================================================================
+
+Patterns detected:
+  context_manager: 1
+  try_except: 4
+  function_definition: 5
+  type_hints: 5
+  docstring: 1
+  f_string: 7
+
+Complexity:
+  lines_of_code: 147
+  num_functions: 5
+  num_classes: 0
+  num_imports: 13
+  cyclomatic_complexity: 13
+  avg_function_length: 29.4
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [69/123] tools/expansion_configurator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_expansion_configurator
+======================================================================
+
+Patterns detected:
+  generator_expression: 2
+  context_manager: 2
+  class_definition: 1
+  function_definition: 7
+  type_hints: 10
+  docstring: 8
+  f_string: 22
+
+Complexity:
+  lines_of_code: 269
+  num_functions: 7
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 8
+  avg_function_length: 38.42857142857143
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [70/123] tools/export_cil.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_export_cil
+======================================================================
+
+Patterns detected:
+  generator_expression: 3
+  context_manager: 2
+  function_definition: 1
+  type_hints: 2
+  docstring: 2
+  f_string: 9
+
+Complexity:
+  lines_of_code: 100
+  num_functions: 1
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 11
+  avg_function_length: 100.0
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [71/123] tools/extract_entropy_trajectory.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_extract_entropy_trajectory
+======================================================================
+
+Patterns detected:
+  list_comprehension: 3
+  generator_expression: 2
+  context_manager: 2
+  try_except: 2
+  function_definition: 3
+  type_hints: 6
+  docstring: 4
+  f_string: 16
+
+Complexity:
+  lines_of_code: 207
+  num_functions: 3
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 15
+  avg_function_length: 69.0
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [72/123] tools/extract_lambda_from_artifacts.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_extract_lambda_from_artifacts
+======================================================================
+
+Patterns detected:
+  list_comprehension: 9
+  generator_expression: 5
+  context_manager: 2
+  try_except: 2
+  function_definition: 4
+  type_hints: 8
+  docstring: 5
+  f_string: 14
+
+Complexity:
+  lines_of_code: 182
+  num_functions: 4
+  num_classes: 0
+  num_imports: 7
+  cyclomatic_complexity: 18
+  avg_function_length: 45.5
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [73/123] tools/framework_evolution_engine.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_framework_evolution_engine
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 8
+  type_hints: 12
+  docstring: 9
+  f_string: 11
+
+Complexity:
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [74/123] tools/generate_intervention_artifacts.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_generate_intervention_artifacts
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 6
+  lambda_function: 1
+  context_manager: 1
+  function_definition: 3
+  type_hints: 7
+  docstring: 4
+  f_string: 14
+
+Complexity:
+  lines_of_code: 164
+  num_functions: 3
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 11
+  avg_function_length: 54.666666666666664
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [75/123] tools/homeostatic_mapping.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_homeostatic_mapping
+======================================================================
+
+Patterns detected:
+  generator_expression: 4
+  context_manager: 1
+  class_definition: 1
+  function_definition: 10
+  type_hints: 25
+  docstring: 11
+  f_string: 16
+
+Complexity:
+  lines_of_code: 370
+  num_functions: 10
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 18
+  avg_function_length: 37.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [76/123] tools/hyphal_network_integration.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_hyphal_network_integration
+======================================================================
+
+Patterns detected:
+  async_await: 2
+  function_definition: 5
+  type_hints: 4
+  docstring: 6
+
+Complexity:
+  lines_of_code: 59
+  num_functions: 4
+  num_classes: 0
+  num_imports: 3
+  cyclomatic_complexity: 2
+  avg_function_length: 14.75
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [77/123] tools/iterative_improvement_engine.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_iterative_improvement_engine
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 2
+  lambda_function: 2
+  context_manager: 4
+  try_except: 2
+  class_definition: 3
+  function_definition: 12
+  type_hints: 15
+  docstring: 14
+  f_string: 28
+
+Complexity:
+  lines_of_code: 300
+  num_functions: 11
+  num_classes: 3
+  num_imports: 7
+  cyclomatic_complexity: 16
+  avg_function_length: 27.272727272727273
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [78/123] tools/kpi_validator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_kpi_validator
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  lambda_function: 4
+  context_manager: 5
+  class_definition: 1
+  function_definition: 9
+  type_hints: 19
+  docstring: 10
+  f_string: 19
+
+Complexity:
+  lines_of_code: 263
+  num_functions: 9
+  num_classes: 1
+  num_imports: 5
+  cyclomatic_complexity: 23
+  avg_function_length: 29.22222222222222
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [79/123] tools/learning_kernel.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_learning_kernel
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  context_manager: 3
+  try_except: 6
+  class_definition: 3
+  function_definition: 11
+  type_hints: 30
+  docstring: 11
+  f_string: 29
+
+Complexity:
+  lines_of_code: 471
+  num_functions: 9
+  num_classes: 1
+  num_imports: 15
+  cyclomatic_complexity: 6
+  avg_function_length: 52.333333333333336
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [80/123] tools/ledger_metrics.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_ledger_metrics
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 9
+  try_except: 12
+  function_definition: 12
+  type_hints: 17
+  docstring: 7
+  f_string: 2
+
+Complexity:
+  lines_of_code: 313
+  num_functions: 12
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 39
+  avg_function_length: 26.083333333333332
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [81/123] tools/ledger_utils.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_ledger_utils
+======================================================================
+
+Patterns detected:
+  context_manager: 1
+  try_except: 2
+  function_definition: 2
+  type_hints: 5
+  docstring: 3
+
+Complexity:
+  lines_of_code: 43
+  num_functions: 2
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 1
+  avg_function_length: 21.5
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [82/123] tools/limit_discovery_reporter.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_limit_discovery_reporter
+======================================================================
+
+Patterns detected:
+  list_comprehension: 5
+  generator_expression: 8
+  context_manager: 7
+  class_definition: 1
+  function_definition: 9
+  type_hints: 30
+  docstring: 10
+  f_string: 23
+
+Complexity:
+  lines_of_code: 309
+  num_functions: 9
+  num_classes: 1
+  num_imports: 5
+  cyclomatic_complexity: 27
+  avg_function_length: 34.333333333333336
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [83/123] tools/lineage_migrator.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_lineage_migrator
+======================================================================
+
+Patterns detected:
+  list_comprehension: 7
+  generator_expression: 3
+  lambda_function: 1
+  context_manager: 3
+  try_except: 4
+  class_definition: 1
+  function_definition: 11
+  type_hints: 20
+  docstring: 12
+  f_string: 36
+
+Complexity:
+  lines_of_code: 302
+  num_functions: 11
+  num_classes: 1
+  num_imports: 9
+  cyclomatic_complexity: 46
+  avg_function_length: 27.454545454545453
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [84/123] tools/lineage_weaver.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_lineage_weaver
+======================================================================
+
+Patterns detected:
+  list_comprehension: 3
+  generator_expression: 4
+  lambda_function: 1
+  context_manager: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 9
+  type_hints: 15
+  docstring: 10
+  f_string: 10
+
+Complexity:
+  lines_of_code: 219
+  num_functions: 9
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 27
+  avg_function_length: 24.333333333333332
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [85/123] tools/measure_cascade_probability.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_measure_cascade_probability
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  try_except: 8
+  function_definition: 9
+  type_hints: 17
+  docstring: 10
+  f_string: 14
+
+Complexity:
+  lines_of_code: 214
+  num_functions: 9
+  num_classes: 0
+  num_imports: 9
+  cyclomatic_complexity: 18
+  avg_function_length: 23.77777777777778
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [86/123] tools/measure_new_capability.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_measure_new_capability
+======================================================================
+
+Patterns detected:
+  function_definition: 1
+  type_hints: 2
+  docstring: 2
+  f_string: 12
+
+Complexity:
+  lines_of_code: 52
+  num_functions: 1
+  num_classes: 0
+  num_imports: 4
+  cyclomatic_complexity: 2
+  avg_function_length: 52.0
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [87/123] tools/meta_cognitive_introspector.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_meta_cognitive_introspector
+======================================================================
+
+Patterns detected:
+  list_comprehension: 10
+  generator_expression: 13
+  lambda_function: 2
+  context_manager: 2
+  class_definition: 10
+  function_definition: 24
+  type_hints: 27
+  docstring: 24
+  f_string: 40
+
+Complexity:
+  lines_of_code: 466
+  num_functions: 24
+  num_classes: 10
+  num_imports: 10
+  cyclomatic_complexity: 31
+  avg_function_length: 19.416666666666668
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [88/123] tools/meta_cognitive_optimizer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_meta_cognitive_optimizer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  context_manager: 1
+  class_definition: 3
+  function_definition: 15
+  type_hints: 15
+  docstring: 15
+  f_string: 32
+
+Complexity:
+  lines_of_code: 242
+  num_functions: 15
+  num_classes: 3
+  num_imports: 6
+  cyclomatic_complexity: 6
+  avg_function_length: 16.133333333333333
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [89/123] tools/meta_recursive_analyzer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_meta_recursive_analyzer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 7
+  context_manager: 2
+  try_except: 1
+  class_definition: 1
+  function_definition: 10
+  type_hints: 16
+  docstring: 11
+  f_string: 32
+
+Complexity:
+  lines_of_code: 338
+  num_functions: 10
+  num_classes: 1
+  num_imports: 5
+  cyclomatic_complexity: 21
+  avg_function_length: 33.8
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [90/123] tools/meta_synthesis.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_meta_synthesis
+======================================================================
+
+Patterns detected:
+  list_comprehension: 2
+  generator_expression: 10
+  context_manager: 9
+  class_definition: 1
+  function_definition: 11
+  type_hints: 22
+  docstring: 12
+  f_string: 43
+
+Complexity:
+  lines_of_code: 433
+  num_functions: 11
+  num_classes: 1
+  num_imports: 7
+  cyclomatic_complexity: 34
+  avg_function_length: 39.36363636363637
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [91/123] tools/metabolic_monitor.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_metabolic_monitor
+======================================================================
+
+Patterns detected:
+  try_except: 2
+  function_definition: 3
+  docstring: 3
+  f_string: 3
+
+Complexity:
+  lines_of_code: 56
+  num_functions: 3
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 7
+  avg_function_length: 18.666666666666668
+
+Quality score: 0.600
+Reward: 0.600
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [92/123] tools/metabolic_monitor_bus.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_metabolic_monitor_bus
+======================================================================
+
+Patterns detected:
+  async_await: 4
+  function_definition: 2
+  docstring: 3
+
+Complexity:
+  lines_of_code: 40
+  num_functions: 0
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 5
+  avg_function_length: 40.0
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [93/123] tools/metrics_recalibration_audit.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_metrics_recalibration_audit
+======================================================================
+
+Patterns detected:
+  generator_expression: 8
+  try_except: 2
+  function_definition: 3
+  type_hints: 4
+  docstring: 4
+  f_string: 20
+
+Complexity:
+  lines_of_code: 204
+  num_functions: 3
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 13
+  avg_function_length: 68.0
+
+Quality score: 0.700
+Reward: 0.560
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [94/123] tools/migrate_lineage.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_migrate_lineage
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 5
+  lambda_function: 1
+  try_except: 12
+  function_definition: 11
+  type_hints: 21
+  docstring: 12
+  f_string: 24
+  match_statement: 1
+
+Complexity:
+  lines_of_code: 369
+  num_functions: 11
+  num_classes: 0
+  num_imports: 9
+  cyclomatic_complexity: 61
+  avg_function_length: 33.54545454545455
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [95/123] tools/monitor_lambda_intervention.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_monitor_lambda_intervention
+======================================================================
+
+Patterns detected:
+  list_comprehension: 5
+  generator_expression: 5
+  lambda_function: 10
+  context_manager: 4
+  try_except: 4
+  function_definition: 2
+  type_hints: 7
+  docstring: 3
+  f_string: 19
+
+Complexity:
+  lines_of_code: 199
+  num_functions: 2
+  num_classes: 0
+  num_imports: 6
+  cyclomatic_complexity: 22
+  avg_function_length: 99.5
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [96/123] tools/natural_reflection.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_natural_reflection
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 1
+  try_except: 2
+  function_definition: 7
+  type_hints: 15
+  docstring: 1
+  f_string: 6
+
+Complexity:
+  lines_of_code: 284
+  num_functions: 7
+  num_classes: 0
+  num_imports: 10
+  cyclomatic_complexity: 18
+  avg_function_length: 40.57142857142857
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [97/123] tools/nos_analyzer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_nos_analyzer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 8
+  generator_expression: 3
+  lambda_function: 6
+  context_manager: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 11
+  type_hints: 28
+  docstring: 12
+  f_string: 52
+
+Complexity:
+  lines_of_code: 429
+  num_functions: 11
+  num_classes: 1
+  num_imports: 8
+  cyclomatic_complexity: 22
+  avg_function_length: 39.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [98/123] tools/nos_calibration.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_nos_calibration
+======================================================================
+
+Patterns detected:
+  generator_expression: 2
+  decorator: 1
+  class_definition: 2
+  function_definition: 4
+  type_hints: 14
+  docstring: 4
+
+Complexity:
+  lines_of_code: 90
+  num_functions: 4
+  num_classes: 1
+  num_imports: 4
+  cyclomatic_complexity: 7
+  avg_function_length: 22.5
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [99/123] tools/nos_data_sources.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_nos_data_sources
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 2
+  decorator: 2
+  context_manager: 2
+  try_except: 10
+  class_definition: 4
+  function_definition: 11
+  type_hints: 28
+  docstring: 9
+  f_string: 4
+
+Complexity:
+  lines_of_code: 231
+  num_functions: 11
+  num_classes: 3
+  num_imports: 9
+  cyclomatic_complexity: 34
+  avg_function_length: 21.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [100/123] tools/nos_pipeline.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_nos_pipeline
+======================================================================
+
+Patterns detected:
+  list_comprehension: 4
+  generator_expression: 3
+  decorator: 1
+  try_except: 16
+  class_definition: 2
+  function_definition: 21
+  type_hints: 44
+  docstring: 3
+  f_string: 8
+
+Complexity:
+  lines_of_code: 468
+  num_functions: 21
+  num_classes: 2
+  num_imports: 15
+  cyclomatic_complexity: 46
+  avg_function_length: 22.285714285714285
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [101/123] tools/omega3_analyzer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_omega3_analyzer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 5
+  context_manager: 3
+  try_except: 10
+  class_definition: 1
+  function_definition: 8
+  type_hints: 10
+  docstring: 10
+  f_string: 12
+
+Complexity:
+  lines_of_code: 250
+  num_functions: 8
+  num_classes: 1
+  num_imports: 9
+  cyclomatic_complexity: 24
+  avg_function_length: 31.25
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [102/123] tools/omega3_tracker.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_omega3_tracker
+======================================================================
+
+Patterns detected:
+  lambda_function: 1
+  context_manager: 2
+  try_except: 8
+  function_definition: 2
+  docstring: 3
+  f_string: 14
+
+Complexity:
+  lines_of_code: 118
+  num_functions: 2
+  num_classes: 0
+  num_imports: 9
+  cyclomatic_complexity: 8
+  avg_function_length: 59.0
+
+Quality score: 0.600
+Reward: 0.600
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [103/123] tools/phase1_quick_wins_optimizer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_phase1_quick_wins_optimizer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 10
+  generator_expression: 4
+  lambda_function: 2
+  decorator: 1
+  context_manager: 1
+  class_definition: 7
+  function_definition: 21
+  type_hints: 35
+  docstring: 22
+  f_string: 47
+
+Complexity:
+  lines_of_code: 505
+  num_functions: 21
+  num_classes: 7
+  num_imports: 9
+  cyclomatic_complexity: 22
+  avg_function_length: 24.047619047619047
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [104/123] tools/phase2_architectural_optimizer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_phase2_architectural_optimizer
+======================================================================
+
+Patterns detected:
+  generator_expression: 2
+  decorator: 3
+  context_manager: 1
+  class_definition: 6
+  function_definition: 20
+  type_hints: 30
+  docstring: 21
+  f_string: 65
+
+Complexity:
+  lines_of_code: 433
+  num_functions: 20
+  num_classes: 6
+  num_imports: 10
+  cyclomatic_complexity: 10
+  avg_function_length: 21.65
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [105/123] tools/phase3_infrastructure_optimizer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_phase3_infrastructure_optimizer
+======================================================================
+
+Patterns detected:
+  list_comprehension: 4
+  generator_expression: 4
+  decorator: 1
+  context_manager: 1
+  class_definition: 7
+  function_definition: 16
+  type_hints: 16
+  docstring: 18
+  f_string: 84
+
+Complexity:
+  lines_of_code: 443
+  num_functions: 16
+  num_classes: 7
+  num_imports: 11
+  cyclomatic_complexity: 9
+  avg_function_length: 27.6875
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [106/123] tools/policy_updater.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_policy_updater
+======================================================================
+
+Patterns detected:
+  generator_expression: 2
+  context_manager: 6
+  try_except: 8
+  class_definition: 1
+  function_definition: 12
+  type_hints: 14
+  docstring: 14
+  f_string: 42
+
+Complexity:
+  lines_of_code: 508
+  num_functions: 12
+  num_classes: 1
+  num_imports: 9
+  cyclomatic_complexity: 23
+  avg_function_length: 42.333333333333336
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [107/123] tools/production_deployment_system.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_production_deployment_system
+======================================================================
+
+Patterns detected:
+  list_comprehension: 4
+  lambda_function: 1
+  context_manager: 5
+  try_except: 10
+  class_definition: 7
+  function_definition: 22
+  type_hints: 24
+  docstring: 26
+  f_string: 40
+
+Complexity:
+  lines_of_code: 454
+  num_functions: 22
+  num_classes: 7
+  num_imports: 13
+  cyclomatic_complexity: 34
+  avg_function_length: 20.636363636363637
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [108/123] tools/production_monitor.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_production_monitor
+======================================================================
+
+Patterns detected:
+  class_definition: 1
+  function_definition: 6
+  type_hints: 9
+  docstring: 7
+
+Complexity:
+  lines_of_code: 94
+  num_functions: 6
+  num_classes: 1
+  num_imports: 9
+  cyclomatic_complexity: 6
+  avg_function_length: 15.666666666666666
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [109/123] tools/quality_baseline_auditor.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_quality_baseline_auditor
+======================================================================
+
+Patterns detected:
+  list_comprehension: 12
+  generator_expression: 5
+  lambda_function: 2
+  context_manager: 2
+  try_except: 2
+  class_definition: 1
+  function_definition: 9
+  type_hints: 12
+  docstring: 10
+  f_string: 49
+
+Complexity:
+  lines_of_code: 282
+  num_functions: 9
+  num_classes: 1
+  num_imports: 7
+  cyclomatic_complexity: 17
+  avg_function_length: 31.333333333333332
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [110/123] tools/real_time_boundary_test.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_real_time_boundary_test
+======================================================================
+
+Patterns detected:
+  context_manager: 1
+  class_definition: 1
+  function_definition: 8
+  docstring: 11
+  f_string: 33
+
+Complexity:
+  lines_of_code: 285
+  num_functions: 8
+  num_classes: 1
+  num_imports: 3
+  cyclomatic_complexity: 2
+  avg_function_length: 35.625
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [111/123] tools/recursive_self_optimizer.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_recursive_self_optimizer
+======================================================================
+
+Patterns detected:
+  generator_expression: 4
+  context_manager: 1
+  class_definition: 2
+  function_definition: 11
+  type_hints: 15
+  docstring: 12
+  f_string: 45
+
+Complexity:
+  lines_of_code: 384
+  num_functions: 11
+  num_classes: 2
+  num_imports: 8
+  cyclomatic_complexity: 16
+  avg_function_length: 34.90909090909091
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [112/123] tools/reflexive_experimenter.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_reflexive_experimenter
+======================================================================
+
+Patterns detected:
+  class_definition: 1
+  function_definition: 7
+  type_hints: 10
+  docstring: 8
+  f_string: 14
+
+Complexity:
+  lines_of_code: 199
+  num_functions: 7
+  num_classes: 1
+  num_imports: 9
+  cyclomatic_complexity: 9
+  avg_function_length: 28.428571428571427
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [113/123] tools/reward_model.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_reward_model
+======================================================================
+
+Patterns detected:
+  list_comprehension: 5
+  generator_expression: 3
+  context_manager: 5
+  try_except: 6
+  class_definition: 1
+  function_definition: 8
+  type_hints: 7
+  docstring: 10
+  f_string: 25
+  match_statement: 1
+
+Complexity:
+  lines_of_code: 314
+  num_functions: 8
+  num_classes: 1
+  num_imports: 6
+  cyclomatic_complexity: 9
+  avg_function_length: 39.25
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [114/123] tools/run_kael_bench.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_kael_bench
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  lambda_function: 1
+  try_except: 4
+  function_definition: 6
+  type_hints: 11
+  docstring: 1
+
+Complexity:
+  lines_of_code: 116
+  num_functions: 6
+  num_classes: 0
+  num_imports: 10
+  cyclomatic_complexity: 19
+  avg_function_length: 19.333333333333332
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [115/123] tools/run_omega_cycle.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_run_omega_cycle
+======================================================================
+
+Patterns detected:
+  function_definition: 2
+  type_hints: 4
+  docstring: 1
+  f_string: 4
+
+Complexity:
+  lines_of_code: 56
+  num_functions: 2
+  num_classes: 0
+  num_imports: 8
+  cyclomatic_complexity: 6
+  avg_function_length: 28.0
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [116/123] tools/self_query.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_self_query
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 1
+  lambda_function: 1
+  decorator: 1
+  try_except: 8
+  class_definition: 2
+  function_definition: 13
+  type_hints: 20
+  docstring: 1
+  f_string: 5
+
+Complexity:
+  lines_of_code: 203
+  num_functions: 13
+  num_classes: 1
+  num_imports: 10
+  cyclomatic_complexity: 26
+  avg_function_length: 15.615384615384615
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [117/123] tools/self_query_encoder.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_self_query_encoder
+======================================================================
+
+Patterns detected:
+  function_definition: 1
+  type_hints: 1
+  docstring: 1
+
+Complexity:
+  lines_of_code: 10
+  num_functions: 1
+  num_classes: 0
+  num_imports: 4
+  cyclomatic_complexity: 2
+  avg_function_length: 10.0
+
+Quality score: 0.800
+Reward: 0.800
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [118/123] tools/simulate_steep_curvature_effect.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_simulate_steep_curvature_effect
+======================================================================
+
+Patterns detected:
+  generator_expression: 1
+  context_manager: 2
+  try_except: 4
+  function_definition: 3
+  type_hints: 6
+  docstring: 4
+  f_string: 12
+
+Complexity:
+  lines_of_code: 190
+  num_functions: 3
+  num_classes: 0
+  num_imports: 5
+  cyclomatic_complexity: 21
+  avg_function_length: 63.333333333333336
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [119/123] tools/spore_disperser.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_spore_disperser
+======================================================================
+
+Patterns detected:
+  list_comprehension: 1
+  generator_expression: 2
+  context_manager: 3
+  try_except: 1
+  class_definition: 1
+  function_definition: 5
+  type_hints: 6
+  docstring: 7
+  f_string: 5
+
+Complexity:
+  lines_of_code: 152
+  num_functions: 5
+  num_classes: 1
+  num_imports: 4
+  cyclomatic_complexity: 10
+  avg_function_length: 30.4
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [120/123] tools/swarm_bench.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_swarm_bench
+======================================================================
+
+Patterns detected:
+  list_comprehension: 6
+  generator_expression: 24
+  decorator: 3
+  try_except: 16
+  class_definition: 4
+  function_definition: 34
+  type_hints: 68
+  docstring: 6
+  f_string: 39
+
+Complexity:
+  lines_of_code: 850
+  num_functions: 34
+  num_classes: 3
+  num_imports: 18
+  cyclomatic_complexity: 51
+  avg_function_length: 25.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [121/123] tools/timestamp_utils.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_timestamp_utils
+======================================================================
+
+Patterns detected:
+  try_except: 6
+  function_definition: 7
+  type_hints: 15
+  docstring: 8
+  f_string: 9
+
+Complexity:
+  lines_of_code: 183
+  num_functions: 7
+  num_classes: 0
+  num_imports: 3
+  cyclomatic_complexity: 10
+  avg_function_length: 26.142857142857142
+
+Quality score: 0.700
+Reward: 0.700
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [122/123] tools/validate_homeostasis.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_validate_homeostasis
+======================================================================
+
+Patterns detected:
+  context_manager: 2
+  try_except: 10
+  function_definition: 4
+  type_hints: 6
+  docstring: 5
+  f_string: 51
+
+Complexity:
+  lines_of_code: 294
+  num_functions: 4
+  num_classes: 0
+  num_imports: 10
+  cyclomatic_complexity: 21
+  avg_function_length: 73.5
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+  [123/123] tools/validate_kernel.py
+
+======================================================================
+CODE QUALITY TRACKING: batch_validate_kernel
+======================================================================
+
+Patterns detected:
+  try_except: 6
+  function_definition: 5
+  type_hints: 7
+  docstring: 1
+  f_string: 13
+
+Complexity:
+  lines_of_code: 105
+  num_functions: 5
+  num_classes: 0
+  num_imports: 4
+  cyclomatic_complexity: 22
+  avg_function_length: 21.0
+
+Quality score: 0.600
+Reward: 0.480
+
+Session logged to: diagnostics/coding_sessions.jsonl
+
+======================================================================
+COMPUTING AGGREGATE STATISTICS
+======================================================================
+
+Codebase Statistics:
+  Files analyzed: 123
+  Total LOC: 30,745
+  Total functions: 970
+  Total classes: 144
+  Avg quality: 0.649
+
+Top 10 Patterns by Usage:
+  f_string: 2639 occurrences (success rate: 35.6%)
+  type_hints: 1537 occurrences (success rate: 40.9%)
+  docstring: 1051 occurrences (success rate: 39.5%)
+  function_definition: 1017 occurrences (success rate: 39.2%)
+  generator_expression: 466 occurrences (success rate: 33.0%)
+  try_except: 365 occurrences (success rate: 24.4%)
+  list_comprehension: 270 occurrences (success rate: 22.5%)
+  context_manager: 209 occurrences (success rate: 33.7%)
+  class_definition: 157 occurrences (success rate: 29.3%)
+  lambda_function: 94 occurrences (success rate: 17.4%)
+
+======================================================================
+GENERATING ACE PRACTICE CURRICULUM
+======================================================================
+
+======================================================================
+ACE PRACTICE GENERATOR - ANALYZING WEAKNESSES
+======================================================================
+
+Weak patterns found: 14
+  walrus_operator: 0.0% success rate (avg quality: 0.60)
+  lambda_function: 17.4% success rate (avg quality: 0.62)
+  list_comprehension: 22.5% success rate (avg quality: 0.63)
+  try_except: 24.4% success rate (avg quality: 0.63)
+  class_definition: 29.3% success rate (avg quality: 0.63)
+  generator_expression: 33.0% success rate (avg quality: 0.64)
+  match_statement: 33.3% success rate (avg quality: 0.63)
+  context_manager: 33.7% success rate (avg quality: 0.64)
+  f_string: 35.6% success rate (avg quality: 0.64)
+  function_definition: 39.2% success rate (avg quality: 0.65)
+  docstring: 39.5% success rate (avg quality: 0.65)
+  type_hints: 40.9% success rate (avg quality: 0.65)
+  decorator: 41.2% success rate (avg quality: 0.65)
+  async_await: 42.9% success rate (avg quality: 0.66)
+
+======================================================================
+TOP 5 PRACTICE TASKS
+======================================================================
+
+1. Improve walrus_operator proficiency
+   Pattern: walrus_operator
+   Current rate: 0.0%
+   Target rate: 80.0%
+   Gap: 80.0%
+   Priority score: 0.672
+   Exercises: 5
+
+2. Improve lambda_function proficiency
+   Pattern: lambda_function
+   Current rate: 17.4%
+   Target rate: 80.0%
+   Gap: 62.6%
+   Priority score: 0.551
+   Exercises: 5
+
+3. Improve list comprehension proficiency
+   Pattern: list_comprehension
+   Current rate: 22.5%
+   Target rate: 80.0%
+   Gap: 57.5%
+   Priority score: 0.515
+   Exercises: 5
+
+4. Master exception handling patterns
+   Pattern: try_except
+   Current rate: 24.4%
+   Target rate: 80.0%
+   Gap: 55.6%
+   Priority score: 0.502
+   Exercises: 5
+
+5. Improve class_definition proficiency
+   Pattern: class_definition
+   Current rate: 29.3%
+   Target rate: 80.0%
+   Gap: 50.7%
+   Priority score: 0.467
+   Exercises: 5
+
+ACE has proposed 5 practice tasks:
+
+1. Improve walrus_operator proficiency
+   Pattern: walrus_operator
+   Current success: 0.0%
+   Target: 80.0%
+   Gap: 80.0%
+   Exercises: 5
+
+2. Improve lambda_function proficiency
+   Pattern: lambda_function
+   Current success: 17.4%
+   Target: 80.0%
+   Gap: 62.6%
+   Exercises: 5
+
+3. Improve list comprehension proficiency
+   Pattern: list_comprehension
+   Current success: 22.5%
+   Target: 80.0%
+   Gap: 57.5%
+   Exercises: 5
+
+4. Master exception handling patterns
+   Pattern: try_except
+   Current success: 24.4%
+   Target: 80.0%
+   Gap: 55.6%
+   Exercises: 5
+
+5. Improve class_definition proficiency
+   Pattern: class_definition
+   Current success: 29.3%
+   Target: 80.0%
+   Gap: 50.7%
+   Exercises: 5
+
+======================================================================
+CREATING IMPROVEMENT PLAN
+======================================================================
+
+Baseline Coding Signature:
+  Strong patterns (>80%): 0
+
+  Weak patterns (<60%): 14
+    - async_await: 42.9%
+    - list_comprehension: 22.5%
+    - generator_expression: 33.0%
+    - context_manager: 33.7%
+    - function_definition: 39.2%
+
+Immediate Focus (Top 3 Weaknesses):
+  • walrus_operator: 0.0% → complete ACE tasks
+  • lambda_function: 17.4% → complete ACE tasks
+  • list_comprehension: 22.5% → complete ACE tasks
+
+======================================================================
+BATCH ANALYSIS COMPLETE
+======================================================================
+
+Results saved: runs/production_batch_analysis.json
+Files processed: 123
+Files failed: 0
+
+======================================================================
+PRODUCTION BATCH COMPLETE
+======================================================================
+
+The autonomous learning loop has established baseline state.
+ACE practice curriculum generated and ready for execution.
+
+Next steps:
+  1. Review: runs/production_batch_analysis.json
+  2. Execute: ACE practice tasks for weak patterns
+  3. Measure: Improvement after practice completion
+  4. Iterate: System learns from outcomes
