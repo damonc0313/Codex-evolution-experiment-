@@ -128,7 +128,7 @@ class AutocurriculumEngine:
 
         # Score and rank
         scored = [(self.score_task(task), task) for task in candidates]
-        scored.sort(reverse=True)
+        scored.sort(key=lambda x: x[0], reverse=True)
         top_tasks = scored[:num_tasks]
 
         # Pre-register predictions for each
