@@ -477,7 +477,7 @@ class RefactorBench:
         avg_safety = sum(t['metrics']['safety'] for t in task_results) / len(task_results)
         avg_coverage = sum(t['metrics']['coverage'] for t in task_results) / len(task_results)
         total_time = sum(t['metrics']['time_seconds'] for t in task_results)
-        total_modules_affected = sum(t['metrics']['modules_affected'] for t in task_results)
+        total_modules_affected = sum(t['metrics'].get('modules_affected', t['metrics'].get('violations_found', 0)) for t in task_results)
 
         # Estimated human baseline (competent developer)
         # Based on industry averages for similar refactoring tasks
