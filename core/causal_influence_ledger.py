@@ -67,17 +67,19 @@ class CausalInfluenceLedger:
         Returns:
             decision_id: UUID for this decision
         """
-        # Normalize weights to sum to 1.0
+        # Normalize weights to sum to 1.0, but ALSO store raw weights for λ fitting
         total_weight = sum(inp.get('weight', 1.0) for inp in inputs)
         if total_weight == 0:
             total_weight = 1.0
 
         normalized_inputs = []
         for inp in inputs:
-            norm_weight = inp.get('weight', 1.0) / total_weight
+            raw_weight = inp.get('weight', 1.0)
+            norm_weight = raw_weight / total_weight
             normalized_inputs.append({
                 'artifact_id': inp['artifact_id'],
-                'weight': norm_weight,
+                'weight': norm_weight,  # Normalized (for decision logic)
+                'raw_weight': raw_weight,  # Raw (for λ fitting)
                 'reason': inp.get('reason', 'unspecified'),
                 'reason_hash': hash(inp.get('reason', 'unspecified'))
             })
@@ -95,10 +97,10 @@ class CausalInfluenceLedger:
             'metadata': metadata or {}
         }
 
-        # Update influence graph
+        # Update influence graph (store both normalized and raw weights)
         for inp in normalized_inputs:
             self.influence_graph[inp['artifact_id']].append(
-                (decision_id, inp['weight'], timestamp)
+                (decision_id, inp['weight'], inp['raw_weight'], timestamp)
             )
 
         # Cache and persist
@@ -115,13 +117,14 @@ class CausalInfluenceLedger:
     def compute_lambda_from_influence(
         self,
         decision_type: Optional[str] = None,
-        window_days: int = 30
+        window_days: int = 30,
+        use_raw_weights: bool = True
     ) -> Tuple[float, Dict]:
         """
         Compute λ (influence decay rate) from actual influence edges.
 
         Fits w ~ e^(-λt) where:
-        - w: normalized influence weight
+        - w: influence weight (raw or normalized)
         - t: age of artifact in days
 
         This is GROUND TRUTH λ, not spawn_count heuristics.
@@ -129,6 +132,7 @@ class CausalInfluenceLedger:
         Args:
             decision_type: Filter by decision type (None = all)
             window_days: Only use recent N days of data
+            use_raw_weights: If True, use raw weights (recommended). If False, use normalized.
 
         Returns:
             (lambda_value, diagnostics)
@@ -138,7 +142,15 @@ class CausalInfluenceLedger:
         age_weight_pairs = []
 
         for artifact_id, influences in self.influence_graph.items():
-            for decision_id, weight, timestamp_str in influences:
+            for edge in influences:
+                # Handle both old format (3-tuple) and new format (4-tuple)
+                if len(edge) == 4:
+                    decision_id, norm_weight, raw_weight, timestamp_str = edge
+                    weight = raw_weight if use_raw_weights else norm_weight
+                else:
+                    # Old format (before raw_weight storage)
+                    decision_id, weight, timestamp_str = edge
+
                 timestamp = datetime.fromisoformat(timestamp_str)
                 age_days = (now - timestamp).total_seconds() / 86400
 
@@ -173,7 +185,8 @@ class CausalInfluenceLedger:
             'n_samples': len(age_weight_pairs),
             'window_days': window_days,
             'mean_age': np.mean(ages),
-            'mean_weight': np.mean(weights)
+            'mean_weight': np.mean(weights),
+            'weight_type': 'raw' if use_raw_weights else 'normalized'
         }
 
         return lambda_fit, diagnostics
