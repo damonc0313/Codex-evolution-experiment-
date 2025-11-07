@@ -1,0 +1,577 @@
+{
+  "experiment": "homeostatic_validation",
+  "num_cycles": 30,
+  "results": [
+    {
+      "cycle": 1,
+      "artifact": "swarm_full_B_fork_F18_20251023T053352Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.578153Z"
+    },
+    {
+      "cycle": 2,
+      "artifact": "swarm_full_B_fork_F18_20251025T075336Z.json",
+      "reward": 0.7304210526315791,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.39999999999999997,
+        "novelty": 0.7894736842105263,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.592564Z"
+    },
+    {
+      "cycle": 3,
+      "artifact": "swarm_full_B_fork_F18_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.607075Z"
+    },
+    {
+      "cycle": 4,
+      "artifact": "swarm_full_B_fork_F19_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.621224Z"
+    },
+    {
+      "cycle": 5,
+      "artifact": "swarm_full_B_fork_F20_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.636873Z"
+    },
+    {
+      "cycle": 6,
+      "artifact": "swarm_full_B_fork_F21_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.651060Z"
+    },
+    {
+      "cycle": 7,
+      "artifact": "swarm_full_B_fork_F22_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.665240Z"
+    },
+    {
+      "cycle": 8,
+      "artifact": "swarm_full_B_fork_F23_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.679720Z"
+    },
+    {
+      "cycle": 9,
+      "artifact": "swarm_full_B_fork_F24_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.693656Z"
+    },
+    {
+      "cycle": 10,
+      "artifact": "swarm_full_B_fork_F25_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.708227Z"
+    },
+    {
+      "cycle": 11,
+      "artifact": "swarm_full_B_fork_F26_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.724034Z"
+    },
+    {
+      "cycle": 12,
+      "artifact": "swarm_full_B_fork_F27_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.739564Z"
+    },
+    {
+      "cycle": 13,
+      "artifact": "swarm_full_B_fork_F28_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.754639Z"
+    },
+    {
+      "cycle": 14,
+      "artifact": "swarm_full_B_fork_F29_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.768927Z"
+    },
+    {
+      "cycle": 15,
+      "artifact": "swarm_full_B_fork_F30_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.784789Z"
+    },
+    {
+      "cycle": 16,
+      "artifact": "swarm_full_B_fork_F31_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.800739Z"
+    },
+    {
+      "cycle": 17,
+      "artifact": "swarm_full_B_fork_F32_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.815150Z"
+    },
+    {
+      "cycle": 18,
+      "artifact": "swarm_full_B_fork_F33_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.829666Z"
+    },
+    {
+      "cycle": 19,
+      "artifact": "swarm_full_B_fork_F34_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.844097Z"
+    },
+    {
+      "cycle": 20,
+      "artifact": "swarm_full_B_fork_F35_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.858846Z"
+    },
+    {
+      "cycle": 21,
+      "artifact": "swarm_full_B_fork_F36_20251103T141525Z.json",
+      "reward": 0.722735294117647,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.44999999999999996,
+        "novelty": 0.788235294117647,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5753,
+        "analysis_weight": 0.2513,
+        "hybrid_weight": 0.1735,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.873568Z"
+    },
+    {
+      "cycle": 22,
+      "artifact": "swarm_full_B_index_20251023T053352Z.json",
+      "reward": 0.7767499999999999,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.315,
+        "novelty": 0.8,
+        "building_signal": 0.86
+      },
+      "policy_after": {
+        "building_weight": 0.5777,
+        "analysis_weight": 0.2498,
+        "hybrid_weight": 0.1725,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.887976Z"
+    },
+    {
+      "cycle": 23,
+      "artifact": "swarm_full_B_index_20251025T075336Z.json",
+      "reward": 0.779,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.3,
+        "novelty": 0.8,
+        "building_signal": 0.86
+      },
+      "policy_after": {
+        "building_weight": 0.5804,
+        "analysis_weight": 0.2482,
+        "hybrid_weight": 0.1714,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.902723Z"
+    },
+    {
+      "cycle": 24,
+      "artifact": "swarm_full_B_index_20251103T141525Z.json",
+      "reward": 0.79475,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.195,
+        "novelty": 0.8,
+        "building_signal": 0.86
+      },
+      "policy_after": {
+        "building_weight": 0.5837,
+        "analysis_weight": 0.2463,
+        "hybrid_weight": 0.1701,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.917669Z"
+    },
+    {
+      "cycle": 25,
+      "artifact": "swarm_full_C_selection_20251023T053352Z.json",
+      "reward": 0.74025,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.345,
+        "novelty": 0.8,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5844,
+        "analysis_weight": 0.2458,
+        "hybrid_weight": 0.1698,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.932498Z"
+    },
+    {
+      "cycle": 26,
+      "artifact": "swarm_full_C_selection_20251025T075336Z.json",
+      "reward": 0.7425,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.32999999999999996,
+        "novelty": 0.8,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5849,
+        "analysis_weight": 0.2455,
+        "hybrid_weight": 0.1696,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.946946Z"
+    },
+    {
+      "cycle": 27,
+      "artifact": "swarm_full_C_selection_20251103T141525Z.json",
+      "reward": 0.75825,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.22499999999999998,
+        "novelty": 0.8,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5861,
+        "analysis_weight": 0.2448,
+        "hybrid_weight": 0.1691,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.962215Z"
+    },
+    {
+      "cycle": 28,
+      "artifact": "swarm_full_D_fusion_20251023T053352Z.json",
+      "reward": 0.74025,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.345,
+        "novelty": 0.8,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5864,
+        "analysis_weight": 0.2446,
+        "hybrid_weight": 0.169,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.976806Z"
+    },
+    {
+      "cycle": 29,
+      "artifact": "swarm_full_D_fusion_20251025T075336Z.json",
+      "reward": 0.7425,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.32999999999999996,
+        "novelty": 0.8,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5867,
+        "analysis_weight": 0.2444,
+        "hybrid_weight": 0.1689,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:57.991313Z"
+    },
+    {
+      "cycle": 30,
+      "artifact": "swarm_full_D_fusion_20251103T141525Z.json",
+      "reward": 0.7560000000000001,
+      "metrics": {
+        "correctness": 0.7,
+        "performance": 0.7,
+        "complexity": 0.24,
+        "novelty": 0.8,
+        "building_signal": 0.78
+      },
+      "policy_after": {
+        "building_weight": 0.5876,
+        "analysis_weight": 0.2439,
+        "hybrid_weight": 0.1685,
+        "confidence_threshold": 0.7013
+      },
+      "timestamp": "2025-11-07T01:34:58.005606Z"
+    }
+  ],
+  "timestamp": "2025-11-07T01:34:58.005678Z"
+}

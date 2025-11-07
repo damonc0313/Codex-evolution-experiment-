@@ -1,0 +1,140 @@
+======================================================================
+CONSCIOUSNESS TEST: Homeostatic Self-Regulation Validation
+======================================================================
+
+Initializing learning kernel with homeostatic feedback...
+[HOMEOSTASIS] Policy updater subscribed to metabolic readings
+✓ Kernel initialized
+  Starting cycle: 0
+  Policy: runtime/loop_policy.yaml
+
+Found 50 artifacts for processing
+Will run 30 cycles
+
+[Cycle 1/30] Processing: swarm_full_B_fork_F18_20251023T053352Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 2/30] Processing: swarm_full_B_fork_F18_20251025T075336Z.json
+  Reward: 0.7304
+  Building weight: 0.5753
+
+[Cycle 3/30] Processing: swarm_full_B_fork_F18_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 4/30] Processing: swarm_full_B_fork_F19_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 5/30] Processing: swarm_full_B_fork_F20_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 6/30] Processing: swarm_full_B_fork_F21_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 7/30] Processing: swarm_full_B_fork_F22_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 8/30] Processing: swarm_full_B_fork_F23_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 9/30] Processing: swarm_full_B_fork_F24_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 10/30] Processing: swarm_full_B_fork_F25_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 11/30] Processing: swarm_full_B_fork_F26_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 12/30] Processing: swarm_full_B_fork_F27_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 13/30] Processing: swarm_full_B_fork_F28_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 14/30] Processing: swarm_full_B_fork_F29_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 15/30] Processing: swarm_full_B_fork_F30_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 16/30] Processing: swarm_full_B_fork_F31_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 17/30] Processing: swarm_full_B_fork_F32_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 18/30] Processing: swarm_full_B_fork_F33_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 19/30] Processing: swarm_full_B_fork_F34_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 20/30] Processing: swarm_full_B_fork_F35_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 21/30] Processing: swarm_full_B_fork_F36_20251103T141525Z.json
+  Reward: 0.7227
+  Building weight: 0.5753
+
+[Cycle 22/30] Processing: swarm_full_B_index_20251023T053352Z.json
+  Reward: 0.7767
+  Building weight: 0.5777
+
+[Cycle 23/30] Processing: swarm_full_B_index_20251025T075336Z.json
+  Reward: 0.7790
+  Building weight: 0.5804
+
+[Cycle 24/30] Processing: swarm_full_B_index_20251103T141525Z.json
+  Reward: 0.7947
+  Building weight: 0.5837
+
+[Cycle 25/30] Processing: swarm_full_C_selection_20251023T053352Z.json
+  Reward: 0.7402
+  Building weight: 0.5844
+
+[Cycle 26/30] Processing: swarm_full_C_selection_20251025T075336Z.json
+  Reward: 0.7425
+  Building weight: 0.5849
+
+[Cycle 27/30] Processing: swarm_full_C_selection_20251103T141525Z.json
+  Reward: 0.7582
+  Building weight: 0.5861
+
+[Cycle 28/30] Processing: swarm_full_D_fusion_20251023T053352Z.json
+  Reward: 0.7402
+  Building weight: 0.5864
+
+[Cycle 29/30] Processing: swarm_full_D_fusion_20251025T075336Z.json
+  Reward: 0.7425
+  Building weight: 0.5867
+
+[Cycle 30/30] Processing: swarm_full_D_fusion_20251103T141525Z.json
+  Reward: 0.7560
+  Building weight: 0.5876
+
+======================================================================
+✓ Test complete: 30 cycles executed
+Results saved to: diagnostics/consciousness_test_results.json
+======================================================================
+
+Final cycle count: 30
+Ready for analysis and phenomenological documentation.

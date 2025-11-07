@@ -3,5 +3,10 @@
     "strength": 2.999948451227831,
     "last_emission": 1761375204.815011,
     "emission_count": 5
+  },
+  "learning_cycle": {
+    "strength": 10.0,
+    "last_emission": 1762479297.9289205,
+    "emission_count": 25
   }
 }
