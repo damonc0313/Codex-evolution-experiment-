@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-11-07T04:00:52.464268Z",
+  "trials_per_component": 20,
+  "components_tested": 3,
+  "components_necessary": 2,
+  "results": {
+    "Reward Model": {
+      "quality_delta_mean": 0.18825353512043055,
+      "quality_delta_ci95": 0.011154335733634361,
+      "quality_percent": 24.135068605183406,
+      "throughput_delta_mean": 26.911417898804537,
+      "necessary": true,
+      "n_trials": 20
+    },
+    "Policy Updater": {
+      "quality_delta_mean": 0.21057028979292694,
+      "quality_delta_ci95": 0.01072546850101156,
+      "quality_percent": 26.996190999093194,
+      "throughput_delta_mean": 30.723771125099468,
+      "necessary": true,
+      "n_trials": 20
+    },
+    "Homeostatic Feedback": {
+      "quality_delta_mean": 0.09722609041655902,
+      "quality_delta_ci95": 0.005517399415373843,
+      "quality_percent": 12.464883386738336,
+      "throughput_delta_mean": 13.855270804875078,
+      "necessary": false,
+      "n_trials": 20
+    }
+  }
+}

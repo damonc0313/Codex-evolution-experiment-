@@ -1,0 +1,109 @@
+{
+  "timestamp": "2025-11-07T04:17:59.511290",
+  "total_decisions": 150,
+  "total_artifacts": 57,
+  "domain_lambdas": {
+    "policy_update": {
+      "lambda": -9701.883171037569,
+      "r_squared": 0.0003583968172112817,
+      "n_samples": 400
+    },
+    "reward_computation": {
+      "lambda": -9701.883171037458,
+      "r_squared": 0.00035839681721161476,
+      "n_samples": 400
+    },
+    "artifact_selection": {
+      "lambda": -9701.883171037662,
+      "r_squared": 0.0003583968172113927,
+      "n_samples": 400
+    }
+  },
+  "top_influencers": [
+    {
+      "artifact_id": "reward_signal",
+      "total_influence": 46.421981442363915
+    },
+    {
+      "artifact_id": "building_signal",
+      "total_influence": 13.980543088486483
+    },
+    {
+      "artifact_id": "novelty",
+      "total_influence": 12.750113800692434
+    },
+    {
+      "artifact_id": "correctness",
+      "total_influence": 12.48317201453276
+    },
+    {
+      "artifact_id": "performance",
+      "total_influence": 10.78617109628833
+    },
+    {
+      "artifact_id": "advantage",
+      "total_influence": 3.0130631683385585
+    },
+    {
+      "artifact_id": "micro_artifact_001",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_002",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_003",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_004",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_005",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_006",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_007",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_008",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_009",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_010",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_011",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_012",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_013",
+      "total_influence": 1.0
+    },
+    {
+      "artifact_id": "micro_artifact_014",
+      "total_influence": 1.0
+    }
+  ],
+  "graph_stats": {
+    "mean_influences_per_artifact": 7.017543859649122,
+    "max_influences": 50,
+    "artifacts_with_influence": 57
+  }
+}

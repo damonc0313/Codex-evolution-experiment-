@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-11-07T04:17:59.693145Z",
+  "method": "exponential_decay_fit",
+  "formula": "w ~ e^(-\u03bbt)",
+  "domains": {
+    "policy_update": {
+      "lambda": -9701.8832,
+      "lambda_stderr": 0.0,
+      "r_squared": 0.0,
+      "n_samples": 400,
+      "mean_age_days": 0.0,
+      "mean_weight": 0.375
+    },
+    "artifact_selection": {
+      "lambda": -9701.8832,
+      "lambda_stderr": 0.0,
+      "r_squared": 0.0,
+      "n_samples": 400,
+      "mean_age_days": 0.0,
+      "mean_weight": 0.375
+    },
+    "reward_computation": {
+      "lambda": -9701.8832,
+      "lambda_stderr": 0.0,
+      "r_squared": 0.0,
+      "n_samples": 400,
+      "mean_age_days": 0.0,
+      "mean_weight": 0.375
+    }
+  }
+}

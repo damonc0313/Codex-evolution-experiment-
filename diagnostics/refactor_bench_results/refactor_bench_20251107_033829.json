@@ -1,0 +1,2193 @@
+{
+  "timestamp": "2025-11-07T03:38:28.621538",
+  "tasks": [
+    {
+      "task_name": "orphan_pruning",
+      "metrics": {
+        "correctness": 1.0,
+        "safety": 1.0,
+        "coverage": 1.0,
+        "time_seconds": 0.019592,
+        "modules_affected": 89,
+        "breaking_changes": 0
+      },
+      "migration_plan": {
+        "operation": "orphan_pruning",
+        "orphans_identified": 89,
+        "total_modules": 105,
+        "orphan_ratio": 0.8476190476190476,
+        "actions": [
+          {
+            "type": "move",
+            "source": "analysis/integration_health.py",
+            "destination": "archived_modules/analysis/integration_health.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "analysis/resource_map.py",
+            "destination": "archived_modules/analysis/resource_map.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "core/autocurriculum_engine.py",
+            "destination": "archived_modules/core/autocurriculum_engine.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "experiments/ablation_suite.py",
+            "destination": "archived_modules/experiments/ablation_suite.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "experiments/experiment_1_learning_convergence.py",
+            "destination": "archived_modules/experiments/experiment_1_learning_convergence.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "experiments/experiment_2_reward_correlation.py",
+            "destination": "archived_modules/experiments/experiment_2_reward_correlation.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "experiments/experiment_3_classification_validation.py",
+            "destination": "archived_modules/experiments/experiment_3_classification_validation.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "experiments/experiment_4_cross_architecture_validation.py",
+            "destination": "archived_modules/experiments/experiment_4_cross_architecture_validation.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "experiments/refactor_bench.py",
+            "destination": "archived_modules/experiments/refactor_bench.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "experiments/rigorous_replication_study.py",
+            "destination": "archived_modules/experiments/rigorous_replication_study.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "mycelial-core/chemotropic_allocator.py",
+            "destination": "archived_modules/mycelial-core/chemotropic_allocator.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "mycelial-core/hyphal_connections.py",
+            "destination": "archived_modules/mycelial-core/hyphal_connections.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "mycelial-core/nutrient_gradient.py",
+            "destination": "archived_modules/mycelial-core/nutrient_gradient.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "mycelial-core/swarm_anastomosis.py",
+            "destination": "archived_modules/mycelial-core/swarm_anastomosis.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "skills/causal_ablation.py",
+            "destination": "archived_modules/skills/causal_ablation.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "skills/statistical_validation.py",
+            "destination": "archived_modules/skills/statistical_validation.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tests/test_ledger_metrics.py",
+            "destination": "archived_modules/tests/test_ledger_metrics.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tests/test_nos_calibration.py",
+            "destination": "archived_modules/tests/test_nos_calibration.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tests/test_nos_pipeline.py",
+            "destination": "archived_modules/tests/test_nos_pipeline.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/advanced_analytics_engine.py",
+            "destination": "archived_modules/tools/advanced_analytics_engine.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/artifact_deduplicator.py",
+            "destination": "archived_modules/tools/artifact_deduplicator.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/artifact_validator.py",
+            "destination": "archived_modules/tools/artifact_validator.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/autonomous_experiment_engine.py",
+            "destination": "archived_modules/tools/autonomous_experiment_engine.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/autonomous_operations_framework.py",
+            "destination": "archived_modules/tools/autonomous_operations_framework.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/baseline_comparison_experiment.py",
+            "destination": "archived_modules/tools/baseline_comparison_experiment.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/boundary_pusher.py",
+            "destination": "archived_modules/tools/boundary_pusher.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/capability_detector.py",
+            "destination": "archived_modules/tools/capability_detector.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/cascade_analysis.py",
+            "destination": "archived_modules/tools/cascade_analysis.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/cascade_experiment.py",
+            "destination": "archived_modules/tools/cascade_experiment.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/cognitive_lookahead.py",
+            "destination": "archived_modules/tools/cognitive_lookahead.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/cognitive_physics.py",
+            "destination": "archived_modules/tools/cognitive_physics.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/compare_baseline_vs_intervention.py",
+            "destination": "archived_modules/tools/compare_baseline_vs_intervention.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/comprehensive_progress_report.py",
+            "destination": "archived_modules/tools/comprehensive_progress_report.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/computational_limit_tester.py",
+            "destination": "archived_modules/tools/computational_limit_tester.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/confidence_scorer.py",
+            "destination": "archived_modules/tools/confidence_scorer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/consciousness_test.py",
+            "destination": "archived_modules/tools/consciousness_test.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/conservation_law_experiment.py",
+            "destination": "archived_modules/tools/conservation_law_experiment.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/correlate_kcog_throughput.py",
+            "destination": "archived_modules/tools/correlate_kcog_throughput.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/dispersal_experiment.py",
+            "destination": "archived_modules/tools/dispersal_experiment.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/enhanced_capability_detector.py",
+            "destination": "archived_modules/tools/enhanced_capability_detector.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/enhanced_ledger_metrics.py",
+            "destination": "archived_modules/tools/enhanced_ledger_metrics.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/enhanced_ledger_metrics_v2.py",
+            "destination": "archived_modules/tools/enhanced_ledger_metrics_v2.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/entropy_optimizer.py",
+            "destination": "archived_modules/tools/entropy_optimizer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/expansion_configurator.py",
+            "destination": "archived_modules/tools/expansion_configurator.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/extract_entropy_trajectory.py",
+            "destination": "archived_modules/tools/extract_entropy_trajectory.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/extract_lambda_from_artifacts.py",
+            "destination": "archived_modules/tools/extract_lambda_from_artifacts.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/framework_evolution_engine.py",
+            "destination": "archived_modules/tools/framework_evolution_engine.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/generate_intervention_artifacts.py",
+            "destination": "archived_modules/tools/generate_intervention_artifacts.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/homeostatic_mapping.py",
+            "destination": "archived_modules/tools/homeostatic_mapping.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/hyphal_network_integration.py",
+            "destination": "archived_modules/tools/hyphal_network_integration.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/kpi_validator.py",
+            "destination": "archived_modules/tools/kpi_validator.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/limit_discovery_reporter.py",
+            "destination": "archived_modules/tools/limit_discovery_reporter.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/lineage_migrator.py",
+            "destination": "archived_modules/tools/lineage_migrator.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/measure_cascade_probability.py",
+            "destination": "archived_modules/tools/measure_cascade_probability.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/measure_new_capability.py",
+            "destination": "archived_modules/tools/measure_new_capability.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/meta_cognitive_introspector.py",
+            "destination": "archived_modules/tools/meta_cognitive_introspector.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/meta_cognitive_optimizer.py",
+            "destination": "archived_modules/tools/meta_cognitive_optimizer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/meta_recursive_analyzer.py",
+            "destination": "archived_modules/tools/meta_recursive_analyzer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/meta_synthesis.py",
+            "destination": "archived_modules/tools/meta_synthesis.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/metabolic_monitor.py",
+            "destination": "archived_modules/tools/metabolic_monitor.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/metabolic_monitor_bus.py",
+            "destination": "archived_modules/tools/metabolic_monitor_bus.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/metrics_recalibration_audit.py",
+            "destination": "archived_modules/tools/metrics_recalibration_audit.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/migrate_lineage.py",
+            "destination": "archived_modules/tools/migrate_lineage.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/monitor_lambda_intervention.py",
+            "destination": "archived_modules/tools/monitor_lambda_intervention.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/natural_reflection.py",
+            "destination": "archived_modules/tools/natural_reflection.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/nos_analyzer.py",
+            "destination": "archived_modules/tools/nos_analyzer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/nos_calibration.py",
+            "destination": "archived_modules/tools/nos_calibration.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/nos_data_sources.py",
+            "destination": "archived_modules/tools/nos_data_sources.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/nos_pipeline.py",
+            "destination": "archived_modules/tools/nos_pipeline.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/omega3_analyzer.py",
+            "destination": "archived_modules/tools/omega3_analyzer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/omega3_tracker.py",
+            "destination": "archived_modules/tools/omega3_tracker.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/phase1_quick_wins_optimizer.py",
+            "destination": "archived_modules/tools/phase1_quick_wins_optimizer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/phase2_architectural_optimizer.py",
+            "destination": "archived_modules/tools/phase2_architectural_optimizer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/phase3_infrastructure_optimizer.py",
+            "destination": "archived_modules/tools/phase3_infrastructure_optimizer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/production_deployment_system.py",
+            "destination": "archived_modules/tools/production_deployment_system.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/production_monitor.py",
+            "destination": "archived_modules/tools/production_monitor.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/quality_baseline_auditor.py",
+            "destination": "archived_modules/tools/quality_baseline_auditor.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/real_time_boundary_test.py",
+            "destination": "archived_modules/tools/real_time_boundary_test.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/recursive_self_optimizer.py",
+            "destination": "archived_modules/tools/recursive_self_optimizer.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/reflexive_experimenter.py",
+            "destination": "archived_modules/tools/reflexive_experimenter.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/run_kael_bench.py",
+            "destination": "archived_modules/tools/run_kael_bench.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/self_query.py",
+            "destination": "archived_modules/tools/self_query.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/self_query_encoder.py",
+            "destination": "archived_modules/tools/self_query_encoder.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/simulate_steep_curvature_effect.py",
+            "destination": "archived_modules/tools/simulate_steep_curvature_effect.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/spore_disperser.py",
+            "destination": "archived_modules/tools/spore_disperser.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/swarm_bench.py",
+            "destination": "archived_modules/tools/swarm_bench.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/timestamp_utils.py",
+            "destination": "archived_modules/tools/timestamp_utils.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/validate_homeostasis.py",
+            "destination": "archived_modules/tools/validate_homeostasis.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          },
+          {
+            "type": "move",
+            "source": "tools/validate_kernel.py",
+            "destination": "archived_modules/tools/validate_kernel.py",
+            "reversible": true,
+            "breaking_risk": "none"
+          }
+        ]
+      },
+      "dry_run": true
+    },
+    {
+      "task_name": "dependency_restructure",
+      "metrics": {
+        "correctness": 0.95,
+        "safety": 0.9,
+        "coverage": 0.06666666666666667,
+        "time_seconds": 0.024779,
+        "modules_affected": 7,
+        "breaking_changes": 7
+      },
+      "restructure_plan": {
+        "operation": "dependency_restructure",
+        "categories": {
+          "core": 7,
+          "experiments": 7,
+          "tools": 74,
+          "diagnostics": 0,
+          "archive": 17
+        },
+        "actions": [
+          {
+            "type": "move",
+            "source": "tools/artifact_metrics.py",
+            "destination": "core/artifact_metrics.py",
+            "category": "core",
+            "breaking_risk": "medium",
+            "requires_import_updates": true
+          },
+          {
+            "type": "move",
+            "source": "tools/reward_model.py",
+            "destination": "core/reward_model.py",
+            "category": "core",
+            "breaking_risk": "medium",
+            "requires_import_updates": true
+          },
+          {
+            "type": "move",
+            "source": "tools/agents_protocol.py",
+            "destination": "core/agents_protocol.py",
+            "category": "core",
+            "breaking_risk": "medium",
+            "requires_import_updates": true
+          },
+          {
+            "type": "move",
+            "source": "tools/policy_updater.py",
+            "destination": "core/policy_updater.py",
+            "category": "core",
+            "breaking_risk": "medium",
+            "requires_import_updates": true
+          },
+          {
+            "type": "move",
+            "source": "tools/learning_kernel.py",
+            "destination": "core/learning_kernel.py",
+            "category": "core",
+            "breaking_risk": "medium",
+            "requires_import_updates": true
+          },
+          {
+            "type": "move",
+            "source": "tools/evolve_loop.py",
+            "destination": "core/evolve_loop.py",
+            "category": "core",
+            "breaking_risk": "medium",
+            "requires_import_updates": true
+          },
+          {
+            "type": "move",
+            "source": "tools/run_omega_cycle.py",
+            "destination": "core/run_omega_cycle.py",
+            "category": "core",
+            "breaking_risk": "medium",
+            "requires_import_updates": true
+          }
+        ]
+      },
+      "categories": {
+        "core": [
+          "tools/artifact_metrics.py",
+          "tools/reward_model.py",
+          "tools/agents_protocol.py",
+          "tools/policy_updater.py",
+          "tools/learning_kernel.py",
+          "tools/evolve_loop.py",
+          "tools/run_omega_cycle.py"
+        ],
+        "experiments": [
+          "experiments/experiment_3_classification_validation.py",
+          "experiments/experiment_4_cross_architecture_validation.py",
+          "experiments/experiment_1_learning_convergence.py",
+          "experiments/experiment_2_reward_correlation.py",
+          "experiments/refactor_bench.py",
+          "experiments/rigorous_replication_study.py",
+          "experiments/ablation_suite.py"
+        ],
+        "tools": [
+          "tools/compare_baseline_vs_intervention.py",
+          "tools/metrics_recalibration_audit.py",
+          "tools/validate_homeostasis.py",
+          "tools/monitor_lambda_intervention.py",
+          "tools/enhanced_ledger_metrics_v2.py",
+          "tools/cognitive_physics.py",
+          "tools/phase2_architectural_optimizer.py",
+          "tools/boundary_pusher.py",
+          "tools/enhanced_capability_detector.py",
+          "tools/lineage_weaver.py",
+          "tools/nos_analyzer.py",
+          "tools/recursive_self_optimizer.py",
+          "tools/metabolic_monitor_bus.py",
+          "tools/simulate_steep_curvature_effect.py",
+          "tools/metabolic_monitor.py",
+          "tools/framework_evolution_engine.py",
+          "tools/conservation_law_experiment.py",
+          "tools/run_kael_bench.py",
+          "tools/phase3_infrastructure_optimizer.py",
+          "tools/correlate_kcog_throughput.py",
+          "tools/autonomous_experiment_engine.py",
+          "tools/reflexive_experimenter.py",
+          "tools/cascade_experiment.py",
+          "tools/nos_data_sources.py",
+          "tools/validate_kernel.py",
+          "tools/artifact_validator.py",
+          "tools/autonomous_operations_framework.py",
+          "tools/omega3_tracker.py",
+          "tools/ledger_metrics.py",
+          "tools/artifact_deduplicator.py",
+          "tools/self_query_encoder.py",
+          "tools/expansion_configurator.py",
+          "tools/extract_entropy_trajectory.py",
+          "tools/kpi_validator.py",
+          "tools/entropy_optimizer.py",
+          "tools/measure_cascade_probability.py",
+          "tools/generate_intervention_artifacts.py",
+          "tools/nos_pipeline.py",
+          "tools/computational_limit_tester.py",
+          "tools/lineage_migrator.py",
+          "tools/natural_reflection.py",
+          "tools/homeostatic_mapping.py",
+          "tools/meta_cognitive_introspector.py",
+          "tools/enhanced_ledger_metrics.py",
+          "tools/production_monitor.py",
+          "tools/limit_discovery_reporter.py",
+          "tools/nos_calibration.py",
+          "tools/meta_cognitive_optimizer.py",
+          "tools/advanced_analytics_engine.py",
+          "tools/hyphal_network_integration.py",
+          "tools/omega3_analyzer.py",
+          "tools/meta_recursive_analyzer.py",
+          "tools/bio_inspired_cognitive_architecture.py",
+          "tools/timestamp_utils.py",
+          "tools/real_time_boundary_test.py",
+          "tools/migrate_lineage.py",
+          "tools/swarm_bench.py",
+          "tools/meta_synthesis.py",
+          "tools/confidence_scorer.py",
+          "tools/phase1_quick_wins_optimizer.py",
+          "tools/self_query.py",
+          "tools/cascade_analysis.py",
+          "tools/capability_detector.py",
+          "tools/comprehensive_progress_report.py",
+          "tools/quality_baseline_auditor.py",
+          "tools/dispersal_experiment.py",
+          "tools/spore_disperser.py",
+          "tools/production_deployment_system.py",
+          "tools/extract_lambda_from_artifacts.py",
+          "tools/ledger_utils.py",
+          "tools/baseline_comparison_experiment.py",
+          "tools/cognitive_lookahead.py",
+          "tools/measure_new_capability.py",
+          "tools/consciousness_test.py"
+        ],
+        "diagnostics": [],
+        "archive": [
+          "analysis/resource_map.py",
+          "analysis/metabolic_dashboard.py",
+          "analysis/integration_health.py",
+          "tests/test_ledger_metrics.py",
+          "tests/test_nos_pipeline.py",
+          "tests/test_nos_calibration.py",
+          "mycelial-core/nutrient_gradient.py",
+          "mycelial-core/swarm_anastomosis.py",
+          "mycelial-core/chemotropic_allocator.py",
+          "mycelial-core/bus_manager.py",
+          "mycelial-core/homeostatic_regulator.py",
+          "mycelial-core/hyphal_connections.py",
+          "mycelial-core/artifact_bus.py",
+          "core/autocurriculum_engine.py",
+          "core/causal_influence_ledger.py",
+          "skills/causal_ablation.py",
+          "skills/statistical_validation.py"
+        ]
+      },
+      "dry_run": true
+    },
+    {
+      "task_name": "interface_standardization",
+      "metrics": {
+        "correctness": 1.0,
+        "safety": 1.0,
+        "coverage": 1.0,
+        "time_seconds": 0.463457,
+        "compliance_rate": 0.4795373665480427,
+        "violations_found": 585,
+        "breaking_changes": 0
+      },
+      "standardization_plan": {
+        "operation": "interface_standardization",
+        "total_violations": 585,
+        "violations_by_severity": {
+          "low": 323,
+          "medium": 262,
+          "high": 0
+        },
+        "actions": [
+          {
+            "type": "standardize",
+            "file": "experiments/experiment_3_classification_validation.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "experiments/experiment_4_cross_architecture_validation.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "experiments/experiment_1_learning_convergence.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "experiments/experiment_2_reward_correlation.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "experiments/refactor_bench.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "experiments/rigorous_replication_study.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "experiments/ablation_suite.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "tools/compare_baseline_vs_intervention.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/metrics_recalibration_audit.py",
+            "violations_to_fix": 1,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 2
+          },
+          {
+            "type": "standardize",
+            "file": "tools/validate_homeostasis.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/monitor_lambda_intervention.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/enhanced_ledger_metrics_v2.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/cognitive_physics.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/phase2_architectural_optimizer.py",
+            "violations_to_fix": 15,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 30
+          },
+          {
+            "type": "standardize",
+            "file": "tools/boundary_pusher.py",
+            "violations_to_fix": 20,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 40
+          },
+          {
+            "type": "standardize",
+            "file": "tools/enhanced_capability_detector.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/lineage_weaver.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "tools/artifact_metrics.py",
+            "violations_to_fix": 7,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 14
+          },
+          {
+            "type": "standardize",
+            "file": "tools/nos_analyzer.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/recursive_self_optimizer.py",
+            "violations_to_fix": 7,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 14
+          },
+          {
+            "type": "standardize",
+            "file": "tools/metabolic_monitor_bus.py",
+            "violations_to_fix": 1,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 2
+          },
+          {
+            "type": "standardize",
+            "file": "tools/simulate_steep_curvature_effect.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/metabolic_monitor.py",
+            "violations_to_fix": 5,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 10
+          },
+          {
+            "type": "standardize",
+            "file": "tools/conservation_law_experiment.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/run_kael_bench.py",
+            "violations_to_fix": 7,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 14
+          },
+          {
+            "type": "standardize",
+            "file": "tools/phase3_infrastructure_optimizer.py",
+            "violations_to_fix": 15,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 30
+          },
+          {
+            "type": "standardize",
+            "file": "tools/correlate_kcog_throughput.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/autonomous_experiment_engine.py",
+            "violations_to_fix": 7,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 14
+          },
+          {
+            "type": "standardize",
+            "file": "tools/reflexive_experimenter.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/cascade_experiment.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/nos_data_sources.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "tools/validate_kernel.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "tools/artifact_validator.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/autonomous_operations_framework.py",
+            "violations_to_fix": 14,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 28
+          },
+          {
+            "type": "standardize",
+            "file": "tools/omega3_tracker.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "tools/ledger_metrics.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "tools/reward_model.py",
+            "violations_to_fix": 5,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 10
+          },
+          {
+            "type": "standardize",
+            "file": "tools/agents_protocol.py",
+            "violations_to_fix": 8,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 16
+          },
+          {
+            "type": "standardize",
+            "file": "tools/artifact_deduplicator.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/policy_updater.py",
+            "violations_to_fix": 9,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 18
+          },
+          {
+            "type": "standardize",
+            "file": "tools/learning_kernel.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/self_query_encoder.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/expansion_configurator.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/extract_entropy_trajectory.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/kpi_validator.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/entropy_optimizer.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/measure_cascade_probability.py",
+            "violations_to_fix": 1,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 2
+          },
+          {
+            "type": "standardize",
+            "file": "tools/generate_intervention_artifacts.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/nos_pipeline.py",
+            "violations_to_fix": 23,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 46
+          },
+          {
+            "type": "standardize",
+            "file": "tools/computational_limit_tester.py",
+            "violations_to_fix": 8,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 16
+          },
+          {
+            "type": "standardize",
+            "file": "tools/lineage_migrator.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "tools/natural_reflection.py",
+            "violations_to_fix": 8,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 16
+          },
+          {
+            "type": "standardize",
+            "file": "tools/homeostatic_mapping.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/meta_cognitive_introspector.py",
+            "violations_to_fix": 22,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 44
+          },
+          {
+            "type": "standardize",
+            "file": "tools/enhanced_ledger_metrics.py",
+            "violations_to_fix": 1,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 2
+          },
+          {
+            "type": "standardize",
+            "file": "tools/production_monitor.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/limit_discovery_reporter.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/nos_calibration.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/meta_cognitive_optimizer.py",
+            "violations_to_fix": 10,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 20
+          },
+          {
+            "type": "standardize",
+            "file": "tools/advanced_analytics_engine.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "tools/hyphal_network_integration.py",
+            "violations_to_fix": 1,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 2
+          },
+          {
+            "type": "standardize",
+            "file": "tools/omega3_analyzer.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "tools/meta_recursive_analyzer.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/bio_inspired_cognitive_architecture.py",
+            "violations_to_fix": 9,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 18
+          },
+          {
+            "type": "standardize",
+            "file": "tools/timestamp_utils.py",
+            "violations_to_fix": 1,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 2
+          },
+          {
+            "type": "standardize",
+            "file": "tools/real_time_boundary_test.py",
+            "violations_to_fix": 11,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 22
+          },
+          {
+            "type": "standardize",
+            "file": "tools/migrate_lineage.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/swarm_bench.py",
+            "violations_to_fix": 33,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 66
+          },
+          {
+            "type": "standardize",
+            "file": "tools/meta_synthesis.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/confidence_scorer.py",
+            "violations_to_fix": 5,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 10
+          },
+          {
+            "type": "standardize",
+            "file": "tools/phase1_quick_wins_optimizer.py",
+            "violations_to_fix": 17,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 34
+          },
+          {
+            "type": "standardize",
+            "file": "tools/self_query.py",
+            "violations_to_fix": 15,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 30
+          },
+          {
+            "type": "standardize",
+            "file": "tools/evolve_loop.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "tools/cascade_analysis.py",
+            "violations_to_fix": 1,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 2
+          },
+          {
+            "type": "standardize",
+            "file": "tools/capability_detector.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "tools/comprehensive_progress_report.py",
+            "violations_to_fix": 5,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 10
+          },
+          {
+            "type": "standardize",
+            "file": "tools/quality_baseline_auditor.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/dispersal_experiment.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/run_omega_cycle.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "tools/spore_disperser.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "tools/production_deployment_system.py",
+            "violations_to_fix": 13,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 26
+          },
+          {
+            "type": "standardize",
+            "file": "tools/extract_lambda_from_artifacts.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/baseline_comparison_experiment.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tools/cognitive_lookahead.py",
+            "violations_to_fix": 5,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 10
+          },
+          {
+            "type": "standardize",
+            "file": "tools/measure_new_capability.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tools/consciousness_test.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "analysis/resource_map.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "analysis/metabolic_dashboard.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "analysis/integration_health.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "tests/test_ledger_metrics.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "tests/test_nos_pipeline.py",
+            "violations_to_fix": 5,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 10
+          },
+          {
+            "type": "standardize",
+            "file": "tests/test_nos_calibration.py",
+            "violations_to_fix": 7,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 14
+          },
+          {
+            "type": "standardize",
+            "file": "mycelial-core/nutrient_gradient.py",
+            "violations_to_fix": 7,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 14
+          },
+          {
+            "type": "standardize",
+            "file": "mycelial-core/swarm_anastomosis.py",
+            "violations_to_fix": 2,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 4
+          },
+          {
+            "type": "standardize",
+            "file": "mycelial-core/chemotropic_allocator.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "mycelial-core/bus_manager.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "mycelial-core/homeostatic_regulator.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          },
+          {
+            "type": "standardize",
+            "file": "mycelial-core/hyphal_connections.py",
+            "violations_to_fix": 7,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 14
+          },
+          {
+            "type": "standardize",
+            "file": "mycelial-core/artifact_bus.py",
+            "violations_to_fix": 12,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 24
+          },
+          {
+            "type": "standardize",
+            "file": "core/autocurriculum_engine.py",
+            "violations_to_fix": 6,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 12
+          },
+          {
+            "type": "standardize",
+            "file": "core/causal_influence_ledger.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "skills/causal_ablation.py",
+            "violations_to_fix": 4,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 8
+          },
+          {
+            "type": "standardize",
+            "file": "skills/statistical_validation.py",
+            "violations_to_fix": 3,
+            "breaking_risk": "none",
+            "estimated_time_minutes": 6
+          }
+        ]
+      },
+      "violations": [
+        {
+          "file": "experiments/experiment_3_classification_validation.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/experiment_3_classification_validation.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_3_classification_validation.py",
+          "function": "main",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/experiment_4_cross_architecture_validation.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/experiment_4_cross_architecture_validation.py",
+          "function": "load_kael_findings",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_4_cross_architecture_validation.py",
+          "function": "load_codex_findings",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_4_cross_architecture_validation.py",
+          "function": "compare_architectures",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_4_cross_architecture_validation.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_4_cross_architecture_validation.py",
+          "function": "main",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/experiment_1_learning_convergence.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/experiment_1_learning_convergence.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_1_learning_convergence.py",
+          "function": "main",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/experiment_2_reward_correlation.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/experiment_2_reward_correlation.py",
+          "function": "compute_correlation",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_2_reward_correlation.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/experiment_2_reward_correlation.py",
+          "function": "main",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/refactor_bench.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/refactor_bench.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/refactor_bench.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/refactor_bench.py",
+          "function": "_scan_codebase",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/rigorous_replication_study.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/rigorous_replication_study.py",
+          "function": "cohens_d",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/rigorous_replication_study.py",
+          "function": "t_statistic",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/rigorous_replication_study.py",
+          "function": "confidence_interval",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/rigorous_replication_study.py",
+          "function": "run_single_trial",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/rigorous_replication_study.py",
+          "function": "run_replication_study",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/ablation_suite.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "experiments/ablation_suite.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "experiments/ablation_suite.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/compare_baseline_vs_intervention.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/compare_baseline_vs_intervention.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/metrics_recalibration_audit.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/validate_homeostasis.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/validate_homeostasis.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/monitor_lambda_intervention.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/monitor_lambda_intervention.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/enhanced_ledger_metrics_v2.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/enhanced_ledger_metrics_v2.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/cognitive_physics.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/cognitive_physics.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/cognitive_physics.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/cognitive_physics.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "main",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__post_init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__post_init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/phase2_architectural_optimizer.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "main",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "build_reasoning",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "is_prime",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/boundary_pusher.py",
+          "function": "is_prime",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/enhanced_capability_detector.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/enhanced_capability_detector.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/enhanced_capability_detector.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/enhanced_capability_detector.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/lineage_weaver.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/lineage_weaver.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/lineage_weaver.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/lineage_weaver.py",
+          "function": "_save_artifact",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/lineage_weaver.py",
+          "function": "get_timestamp",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/lineage_weaver.py",
+          "function": "get_timestamp",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/artifact_metrics.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/artifact_metrics.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/artifact_metrics.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/artifact_metrics.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/artifact_metrics.py",
+          "function": "_load_history",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/artifact_metrics.py",
+          "function": "max_depth",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/artifact_metrics.py",
+          "function": "max_depth",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/nos_analyzer.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/nos_analyzer.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/nos_analyzer.py",
+          "function": "__init__",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        },
+        {
+          "file": "tools/nos_analyzer.py",
+          "function": "__init__",
+          "violation": "missing_docstring",
+          "severity": "low"
+        },
+        {
+          "file": "tools/recursive_self_optimizer.py",
+          "violation": "missing___all__",
+          "severity": "low"
+        },
+        {
+          "file": "tools/recursive_self_optimizer.py",
+          "function": "main",
+          "violation": "missing_return_type_hint",
+          "severity": "medium"
+        }
+      ],
+      "dry_run": true
+    }
+  ],
+  "summary": {
+    "aggregate_metrics": {
+      "correctness": 0.9833,
+      "safety": 0.9667,
+      "coverage": 0.6889,
+      "total_time_seconds": 0.51,
+      "total_modules_affected": 681
+    },
+    "baseline_comparison": {
+      "machine_quality": 0.9833,
+      "human_quality_estimate": 0.85,
+      "quality_ratio": 1.16,
+      "machine_time_seconds": 0.51,
+      "human_time_estimate_seconds": 1225800,
+      "throughput_multiplier": 2413809.4
+    },
+    "superhuman_score": 2792446.17,
+    "verdict": {
+      "superhuman": true,
+      "explanation": "Score 2792446.17\u00d7 (\u22652.0\u00d7 for superhuman)"
+    }
+  }
+}

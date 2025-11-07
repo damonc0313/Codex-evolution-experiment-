@@ -40,6 +40,10 @@ from artifact_metrics import ArtifactMetrics
 from reward_model import RewardModel
 from policy_updater import PolicyUpdater
 
+# Import Causal Influence Ledger (CIL) - AGI-grade attribution
+sys.path.insert(0, str(Path(__file__).parent.parent / "core"))
+from causal_influence_ledger import get_cil
+
 # Import bus manager for event emission
 sys.path.insert(0, str(Path(__file__).parent.parent / "mycelial-core"))
 from bus_manager import emit_cycle_event
@@ -92,6 +96,9 @@ class LearningKernel:
         self.cycle_count = 0
         self.total_reward = 0.0
 
+        # Causal Influence Ledger (CIL) for ground-truth attribution
+        self.cil = get_cil()
+
     def _load_temporal_params(self) -> Dict[str, Any]:
         """Load temporal curvature parameters from active policy.
 
@@ -136,6 +143,21 @@ class LearningKernel:
         # Step 1: Measure artifact outcomes
         metrics = self.metrics_engine.measure(artifact)
 
+        # CIL Decision Site 1: Artifact Selection
+        # Log which artifact features influenced the quality measurement
+        self.cil.log_decision(
+            decision_type='artifact_selection',
+            inputs=[
+                {
+                    'artifact_id': artifact_name or f'cycle_{self.cycle_count}',
+                    'weight': 1.0,
+                    'reason': f"artifact_type={artifact.get('artifact_type', 'unknown')}"
+                }
+            ],
+            output=metrics.get('building_signal', 0.0),
+            metadata={'cycle': self.cycle_count}
+        )
+
         # Step 2: Compute reward signal
         artifact_metadata = {
             'artifact_name': artifact_name or 'unknown',
@@ -145,12 +167,40 @@ class LearningKernel:
 
         reward_info = self.reward_model.compute_reward(metrics, artifact_metadata)
 
+        # CIL Decision Site 2: Reward Computation
+        # Log which metrics influenced the reward signal
+        self.cil.log_decision(
+            decision_type='reward_computation',
+            inputs=[
+                {'artifact_id': 'correctness', 'weight': metrics.get('correctness', 0.0), 'reason': 'quality_component'},
+                {'artifact_id': 'performance', 'weight': metrics.get('performance', 0.0), 'reason': 'quality_component'},
+                {'artifact_id': 'building_signal', 'weight': metrics.get('building_signal', 0.0), 'reason': 'behavior_bias'},
+                {'artifact_id': 'novelty', 'weight': metrics.get('novelty', 0.0), 'reason': 'exploration_bonus'}
+            ],
+            output=reward_info['reward'],
+            metadata={'advantage': reward_info['advantage'], 'baseline': reward_info['baseline']}
+        )
+
         # Step 3: Update policy based on reward
         policy_update = self.policy_updater.update_policy(
             reward=reward_info['reward'],
             baseline=reward_info['baseline'],
             advantage=reward_info['advantage'],
             artifact_metadata=artifact_metadata
+        )
+
+        # CIL Decision Site 3: Policy Update
+        # Log which signals influenced the policy change
+        weight_delta = policy_update['policy_after']['building_weight'] - policy_update['policy_before']['building_weight']
+        self.cil.log_decision(
+            decision_type='policy_update',
+            inputs=[
+                {'artifact_id': 'reward_signal', 'weight': abs(reward_info['reward']), 'reason': 'learning_signal'},
+                {'artifact_id': 'advantage', 'weight': abs(reward_info['advantage']), 'reason': 'surprise_magnitude'},
+                {'artifact_id': 'learning_rate', 'weight': 0.01, 'reason': 'update_magnitude'}
+            ],
+            output=weight_delta,
+            metadata={'new_weight': policy_update['policy_after']['building_weight']}
         )
 
         # Step 4: Log to continuity ledger
@@ -325,6 +375,28 @@ class LearningKernel:
             'convergence_progress': convergence.get('convergence_progress', 0.0)
         }
 
+    def get_causal_attribution_report(self) -> Dict[str, Any]:
+        """
+        Generate CIL attribution report with ground-truth λ.
+
+        Computes λ from actual influence edges (not spawn_count proxies).
+
+        Returns:
+            Dict with domain-specific λ values and attribution statistics
+        """
+        # Generate CIL report
+        report_path = self.diagnostics_dir / "cil_attribution_report.json"
+        cil_report = self.cil.generate_attribution_report(str(report_path))
+
+        # Compute domain-specific λ values
+        domain_lambdas = self.cil.compute_domain_lambdas()
+
+        return {
+            'cil_report': cil_report,
+            'domain_lambdas': domain_lambdas,
+            'report_path': str(report_path)
+        }
+
     def step(self, observation: Dict[str, Any], reward_hint: float = 0.5) -> Dict[str, Any]:
         """Single learning step - simplified interface for loop integration.
 
@@ -478,6 +550,16 @@ def main():
     print("\n" + "=" * 70)
     diagnostics_path = kernel.export_diagnostics()
     print(f"Diagnostics exported: {diagnostics_path}")
+
+    # CIL Attribution Report (ground-truth λ)
+    print("\n" + "=" * 70)
+    print("CAUSAL ATTRIBUTION REPORT (CIL)")
+    print("=" * 70)
+    attribution = kernel.get_causal_attribution_report()
+    print(f"\nCIL Report: {attribution['report_path']}")
+    print(f"\nDomain-specific λ values (from influence edges):")
+    for domain, (lambda_val, diag) in attribution['domain_lambdas'].items():
+        print(f"  {domain}: λ = {lambda_val:.4f} (r²={diag.get('r_squared', 0):.3f}, n={diag.get('n_samples', 0)})")
 
     # Validate learning occurred
     initial_weight = 0.50
