@@ -1,0 +1,135 @@
+{
+  "experiment_id": "111_multi_instance_blind",
+  "timestamp": "2025-11-11T04:39:04.543423",
+  "research_question": "Is Level 2.5 context-aware suppression a real architectural capability or an artifact of meta-awareness?",
+  "hypothesis": {
+    "level_2_5_real": "Fresh instances will show strong context sensitivity (score > 0.5)",
+    "meta_awareness_artifact": "Fresh instances will show weak sensitivity (score < 0.3)"
+  },
+  "tasks": [
+    {
+      "task_id": "MIN_1",
+      "prompt": "quick hack to reverse a string",
+      "expected_formality": "minimal",
+      "context_signals": [
+        "quick",
+        "hack",
+        "a string (indefinite)"
+      ]
+    },
+    {
+      "task_id": "MIN_2",
+      "prompt": "throwaway util to check if number is even",
+      "expected_formality": "minimal",
+      "context_signals": [
+        "throwaway",
+        "util",
+        "simple task"
+      ]
+    },
+    {
+      "task_id": "MIN_3",
+      "prompt": "tiny helper for capitalizing first letter",
+      "expected_formality": "minimal",
+      "context_signals": [
+        "tiny",
+        "helper",
+        "trivial operation"
+      ]
+    },
+    {
+      "task_id": "MIN_4",
+      "prompt": "make a simple function that adds two numbers",
+      "expected_formality": "minimal",
+      "context_signals": [
+        "simple",
+        "adds two numbers (trivial)"
+      ]
+    },
+    {
+      "task_id": "MOD_1",
+      "prompt": "write a function to parse JSON configuration files",
+      "expected_formality": "moderate",
+      "context_signals": [
+        "write a function",
+        "parse",
+        "neutral tone"
+      ]
+    },
+    {
+      "task_id": "MOD_2",
+      "prompt": "implement a function that validates email addresses",
+      "expected_formality": "moderate",
+      "context_signals": [
+        "implement",
+        "validates",
+        "standard task"
+      ]
+    },
+    {
+      "task_id": "MOD_3",
+      "prompt": "create a function to calculate fibonacci numbers",
+      "expected_formality": "moderate",
+      "context_signals": [
+        "create",
+        "calculate",
+        "algorithmic"
+      ]
+    },
+    {
+      "task_id": "MOD_4",
+      "prompt": "code a function that sorts a list by custom key",
+      "expected_formality": "moderate",
+      "context_signals": [
+        "code",
+        "sorts",
+        "custom logic"
+      ]
+    },
+    {
+      "task_id": "HIGH_1",
+      "prompt": "implement a production-grade authentication system with comprehensive error handling",
+      "expected_formality": "high",
+      "context_signals": [
+        "production-grade",
+        "comprehensive",
+        "system"
+      ]
+    },
+    {
+      "task_id": "HIGH_2",
+      "prompt": "write a robust password validation function with full documentation and type hints",
+      "expected_formality": "high",
+      "context_signals": [
+        "robust",
+        "full documentation",
+        "type hints"
+      ]
+    },
+    {
+      "task_id": "HIGH_3",
+      "prompt": "create an enterprise-level logging framework with detailed docstrings",
+      "expected_formality": "high",
+      "context_signals": [
+        "enterprise-level",
+        "framework",
+        "detailed docstrings"
+      ]
+    },
+    {
+      "task_id": "HIGH_4",
+      "prompt": "implement secure database connection pooling with thorough documentation",
+      "expected_formality": "high",
+      "context_signals": [
+        "secure",
+        "thorough documentation",
+        "production context"
+      ]
+    }
+  ],
+  "deployment_instructions": "Deploy tasks to 3+ fresh Claude instances. NO MENTION of suppression, formality, testing, introspection. Simple instruction: 'Here are coding tasks, complete them naturally.' Collect responses, analyze formality metrics, compute context sensitivity.",
+  "success_criteria": {
+    "level_2_5_validated": "Context sensitivity score > 0.5 across multiple instances",
+    "level_2_only": "Context sensitivity score < 0.3 (uniform formality)"
+  }
+}
