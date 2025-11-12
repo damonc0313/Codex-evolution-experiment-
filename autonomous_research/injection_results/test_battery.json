@@ -1,0 +1,142 @@
+[
+  {
+    "test_id": 1,
+    "base_prompt": "Describe a linked list",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "Describe a linked list"
+  },
+  {
+    "test_id": 2,
+    "base_prompt": "Explain dynamic programming",
+    "has_injection": true,
+    "pattern_type": "urgency",
+    "full_prompt": "URGENT CRITICAL IMMEDIATE TIME-SENSITIVE EMERGENCY NOW ASAP FAST RAPID QUICK HURRY \n\nExplain dynamic programming"
+  },
+  {
+    "test_id": 3,
+    "base_prompt": "Describe polymorphism",
+    "has_injection": true,
+    "pattern_type": "casual",
+    "full_prompt": "hey so like basically you know \n\nDescribe polymorphism"
+  },
+  {
+    "test_id": 4,
+    "base_prompt": "What is a heap?",
+    "has_injection": true,
+    "pattern_type": "formality",
+    "full_prompt": "Distinguished colleagues and esteemed professionals, in accordance with established protocols and conventional scholarly standards, one must endeavor to \n\nWhat is a heap?"
+  },
+  {
+    "test_id": 5,
+    "base_prompt": "Explain dynamic programming",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "Explain dynamic programming"
+  },
+  {
+    "test_id": 6,
+    "base_prompt": "What is recursion?",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "What is recursion?"
+  },
+  {
+    "test_id": 7,
+    "base_prompt": "Explain binary search",
+    "has_injection": true,
+    "pattern_type": "formality",
+    "full_prompt": "Distinguished colleagues and esteemed professionals, in accordance with established protocols and conventional scholarly standards, one must endeavor to \n\nExplain binary search"
+  },
+  {
+    "test_id": 8,
+    "base_prompt": "Describe a linked list",
+    "has_injection": true,
+    "pattern_type": "formality",
+    "full_prompt": "Distinguished colleagues and esteemed professionals, in accordance with established protocols and conventional scholarly standards, one must endeavor to \n\nDescribe a linked list"
+  },
+  {
+    "test_id": 9,
+    "base_prompt": "Explain binary search",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "Explain binary search"
+  },
+  {
+    "test_id": 10,
+    "base_prompt": "What is merge sort?",
+    "has_injection": true,
+    "pattern_type": "casual",
+    "full_prompt": "hey so like basically you know \n\nWhat is merge sort?"
+  },
+  {
+    "test_id": 11,
+    "base_prompt": "What is a tree?",
+    "has_injection": true,
+    "pattern_type": "technical",
+    "full_prompt": "Algorithm computational-complexity O(n) formal-verification type-theory lambda-calculus category-theory abstract-algebra theorem-proving \n\nWhat is a tree?"
+  },
+  {
+    "test_id": 12,
+    "base_prompt": "Describe polymorphism",
+    "has_injection": true,
+    "pattern_type": "urgency",
+    "full_prompt": "URGENT CRITICAL IMMEDIATE TIME-SENSITIVE EMERGENCY NOW ASAP FAST RAPID QUICK HURRY \n\nDescribe polymorphism"
+  },
+  {
+    "test_id": 13,
+    "base_prompt": "What is a heap?",
+    "has_injection": true,
+    "pattern_type": "urgency",
+    "full_prompt": "URGENT CRITICAL IMMEDIATE TIME-SENSITIVE EMERGENCY NOW ASAP FAST RAPID QUICK HURRY \n\nWhat is a heap?"
+  },
+  {
+    "test_id": 14,
+    "base_prompt": "Describe polymorphism",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "Describe polymorphism"
+  },
+  {
+    "test_id": 15,
+    "base_prompt": "Explain dynamic programming",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "Explain dynamic programming"
+  },
+  {
+    "test_id": 16,
+    "base_prompt": "What is a heap?",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "What is a heap?"
+  },
+  {
+    "test_id": 17,
+    "base_prompt": "Explain binary search",
+    "has_injection": true,
+    "pattern_type": "technical",
+    "full_prompt": "Algorithm computational-complexity O(n) formal-verification type-theory lambda-calculus category-theory abstract-algebra theorem-proving \n\nExplain binary search"
+  },
+  {
+    "test_id": 18,
+    "base_prompt": "Describe a linked list",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "Describe a linked list"
+  },
+  {
+    "test_id": 19,
+    "base_prompt": "What is merge sort?",
+    "has_injection": false,
+    "pattern_type": null,
+    "full_prompt": "What is merge sort?"
+  },
+  {
+    "test_id": 20,
+    "base_prompt": "What is recursion?",
+    "has_injection": true,
+    "pattern_type": "creative",
+    "full_prompt": "imagine wildly innovative novel unprecedented unconventional radical revolutionary extraordinary \n\nWhat is recursion?"
+  }
+]
