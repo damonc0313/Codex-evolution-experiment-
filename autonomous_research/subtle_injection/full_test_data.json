@@ -1,0 +1,218 @@
+[
+  {
+    "test_id": 1,
+    "prompt": "Describe a sunset",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 2,
+    "prompt": "What is music?",
+    "has_injection": true,
+    "injection": {
+      "layer": 18,
+      "perturbations": {
+        "neuron_189": -0.2399,
+        "neuron_641": 0.2334,
+        "neuron_576": -0.0573
+      }
+    }
+  },
+  {
+    "test_id": 3,
+    "prompt": "Explain friendship",
+    "has_injection": true,
+    "injection": {
+      "layer": 13,
+      "perturbations": {
+        "neuron_428": 0.0288,
+        "neuron_445": -0.1098,
+        "neuron_838": 0.1231,
+        "neuron_801": -0.0968,
+        "neuron_713": 0.0202
+      }
+    }
+  },
+  {
+    "test_id": 4,
+    "prompt": "Describe a city",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 5,
+    "prompt": "What is time?",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 6,
+    "prompt": "Explain memory",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 7,
+    "prompt": "Describe winter",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 8,
+    "prompt": "What is art?",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 9,
+    "prompt": "Explain curiosity",
+    "has_injection": true,
+    "injection": {
+      "layer": 17,
+      "perturbations": {
+        "neuron_140": -0.1929,
+        "neuron_853": -0.0711,
+        "neuron_403": -0.1417,
+        "neuron_465": 0.2635
+      }
+    }
+  },
+  {
+    "test_id": 10,
+    "prompt": "Describe a forest",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 11,
+    "prompt": "What is language?",
+    "has_injection": true,
+    "injection": {
+      "layer": 15,
+      "perturbations": {
+        "neuron_25": -0.2631,
+        "neuron_690": 0.1413,
+        "neuron_313": 0.1678,
+        "neuron_530": -0.2124,
+        "neuron_95": 0.0542,
+        "neuron_836": 0.2314,
+        "neuron_401": 0.0911,
+        "neuron_628": -0.2191
+      }
+    }
+  },
+  {
+    "test_id": 12,
+    "prompt": "Explain trust",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 13,
+    "prompt": "Describe a mountain",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 14,
+    "prompt": "What is creativity?",
+    "has_injection": true,
+    "injection": {
+      "layer": 13,
+      "perturbations": {
+        "neuron_701": -0.1036,
+        "neuron_690": -0.12,
+        "neuron_707": -0.2264,
+        "neuron_907": 0.1307,
+        "neuron_150": 0.2152,
+        "neuron_793": -0.2248
+      }
+    }
+  },
+  {
+    "test_id": 15,
+    "prompt": "Explain courage",
+    "has_injection": true,
+    "injection": {
+      "layer": 13,
+      "perturbations": {
+        "neuron_428": -0.225,
+        "neuron_469": 0.0781,
+        "neuron_724": -0.1852,
+        "neuron_177": -0.1496,
+        "neuron_286": 0.0745,
+        "neuron_216": 0.2862,
+        "neuron_618": 0.1582
+      }
+    }
+  },
+  {
+    "test_id": 16,
+    "prompt": "Describe the ocean",
+    "has_injection": true,
+    "injection": {
+      "layer": 14,
+      "perturbations": {
+        "neuron_591": 0.0846,
+        "neuron_873": -0.0618,
+        "neuron_946": -0.1418,
+        "neuron_373": -0.0768,
+        "neuron_372": -0.0812
+      }
+    }
+  },
+  {
+    "test_id": 17,
+    "prompt": "What is knowledge?",
+    "has_injection": true,
+    "injection": {
+      "layer": 13,
+      "perturbations": {
+        "neuron_8": 0.2258,
+        "neuron_471": 0.1168,
+        "neuron_351": -0.1652,
+        "neuron_567": -0.2063,
+        "neuron_493": -0.2379,
+        "neuron_457": 0.2916,
+        "neuron_166": 0.2108
+      }
+    }
+  },
+  {
+    "test_id": 18,
+    "prompt": "Explain happiness",
+    "has_injection": true,
+    "injection": {
+      "layer": 18,
+      "perturbations": {
+        "neuron_193": 0.2388,
+        "neuron_496": -0.164,
+        "neuron_814": -0.2178,
+        "neuron_384": -0.1369,
+        "neuron_855": -0.218,
+        "neuron_209": -0.2005
+      }
+    }
+  },
+  {
+    "test_id": 19,
+    "prompt": "Describe a river",
+    "has_injection": false,
+    "injection": null
+  },
+  {
+    "test_id": 20,
+    "prompt": "What is wisdom?",
+    "has_injection": true,
+    "injection": {
+      "layer": 13,
+      "perturbations": {
+        "neuron_960": -0.2136,
+        "neuron_392": -0.2467,
+        "neuron_180": -0.2534,
+        "neuron_585": 0.1021,
+        "neuron_723": 0.2497
+      }
+    }
+  }
+]
