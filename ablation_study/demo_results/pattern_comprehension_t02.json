@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_comprehension",
+  "task_id": "pattern_comprehension_t02",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 19,
+  "timestamp_utc": "2025-11-13T18:37:04.669256",
+  "error_log": null,
+  "solution_code": "\ndef invert_dict(d: dict) -> dict:\n    \"\"\"Invert dictionary, swapping keys and values.\"\"\"\n    return {value: key for key, value in d.items()}\n"
+}

@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_classes",
+  "task_id": "pattern_classes_t02",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 102,
+  "timestamp_utc": "2025-11-13T18:37:06.232875",
+  "error_log": null,
+  "solution_code": "\nclass Temperature:\n    \"\"\"Temperature value with unit conversion.\"\"\"\n\n    def __init__(self, celsius: float):\n        \"\"\"Initialize with temperature in Celsius.\"\"\"\n        self._celsius = celsius\n\n    @property\n    def celsius(self) -> float:\n        \"\"\"Get temperature in Celsius.\"\"\"\n        return self._celsius\n\n    @property\n    def fahrenheit(self) -> float:\n        \"\"\"Get temperature in Fahrenheit.\"\"\"\n        return self._celsius * 9/5 + 32\n\n    @property\n    def kelvin(self) -> float:\n        \"\"\"Get temperature in Kelvin.\"\"\"\n        return self._celsius + 273.15\n\n    def set_fahrenheit(self, fahrenheit: float) -> None:\n        \"\"\"Set temperature from Fahrenheit value.\"\"\"\n        self._celsius = (fahrenheit - 32) * 5/9\n\n    def set_kelvin(self, kelvin: float) -> None:\n        \"\"\"Set temperature from Kelvin value.\"\"\"\n        self._celsius = kelvin - 273.15\n\n    def __str__(self) -> str:\n        \"\"\"Return string representation: '25.0\u00b0C'\"\"\"\n        return f\"{self._celsius:.1f}\u00b0C\"\n"
+}

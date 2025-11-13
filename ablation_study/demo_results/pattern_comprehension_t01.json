@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_comprehension",
+  "task_id": "pattern_comprehension_t01",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 31,
+  "timestamp_utc": "2025-11-13T18:37:04.269251",
+  "error_log": null,
+  "solution_code": "\ndef flatten(nested: list) -> list:\n    \"\"\"Flatten a nested list (one level deep) using comprehensions.\"\"\"\n    return [\n        item\n        for element in nested\n        for item in (element if isinstance(element, list) else [element])\n    ]\n"
+}

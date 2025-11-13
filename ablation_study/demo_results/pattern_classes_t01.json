@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_classes",
+  "task_id": "pattern_classes_t01",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 109,
+  "timestamp_utc": "2025-11-13T18:37:05.854564",
+  "error_log": null,
+  "solution_code": "\nclass Counter:\n    \"\"\"A counter that tracks its value and history of changes.\"\"\"\n\n    def __init__(self, initial: int = 0):\n        \"\"\"Initialize counter with optional initial value.\"\"\"\n        self._initial = initial\n        self._value = initial\n        self._history = [initial]\n\n    def increment(self, amount: int = 1) -> int:\n        \"\"\"Increment counter and return new value.\"\"\"\n        self._value += amount\n        self._history.append(self._value)\n        return self._value\n\n    def decrement(self, amount: int = 1) -> int:\n        \"\"\"Decrement counter and return new value.\"\"\"\n        self._value -= amount\n        self._history.append(self._value)\n        return self._value\n\n    def reset(self) -> None:\n        \"\"\"Reset counter to initial value.\"\"\"\n        self._value = self._initial\n        self._history.append(self._value)\n\n    @property\n    def value(self) -> int:\n        \"\"\"Get current value.\"\"\"\n        return self._value\n\n    def get_history(self) -> list[int]:\n        \"\"\"Get list of all values (including initial).\"\"\"\n        return self._history.copy()\n"
+}

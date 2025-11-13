@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_lambda",
+  "task_id": "pattern_lambda_t02",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 53,
+  "timestamp_utc": "2025-11-13T18:37:03.886852",
+  "error_log": null,
+  "solution_code": "\nfrom typing import Any, Callable\n\ndef multi_sort(items: list[dict], *criteria: tuple[str, bool]) -> list[dict]:\n    \"\"\"Sort items by multiple criteria.\"\"\"\n    if not criteria:\n        return items.copy()\n\n    result = items.copy()\n\n    # Sort by criteria in reverse order (last criterion applied first)\n    for key_name, reverse in reversed(criteria):\n        result.sort(\n            key=lambda item: (item.get(key_name) is None, item.get(key_name)),\n            reverse=reverse\n        )\n\n    return result\n"
+}

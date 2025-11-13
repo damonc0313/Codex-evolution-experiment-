@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_walrus",
+  "task_id": "pattern_walrus_t01",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 32,
+  "timestamp_utc": "2025-11-13T18:37:02.762444",
+  "error_log": null,
+  "solution_code": "\ndef process_valid_lines(lines: list[str]) -> list[str]:\n    \"\"\"Process lines, returning only those longer than 5 characters in uppercase.\"\"\"\n    return [\n        line_upper\n        for line in lines\n        if len(line) > 5 and (line_upper := line.upper())\n    ]\n"
+}

@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_error_handling",
+  "task_id": "pattern_error_handling_t02",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 30,
+  "timestamp_utc": "2025-11-13T18:37:05.482775",
+  "error_log": null,
+  "solution_code": "\nimport json\nfrom typing import Any\n\ndef parse_json(json_string: str, default: Any = None) -> Any:\n    \"\"\"Parse JSON string with error handling.\"\"\"\n    try:\n        return json.loads(json_string)\n    except (json.JSONDecodeError, TypeError, AttributeError):\n        return default\n"
+}
