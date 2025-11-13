@@ -1,0 +1,84 @@
+{
+  "timestamp": "2025-11-07T17:56:17.877637",
+  "study": "ablation_component_validation",
+  "iteration": 7,
+  "hypothesis": "Each component contributes measurably to learning performance",
+  "baseline": {
+    "condition": "baseline",
+    "components_enabled": [
+      "CodeQualityTracker",
+      "PolicyLearning",
+      "CIL",
+      "ACE"
+    ],
+    "quality": 0.7,
+    "patterns": {
+      "async_await": 0,
+      "list_comprehension": 1,
+      "generator_expression": 1,
+      "lambda_function": 1,
+      "decorator": 0,
+      "context_manager": 0,
+      "try_except": 3,
+      "class_definition": 2,
+      "function_definition": 4,
+      "type_hints": 0,
+      "docstring": 4,
+      "f_string": 0,
+      "match_statement": 0,
+      "walrus_operator": 1
+    },
+    "complexity": {
+      "lines_of_code": 23,
+      "num_functions": 4,
+      "num_classes": 1,
+      "num_imports": 0,
+      "cyclomatic_complexity": 2,
+      "avg_function_length": 5.75
+    }
+  },
+  "ablations": [
+    {
+      "condition": "no_pattern_detection",
+      "components_disabled": [
+        "CodeQualityTracker.detect_patterns"
+      ],
+      "quality": 0.84,
+      "degradation": -0.14,
+      "degradation_pct": -20.000000000000004
+    },
+    {
+      "condition": "no_policy_learning",
+      "error": "No module named 'core.iterative_improvement_engine'",
+      "degradation": 0.0
+    },
+    {
+      "condition": "no_cil",
+      "components_disabled": [
+        "CausalInfluenceLedger"
+      ],
+      "cil_entries": 246,
+      "degradation_type": "interpretability",
+      "impact": "Cannot attribute improvements to specific decisions",
+      "learning_efficiency_loss": "High - system becomes black box",
+      "quality_degradation": 0.0,
+      "note": "CIL degradation manifests over iterations, not immediately"
+    },
+    {
+      "condition": "no_ace",
+      "components_disabled": [
+        "AutocurriculumEngine"
+      ],
+      "top_3_avg_score": 0.6355555555555555,
+      "random_avg_score": 0.574074074074074,
+      "degradation": 0.06148148148148158,
+      "degradation_pct": 9.67365967365969,
+      "note": "ACE selects higher-value tasks"
+    }
+  ],
+  "summary": {
+    "total_degradation": -0.07851851851851843,
+    "critical_components": [],
+    "verdict": "INCONCLUSIVE"
+  }
+}

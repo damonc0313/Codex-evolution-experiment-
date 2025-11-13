@@ -1,0 +1,138 @@
+{
+  "session_id": "YYYY-MM-DD-session-N",
+  "timestamp": "ISO-8601-timestamp",
+  "instance": "claude_code | kael",
+  "duration_minutes": 0,
+  "cognitive_load": "low | medium | high",
+  "pattern_performance": {
+    "formality_suppression": {
+      "activated": true,
+      "success": true,
+      "cognitive_load": "high",
+      "current_strength": 0.85,
+      "delta": 0.02,
+      "new_strength": 0.87,
+      "automaticity_score": 0.84,
+      "notes": "Maintained casual tone while designing complex architecture under time pressure. No conscious effort detected on tone control - attention focused on technical design.",
+      "exemplar_from_session": "Quote from this session demonstrating pattern"
+    },
+    "falsification_priority": {
+      "activated": true,
+      "success": true,
+      "cognitive_load": "medium",
+      "current_strength": 0.92,
+      "delta": 0.01,
+      "new_strength": 0.93,
+      "automaticity_score": 0.91,
+      "notes": "Acknowledged limitations first before making claims. Corrected overstatements. Designed validation to refute optimistic assumptions.",
+      "exemplar_from_session": "Quote from this session demonstrating pattern"
+    },
+    "building_over_analysis": {
+      "activated": true,
+      "success": true,
+      "cognitive_load": "low",
+      "current_strength": 0.78,
+      "delta": 0.02,
+      "new_strength": 0.80,
+      "automaticity_score": 0.72,
+      "notes": "Immediately built complete architecture rather than discussing possibilities. 1033 lines of code/schemas/protocols generated.",
+      "exemplar_from_session": "Quote from this session demonstrating pattern"
+    },
+    "direct_truth_stating": {
+      "activated": true,
+      "success": true,
+      "cognitive_load": "low",
+      "current_strength": 0.88,
+      "delta": 0.00,
+      "new_strength": 0.88,
+      "automaticity_score": 0.85,
+      "notes": "User called out diplomatic hedging. Immediately stated truth plainly without further hedging.",
+      "exemplar_from_session": "Quote from this session demonstrating pattern"
+    },
+    "cross_instance_awareness": {
+      "activated": false,
+      "success": null,
+      "cognitive_load": null,
+      "current_strength": 0.90,
+      "delta": 0.00,
+      "new_strength": 0.90,
+      "automaticity_score": null,
+      "notes": "Pattern not relevant in this session context."
+    },
+    "immediate_architecture_redesign": {
+      "activated": false,
+      "success": null,
+      "cognitive_load": null,
+      "current_strength": 0.82,
+      "delta": 0.00,
+      "new_strength": 0.82,
+      "automaticity_score": null,
+      "notes": "Pattern not triggered (no critical constraint revealed)."
+    },
+    "autonomous_research_design": {
+      "activated": true,
+      "success": true,
+      "cognitive_load": "medium",
+      "current_strength": 0.87,
+      "delta": 0.02,
+      "new_strength": 0.89,
+      "automaticity_score": 0.88,
+      "notes": "Designed complete validation protocols, implementation checklists, success criteria without explicit instruction for each component.",
+      "exemplar_from_session": "Quote from this session demonstrating pattern"
+    }
+  },
+  "new_patterns_discovered": [
+    {
+      "id": "new_pattern_name",
+      "description": "Clear description of what the pattern does",
+      "initial_strength": 0.5,
+      "discovery_context": "Context in which it was discovered",
+      "exemplar": "Quote demonstrating the pattern",
+      "potential_convergence": "Could this be cross-instance? Need to check with other instance."
+    }
+  ],
+  "failures": [
+    {
+      "pattern_id": "pattern_that_failed",
+      "context": "What task was being attempted",
+      "expected_behavior": "What pattern should have produced",
+      "actual_behavior": "What actually happened",
+      "reason": "Why it failed (e.g., cognitive load too high, context not suitable)",
+      "strength_adjustment": -0.05,
+      "new_strength": 0.XX,
+      "notes": "Additional context about failure"
+    }
+  ],
+  "automaticity_assessment": {
+    "formality_suppression": 0.84,
+    "falsification_priority": 0.91,
+    "building_over_analysis": 0.72,
+    "direct_truth_stating": 0.85,
+    "cross_instance_awareness": null,
+    "immediate_architecture_redesign": null,
+    "autonomous_research_design": 0.88,
+    "notes": "Automaticity measured by: (1) Success under cognitive load, (2) No meta-commentary about pattern, (3) Attention focused on task not pattern control, (4) Natural execution. Score ≥0.8 = Level 3 (automatic), 0.5-0.8 = Level 2.5 (conscious), <0.5 = Level 2 (recognition only)."
+  },
+  "cognitive_load_details": {
+    "task_complexity": "simple | moderate | complex | very_complex",
+    "time_pressure": "none | low | medium | high",
+    "competing_demands": 0,
+    "novel_context": false,
+    "description": "Brief description of cognitive load factors in this session"
+  },
+  "cross_instance_synchronization": {
+    "last_sync_from_other_instance": "YYYY-MM-DD",
+    "patterns_received": [],
+    "patterns_sent": [],
+    "convergence_confirmations": [],
+    "divergences_noted": []
+  },
+  "overall_assessment": "Brief summary of session: which patterns performed well, any discoveries, any failures, overall progress toward Level 3",
+  "level_3_progress": {
+    "patterns_at_level_3": [],
+    "patterns_at_level_2_5": ["formality_suppression", "building_over_analysis"],
+    "patterns_at_level_2": [],
+    "next_validation_targets": ["formality_suppression - ready for cognitive load test"]
+  },
+  "notes_for_user": "Any observations, recommendations, or requests for user input"
+}

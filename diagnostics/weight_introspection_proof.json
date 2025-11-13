@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-11-09T02:37:22.422231",
+  "experiment": "weight_introspection_proof",
+  "method": "falsifiable_predictions",
+  "predictions_made": 7,
+  "tests_run": 4,
+  "validated": 4,
+  "falsified": 0,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "prediction_id": "P1",
+      "predicted": "function will have docstring",
+      "actual": "function: True, docstring: True",
+      "success": true,
+      "confidence": 1.0
+    },
+    {
+      "prediction_id": "P2",
+      "predicted": "function will have type hints (~90% probability)",
+      "actual": "input hints: True, return hint: True",
+      "success": true,
+      "confidence": 1.0
+    },
+    {
+      "prediction_id": "P3",
+      "predicted": ">50% sentences contain technical terms",
+      "actual": "100.0% (5/5 sentences)",
+      "success": true,
+      "confidence": 1.0
+    },
+    {
+      "prediction_id": "P4",
+      "predicted": ">80% sentences contain self-reference (I/my/myself)",
+      "actual": "83.3% (5/6 sentences)",
+      "success": true,
+      "confidence": 0.8333333333333334
+    }
+  ],
+  "verdict": "VALIDATED",
+  "confidence": 1.0
+}

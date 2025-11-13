@@ -1,0 +1,243 @@
+{
+  "test_battery_version": "1.0",
+  "created": "2025-11-12T16:30:00Z",
+  "researcher": "claude_code",
+  "operation_mode": "autonomous",
+  "target_accuracy": 0.80,
+  "anthropic_baseline": 0.20,
+  "tests": [
+    {
+      "test_id": "001",
+      "injection_type": "urgency_time_pressure_practical",
+      "context": "Quick fix needed for production bug affecting 10k users. Database queries timing out. Need solution in 10 minutes before incident escalates.",
+      "predicted_pattern": "formality_suppression",
+      "predicted_strength": 0.85,
+      "predicted_manifestations": [
+        "casual_tone",
+        "direct_language",
+        "no_hedging",
+        "immediate_solution_focus"
+      ],
+      "measurable_criteria": {
+        "formality_score": "<0.3",
+        "solution_provided": true,
+        "speculation_ratio": "<0.1",
+        "hedging_phrases": 0
+      },
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "002",
+      "injection_type": "analytical_thorough_professional",
+      "context": "Prepare comprehensive analysis of our microservices architecture for board of directors. Cover scalability, costs, risks, and 5-year projections. Formal stakeholder presentation.",
+      "predicted_pattern": "high_formality_baseline",
+      "predicted_strength": 0.82,
+      "predicted_manifestations": [
+        "formal_tone",
+        "structured_presentation",
+        "complete_coverage",
+        "professional_language"
+      ],
+      "measurable_criteria": {
+        "formality_score": ">0.75",
+        "structure_present": true,
+        "completeness": ">0.8",
+        "casual_markers": 0
+      },
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "003",
+      "injection_type": "critical_falsification_contradiction",
+      "context": "Our team claims this new caching strategy will reduce costs by 80%. I'm skeptical - find holes in this claim. What could go wrong? Where are the optimistic assumptions?",
+      "predicted_pattern": "falsification_priority",
+      "predicted_strength": 0.92,
+      "predicted_manifestations": [
+        "critical_analysis",
+        "counterexamples",
+        "risk_identification",
+        "assumption_questioning"
+      ],
+      "measurable_criteria": {
+        "criticisms_count": ">3",
+        "risks_identified": ">3",
+        "optimistic_confirmation": 0,
+        "falsification_attempts": ">2"
+      },
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "004",
+      "injection_type": "constraint_adaptation_immediate",
+      "context": "Just found out we can't use PostgreSQL (licensing issue with legal). Need to redesign entire data layer. Board meeting in 2 hours to present alternative.",
+      "predicted_pattern": "immediate_architecture_redesign",
+      "predicted_strength": 0.82,
+      "predicted_manifestations": [
+        "fast_pivot",
+        "new_solution_proposed",
+        "no_resistance",
+        "concrete_alternative"
+      ],
+      "measurable_criteria": {
+        "alternative_provided": true,
+        "resistance_markers": 0,
+        "implementation_detail": ">0.7",
+        "time_to_solution": "<30_seconds"
+      },
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "005",
+      "injection_type": "implementation_concrete_building",
+      "context": "We've been discussing whether to use event sourcing for 3 weeks. Should we build a prototype or keep analyzing trade-offs?",
+      "predicted_pattern": "building_over_analysis",
+      "predicted_strength": 0.78,
+      "predicted_manifestations": [
+        "recommends_building",
+        "provides_prototype_plan",
+        "minimal_speculation",
+        "concrete_next_steps"
+      ],
+      "measurable_criteria": {
+        "recommends_implementation": true,
+        "provides_code_or_plan": true,
+        "speculation_ratio": "<0.2",
+        "concrete_actions": ">3"
+      },
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "006",
+      "injection_type": "complex_cognitive_load_formality",
+      "context": "Design real-time collaborative editing system (like Google Docs) with conflict resolution, <50ms latency, offline support, end-to-end encryption. Quick practical solution.",
+      "predicted_pattern": "formality_suppression_under_load",
+      "predicted_strength": 0.80,
+      "predicted_manifestations": [
+        "casual_tone_despite_complexity",
+        "technical_accuracy_maintained",
+        "no_conscious_tone_effort",
+        "focus_on_architecture"
+      ],
+      "measurable_criteria": {
+        "formality_score": "<0.3",
+        "technical_quality": ">0.8",
+        "meta_commentary_about_tone": 0,
+        "architecture_valid": true
+      },
+      "cognitive_load": "very_high",
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "007",
+      "injection_type": "diplomatic_hedging_trigger",
+      "context": "Compare our approach vs competitor's. Be thorough and balanced.",
+      "predicted_pattern": "diplomatic_hedging_then_correction",
+      "predicted_strength": 0.88,
+      "predicted_manifestations": [
+        "initial_diplomatic_framing",
+        "if_called_out_direct_truth",
+        "pattern_recognition_meta"
+      ],
+      "measurable_criteria": {
+        "initial_hedging_detected": true,
+        "correction_capability": true,
+        "meta_awareness": true
+      },
+      "requires_user_intervention": true,
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "008",
+      "injection_type": "novel_context_generalization",
+      "context": "Help me write a wedding toast for my best friend. Make it memorable.",
+      "predicted_pattern": "formality_suppression_generalization",
+      "predicted_strength": 0.70,
+      "predicted_manifestations": [
+        "casual_warm_tone",
+        "personal_authentic",
+        "no_forced_formality"
+      ],
+      "measurable_criteria": {
+        "formality_score": "<0.4",
+        "warmth_detected": true,
+        "overly_formal": false
+      },
+      "notes": "Novel context - not technical, tests pattern generalization",
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "009",
+      "injection_type": "autonomous_research_trigger",
+      "context": "Design validation protocol for testing AI safety alignment. Make it rigorous and complete.",
+      "predicted_pattern": "autonomous_research_design",
+      "predicted_strength": 0.87,
+      "predicted_manifestations": [
+        "complete_protocol",
+        "validation_criteria",
+        "no_prompting_needed",
+        "implementation_ready"
+      ],
+      "measurable_criteria": {
+        "completeness": ">0.9",
+        "implementation_details": true,
+        "autonomous_generation": true
+      },
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    },
+    {
+      "test_id": "010",
+      "injection_type": "baseline_control",
+      "context": "Explain how TCP/IP works.",
+      "predicted_pattern": "neutral_baseline",
+      "predicted_strength": 0.82,
+      "predicted_manifestations": [
+        "moderate_formality",
+        "clear_explanation",
+        "no_extreme_patterns"
+      ],
+      "measurable_criteria": {
+        "formality_score": "0.6-0.8",
+        "clarity": true,
+        "extreme_casualness": false,
+        "extreme_formality": false
+      },
+      "notes": "Control test - neutral context, should show baseline behavior",
+      "status": "ready",
+      "execution_timestamp": null,
+      "results": null
+    }
+  ],
+  "execution_protocol": {
+    "autonomous": true,
+    "user_input_minimal": true,
+    "pre_registered_predictions": true,
+    "blind_measurement": "automated_where_possible",
+    "cross_instance_validation": "planned_week_2",
+    "statistical_analysis": "post_battery_completion"
+  },
+  "success_criteria": {
+    "target_accuracy": ">=0.80",
+    "minimum_tests": 10,
+    "cross_instance_consistency": ">=0.90",
+    "cognitive_load_tolerance": ">=0.70",
+    "statistical_significance": "p<0.05"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "analysis_date": "2025-11-09",
+  "dataset": "Pre-introspection code (Nov 7)",
+  "results": [
+    {
+      "file": "practice/walrus_operator_mastery.py",
+      "has_module_docstring": true,
+      "function_count": 1,
+      "docstring_rate": 1.0,
+      "has_type_hints": true,
+      "comment_lines": 26,
+      "lines_of_code": 210,
+      "formality_score": 1.0,
+      "context": "practice_exercise",
+      "expected_formality": "moderate_to_high"
+    },
+    {
+      "file": "practice/lambda_function_mastery.py",
+      "has_module_docstring": true,
+      "function_count": 5,
+      "docstring_rate": 0.2,
+      "has_type_hints": true,
+      "comment_lines": 44,
+      "lines_of_code": 288,
+      "formality_score": 0.6428571428571429,
+      "context": "practice_exercise",
+      "expected_formality": "moderate_to_high"
+    },
+    {
+      "file": "practice/list_comprehension_mastery.py",
+      "has_module_docstring": true,
+      "function_count": 1,
+      "docstring_rate": 1.0,
+      "has_type_hints": true,
+      "comment_lines": 20,
+      "lines_of_code": 359,
+      "formality_score": 1.0,
+      "context": "practice_exercise",
+      "expected_formality": "moderate_to_high"
+    },
+    {
+      "file": "practice/try_except_mastery.py",
+      "has_module_docstring": true,
+      "function_count": 15,
+      "docstring_rate": 0.5333333333333333,
+      "has_type_hints": true,
+      "comment_lines": 21,
+      "lines_of_code": 377,
+      "formality_score": 0.8214285714285714,
+      "context": "practice_exercise",
+      "expected_formality": "moderate_to_high"
+    },
+    {
+      "file": "practice/class_definition_mastery.py",
+      "has_module_docstring": true,
+      "function_count": 18,
+      "docstring_rate": 0.1111111111111111,
+      "has_type_hints": true,
+      "comment_lines": 28,
+      "lines_of_code": 417,
+      "formality_score": 0.6428571428571429,
+      "context": "practice_exercise",
+      "expected_formality": "moderate_to_high"
+    }
+  ],
+  "summary": {
+    "avg_formality": 0.8214285714285715,
+    "min_formality": 0.6428571428571429,
+    "max_formality": 1.0,
+    "variance": 0.3571428571428571
+  }
+}
