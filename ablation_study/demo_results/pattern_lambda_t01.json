@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_lambda",
+  "task_id": "pattern_lambda_t01",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 46,
+  "timestamp_utc": "2025-11-13T18:37:03.502628",
+  "error_log": null,
+  "solution_code": "\nfrom typing import Callable, Any\nfrom functools import reduce\n\ndef transform_pipeline(data: list, *transforms: Callable) -> list:\n    \"\"\"Apply a sequence of transformations to each item in data.\"\"\"\n    if not transforms:\n        return data.copy()\n\n    def apply_all(item):\n        return reduce(lambda x, f: f(x), transforms, item)\n\n    return [apply_all(item) for item in data]\n"
+}

@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_walrus",
+  "task_id": "pattern_walrus_t02",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 42,
+  "timestamp_utc": "2025-11-13T18:37:03.128815",
+  "error_log": null,
+  "solution_code": "\ndef parse_config(config: dict, key: str, default: int = 0, min_val: int = 0) -> int:\n    \"\"\"Parse a config value, applying default and minimum validation.\"\"\"\n    if (val := config.get(key)) is not None and isinstance(val, int) and val >= min_val:\n        return val\n    return default\n"
+}

@@ -1,0 +1,13 @@
+{
+  "condition": "DEMO",
+  "pattern": "pattern_error_handling",
+  "task_id": "pattern_error_handling_t01",
+  "passed": true,
+  "pass_fraction": 1.0,
+  "attempts": 1,
+  "self_corrections": 0,
+  "tokens_generated": 34,
+  "timestamp_utc": "2025-11-13T18:37:05.079747",
+  "error_log": null,
+  "solution_code": "\nfrom typing import Optional\n\ndef safe_divide(a: float, b: float, default: Optional[float] = None) -> Optional[float]:\n    \"\"\"Safely divide a by b, handling division by zero.\"\"\"\n    try:\n        return a / b\n    except (ZeroDivisionError, TypeError):\n        return default\n"
+}
