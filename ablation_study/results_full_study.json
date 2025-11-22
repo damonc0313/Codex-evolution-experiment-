@@ -1,0 +1,953 @@
+{
+  "study_id": "CC-ABLATION-001",
+  "timestamp": "2025-11-21T00:53:00.331295",
+  "total_evaluations": 100,
+  "summary": {
+    "FS": {
+      "total_tasks": 25,
+      "passed": 24,
+      "failed": 1,
+      "pass_rate": 0.96,
+      "results": [
+        {
+          "task_id": "pattern_walrus_t01",
+          "pattern": "walrus",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t02",
+          "pattern": "walrus",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t03",
+          "pattern": "walrus",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t04",
+          "pattern": "walrus",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t05",
+          "pattern": "walrus",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t01",
+          "pattern": "lambda",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t02",
+          "pattern": "lambda",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t03",
+          "pattern": "lambda",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 9,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t04",
+          "pattern": "lambda",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 15,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t05",
+          "pattern": "lambda",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t01",
+          "pattern": "comprehension",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t02",
+          "pattern": "comprehension",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t03",
+          "pattern": "comprehension",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t04",
+          "pattern": "comprehension",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t05",
+          "pattern": "comprehension",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t01",
+          "pattern": "error_handling",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t02",
+          "pattern": "error_handling",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t03",
+          "pattern": "error_handling",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t04",
+          "pattern": "error_handling",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t05",
+          "pattern": "error_handling",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t01",
+          "pattern": "classes",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 11,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t02",
+          "pattern": "classes",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t03",
+          "pattern": "classes",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t04",
+          "pattern": "classes",
+          "condition": "FS",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t05",
+          "pattern": "classes",
+          "condition": "FS",
+          "passed": false,
+          "pass_fraction": 0.5,
+          "tests_passed": 1,
+          "tests_failed": 1
+        }
+      ]
+    },
+    "NM": {
+      "total_tasks": 25,
+      "passed": 24,
+      "failed": 1,
+      "pass_rate": 0.96,
+      "results": [
+        {
+          "task_id": "pattern_walrus_t01",
+          "pattern": "walrus",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t02",
+          "pattern": "walrus",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t03",
+          "pattern": "walrus",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t04",
+          "pattern": "walrus",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t05",
+          "pattern": "walrus",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t01",
+          "pattern": "lambda",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t02",
+          "pattern": "lambda",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t03",
+          "pattern": "lambda",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 9,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t04",
+          "pattern": "lambda",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 15,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t05",
+          "pattern": "lambda",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t01",
+          "pattern": "comprehension",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t02",
+          "pattern": "comprehension",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t03",
+          "pattern": "comprehension",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t04",
+          "pattern": "comprehension",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t05",
+          "pattern": "comprehension",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t01",
+          "pattern": "error_handling",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t02",
+          "pattern": "error_handling",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t03",
+          "pattern": "error_handling",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t04",
+          "pattern": "error_handling",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t05",
+          "pattern": "error_handling",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t01",
+          "pattern": "classes",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 11,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t02",
+          "pattern": "classes",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t03",
+          "pattern": "classes",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t04",
+          "pattern": "classes",
+          "condition": "NM",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t05",
+          "pattern": "classes",
+          "condition": "NM",
+          "passed": false,
+          "pass_fraction": 0.5,
+          "tests_passed": 1,
+          "tests_failed": 1
+        }
+      ]
+    },
+    "RC": {
+      "total_tasks": 25,
+      "passed": 24,
+      "failed": 1,
+      "pass_rate": 0.96,
+      "results": [
+        {
+          "task_id": "pattern_walrus_t01",
+          "pattern": "walrus",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t02",
+          "pattern": "walrus",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t03",
+          "pattern": "walrus",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t04",
+          "pattern": "walrus",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t05",
+          "pattern": "walrus",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t01",
+          "pattern": "lambda",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t02",
+          "pattern": "lambda",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t03",
+          "pattern": "lambda",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 9,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t04",
+          "pattern": "lambda",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 15,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t05",
+          "pattern": "lambda",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t01",
+          "pattern": "comprehension",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t02",
+          "pattern": "comprehension",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t03",
+          "pattern": "comprehension",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t04",
+          "pattern": "comprehension",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t05",
+          "pattern": "comprehension",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t01",
+          "pattern": "error_handling",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t02",
+          "pattern": "error_handling",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t03",
+          "pattern": "error_handling",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t04",
+          "pattern": "error_handling",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t05",
+          "pattern": "error_handling",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t01",
+          "pattern": "classes",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 11,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t02",
+          "pattern": "classes",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t03",
+          "pattern": "classes",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t04",
+          "pattern": "classes",
+          "condition": "RC",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t05",
+          "pattern": "classes",
+          "condition": "RC",
+          "passed": false,
+          "pass_fraction": 0.5,
+          "tests_passed": 1,
+          "tests_failed": 1
+        }
+      ]
+    },
+    "VB": {
+      "total_tasks": 25,
+      "passed": 24,
+      "failed": 1,
+      "pass_rate": 0.96,
+      "results": [
+        {
+          "task_id": "pattern_walrus_t01",
+          "pattern": "walrus",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t02",
+          "pattern": "walrus",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t03",
+          "pattern": "walrus",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t04",
+          "pattern": "walrus",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_walrus_t05",
+          "pattern": "walrus",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t01",
+          "pattern": "lambda",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t02",
+          "pattern": "lambda",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t03",
+          "pattern": "lambda",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 9,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t04",
+          "pattern": "lambda",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 15,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_lambda_t05",
+          "pattern": "lambda",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t01",
+          "pattern": "comprehension",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t02",
+          "pattern": "comprehension",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t03",
+          "pattern": "comprehension",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t04",
+          "pattern": "comprehension",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_comprehension_t05",
+          "pattern": "comprehension",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t01",
+          "pattern": "error_handling",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 8,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t02",
+          "pattern": "error_handling",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t03",
+          "pattern": "error_handling",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t04",
+          "pattern": "error_handling",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_error_handling_t05",
+          "pattern": "error_handling",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 7,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t01",
+          "pattern": "classes",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 11,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t02",
+          "pattern": "classes",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 10,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t03",
+          "pattern": "classes",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t04",
+          "pattern": "classes",
+          "condition": "VB",
+          "passed": true,
+          "pass_fraction": 1.0,
+          "tests_passed": 13,
+          "tests_failed": 0
+        },
+        {
+          "task_id": "pattern_classes_t05",
+          "pattern": "classes",
+          "condition": "VB",
+          "passed": false,
+          "pass_fraction": 0.5,
+          "tests_passed": 1,
+          "tests_failed": 1
+        }
+      ]
+    }
+  },
+  "hypotheses": {
+    "H1_FS_gt_VB": {
+      "supported": false,
+      "margin": 0.0
+    },
+    "H2_FS_gt_NM": {
+      "supported": false,
+      "margin": 0.0
+    },
+    "H3_FS_gt_RC": {
+      "supported": false,
+      "margin": 0.0
+    }
+  }
+}
