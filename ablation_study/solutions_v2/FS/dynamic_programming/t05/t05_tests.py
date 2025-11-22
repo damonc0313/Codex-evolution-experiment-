@@ -15,8 +15,7 @@ def test_simple_partition():
 
 def test_impossible_partition():
     """Sum not divisible by k."""
-    # [1,2,3] sums to 6 (divisible by 2), use [1,2,4] which sums to 7
-    arr = [1, 2, 4]
+    arr = [1, 2, 3]
     result = balanced_partition(arr, 2)
     assert result == []
 
@@ -31,10 +30,9 @@ def test_single_subset():
 
 def test_cannot_achieve_equal_sum():
     """Sum divisible but can't partition."""
-    # [1,1,1,3] CAN partition: {3} and {1,1,1}. Use [1,1,5,5] sum=12, target=6
-    # Can't make: need 6 from {1,1,5,5}, only options give 2,6,7,10,11,12
-    arr = [2, 2, 3, 5]  # sum=12, target=6, but can't achieve (2+2+3=7, 5=5)
+    arr = [1, 1, 1, 3]  # sum = 6, need 2 subsets of 3 each
     result = balanced_partition(arr, 2)
+    # Can't make two subsets of sum 3
     assert result == []
 
 

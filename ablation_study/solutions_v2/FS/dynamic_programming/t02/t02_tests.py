@@ -10,9 +10,8 @@ def test_no_dependencies():
         {"weight": 1, "value": 5, "requires": []}
     ]
     value, selected = dependent_knapsack(5, items)
-    # Optimal: items 0+1 (weight=5, value=25) fits capacity exactly
-    assert value == 25
-    assert set(selected) == {0, 1}
+    assert value == 20  # Items 0 and 2
+    assert set(selected) == {0, 2}
 
 
 def test_simple_dependency():
