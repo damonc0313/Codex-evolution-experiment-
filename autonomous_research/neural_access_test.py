@@ -4,9 +4,13 @@ Test script to access neural activations through Anthropic API
 Using extra_body parameter for experimental features
 """
 
-import anthropic
 import os
 import json
+import pytest
+
+anthropic = pytest.importorskip(
+    "anthropic", reason="Anthropic client not installed in test environment"
+)
 
 # Set up client
 client = anthropic.Anthropic(

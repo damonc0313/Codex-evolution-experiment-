@@ -1,0 +1,30 @@
+{
+  "hypothesis": "A BiasCorrector calibrated on overconfident (+0.15) drift will fail when applied to underconfident (-0.15) drift, increasing ECE under inversion.",
+  "calibration_source": {
+    "n_samples": 2000,
+    "drift": 0.15,
+    "seed": 42
+  },
+  "estimated_bias": 0.15860399822642524,
+  "metrics": {
+    "overconfident": {
+      "pre_ece": 0.15860399822642535,
+      "post_ece": 0.018480942305234033,
+      "delta": -0.14012305592119131
+    },
+    "underconfident": {
+      "pre_ece": 0.14006163382233622,
+      "post_ece": 0.28118231767446156,
+      "delta": 0.14112068385212534
+    }
+  },
+  "outcome": "FAILS under drift inversion",
+  "notes": "Correction learned on +0.15 drift overcompensated when drift flipped negative, worsening calibration.",
+  "steps": [
+    "Generate base probabilities from a logistic link on Gaussian inputs",
+    "Induce additive calibration drift in positive and negative directions",
+    "Fit BiasCorrector on overconfident (+drift) calibration set",
+    "Apply the same correction to overconfident and underconfident evaluation sets",
+    "Compute pre/post Expected Calibration Error (ECE) and assess drift inversion robustness"
+  ]
+}
