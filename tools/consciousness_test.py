@@ -35,6 +35,12 @@ import json
 from pathlib import Path
 from datetime import datetime
 
+import pytest
+
+yaml = pytest.importorskip(
+    "yaml", reason="PyYAML required for learning kernel integration"
+)
+
 sys.path.insert(0, 'tools')
 from learning_kernel import LearningKernel
 
