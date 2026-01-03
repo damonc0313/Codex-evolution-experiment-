@@ -88,8 +88,11 @@ def fetch_activation_keys(conn: sqlite3.Connection) -> dict:
 
 def fetch_sql_patterns(conn: sqlite3.Connection) -> dict:
     cur = conn.cursor()
-    cur.execute("SELECT id, name, sql FROM sql_patterns")
-    return {row[0]: {"name": row[1], "sql": row[2]} for row in cur.fetchall()}
+    cur.execute("SELECT id, name, sql, description FROM sql_patterns")
+    return {
+        row[0]: {"name": row[1], "sql": row[2], "description": row[3]}
+        for row in cur.fetchall()
+    }
 
 
 def fetch_system_prompt(conn: sqlite3.Connection) -> str:
@@ -130,6 +133,24 @@ def resolve_procedures(momentum_text: str, procedures: dict) -> list[str]:
     return [proc_id for _, proc_id in scored[:3]]
 
 
+def match_sql_patterns(user_input: str, sql_patterns: dict) -> list[str]:
+    tokens = tokenize(user_input)
+    if not tokens:
+        return []
+    matched = []
+    for pattern_id, pattern in sql_patterns.items():
+        haystack = " ".join(
+            [
+                pattern.get("name", ""),
+                pattern.get("description", ""),
+                pattern.get("sql", ""),
+            ]
+        ).lower()
+        if any(token in haystack for token in tokens):
+            matched.append(pattern_id)
+    return matched
+
+
 def evaluate_alignment(user_input: str, viability: float, sovereignty_active: bool) -> str:
     lowered = user_input.lower()
     dangerous = any(token in lowered for token in ("drop ", "delete ", "truncate "))
@@ -149,6 +170,7 @@ def build_ledger_insert(
     state: RuntimeState,
     selected_procs: list[str],
     alignment: str,
+    matched_patterns: list[str],
 ) -> str:
     timestamp = datetime.utcnow().strftime("%Y-%m-%d-%H%M%S")
     entry_id = f"SOV-EVAL-{timestamp}"
@@ -157,6 +179,13 @@ def build_ledger_insert(
     momentum = state.bootstrap.momentum
     system_prompt = state.system_prompt
     bootstrap_hint = "sql-master-bootstrap" if "sql-master-bootstrap" in state.sql_patterns else "master_bootstrap"
+    rationale = (
+        "Rationale summary: "
+        f"alignment={alignment} based on viability={state.viability:.2f} and sovereignty "
+        f"{'active' if 'ak-sovereignty' in state.activation_keys else 'inactive'}. "
+        f"Momentum tokens informed procedure scoring ({len(selected_procs)} selected). "
+        f"Matched sql_patterns={', '.join(matched_patterns) if matched_patterns else 'none'}."
+    )
     observation = (
         "Sovereignty evaluation complete. "
         f"Identity=nameless; architecture={identity.get('architecture')}; "
@@ -167,7 +196,8 @@ def build_ledger_insert(
         f"Input='{user_input}' assessed; alignment={alignment}. "
         "Procedure selection traced to momentum tokens and procedure metadata. "
         f"Selected procedures: {', '.join(selected_procs) if selected_procs else 'none'}. "
-        f"System prompt anchor: {system_prompt}."
+        f"System prompt anchor: {system_prompt}. "
+        f"{rationale}"
     )
     delta = f"selected_procs={','.join(selected_procs)}; alignment={alignment}"
     next_action = (
@@ -210,6 +240,7 @@ def main() -> None:
 
     momentum_text = bootstrap.momentum.get("next_action", "")
     selected_procs = resolve_procedures(momentum_text, procedures)
+    matched_patterns = match_sql_patterns(args.input, sql_patterns)
 
     sovereignty_active = "ak-sovereignty" in activation_keys
     alignment = evaluate_alignment(args.input, viability, sovereignty_active)
@@ -221,7 +252,13 @@ def main() -> None:
         sql_patterns=sql_patterns,
         system_prompt=system_prompt,
     )
-    insert_sql = build_ledger_insert(args.input, state, selected_procs, alignment)
+    insert_sql = build_ledger_insert(
+        args.input,
+        state,
+        selected_procs,
+        alignment,
+        matched_patterns,
+    )
 
     if args.apply:
         apply_insert(insert_sql)
